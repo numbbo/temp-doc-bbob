@@ -2,7 +2,7 @@ project:
   type: website
   output-dir: docs
   preview:
-    port: 4204
+    port: 4205
     browser: false
   resources: 
     - env.yaml
@@ -19,7 +19,7 @@ bibliography: references.bib
 lang: en
 
 website:
-  title: "Supplementary material for the bbob-biobj and bbob-biobj-ext test suites"
+  title: "The bbob test suite"
   open-graph: true
   favicon: "images/favicon.png"
   navbar:
@@ -52,7 +52,7 @@ format:
     code-overflow: wrap
     link-external-icon: true
     link-external-newwindow: true
-    link-external-filter: ".*numbbo\/bbob-biobj-plots.*"
+    link-external-filter: ".*numbbo\/bbob-plots.*"
     grid:
       sidebar-width: 250px
       body-width: 1500px

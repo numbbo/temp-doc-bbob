@@ -2,8 +2,8 @@
 plotPath = "https://raw.githubusercontent.com/numbbo/bbob-plots/main/bbob/"
 
 /* Define some global variables */
-var labelsTyp = ["Linear-linear cuts", "Linear-logarithmic cuts", "Logarithmic-logarithmic cuts", "Heatmap visualization", "Surface plot visualization"];
-var valuesTyp = ["cuts-lin-lin","cuts-lin-log","cuts-log-log","heatmap","surface"];
+var labelsTyp = ["Search space cuts: lin-lin", "Search space cuts: lin-log", "Search space cuts: log-log", "Heatmap", "Surface plot"];
+var valuesTyp = ["cuts-lin-lin", "cuts-lin-log", "cuts-log-log", "heatmap", "surface"];
 var allNodes = ["dimAll", "funAll", "insAll", "typAll"];
 var selectedNode = "typAll";
 var valuesDim = ["2", "3", "5", "10", "20", "40"];
