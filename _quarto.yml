@@ -1,0 +1,61 @@
+project:
+  type: website
+  output-dir: docs
+  preview:
+    port: 4204
+    browser: false
+  resources: 
+    - env.yaml
+    - "*.ipynb"
+  render:
+    - "*.qmd"
+    - "*.ipynb"
+    - "!scripts/"
+    - "!README.md"
+    - "env.yaml"
+
+bibliography: references.bib
+
+lang: en
+
+website:
+  title: "Supplementary material for the bbob-biobj and bbob-biobj-ext test suites"
+  open-graph: true
+  favicon: "images/favicon.png"
+  navbar:
+    title: false
+    background: primary
+    logo: images/favicon.png
+    left:
+    - text: "Home"
+      href: index.qmd
+  sidebar:
+    style: "docked"
+    contents:
+      - text: "Home"
+        href: index.qmd
+      - text: "Function definitions"
+        file: def.qmd
+      - text: "Visualizations"
+        file: vis.qmd
+  search: 
+    location: navbar
+    type: overlay
+
+format:
+  html:
+    toc: true
+    theme: coco.scss
+    css: "assets/css/custom.css"
+    html-math-method: katex
+    code-copy: true
+    code-overflow: wrap
+    link-external-icon: true
+    link-external-newwindow: true
+    link-external-filter: ".*numbbo\/bbob-biobj-plots.*"
+    grid:
+      sidebar-width: 250px
+      body-width: 1500px
+      margin-width: 250px
+      gutter-width: 1.5rem
+

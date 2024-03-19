@@ -1,0 +1,7 @@
+---
+title: Function definitions
+format: 
+  html:
+    grid:
+      margin-width: 450px
+---
