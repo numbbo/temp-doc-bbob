@@ -1,5 +1,4 @@
 /* Url to the plots */
-// plotPath = "https://raw.githubusercontent.com/numbbo/bbob-biobj-plots/gh-pages/plots_currData_Sep2020/"
 plotPath = "https://raw.githubusercontent.com/numbbo/bbob-plots/main/bbob/"
 
 /* Define some global variables */

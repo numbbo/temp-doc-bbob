@@ -38,10 +38,6 @@ website:
         file: def.qmd
       - text: "Visualizations"
         file: vis.qmd
-      #- text: "Gradient angle plots"
-      #  file: ecdfs.qmd
-      #- text: "Postprocessed data"
-      #  file: ppdata.qmd
   search: 
     location: navbar
     type: overlay
