@@ -107,38 +107,7 @@ function changePlot() {
 			}
 		}
 	}
-
-	/* Make sure only the correct plot descriptions are shown */
-	// for (let iTyp = 0; iTyp < valuesTyp.length; iTyp++) {
-	// 	textName = "text-" + valuesTyp[iTyp];
-	// 	if ((selectedNode === "typAll") || (valuesTyp[iTyp] === chosenTyp[0])) {
-	// 		document.getElementById(textName).setAttribute("style", "display:block;");
-	// 	}
-	// 	else {
-	// 		document.getElementById(textName).setAttribute("style", "display:none;");
-	// 	}
-	// }
-	// if ((selectedNode === "typAll") ||
-	// (chosenTyp[0] === "directions-objspace") ||
-	// (chosenTyp[0] === "directions-logobjspace") ||
-	// (chosenTyp[0] === "directions-searchspace") ||
-	// (chosenTyp[0] === "directions-searchspace-projection")) {
-	// 	document.getElementById("text-additional-info").setAttribute("style", "display:block;");
-	// } else {
-	// 	document.getElementById("text-additional-info").setAttribute("style", "display:none;");
-	// }
-
-	// /* Make sure only the correct function description is shown */
-	// for (let iFun = 0; iFun < valuesFun.length; iFun++) {
-	// 	textName = "text-f" + valuesFun[iFun];
-	// 	if ((selectedNode === "funAll") || (valuesFun[iFun] == chosenFun[0])) {
-	// 		document.getElementById(textName).setAttribute("style", "display:block;");
-	// 	}
-	// 	else {
-	// 		document.getElementById(textName).setAttribute("style", "display:none;");
-	// 	}
-	// }
-
+	
 	/* Reflect the current state in the URL parameters */
 	setAllParams();
 }
