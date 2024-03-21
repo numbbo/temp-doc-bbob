@@ -107,6 +107,16 @@ function changePlot() {
 			}
 		}
 	}
+
+	for (let iFun = 0; iFun < valuesFun.length; iFun++) {
+		textName = "text-f" + valuesFun[iFun];
+		if ((selectedNode === "funAll") || (valuesFun[iFun] == chosenFun[0])) {
+			document.getElementById(textName).setAttribute("style", "display:block;");
+		}
+		else {
+			document.getElementById(textName).setAttribute("style", "display:none;");
+		}
+	}
 	
 	/* Reflect the current state in the URL parameters */
 	setAllParams();
@@ -179,7 +189,7 @@ function setAllParams() {
     const urlParams = new URLSearchParams(window.location.search);
     for (var i = 0; i < params.length; i++) {
 		var value = document.getElementById(params[i]).value;
-        if (selectedNode === (params[i] + "All")) {
+		if (selectedNode === (params[i] + "All")) {
             value = "all";
         }
         urlParams.set(params[i], value);

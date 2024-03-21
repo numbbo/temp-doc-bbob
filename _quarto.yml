@@ -26,18 +26,21 @@ website:
     title: false
     background: primary
     logo: images/favicon.png
-    left:
-    - text: "Home"
-      href: index.qmd
   sidebar:
     style: "docked"
     contents:
-      - text: "Home"
-        href: index.qmd
-      - text: "Function definitions"
-        file: def.qmd
-      - text: "Visualizations"
-        file: vis.qmd
+      - section: "BBOB"
+        contents:
+          - text: "Function Definitions"
+            href: "bbob/def.html"
+          - text: "Visualizations"
+            href: "bbob/vis.html"
+      - section: "Mixed-integer"
+        contents:
+          - text: "Function Definitions"
+            href: "mixed-integer/def.html"
+          - text: "Visualizations"
+            href: "mixed-integer/vis.html"
   search: 
     location: navbar
     type: overlay
@@ -45,6 +48,7 @@ website:
 format:
   html:
     toc: true
+    toc-depth: 2
     theme: coco.scss
     css: "assets/css/custom.css"
     html-math-method: katex
