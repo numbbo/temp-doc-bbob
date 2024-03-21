@@ -1,12 +1,12 @@
 /* Url to the plots */
-plotPath = "https://raw.githubusercontent.com/numbbo/bbob-plots/main/bbob/"
+plotPath = "https://raw.githubusercontent.com/numbbo/bbob-plots/main/bbob-mixint/"
 
 /* Define some global variables */
-var labelsTyp = ["Search space cuts: lin-lin", "Search space cuts: lin-log", "Search space cuts: log-log", "Heatmap", "Surface plot"];
-var valuesTyp = ["cuts-lin-lin", "cuts-lin-log", "cuts-log-log", "heatmap", "surface"];
+var labelsTyp = ["Search space cuts: lin-lin", "Search space cuts: lin-log"];
+var valuesTyp = ["cuts-lin-lin", "cuts-lin-log"];
 var allNodes = ["dimAll", "funAll", "insAll", "typAll"];
 var selectedNode = "typAll";
-var valuesDim = ["2"];
+var valuesDim = ["5"];
 var valuesFun = [];
 for (let i = 1; i <= 24; i++) {valuesFun.push(i);}
 var valuesIns = [];
@@ -19,8 +19,8 @@ var params = ["col", "dim", "fun", "ins", "typ"];
    there are five plots per row, the first option is chosen for all other select elements) */
 window.onload=function() {
     /* Fill the dropdowns with values */
-    fill_options("col", valuesCol, valuesCol, "5");
-    fill_options("dim", valuesDim, valuesDim, "2");
+    fill_options("col", valuesCol, valuesCol, "2");
+    fill_options("dim", valuesDim, valuesDim, "5");
     fill_options("fun", valuesFun, valuesFun, "1");
     fill_options("ins", valuesIns, valuesIns, "1");
     fill_options("typ", valuesTyp, labelsTyp, "cuts-lin-lin");
@@ -95,26 +95,15 @@ function changePlot() {
 		chosenTyp = [...valuesTyp];
 	}
 	document.getElementById("images").innerHTML = "";
-    // document.getElementById("result").value = "";
+
 	for (let iDim = 0; iDim < chosenDim.length; iDim++) {
 		for (let iFun = 0; iFun < chosenFun.length; iFun++) {
 			for (let iIns = 0; iIns < chosenIns.length; iIns++) {
 				for (let iTyp = 0; iTyp < chosenTyp.length; iTyp++) {
-					plotName = chosenTyp[iTyp] + "-500/bbob_f" + pad(chosenFun[iFun], 1) + "_i" + pad(chosenIns[iIns], 0) + "_d" + pad(chosenDim[iDim], 0) + "_" + pad(chosenTyp[iTyp], 0) + ".png";
+					plotName = chosenTyp[iTyp] + "-500/mixint_f" + pad(chosenFun[iFun], 1) + "_i" + pad(chosenIns[iIns], 0) + "_d" + pad(chosenDim[iDim], 0) + "_" + pad(chosenTyp[iTyp], 0) + ".png";
 					addPlot(plotName);
-					// document.getElementById("result").value += plotName + "\n";
 				}
 			}
-		}
-	}
-
-	for (let iFun = 0; iFun < valuesFun.length; iFun++) {
-		textName = "text-f" + valuesFun[iFun];
-		if ((selectedNode === "funAll") || (valuesFun[iFun] == chosenFun[0])) {
-			document.getElementById(textName).setAttribute("style", "display:block;");
-		}
-		else {
-			document.getElementById(textName).setAttribute("style", "display:none;");
 		}
 	}
 	

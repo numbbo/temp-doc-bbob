@@ -23,7 +23,9 @@ columns (click on <b>Dimension</b>/<b>Function</b>/<b>Instance</b>/<b>Visualizat
 </tr>
 <tr>
 <td class="select" align="center">
-<select id="dim" onchange="changePlot()" class="dropdown"></select>
+<button id="dimPrev" onclick="getPrev(this)" class="button" hidden>&minus;</button>
+<div id="dim" class="dropdown" disabled></div>
+<button id="dimNext" onclick="getNext(this)" class="button" hidden>+</button>
 </td>
 <td class="select" align="center">
 <button id="funPrev" onclick="getPrev(this)" class="button">&minus;</button>

@@ -5,7 +5,3 @@ format:
     grid:
       margin-width: 450px
 ---
-
-{{< include ../assets/bbob/func_def/intro.md >}}
-
-{{< include ../assets/bbob/func_def/functions.md >}}
