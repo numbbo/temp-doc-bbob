@@ -122,13 +122,18 @@ the suite.
 
 ::: {#fig-1 layout-ncol=3}
 
-![bbob suite](../images/1.png){#fig-a}
+![bbob suite](https://raw.githubusercontent.com/LukaMarkicevic/temp-doc-bbob/main/assets/mixed-integer/images/1.png){#fig-a}
 
-![bbob-mixint suite before scaling](../images/2.png){#fig-b}
+![bbob-mixint suite before scaling](https://raw.githubusercontent.com/LukaMarkicevic/temp-doc-bbob/main/assets/mixed-integer/images/2.png){#fig-b}
 
-![bbob-mixint suite](../images/3.png){#fig-c}
+![bbob-mixint suite](https://raw.githubusercontent.com/LukaMarkicevic/temp-doc-bbob/main/assets/mixed-integer/images/3.png){#fig-c}
 
+Estimation of targets reached by the domain middle (in logarithmic scale). They are computed as the distance between
+the f -value of the domain middle and the optimal solution for the bbob suite (a), or the median of the distances between the
+f -values of 1000 domain middle samples and the optimal solution for the bbob-mixint suite before (b) and after (c) scaling.
+Each circle depicts one problem instance for instances 1–15.
 :::
+
 
 | Factor | Value    | Factor | Value    | Factor | Value | Factor | Value |
 |--------|----------|--------|----------|--------|-------|--------|-------|
@@ -139,6 +144,7 @@ the suite.
 | $f_5$  | 1        | $f_{11}$ | $10^{-2}$| $f_{17}$ | 10    | $f_{23}$ | 10    |
 | $f_6$  | $10^{-2}$| $f_{12}$ | $10^{-4}$| $f_{18}$ | 1     | $f_{24}$ | 0.1   |
 
+: Table 1: Factors used for scaling the bbob-mixint functions.
 
 To summarize, the `bbob-mixint` suite contains mixed-integer problems
 constructed by discretizing the continuous problems from the `bbob` and
