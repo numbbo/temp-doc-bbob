@@ -6,6 +6,4 @@ format:
       margin-width: 450px
 ---
 
-{{< include ../assets/mixed-integer/func_def/intro.md >}}
-
 {{< include ../assets/mixed-integer/func_def/functions.md >}}
