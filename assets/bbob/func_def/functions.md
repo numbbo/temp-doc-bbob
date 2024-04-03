@@ -1,5 +1,5 @@
 <div id="text-f1">
-### $F_1:~$Sphere Function 
+## $F_1:~$Sphere Function {#f1}
 
 $$f_{1}(\mathbf{x}) = \|\mathbf{z}\|^2 + f_\mathrm{opt}$$
 
@@ -22,7 +22,7 @@ random search is too expensive).
 </div>
 
 <div id="text-f2">
-### $F_2:~$Ellipsoidal Function 
+## $F_2:~$Ellipsoidal Function {#f2}
 
 $$f_{2}(\mathbf{x}) = \sum_{i = 1}^{D} 10^{6\frac{i-1}{D-1}}\,z_i^2 + f_\mathrm{opt}\\$$
 
@@ -42,7 +42,7 @@ irregularities.
 -   In comparison to f10: Is separability exploited?
 </div>
 <div id="text-f3">
-### $F_3:~$Rastrigin Function 
+## $F_3:~$Rastrigin Function {#f3}
 
 $$f_{3}(\mathbf{x}) = 10 \left(D- \sum_{i = 1}^{D}\cos(2\pi z_i)\right) + \|\mathbf{z}\|^2 + f_\mathrm{opt}$$
 
@@ -64,7 +64,7 @@ the symmetry and regularity of the original Rastrigin function
 -   In comparison to f15: Is separability exploited?
 </div>
 <div id="text-f4">
-### $F_4:~$Büche-Rastrigin Function 
+## $F_4:~$Büche-Rastrigin Function {#f4}
 
 $$f_{4}(\mathbf{x}) = 10 \left(D- \sum_{i = 1}^{D}\cos(2\pi z_i)\right) + 
              \sum_{i = 1}^{D}z_i^2 + 100\,f_{\mathrm{pen}}(\mathbf{x}) + f_\mathrm{opt}$$
@@ -93,7 +93,7 @@ symmetrically distributed search operators.
 -   In comparison to f3: What is the effect of asymmetry?
 </div>
 <div id="text-f5">
-### $F_5:~$Linear Slope 
+## $F_5:~$Linear Slope {#f5}
 
 $$f_{5}(\mathbf{x}) = \sum_{i = 1}^{D} 5\,|s_i| - s_i z_i  
    + f_\mathrm{opt}$$
@@ -123,7 +123,7 @@ initial convex hull of solutions right into the domain boundary.
 </div>
 
 <div id="text-f6">
-### $F_6:~$Attractive Sector Function 
+## $F_6:~$Attractive Sector Function {#f6}
 
 $$f_{6}(\mathbf{x}) = T_\mathrm{\hspace*{-0.01emosz}}\left(\sum_{i = 1}^{D} (s_i z_i)^2\right)^{0.9} + f_\mathrm{opt}$$
 
@@ -148,7 +148,7 @@ function values. The optimum is located at the tip of this cone.
     landscape?
 </div>
 <div id="text-f7">
-### $F_7:~$Step Ellipsoidal Function 
+## $F_7:~$Step Ellipsoidal Function {#f7}
 
 $$f_{7}(\mathbf{x}) = 0.1 \max\left(|\hat{z}_1|/10^4,\, \sum_{i = 1}^{D} 
                          10^{2\frac{i-1}{D-1}} z_i^2\right) + f_{\mathrm{pen}}(\mathbf{x}) + f_\mathrm{opt}$$
@@ -173,7 +173,7 @@ everywhere.
 -   Does the search get stuck on plateaus?
 </div>
 <div id="text-f8">
-### $F_8:~$Rosenbrock Function, original
+## $F_8:~$Rosenbrock Function, original {#f8}
 
 $$f_{8}(\mathbf{x}) = \sum_{i = 1}^{D-1} \left( 100\,\left(z_i^2 - z_{i+1}\right)^2 + (z_i-1)^2 \right) + f_\mathrm{opt}$$
 
@@ -200,7 +200,7 @@ $\mathbf{x^\mathrm{opt}}\in[-3,3]^D$.
     the direction?
 </div>
 <div id="text-f9">
-### $F_9:~$Rosenbrock Function, rotated 
+## $F_9:~$Rosenbrock Function, rotated {#f9}
 
 $$f_{9}(\mathbf{x}) = \sum_{i = 1}^{D-1} \left( 100\,\left(z_i^2 - z_{i+1}\right)^2 + (z_i-1)^2 \right) + f_\mathrm{opt}$$
 
@@ -220,7 +220,7 @@ rotated version of the previously defined Rosenbrock function.
 </div>
 
 <div id="text-f10">
-### $F_{10}:~$Ellipsoidal Function 
+## $F_{10}:~$Ellipsoidal Function {#f10}
 
 $$f_{10}(\mathbf{x}) = \sum_{i = 1}^{D} 10^{6\frac{i-1}{D-1}}z_i^2 + f_\mathrm{opt}$$
 
@@ -242,7 +242,7 @@ Note: The 3d plot shows only a part of the complete function in the
 vicinity of the optimum.
 </div>
 <div id="text-f11">
-### $F_{11}:~$Discus Function 
+## $F_{11}:~$Discus Function {#f11}
 
 $$f_{11}(\mathbf{x}) = 10^6 z_1^2 + \sum_{i = 2}^{D} z_i^2 + f_\mathrm{opt}$$
 
@@ -265,7 +265,7 @@ Note: The 3d plot shows only a part of the complete function in the
 vicinity of the optimum.
 </div>
 <div id="text-f12">
-### $F_{12}:~$Bent Cigar Function 
+## $F_{12}:~$Bent Cigar Function {#f12}
 
 $$f_{12}(\mathbf{x}) = z_1^2 + 10^6\sum_{i = 2}^{D} z_i^2 + f_\mathrm{opt}$$
 
@@ -288,7 +288,7 @@ Note: The 3d plot shows only a part of the complete function in the
 vicinity of the optimum.
 </div>
 <div id="text-f13">
-### $F_{13}:~$Sharp Ridge Function 
+## $F_{13}:~$Sharp Ridge Function {#f13}
 
 $$f_{13}(\mathbf{x}) = z_1^2 + 100\,\sqrt{\sum_{i = 2}^{D} z_i^2} + f_\mathrm{opt}$$
 
@@ -310,7 +310,7 @@ gradient towards the ridge does not flatten out.\
     non-differentiabale ridge?
 </div>
 <div id="text-f14">
-### $F_14:~$Different Powers Function 
+## $F_{14}:~$Different Powers Function {#f14}
 
 $$f_{14}(\mathbf{x}) = \sqrt{\sum_{i = 1}^{D}|z_i|^{2+4\frac{i - 1}{D- 1}}} + f_\mathrm{opt}$$
 
@@ -322,7 +322,7 @@ Due to the different exponents the sensitivies of the $z_i$-variables
 become more and more different when approaching the optimum.
 </div>
 <div id="text-f15">
-### $F_{15}:~$Rastrigin Function 
+## $F_{15}:~$Rastrigin Function {#f15}
 
 $$f_{15}(\mathbf{x}) = 10 \left(D- \sum_{i = 1}^{D}\cos(2\pi z_i)\right) 
     + \|\mathbf{z}\|^2 + f_\mathrm{opt}$$
@@ -349,7 +349,7 @@ of the original Rastrigin function.
     highly multimodal function?
 </div>
 <div id="text-f16">
-### $F_{16}:~$Weierstrass Function 
+## $F_{16}:~$Weierstrass Function {#f16}
 
 $$f_{16}(\mathbf{x}) = 10 \left( \frac{1}{D} 
    \sum_{i = 1}^{D}\sum_{k = 0}^{11} 1/2^k \cos(2\pi3^k(z_i + 1/2))
@@ -375,7 +375,7 @@ optimum is not unique.
     deter the search behavior?
 </div>
 <div id="text-f17">
-### $F_{17}:~$Schaffers F7 Function 
+## $F_{17}:~$Schaffers F7 Function {#f17}
 
 $$f_{17}(\mathbf{x}) = \left(\frac{1}{D- 1}\sum_{i = 1}^{D- 1} \sqrt{s_i} + 
       \sqrt{s_i} \sin^2\!\left(50\,s_i^{1/5}\right)\right)^2 + 10\,f_{\mathrm{pen}}(\mathbf{x}) + f_\mathrm{opt}$$
@@ -394,7 +394,7 @@ modulation vary.
 -   conditioning is low
 </div>
 <div id="text-f18">
-### $F_{18}:~$Schaffers F7 Function, moderately ill-conditioned 
+## $F_{18}:~$Schaffers F7 Function, moderately ill-conditioned {#f18}
 
 $$f_{18}(\mathbf{x}) = \left(\frac{1}{D- 1}\sum_{i = 1}^{D- 1} \sqrt{s_i} + 
       \sqrt{s_i} \sin^2\!\left(50\,s_i^{1/5}\right)\right)^2 + 10\,f_{\mathrm{pen}}(\mathbf{x}) + f_\mathrm{opt}$$
@@ -415,7 +415,7 @@ Moderately ill-conditioned counterpart to $f_{17}$
 -   In comparison to f17: What is the effect of ill-conditioning?
 </div>
 <div id="text-f19">
-### $F_19:~$Composite Griewank-Rosenbrock Function F8F2
+## $F_{19}:~$Composite Griewank-Rosenbrock Function F8F2 {#f19}
 
 $$f_{19}(\mathbf{x}) = \frac{10}{D-1} \sum_{i=1}^{D-1} \left( \frac{s_i}{4000} - \cos(s_i) \right) + 10 + f_\mathrm{opt}$$
 
@@ -431,7 +431,7 @@ $$f_{19}(\mathbf{x}) = \frac{10}{D-1} \sum_{i=1}^{D-1} \left( \frac{s_i}{4000} -
 Resembling the Rosenbrock function in a highly multimodal way.
 </div>
 <div id="text-f20">
-### $F_{20}:~$Schwefel Function 
+## $F_{20}:~$Schwefel Function {#f20}
 
 $$f_{20}(\mathbf{x}) = - \frac{1}{100D}%  % kept in the final print
 \sum_{i = 1}^{D}z_i\sin(\sqrt{|z_i|}) + 4.189828872724339 
@@ -455,7 +455,7 @@ close to the corners of the unpenalized search area.
     occur further away from the search space origin
 </div>
 <div id="text-f21">
-### $F_{21}:~$Gallagher's Gaussian 101-me Peaks Function
+## $F_{21}:~$Gallagher's Gaussian 101-me Peaks Function {#f21}
 
 $$f_{21}(\mathbf{x}) = T_\mathrm{\hspace*{-0.01emosz}}\left( 10 - \max_{i=1}^{101} 
        w_i \exp\left(-\frac{1}{2D}\, 
@@ -494,7 +494,7 @@ function).
 -   Is the search effective without any global structure?
 </div>
 <div id="text-f22">
-### $F_{22}:~$Gallagher's Gaussian 21-hi Peaks Function
+## $F_{22}:~$Gallagher's Gaussian 21-hi Peaks Function {#f22}
 
 $$f_{22}(\mathbf{x}) = T_\mathrm{\hspace*{-0.01emosz}}\left( 10 - \max_{i=1}^{21} 
        w_i \exp\left(-\frac{1}{2D}\, 
@@ -532,7 +532,7 @@ function).
 -   In comparison to f21: What is the effect of higher condition?
 </div>
 <div id="text-f23">
-### $F_{23}:~$Katsuura Function 
+## $F_{23}:~$Katsuura Function {#f23}
 
 $$f_{23}(\mathbf{x}) = \frac{10}{D^{2}} \prod_{i=1}^D\left(1 + i\sum_{j=1}^{32} 
      \frac{\left|2^j z_i - [2^j z_i]\right|}{2^j} \right)^{10/D^{1.2}}
@@ -546,7 +546,7 @@ Highly rugged and highly repetitive function with more than
 $10^D$ global optima.
 </div>
 <div id="text-f24">
-### $F_{24}:~$Lunacek bi-Rastrigin Function 
+## $F_{24}:~$Lunacek bi-Rastrigin Function {#f24}
 
 $$f_{24}(\mathbf{x}) = \mathrm{min}\left(\sum_{i = 1}^{D}(\hat{x}_i - \mu_0)^2,
                        d\,D+ s\sum_{i = 1}^{D}(\hat{x}_i - \mu_1)^2\right)

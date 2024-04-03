@@ -4,7 +4,12 @@ format:
   html:
     grid:
       margin-width: 450px
+    toc-depth: 2
+    toc-expand: 2
 ---
+
+![](../assets/bbob/func_def/func_def.pdf){width=100% height=800px}
+
 
 {{< include ../assets/bbob/func_def/intro.md >}}
 

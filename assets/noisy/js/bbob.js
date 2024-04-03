@@ -1,14 +1,14 @@
 /* Url to the plots */
-plotPath = "https://raw.githubusercontent.com/numbbo/bbob-plots/main/bbob/"
+plotPath = "https://raw.githubusercontent.com/numbbo/bbob-noisy/main/bbob/"
 
 /* Define some global variables */
-var labelsTyp = ["Search space cuts: lin-lin", "Search space cuts: lin-log", "Search space cuts: log-log", "Heatmap", "Rank ratio heatmap", "Surface plot"];
-var valuesTyp = ["cuts-lin-lin", "cuts-lin-log", "cuts-log-log", "heatmap", "rank-ratio-heatmap", "surface"];
+var labelsTyp = ["Search space cuts: lin-lin", "Search space cuts: lin-log", "Search space cuts: log-log", "Heatmap", "Surface plot"];
+var valuesTyp = ["cuts-lin-lin", "cuts-lin-log", "cuts-log-log", "heatmap", "surface"];
 var allNodes = ["dimAll", "funAll", "insAll", "typAll"];
 var selectedNode = "typAll";
 var valuesDim = ["2", "3", "5", "10", "20", "40"];
 var valuesFun = [];
-for (let i = 1; i <= 24; i++) {valuesFun.push(i);}
+for (let i = 1; i <= 30; i++) {valuesFun.push(i);}
 var valuesIns = [];
 for (let i = 1; i <= 15; i++) {valuesIns.push(i);}
 var valuesCol = [];
