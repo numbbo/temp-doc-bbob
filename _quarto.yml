@@ -35,6 +35,12 @@ website:
             href: "bbob/def.html"
           - text: "Visualizations"
             href: "bbob/vis.html"
+      - section: "Noisy"
+        contents:
+          - text: "Function Definitions"
+            href: "noisy/def.html"
+          - text: "Visualizations"
+            href: "noisy/vis.html"
       - section: "Mixed-integer"
         contents:
           - text: "Function Definitions"
@@ -48,7 +54,7 @@ website:
 format:
   html:
     toc: true
-    toc-depth: 2
+    toc-depth: 3
     theme: coco.scss
     css: "assets/css/custom.css"
     html-math-method: katex

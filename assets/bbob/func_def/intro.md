@@ -25,7 +25,7 @@ instance the randomly chosen values are drawn anew. Apart from the
 first subgroup, the benchmarks are non-separable. Other specific
 properties are discussed in the appendix.
 
-## General Setup
+# General Setup
 
 #### Search Space
 
@@ -75,7 +75,7 @@ $T^{{}}_\mathrm{asy}$ is the identity for negative values. When
 $T^{{}}_\mathrm{asy}$ is applied, a portion of $1/2^D$ of
 the search space remains untransformed.
 
-## Symbols and Definitions []{#sec:symbols label="sec:symbols"}
+# Symbols and Definitions []{#sec:symbols label="sec:symbols"}
 
 Used symbols and definitions of, e.g., auxiliary functions are given in
 the following. Vectors are typeset in bold and refer to column vectors.
