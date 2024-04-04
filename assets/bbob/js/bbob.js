@@ -3,7 +3,7 @@ plotPath = "https://raw.githubusercontent.com/numbbo/bbob-plots/main/bbob/"
 
 /* Define some global variables */
 var labelsTyp = ["Search space cuts: lin-lin", "Search space cuts: lin-log", "Search space cuts: log-log", "Heatmap", "Rank ratio heatmap", "Surface plot"];
-var valuesTyp = ["cuts-lin-lin", "cuts-lin-log", "cuts-log-log", "heatmap", "rank-ratio-heatmap", "surface"];
+var valuesTyp = ["cuts-lin-lin", "cuts-lin-log", "cuts-log-log", "heatmap", "heatmap-rank", "surface"];
 var allNodes = ["dimAll", "funAll", "insAll", "typAll"];
 var selectedNode = "typAll";
 var valuesDim = ["2", "3", "5", "10", "20", "40"];
@@ -19,7 +19,7 @@ var params = ["col", "dim", "fun", "ins", "typ"];
    there are five plots per row, the first option is chosen for all other select elements) */
 window.onload=function() {
     /* Fill the dropdowns with values */
-    fill_options("col", valuesCol, valuesCol, "5");
+    fill_options("col", valuesCol, valuesCol, "3");
     fill_options("dim", valuesDim, valuesDim, "2");
     fill_options("fun", valuesFun, valuesFun, "1");
     fill_options("ins", valuesIns, valuesIns, "1");

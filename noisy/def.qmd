@@ -4,8 +4,8 @@ format:
   html:
     grid:
       margin-width: 450px
-    toc-expand: 3
-
+    toc-expand: 4
+    toc-depth: 4
 ---
 
 {{< include ../assets/noisy/func_def/intro.md >}}

@@ -19,7 +19,7 @@ var params = ["col", "dim", "fun", "ins", "typ"];
    there are five plots per row, the first option is chosen for all other select elements) */
 window.onload=function() {
     /* Fill the dropdowns with values */
-    fill_options("col", valuesCol, valuesCol, "5");
+    fill_options("col", valuesCol, valuesCol, "3");
     fill_options("dim", valuesDim, valuesDim, "2");
     fill_options("fun", valuesFun, valuesFun, "1");
     fill_options("ins", valuesIns, valuesIns, "1");
