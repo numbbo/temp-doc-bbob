@@ -66,13 +66,13 @@ $\mathbf{x}^\mathrm{opt}$ :   optimal solution vector, such that
 
 ## General Setup
 
-#### Search Space
+### Search Space
 
 All functions are defined and can be evaluated over
 $\mathcal{R}^{D}$, while the actual search
 domain is given as $[-5,5]^{D}$.
 
-#### Location of the optimal $\mathbf{x}^\mathrm{opt}$ and of $f_\mathrm{opt}=f(\mathbf{x^\mathrm{opt}})$
+### Location of the optimal $\mathbf{x}^\mathrm{opt}$ and of $f_\mathrm{opt}=f(\mathbf{x^\mathrm{opt}})$
 
 All functions have their global optimum in $[-5,5]^{D}$.
 The majority of functions has the global optimum in
@@ -87,18 +87,18 @@ optimum in
 $\mathbf{z^\mathrm{opt}}=\mathbf{0}$, if not
 stated otherwise.
 
-#### Boundary Handling
+### Boundary Handling
 
 On all functions a penalty boundary handling is applied as given with
 $f^{{}}_\mathrm{pen}$.
 
-#### Linear Transformations
+### Linear Transformations
 
 Linear transformations of the search space are applied to derive
 non-separable functions from separable ones and to control the
 conditioning of the function.
 
-#### Non-Linear Transformations and Symmetry Breaking
+### Non-Linear Transformations and Symmetry Breaking
 
 In order to make relatively simple, but well understood functions less
 regular, on some functions non-linear transformations are applied in
@@ -125,7 +125,7 @@ model. All noise models are applied to a function value $f$ under the
 assumption that $f\ge0$. All noise models reveal *stochastic dominance*
 between any two solutions and are therefore utility-free.
 
-#### Gaussian Noise
+### Gaussian Noise
 
 The Gaussian noise model is scale invariant and defined as
 $$f_{\mathrm{GN}\left({f,\beta}\right)} = f\times\exp(\beta\,\mathcal{N}(0,1))\enspace.$$
@@ -135,7 +135,7 @@ the benchmark functions with moderate noise $\beta = 0.01$, otherwise
 $\beta = 1$. For small values of $\beta$ this noise model resembles
 $f\times(1+\beta\,\mathcal{N}(0,1))$.
 
-#### Uniform Noise
+### Uniform Noise
 
 The uniform noise model is introduced as a more severe noise model than
 the Gaussian and is defined as $$
@@ -154,7 +154,7 @@ The uniform noise model is not scale invariant. Due to the last factor
 (positive) value of $f$. Therefore the noise strength becomes more
 severe when approaching the optimum.
 
-#### Cauchy Noise
+### Cauchy Noise
 
 The Cauchy noise model represents a different type of noise with two
 important aspects. First, only a comparatively small percentage of
@@ -170,7 +170,7 @@ The summand of $1000$ was chosen to sample positive and negative
 "outliers" (as the function value is cut from below, see next paragraph)
 and $\epsilon$ is set to $10^{-199}$.
 
-#### Final Function Value
+### Final Function Value
 
 In order to achieve a convenient testing for the target function value,
 in all noise models $1.01\times10^{-8}$ is added to the function value

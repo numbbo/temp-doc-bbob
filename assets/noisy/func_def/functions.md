@@ -1,13 +1,13 @@
 
-# Functions with moderate noise
+## Functions with moderate noise
 
-## Sphere
+### Sphere
 
 $$f_\mathrm{sphere}(\mathbf{x}) = \|\mathbf{z}\|^2$$
 
 -   $\mathbf{z}= \mathbf{x}- \mathbf{x^\mathrm{opt}}$
 
-#### Properties
+**Properties:**
 
 Presumably the most easy continuous domain search problem, given the
 volume of the searched solution is small (i.e. where pure monte-carlo
@@ -17,22 +17,22 @@ random search is too expensive).
 
 -   highly symmetric, in particular rotationally invariant
 
-### $F_{101}:~$ Sphere with moderate gaussian noise
+#### f<sub>101</sub>:  Sphere with moderate gaussian noise
 
 $$f_{101}(\mathbf{x}) = f_{\mathrm{GN}}({f_\mathrm{sphere}(\mathbf{x}),0.01}) + f_{\mathrm{pen}}(\mathbf{x}) + f_\mathrm{opt}$$
 
 
-### $F_{102}:~$ Sphere with moderate uniform noise
+#### f<sub>102</sub>:  Sphere with moderate uniform noise
 
 $$f_{102}(\mathbf{x}) = f_{\mathrm{UN}}\left({f_\mathrm{sphere}(\mathbf{x}),0.01\left(0.49 + \dfrac{1}{D}\right),0.01}\right) + f_{\mathrm{pen}}(\mathbf{x}) + f_\mathrm{opt}$$
 
 
-### $F_{103}:~$ Sphere with moderate seldom cauchy noise
+#### f<sub>103</sub>:  Sphere with moderate seldom cauchy noise
 
 $$f_{103}(\mathbf{x}) = f_{\mathrm{CN}}\left({f_\mathrm{sphere}(\mathbf{x}),0.01,0.05}\right) + f_{\mathrm{pen}}(\mathbf{x}) + f_\mathrm{opt}$$
 
 
-## Rosenbrock
+### Rosenbrock
 
 $$f_\mathrm{rosenbrock}(\mathbf{x}) = \sum_{i = 1}^{D-1} 100\,\left(z_i^2 - z_{i+1}\right)^2 + (z_i-1)^2$$
 
@@ -40,7 +40,7 @@ $$f_\mathrm{rosenbrock}(\mathbf{x}) = \sum_{i = 1}^{D-1} 100\,\left(z_i^2 - z_{i
 
 -   $\mathbf{z^\mathrm{opt}}=\mathbf{1}$
 
-#### Properties
+**Properties:**
 
 So-called banana function due to its 2-D contour lines as a bent ridge
 (or valley). In the beginning, the prominent first term of the function
@@ -52,30 +52,30 @@ changes its orientation $D-1$ times.
 -   in larger dimensions the function has a local optimum with an
     attraction volume of about 25%
 
-### $F_{104}:~$ Rosenbrock with moderate gaussian noise
+#### f<sub>104</sub>:  Rosenbrock with moderate gaussian noise
 
 $$f_{104}(\mathbf{x}) = f_{\mathrm{GN}}\left({f_\mathrm{rosenbrock}(\mathbf{x}),0.01}\right) + f_{\mathrm{pen}}(\mathbf{x}) + f_\mathrm{opt}$$
 
 
-### $F_{105}:~$ Rosenbrock with moderate uniform noise
+#### f<sub>105</sub>:  Rosenbrock with moderate uniform noise
 
 $$f_{105}(\mathbf{x}) = f_{\mathrm{UN}}\left({f_\mathrm{rosenbrock}(\mathbf{x}),0.01\left(0.49 + \dfrac{1}{D}\right),0.01}\right) + f_{\mathrm{pen}}(\mathbf{x}) + f_\mathrm{opt}$$
 
 
-### $F_{106}:~$ Rosenbrock with moderate seldom cauchy noise
+#### f<sub>106</sub>:  Rosenbrock with moderate seldom cauchy noise
 
 $$f_{106}(\mathbf{x}) = f_{\mathrm{CN}}\left({f_\mathrm{rosenbrock}(\mathbf{x}),0.01,0.05}\right) + f_{\mathrm{pen}}(\mathbf{x}) + f_\mathrm{opt}$$
 
 
-# Functions with severe noise
+## Functions with severe noise
 
-## Sphere 
+### Sphere 
 
 $$f_\mathrm{sphere}(\mathbf{x}) = \|\mathbf{z}\|^2$$
 
 -   $\mathbf{z}= \mathbf{x}- \mathbf{x^\mathrm{opt}}$
 
-#### Properties
+**Properties:**
 
 Presumably the most easy continuous domain search problem, given the
 volume of the searched solution is small (i.e. where pure monte-carlo
@@ -85,22 +85,22 @@ random search is too expensive).
 
 -   highly symmetric, in particular rotationally invariant
 
-### $F_{107}:~$ Sphere with gaussian noise
+#### f<sub>107</sub>:  Sphere with gaussian noise
 
 $$f_{107}(\mathbf{x}) = f_{\mathrm{GN}}\left({f_\mathrm{sphere}(\mathbf{x}),1}\right) + f_{\mathrm{pen}}(\mathbf{x}) + f_\mathrm{opt}$$
 
 
-### $F_{108}:~$ Sphere with uniform noise
+#### f<sub>108</sub>:  Sphere with uniform noise
 
 $$f_{108}(\mathbf{x}) = f_{\mathrm{UN}}\left({f_\mathrm{sphere}(\mathbf{x}),0.49 + \dfrac{1}{D},1}\right) + f_{\mathrm{pen}}(\mathbf{x}) + f_\mathrm{opt}$$
 
 
-### $F_{109}:~$ Sphere with seldom cauchy noise
+#### f<sub>109</sub>:  Sphere with seldom cauchy noise
 
 $$f_{109}(\mathbf{x}) = f_{\mathrm{CN}}\left({f_\mathrm{sphere}(\mathbf{x}),1,0.2}\right) + f_{\mathrm{pen}}(\mathbf{x}) + f_\mathrm{opt}$$
 
 
-## Rosenbrock 
+### Rosenbrock 
 
 $$f_\mathrm{rosenbrock}(\mathbf{x}) = \sum_{i = 1}^{D-1} 100\,\left(z_i^2 - z_{i+1}\right)^2 + (z_i-1)^2$$
 
@@ -108,7 +108,7 @@ $$f_\mathrm{rosenbrock}(\mathbf{x}) = \sum_{i = 1}^{D-1} 100\,\left(z_i^2 - z_{i
 
 -   $\mathbf{z^\mathrm{opt}}=\mathbf{1}$
 
-#### Properties
+**Properties:**
 
 So-called banana function due to its 2-D contour lines as a bent ridge
 (or valley). In the beginning, the prominent first term of the function
@@ -119,22 +119,22 @@ changes its orientation $D-1$ times.
 
 -   a local optimum with an attraction volume of about 25%
 
-### $F_{110}:~$ Rosenbrock with gaussian noise
+#### f<sub>110</sub>:  Rosenbrock with gaussian noise
 
 $$f_{110}(\mathbf{x}) = f_{\mathrm{GN}}\left({f_\mathrm{rosenbrock}(\mathbf{x}),1}\right) + f_{\mathrm{pen}}(\mathbf{x}) + f_\mathrm{opt}$$
 
 
-### $F_{111}:~$ Rosenbrock with uniform noise
+#### f<sub>111</sub>:  Rosenbrock with uniform noise
 
 $$f_{111}(\mathbf{x}) = f_{\mathrm{UN}}\left({f_\mathrm{rosenbrock}(\mathbf{x}),0.49 + \dfrac{1}{D},1}\right) + f_{\mathrm{pen}}(\mathbf{x}) + f_\mathrm{opt}$$
 
 
-### $F_{112}:~$ Rosenbrock with seldom cauchy noise
+#### f<sub>112</sub>:  Rosenbrock with seldom cauchy noise
 
 $$f_{112}(\mathbf{x}) = f_{\mathrm{CN}}\left({f_\mathrm{rosenbrock}(\mathbf{x}),1,0.2}\right) + f_{\mathrm{pen}}(\mathbf{x}) + f_\mathrm{opt}$$
 
 
-## Step ellipsoid 
+### Step ellipsoid 
 
 $$f_\mathrm{step}(\mathbf{x}) = 0.1 \max\left(|\hat{z}_1|/10^4,\, \sum_{i = 1}^{D} 10^{2\frac{i-1}{D-1}} z_i^2\right)$$
 
@@ -148,7 +148,7 @@ $$f_\mathrm{step}(\mathbf{x}) = 0.1 \max\left(|\hat{z}_1|/10^4,\, \sum_{i = 1}^{
 
 -   $\mathbf{z}= \mathbf{Q}\tilde{\mathbf{z}}$
 
-#### Properties
+**Properties:**
 
 The function consists of many plateaus of different sizes. Apart from a
 small area close to the global optimum, the gradient is zero almost
@@ -156,78 +156,78 @@ everywhere.
 
 -   condition number is about $100$
 
-### $F_{113}:~$ Step ellipsoid with gaussian noise
+#### f<sub>113</sub>:  Step ellipsoid with gaussian noise
 
 $$f_{113}(\mathbf{x}) = f_{\mathrm{GN}}\left({f_\mathrm{step}(\mathbf{x}),1}\right) + f_{\mathrm{pen}}(\mathbf{x}) + f_\mathrm{opt}$$
 
 
-### $F_{114}:~$ Step ellipsoid with uniform noise
+#### f<sub>114</sub>:  Step ellipsoid with uniform noise
 
 $$f_{114}(\mathbf{x}) = f_{\mathrm{UN}}\left({f_\mathrm{step}(\mathbf{x}),0.49 + \dfrac{1}{D},1}\right) + f_{\mathrm{pen}}(\mathbf{x}) + f_\mathrm{opt}$$
 
 
-### $F_{115}:~$ Step ellipsoid with seldom cauchy noise
+#### f<sub>115</sub>:  Step ellipsoid with seldom cauchy noise
 
 $$f_{115}(\mathbf{x}) = f_{\mathrm{CN}}\left({f_\mathrm{step}(\mathbf{x}),1,0.2}\right) + f_{\mathrm{pen}}(\mathbf{x}) + f_\mathrm{opt}$$
 
 
-## Ellipsoid
+### Ellipsoid
 
 $$f_\mathrm{ellipsoid}(\mathbf{x}) = \sum_{i = 1}^{D} 10^{4\frac{i-1}{D-1}}z_i^2$$
 
 -   $\mathbf{z}= T_\mathrm{\hspace*{-0.01emosz}}(\mathbf{R}(\mathbf{x}- \mathbf{x^\mathrm{opt}}))$
 
-#### Properties
+**Properties:**
 
 Globally quadratic ill-conditioned function with smooth local
 irregularities.
 
 -   condition number is $10^4$
 
-### $F_{116}:~$ Ellipsoid with gaussian noise
+#### f<sub>116</sub>:  Ellipsoid with gaussian noise
 
 $$f_{116}(\mathbf{x}) = f_{\mathrm{GN}}\left({f_\mathrm{ellipsoid}(\mathbf{x}),1}\right) + f_{\mathrm{pen}}(\mathbf{x}) + f_\mathrm{opt}$$
 
 
-### $F_{117}:~$ Ellipsoid with uniform noise
+#### f<sub>117</sub>:  Ellipsoid with uniform noise
 
 $$f_{117}(\mathbf{x}) = f_{\mathrm{UN}}\left({f_\mathrm{ellipsoid}(\mathbf{x}),0.49 + \dfrac{1}{D},1}\right) + f_{\mathrm{pen}}(\mathbf{x}) + f_\mathrm{opt}$$
 
 
-### $F_{118}:~$ Ellipsoid with seldom cauchy noise
+#### f<sub>118</sub>:  Ellipsoid with seldom cauchy noise
 
 $$f_{118}(\mathbf{x}) = f_{\mathrm{CN}}\left({f_\mathrm{ellipsoid}(\mathbf{x}),1,0.2}\right) + f_{\mathrm{pen}}(\mathbf{x}) + f_\mathrm{opt}$$
 
 
-## Different Powers 
+### Different Powers 
 
 $$f_\mathrm{diffpowers}(\mathbf{x}) = \sqrt{\sum_{i = 1}^{D}|z_i|^{2+4\frac{i - 1}{D- 1}}}$$
 
 -   $\mathbf{z}= \mathbf{R}(\mathbf{x}- \mathbf{x^\mathrm{opt}})$
 
-#### Properties
+**Properties:**
 
 Due to the different exponents the sensitivies of the $z_i$-variables
 become more and more different when approaching the optimum.
 
-### $F_{119}:~$ Different Powers with gaussian noise
+#### f<sub>119</sub>:  Different Powers with gaussian noise
 
 $$f_{119}(\mathbf{x}) = f_{\mathrm{GN}}\left({f_\mathrm{diffpowers}(\mathbf{x}),1}\right) + f_{\mathrm{pen}}(\mathbf{x}) + f_\mathrm{opt}$$
 
 
-### $F_{120}:~$ Different Powers with uniform noise
+#### f<sub>120</sub>:  Different Powers with uniform noise
 
 $$f_{120}(\mathbf{x}) = f_{\mathrm{UN}}\left({f_\mathrm{diffpowers}(\mathbf{x}),0.49 + \dfrac{1}{D},1}\right) + f_{\mathrm{pen}}(\mathbf{x}) + f_\mathrm{opt}$$
 
 
-### $F_{121}:~$ Different Powers with seldom cauchy noise
+#### f<sub>121</sub>:  Different Powers with seldom cauchy noise
 
 $$f_{121}(\mathbf{x}) = f_{\mathrm{CN}}\left({f_\mathrm{diffpowers}(\mathbf{x}),1,0.2}\right) + f_{\mathrm{pen}}(\mathbf{x}) + f_\mathrm{opt}$$
 
 
-# Highly multi-modal functions with severe noise
+## Highly multi-modal functions with severe noise
 
-## Schaffer's F7
+### Schaffer's F7
 
 $$f_\mathrm{schaffer}(\mathbf{x}) = \left(\frac{1}{D- 1}\sum_{i = 1}^{D- 1} \sqrt{s_i} +
       \sqrt{s_i} \sin^2\!\left(50\,s_i^{1/5}\right)\right)^2$$
@@ -236,29 +236,29 @@ $$f_\mathrm{schaffer}(\mathbf{x}) = \left(\frac{1}{D- 1}\sum_{i = 1}^{D- 1} \sqr
 
 -   $s_i = \sqrt{z_i^2 + z_{i+1}^2}$ for $i=1,\dots,D$
 
-#### Properties
+**Properties:**
 
 A highly multimodal function where frequency and amplitude of the
 modulation vary.
 
 -   conditioning is low
 
-### $F_{122}:~$ Schaffer's F7 with gaussian noise
+#### f<sub>122</sub>:  Schaffer's F7 with gaussian noise
 
 $$f_{122}(\mathbf{x}) = f_{\mathrm{GN}\left({f_\mathrm{schaffer}(\mathbf{x}),1}\right)} + f_{\mathrm{pen}}(\mathbf{x}) + f_\mathrm{opt}$$
 
 
-### $F_{123}:~$ Schaffer's F7 with uniform noise
+#### f<sub>123</sub>:  Schaffer's F7 with uniform noise
 
 $$f_{123}(\mathbf{x}) = f_{\mathrm{UN}}\left({f_\mathrm{schaffer}(\mathbf{x}),0.49 + \dfrac{1}{D},1}\right) + f_{\mathrm{pen}}(\mathbf{x}) + f_\mathrm{opt}$$
 
 
-### $F_{124}:~$ Schaffer's F7 with seldom cauchy noise
+#### f<sub>124</sub>:  Schaffer's F7 with seldom cauchy noise
 
 $$f_{124}(\mathbf{x}) = f_{\mathrm{CN}}\left({f_\mathrm{schaffer}(\mathbf{x}),1,0.2}\right) + f_{\mathrm{pen}}(\mathbf{x}) + f_\mathrm{opt}$$
 
 
-## Composite Griewank-Rosenbrock 
+### Composite Griewank-Rosenbrock 
 
 $$f_\mathrm{f8f2}(\mathbf{x}) = \frac{1}{D-1} \sum_{i=1}^{D-1}
      \left(\frac{s_i}{4000} - \cos(s_i)\right) + 1$$
@@ -270,26 +270,26 @@ $$f_\mathrm{f8f2}(\mathbf{x}) = \frac{1}{D-1} \sum_{i=1}^{D-1}
 
 -   $\mathbf{z^\mathrm{opt}}=\mathbf{1}$
 
-#### Properties
+**Properties:**
 
 Resembling the Rosenbrock function in a highly multimodal way.
 
-### $F_{125}:~$ Composite Griewank-Rosenbrock with gaussian noise
+#### f<sub>125</sub>:  Composite Griewank-Rosenbrock with gaussian noise
 
 $$f_{125}(\mathbf{x}) = f_{\mathrm{GN}}\left({f_\mathrm{f8f2}(\mathbf{x}),1}\right) + f_{\mathrm{pen}}(\mathbf{x}) + f_\mathrm{opt}$$
 
 
-### $F_{126}:~$ Composite Griewank-Rosenbrock with uniform noise
+#### f<sub>126</sub>:  Composite Griewank-Rosenbrock with uniform noise
 
 $$f_{126}(\mathbf{x}) = f_{\mathrm{UN}}\left({f_\mathrm{f8f2}(\mathbf{x}),0.49 + \dfrac{1}{D},1}\right) + f_{\mathrm{pen}}(\mathbf{x}) + f_\mathrm{opt}$$
 
 
-### $F_{127}:~$ Composite Griewank-Rosenbrock with seldom cauchy noise
+#### f<sub>127</sub>:  Composite Griewank-Rosenbrock with seldom cauchy noise
 
 $$f_{127}(\mathbf{x}) = f_{\mathrm{CN}}\left({f_\mathrm{f8f2}(\mathbf{x}),1,0.2}\right) + f_{\mathrm{pen}}(\mathbf{x}) + f_\mathrm{opt}$$
 
 
-## Gallagher's Gaussian Peaks, globally rotated
+### Gallagher's Gaussian Peaks, globally rotated
 
 $$f_\mathrm{gallagher}(\mathbf{x}) = T_\mathrm{\hspace*{-0.01emosz}}\left(10 - \max_{i=1}^{101}
                 w_i \exp\left(-\frac{1}{2D}\,
@@ -314,7 +314,7 @@ $$f_\mathrm{gallagher}(\mathbf{x}) = T_\mathrm{\hspace*{-0.01emosz}}\left(10 - \
     optimum is at
     $\mathbf{x^\mathrm{opt}}=\mathbf{y}_1$.
 
-#### Properties
+**Properties:**
 
 The function consists of $101$ optima with position and height being
 unrelated and randomly chosen.
@@ -323,16 +323,16 @@ unrelated and randomly chosen.
 
 -   same overall rotation matrix
 
-### $F_{128}:~$ Gallagher's Gaussian Peaks 101-me with gaussian noise
+#### f<sub>128</sub>:  Gallagher's Gaussian Peaks 101-me with gaussian noise
 
 $$f_{128}(\mathbf{x}) = f_{\mathrm{GN}}\left({f_\mathrm{gallagher}(\mathbf{x}),1}\right) + f_{\mathrm{pen}}(\mathbf{x}) + f_\mathrm{opt}$$
 
 
-### $F_{129}:~$ Gallagher's Gaussian Peaks 101-me with uniform noise
+#### f<sub>129</sub>:  Gallagher's Gaussian Peaks 101-me with uniform noise
 
 $$f_{129}(\mathbf{x}) = f_{\mathrm{UN}}\left({f_\mathrm{gallagher}(\mathbf{x}),0.49 + \dfrac{1}{D},1}\right) + f_{\mathrm{pen}}(\mathbf{x}) + f_\mathrm{opt}$$
 
 
-### $F_{130}:~$ Gallagher's Gaussian Peaks 101-me with seldom cauchy noise
+#### f<sub>130</sub>:  Gallagher's Gaussian Peaks 101-me with seldom cauchy noise
 
 $$f_{130}(\mathbf{x}) = f_{\mathrm{CN}}\left({f_\mathrm{gallagher}(\mathbf{x}),1,0.2}\right) + f_{\mathrm{pen}}(\mathbf{x}) + f_\mathrm{opt}$$

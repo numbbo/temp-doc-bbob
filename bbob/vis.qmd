@@ -4,10 +4,10 @@ format:
   html:
     include-after-body: 
       - text: <script type="text/javascript" defer src="../assets/bbob/js/bbob.js"></script>
-    toc-depth: 1
+    toc-depth: 2
 ---
 
-# Plots
+## Plots
 
 Show plots in 
 <button id="colPrev" onclick="getPrev(this)" class="button">&minus;</button>
@@ -51,10 +51,10 @@ columns (click on <b>Dimension</b>/<b>Function</b>/<b>Instance</b>/<b>Visualizat
 
 <div id="images" width=100%></div>
 
-# Plot explanation
+## Plot explanation
 
 {{< include ../assets/bbob/func_def/plots.md >}}
 
-# Problem definition
+## Problem definition
 
 {{< include ../assets/bbob/func_def/functions.md >}}
