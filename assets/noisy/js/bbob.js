@@ -1,14 +1,14 @@
 /* Url to the plots */
-plotPath = "https://raw.githubusercontent.com/numbbo/bbob-noisy/main/bbob/"
+plotPath = "https://raw.githubusercontent.com/numbbo/bbob-plots/main/bbob-noisy/"
 
 /* Define some global variables */
-var labelsTyp = ["Search space cuts: lin-lin", "Search space cuts: lin-log", "Search space cuts: log-log", "Heatmap", "Surface plot"];
-var valuesTyp = ["cuts-lin-lin", "cuts-lin-log", "cuts-log-log", "heatmap", "surface"];
+var labelsTyp = ["Search space cuts: lin-lin", "Search space cuts: lin-log", "Search space cuts: log-log", "Heatmap", "Rank ratio heatmap", "Surface plot"];
+var valuesTyp = ["cuts-lin-lin", "cuts-lin-log", "cuts-log-log", "heatmap", "heatmap-rank", "surface"];
 var allNodes = ["dimAll", "funAll", "insAll", "typAll"];
 var selectedNode = "typAll";
 var valuesDim = ["2", "3", "5", "10", "20", "40"];
 var valuesFun = [];
-for (let i = 1; i <= 30; i++) {valuesFun.push(i);}
+for (let i = 101; i <= 130; i++) {valuesFun.push(i);}
 var valuesIns = [];
 for (let i = 1; i <= 15; i++) {valuesIns.push(i);}
 var valuesCol = [];
@@ -21,7 +21,7 @@ window.onload=function() {
     /* Fill the dropdowns with values */
     fill_options("col", valuesCol, valuesCol, "3");
     fill_options("dim", valuesDim, valuesDim, "2");
-    fill_options("fun", valuesFun, valuesFun, "1");
+    fill_options("fun", valuesFun, valuesFun, "101");
     fill_options("ins", valuesIns, valuesIns, "1");
     fill_options("typ", valuesTyp, labelsTyp, "cuts-lin-lin");
 
@@ -100,7 +100,7 @@ function changePlot() {
 		for (let iFun = 0; iFun < chosenFun.length; iFun++) {
 			for (let iIns = 0; iIns < chosenIns.length; iIns++) {
 				for (let iTyp = 0; iTyp < chosenTyp.length; iTyp++) {
-					plotName = chosenTyp[iTyp] + "-500/bbob_f" + pad(chosenFun[iFun], 1) + "_i" + pad(chosenIns[iIns], 0) + "_d" + pad(chosenDim[iDim], 0) + "_" + pad(chosenTyp[iTyp], 0) + ".png";
+					plotName = chosenTyp[iTyp] + "-500/noisy_f" + pad(chosenFun[iFun], 1) + "_i" + pad(chosenIns[iIns], 0) + "_d" + pad(chosenDim[iDim], 0) + "_" + pad(chosenTyp[iTyp], 0) + ".png";
 					addPlot(plotName);
 					// document.getElementById("result").value += plotName + "\n";
 				}
