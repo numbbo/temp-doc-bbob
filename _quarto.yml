@@ -31,19 +31,19 @@ website:
     contents:
       - section: "`bbob`"
         contents:
-          - text: "Function Definitions"
+          - text: "Function definitions"
             href: "bbob/def.html"
           - text: "Visualizations"
             href: "bbob/vis.html"
       - section: "`bbob-noisy`"
         contents:
-          - text: "Function Definitions"
+          - text: "Function definitions"
             href: "noisy/def.html"
           - text: "Visualizations"
             href: "noisy/vis.html"
       - section: "`bbob-mixint`"
         contents:
-          - text: "Function Definitions"
+          - text: "Function definitions"
             href: "mixed-integer/def.html"
           - text: "Visualizations"
             href: "mixed-integer/vis.html"
