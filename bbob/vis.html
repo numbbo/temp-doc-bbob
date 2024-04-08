@@ -1,0 +1,1000 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.3.450">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>The bbob test suite - Visualizations of problem landscapes</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../images/favicon.png" rel="icon" type="image/png">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script>window.backupDefine = window.define; window.define = undefined;</script><script src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.js"></script>
+  <script>document.addEventListener("DOMContentLoaded", function () {
+ var mathElements = document.getElementsByClassName("math");
+ var macros = [];
+ for (var i = 0; i < mathElements.length; i++) {
+  var texText = mathElements[i].firstChild;
+  if (mathElements[i].tagName == "SPAN") {
+   katex.render(texText.data, mathElements[i], {
+    displayMode: mathElements[i].classList.contains('display'),
+    throwOnError: false,
+    macros: macros,
+    fleqn: false
+   });
+}}});
+  </script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css">
+
+<link rel="stylesheet" href="../assets/css/custom.css">
+<meta property="og:title" content="The bbob test suite - Visualizations of problem landscapes">
+<meta property="og:description" content="">
+<meta property="og:site-name" content="The bbob test suite">
+</head>
+
+<body class="nav-sidebar docked nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a href="../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../images/favicon.png" alt="" class="navbar-logo">
+    </a>
+  </div>
+        <div class="quarto-navbar-tools ms-auto">
+</div>
+          <div id="quarto-search" class="" title="Search"></div>
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../bbob/def.html"><code>bbob</code></a></li><li class="breadcrumb-item"><a href="../bbob/vis.html">Visualizations</a></li></ol></nav>
+      <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+      </a>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation docked overflow-auto">
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
+ <span class="menu-text"><code>bbob</code></span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../bbob/def.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Function Definitions</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../bbob/vis.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Visualizations</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">
+ <span class="menu-text"><code>bbob-noisy</code></span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../noisy/def.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Function Definitions</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../noisy/vis.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Visualizations</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true">
+ <span class="menu-text"><code>bbob-mixint</code></span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../mixed-integer/def.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Function Definitions</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../mixed-integer/vis.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Visualizations</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul class="collapse">
+  <li><a href="#plots" id="toc-plots" class="nav-link active" data-scroll-target="#plots">Plots</a></li>
+  <li><a href="#plot-explanation" id="toc-plot-explanation" class="nav-link" data-scroll-target="#plot-explanation">Plot explanation</a></li>
+  <li><a href="#problem-definition" id="toc-problem-definition" class="nav-link" data-scroll-target="#problem-definition">Problem definition</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Visualizations of problem landscapes</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+</header>
+
+<section id="plots" class="level2">
+<h2 class="anchored" data-anchor-id="plots">Plots</h2>
+<p>Show plots in <button id="colPrev" onclick="getPrev(this)" class="button">−</button> <select id="col" onchange="changePlot()" class="dropdown"></select> <button id="colNext" onclick="getNext(this)" class="button">+</button> columns (click on <b>Dimension</b>/<b>Function</b>/<b>Instance</b>/<b>Visualization type</b> below to show all plots for the chosen category)</p>
+
+<table border="0" width="100%">
+<tbody><tr>
+<td align="center" onclick="selectNode(this)" id="dimAll" class="off">
+<b>Dimension</b>
+</td>
+<td align="center" onclick="selectNode(this)" id="funAll" class="off">
+<b>Function</b>
+</td>
+<td align="center" onclick="selectNode(this)" id="insAll" class="off">
+<b>Instance</b>
+</td>
+<td align="center" onclick="selectNode(this)" id="typAll" class="on">
+<b>Visualization type</b>
+</td>
+</tr>
+<tr>
+<td class="select" align="center">
+<button id="dimPrev" onclick="getPrev(this)" class="button">
+−
+</button>
+<select id="dim" onchange="changePlot()" class="dropdown"></select> <button id="dimNext" onclick="getNext(this)" class="button">+</button>
+</td>
+<td class="select" align="center">
+<button id="funPrev" onclick="getPrev(this)" class="button">
+−
+</button>
+<select id="fun" onchange="changePlot()" class="dropdown"></select> <button id="funNext" onclick="getNext(this)" class="button">+</button>
+</td>
+<td class="select" align="center">
+<button id="insPrev" onclick="getPrev(this)" class="button">
+−
+</button>
+<select id="ins" onchange="changePlot()" class="dropdown"></select> <button id="insNext" onclick="getNext(this)" class="button">+</button>
+</td>
+<td class="select" align="center">
+<button id="typPrev" onclick="getPrev(this)" class="button">
+<i class="arrow left"></i>
+</button>
+<select id="typ" onchange="changePlot()" style="width:220px;height:30px;"> </select> <button id="typNext" onclick="getNext(this)" class="button"><i class="arrow right"></i></button>
+</td>
+</tr>
+
+</tbody></table>
+<!-- <textarea id="result" num=7></textarea> -->
+<div id="images" width="100%">
+
+</div>
+</section>
+<section id="plot-explanation" class="level2">
+<h2 class="anchored" data-anchor-id="plot-explanation">Plot explanation</h2>
+<p>The benchmark function definitions in the next section are accompanied with a number of figures.</p>
+<ol type="1">
+<li><p>a (3-D) surface plot, where <span class="math inline">D=2</span></p></li>
+<li><p>a contour plot, where <span class="math inline">D=2</span></p></li>
+<li><p>two projected contour plots, where <span class="math inline">D=20</span>. Plotted are, starting from the optimum <span class="math inline">\mathbf{x}^\mathrm{opt}</span>, first versus second variable (left) and first versus fifth variable (right).</p></li>
+<li><p>sections (<span class="math inline">f</span> versus <span class="math inline">x</span>) through the global optimum along the first variable <span class="math inline">x_1</span>, the second variable <span class="math inline">x_2</span>, and the all-ones vector. The sections for different dimensions appear</p>
+<ol type="1">
+<li><p>in a non-log plot (above), where the maximum <span class="math inline">f</span>-value is normalized to one for each single graph.</p></li>
+<li><p>in a semi-log plot (middle row)</p></li>
+<li><p>in a log-log plot (below) starting close to the global optimum along <span class="math inline">x _1</span>, <span class="math inline">-x_1</span>, <span class="math inline">x_2</span>, <span class="math inline">-x_2</span>, <span class="math inline">\mathbf{1}</span>, and <span class="math inline">-\mathbf{1}</span>.</p></li>
+</ol></li>
+</ol>
+</section>
+<section id="problem-definition" class="level2">
+<h2 class="anchored" data-anchor-id="problem-definition">Problem definition</h2>
+<div id="text-f1">
+<section id="f1" class="level3">
+<h3 class="anchored" data-anchor-id="f1">f<sub>1</sub>: Sphere Function</h3>
+<p><span class="math display">f_{1}(\mathbf{x}) = \|\mathbf{z}\|^2 + f_\mathrm{opt}</span></p>
+<ul>
+<li><span class="math inline">\mathbf{z}= \mathbf{x}- \mathbf{x^\mathrm{opt}}</span></li>
+</ul>
+<p><strong>Properties:</strong></p>
+<p>Presumably the most easy continuous domain search problem, given the volume of the searched solution is small (i.e.&nbsp;where pure monte-carlo random search is too expensive).</p>
+<ul>
+<li><p>unimodal</p></li>
+<li><p>highly symmetric, in particular rotationally invariant, scale invariant</p></li>
+</ul>
+<p><strong>Information gained from this function:</strong></p>
+<ul>
+<li>What is the optimal convergence rate of an algorithm?</li>
+</ul>
+</section>
+</div>
+<div id="text-f2">
+<section id="f2" class="level3">
+<h3 class="anchored" data-anchor-id="f2">f<sub>2</sub>: Ellipsoidal Function</h3>
+<p><span class="math display">f_{2}(\mathbf{x}) = \sum_{i = 1}^{D} 10^{6\frac{i-1}{D-1}}\,z_i^2 + f_\mathrm{opt}\\</span></p>
+<ul>
+<li><span class="math inline">\mathbf{z}= T_\mathrm{\hspace*{-0.01emosz}}(\mathbf{x}- \mathbf{x^\mathrm{opt}})</span></li>
+</ul>
+<p><strong>Properties:</strong></p>
+<p>Globally quadratic and ill-conditioned function with smooth local irregularities.</p>
+<ul>
+<li><p>unimodal</p></li>
+<li><p>conditioning is about <span class="math inline">10^6</span></p></li>
+</ul>
+<p><strong>Information gained from this function:</strong></p>
+<ul>
+<li>In comparison to f10: Is separability exploited?</li>
+</ul>
+</section>
+</div>
+<div id="text-f3">
+<section id="f3" class="level3">
+<h3 class="anchored" data-anchor-id="f3">f<sub>3</sub>: Rastrigin Function</h3>
+<p><span class="math display">f_{3}(\mathbf{x}) = 10 \left(D- \sum_{i = 1}^{D}\cos(2\pi z_i)\right) + \|\mathbf{z}\|^2 + f_\mathrm{opt}</span></p>
+<ul>
+<li><span class="math inline">\mathbf{z}= \Lambda^{\!10}T^{{0.2}}_{\mathrm{asy}}(T_\mathrm{\hspace*{-0.01emosz}}(\mathbf{x}-\mathbf{x^\mathrm{opt}}))</span></li>
+</ul>
+<p><strong>Properties:</strong></p>
+<p>Highly multimodal function with a comparatively regular structure for the placement of the optima. The transformations <span class="math inline">T^{{}}_\mathrm{asy}</span>&nbsp;and <span class="math inline">T_\mathrm{\hspace*{-0.01em}osz}</span>&nbsp;alleviate the symmetry and regularity of the original Rastrigin function</p>
+<ul>
+<li><p>roughly <span class="math inline">10^D</span> local optima</p></li>
+<li><p>conditioning is about <span class="math inline">10</span></p></li>
+</ul>
+<p><strong>Information gained from this function:</strong></p>
+<ul>
+<li>In comparison to f15: Is separability exploited?</li>
+</ul>
+</section>
+</div>
+<div id="text-f4">
+<section id="f4" class="level3">
+<h3 class="anchored" data-anchor-id="f4">f<sub>4</sub>: Büche-Rastrigin Function</h3>
+<p><span class="math display">f_{4}(\mathbf{x}) = 10 \left(D- \sum_{i = 1}^{D}\cos(2\pi z_i)\right) +
+             \sum_{i = 1}^{D}z_i^2 + 100\,f_{\mathrm{pen}}(\mathbf{x}) + f_\mathrm{opt}</span></p>
+<ul>
+<li><p><span class="math inline">z_i = s_i\,T_\mathrm{\hspace*{-0.01emosz}}(x_i - x_i^\mathrm{opt}) \quad \text{for} \; i = 1  \ldots D</span></p></li>
+<li><p><span class="math inline">s_i = \begin{cases}  10\times10^{\frac{1}{2}\,\frac{i-1}{D-1}} &amp;  \text{~if~} z_i&gt;0 \text{~and~} i = 1,3,5,\ldots  \\  10^{\frac{1}{2}\frac{i-1}{D-1}} &amp; \text{~otherwise~}  \end{cases}</span> for <span class="math inline">i= 1,\dots,D</span></p></li>
+</ul>
+<p><strong>Properties:</strong></p>
+<p>Highly multimodal function with a structured but highly asymmetric placement of the optima. Constructed as a deceptive function for symmetrically distributed search operators.</p>
+<ul>
+<li>roughly <span class="math inline">10^D</span> local optima, conditioning is about <span class="math inline">10</span>, skew factor is about <span class="math inline">10</span> in <span class="math inline">x</span>-space and <span class="math inline">100</span> in <span class="math inline">f</span>-space</li>
+</ul>
+<p><strong>Information gained from this function:</strong></p>
+<ul>
+<li>In comparison to f3: What is the effect of asymmetry?</li>
+</ul>
+</section>
+</div>
+<div id="text-f5">
+<section id="f5" class="level3">
+<h3 class="anchored" data-anchor-id="f5">f<sub>5</sub>: Linear Slope</h3>
+<p><span class="math display">f_{5}(\mathbf{x}) = \sum_{i = 1}^{D} 5\,|s_i| - s_i z_i  
+   + f_\mathrm{opt}</span></p>
+<ul>
+<li><p><span class="math inline">z_i = x_i</span> if <span class="math inline">x_i^\mathrm{opt}x_i &lt; 5^2</span> and <span class="math inline">z_i = x_i^\mathrm{opt}</span> otherwise, for <span class="math inline">i=1,\dots,D</span>. That is, if <span class="math inline">x_i</span> exceeds <span class="math inline">x_i^\mathrm{opt}</span> it will mapped back into the domain and the function appears to be constant in this direction.</p></li>
+<li><p><span class="math inline">s_i = \mathrm{{sign}}\left(x_i^\mathrm{opt}\right)\, 10^{\frac{i-1}{D-1}}</span> for <span class="math inline">i=1,\dots,D</span>.</p></li>
+<li><p><span class="math inline">\mathbf{x^\mathrm{opt}}= \mathbf{z^\mathrm{opt}}= 5\times\mathbf{1_-^+}</span></p></li>
+</ul>
+<p><strong>Properties:</strong></p>
+<p>Purely linear function testing whether the search can go outside the initial convex hull of solutions right into the domain boundary.</p>
+<ul>
+<li><span class="math inline">\mathbf{x}^\mathrm{opt}</span>&nbsp;is on the domain boundary</li>
+</ul>
+<p><strong>Information gained from this function:</strong></p>
+<ul>
+<li>Can the search go outside the initial convex hull of solutions into the domain boundary? Can the step size be increased accordingly?</li>
+</ul>
+</section>
+</div>
+<div id="text-f6">
+<section id="f6" class="level3">
+<h3 class="anchored" data-anchor-id="f6">f<sub>6</sub>: Attractive Sector Function</h3>
+<p><span class="math display">f_{6}(\mathbf{x}) = T_\mathrm{\hspace*{-0.01emosz}}\left(\sum_{i = 1}^{D} (s_i z_i)^2\right)^{0.9} + f_\mathrm{opt}</span></p>
+<ul>
+<li><p><span class="math inline">\mathbf{z}= \mathbf{Q}\Lambda^{\!10}\mathbf{R}(\mathbf{x}- \mathbf{x^\mathrm{opt}})</span></p></li>
+<li><p><span class="math inline">s_i = \begin{cases}  10^2&amp; \text{if~} z_i\times x_i^\mathrm{opt}&gt; 0\\  1 &amp; \text{otherwise}  \end{cases}</span></p></li>
+</ul>
+<p><strong>Properties:</strong></p>
+<p>Highly asymmetric function, where only one “hypercone” (with angular base area) with a volume of roughly <span class="math inline">{1}/{2^D}</span> yields low function values. The optimum is located at the tip of this cone.</p>
+<ul>
+<li>unimodal</li>
+</ul>
+<p><strong>Information gained from this function:</strong></p>
+<ul>
+<li>In comparison to f1: What is the effect of a highly asymmetric landscape?</li>
+</ul>
+</section>
+</div>
+<div id="text-f7">
+<section id="f7" class="level3">
+<h3 class="anchored" data-anchor-id="f7">f<sub>7</sub>: Step Ellipsoidal Function</h3>
+<p><span class="math display">f_{7}(\mathbf{x}) = 0.1 \max\left(|\hat{z}_1|/10^4,\, \sum_{i = 1}^{D}
+                         10^{2\frac{i-1}{D-1}} z_i^2\right) + f_{\mathrm{pen}}(\mathbf{x}) + f_\mathrm{opt}</span></p>
+<ul>
+<li><p><span class="math inline">\hat{\mathbf{z}} = \Lambda^{\!10}\mathbf{R}(\mathbf{x}- \mathbf{x^\mathrm{opt}})</span></p></li>
+<li><p><span class="math inline">\hat{z_i} = \begin{cases} \lfloor0.5+\hat{z}_i\rfloor &amp; \text{if~} \left|\hat{z}_i\right| &gt; 0.5 \\ {\lfloor0.5+10\,\hat{z}_i\rfloor}/{10} &amp; \text{otherwise} \end{cases}</span> for <span class="math inline">i=1,\dots,D</span>,<br>
+denotes the rounding procedure in order to produce the plateaus.</p></li>
+<li><p><span class="math inline">\mathbf{z}= \mathbf{Q}\tilde{\mathbf{z}}</span></p></li>
+</ul>
+<p><strong>Properties:</strong></p>
+<p>The function consists of many plateaus of different sizes. Apart from a small area close to the global optimum, the gradient is zero almost everywhere.</p>
+<ul>
+<li>unimodal, non-separable, conditioning is about <span class="math inline">100</span></li>
+</ul>
+<p><strong>Information gained from this function:</strong></p>
+<ul>
+<li>Does the search get stuck on plateaus?</li>
+</ul>
+</section>
+</div>
+<div id="text-f8">
+<section id="f8" class="level3">
+<h3 class="anchored" data-anchor-id="f8">f<sub>8</sub>: Rosenbrock Function, original</h3>
+<p><span class="math display">f_{8}(\mathbf{x}) = \sum_{i = 1}^{D-1} \left( 100\,\left(z_i^2 - z_{i+1}\right)^2 + (z_i-1)^2 \right) + f_\mathrm{opt}</span></p>
+<ul>
+<li><p><span class="math inline">\mathbf{z}= \max\!\left(1,\frac{\sqrt{D}}{8}\right)(\mathbf{x}- \mathbf{x^\mathrm{opt}}) + 1</span></p></li>
+<li><p><span class="math inline">\mathbf{z^\mathrm{opt}}=\mathbf{1}</span></p></li>
+</ul>
+<p><strong>Properties:</strong></p>
+<p>So-called banana function due to its 2-D contour lines as a bent ridge (or valley). In the beginning, the prominent first term of the function definition attracts to the point <span class="math inline">\mathbf{z}=\mathbf{0}</span>. Then, a long bending valley needs to be followed to reach the global optimum. The ridge changes its orientation <span class="math inline">D-1</span> times. Exceptionally, here <span class="math inline">\mathbf{x^\mathrm{opt}}\in[-3,3]^D</span>.</p>
+<ul>
+<li>tri-band dependency structure, in larger dimensions the function has a local optimum with an attraction volume of about 25%</li>
+</ul>
+<p><strong>Information gained from this function:</strong></p>
+<ul>
+<li>Can the search follow a long path with <span class="math inline">D-1</span> changes in the direction?</li>
+</ul>
+</section>
+</div>
+<div id="text-f9">
+<section id="f9" class="level3">
+<h3 class="anchored" data-anchor-id="f9">f<sub>9</sub>: Rosenbrock Function, rotated</h3>
+<p><span class="math display">f_{9}(\mathbf{x}) = \sum_{i = 1}^{D-1} \left( 100\,\left(z_i^2 - z_{i+1}\right)^2 + (z_i-1)^2 \right) + f_\mathrm{opt}</span></p>
+<ul>
+<li><p><span class="math inline">\mathbf{z}= \max\left(1,\frac{\sqrt{D}}{8}\right)\mathbf{R}\mathbf{x}+ \mathbf{1}/2</span></p></li>
+<li><p><span class="math inline">\mathbf{z^\mathrm{opt}}=\mathbf{1}</span></p></li>
+</ul>
+<p><strong>Properties:</strong></p>
+<p>rotated version of the previously defined Rosenbrock function.</p>
+<p><strong>Information gained from this function:</strong></p>
+<ul>
+<li>In comparison to f8: Can the search follow a long path with <span class="math inline">D-1</span> changes in the direction without exploiting partial separability?</li>
+</ul>
+</section>
+</div>
+<div id="text-f10">
+<section id="f10" class="level3">
+<h3 class="anchored" data-anchor-id="f10">f<sub>10</sub>: Ellipsoidal Function</h3>
+<p><span class="math display">f_{10}(\mathbf{x}) = \sum_{i = 1}^{D} 10^{6\frac{i-1}{D-1}}z_i^2 + f_\mathrm{opt}</span></p>
+<ul>
+<li><span class="math inline">\mathbf{z}= T_\mathrm{\hspace*{-0.01emosz}}(\mathbf{R}(\mathbf{x}- \mathbf{x^\mathrm{opt}}))</span></li>
+</ul>
+<p><strong>Properties:</strong></p>
+<p>Globally quadratic ill-conditioned function with smooth local irregularities, non-separable counterpart to <span class="math inline">f_2</span>.</p>
+<ul>
+<li>unimodal, conditioning is <span class="math inline">10^6</span></li>
+</ul>
+<p><strong>Information gained from this function:</strong></p>
+<ul>
+<li>In comparison to f2: What is the effect of rotation (non-separability)?</li>
+</ul>
+<p>Note: The 3d plot shows only a part of the complete function in the vicinity of the optimum.</p>
+</section>
+</div>
+<div id="text-f11">
+<section id="f11" class="level3">
+<h3 class="anchored" data-anchor-id="f11">f<sub>11</sub>: Discus Function</h3>
+<p><span class="math display">f_{11}(\mathbf{x}) = 10^6 z_1^2 + \sum_{i = 2}^{D} z_i^2 + f_\mathrm{opt}</span></p>
+<ul>
+<li><span class="math inline">\mathbf{z}= T_\mathrm{\hspace*{-0.01emosz}}(\mathbf{R}(\mathbf{x}- \mathbf{x^\mathrm{opt}}))</span></li>
+</ul>
+<p><strong>Properties:</strong></p>
+<p>Globally quadratic function with local irregularities. A single direction in search space is a thousand times more sensitive than all others.</p>
+<ul>
+<li>conditioning is about <span class="math inline">10^6</span></li>
+</ul>
+<p><strong>Information gained from this function:</strong></p>
+<ul>
+<li>In comparison to f1: What is the effect of constraint-like penalization?</li>
+</ul>
+<p>Note: The 3d plot shows only a part of the complete function in the vicinity of the optimum.</p>
+</section>
+</div>
+<div id="text-f12">
+<section id="f12" class="level3">
+<h3 class="anchored" data-anchor-id="f12">f<sub>12</sub>: Bent Cigar Function</h3>
+<p><span class="math display">f_{12}(\mathbf{x}) = z_1^2 + 10^6\sum_{i = 2}^{D} z_i^2 + f_\mathrm{opt}</span></p>
+<ul>
+<li><span class="math inline">\mathbf{z}= \mathbf{R}\,T^{{0.5}}_\mathrm{asy}(\mathbf{R}(\mathbf{x}- \mathbf{x^\mathrm{opt}}))</span></li>
+</ul>
+<p><strong>Properties:</strong></p>
+<p>A ridge defined as <span class="math inline">\sum_{i=2}^{D} z_i^2 =0</span> needs to be followed. The ridge is smooth but very narrow. Due to <span class="math inline">T^{{1/2}}_\mathrm{asy}</span> the overall shape deviates remarkably from being quadratic.</p>
+<ul>
+<li>conditioning is about <span class="math inline">10^6</span>, rotated, unimodal</li>
+</ul>
+<p><strong>Information gained from this function:</strong></p>
+<ul>
+<li>Can the search continuously change its search direction?</li>
+</ul>
+<p>Note: The 3d plot shows only a part of the complete function in the vicinity of the optimum.</p>
+</section>
+</div>
+<div id="text-f13">
+<section id="f13" class="level3">
+<h3 class="anchored" data-anchor-id="f13">f<sub>13</sub>: Sharp Ridge Function</h3>
+<p><span class="math display">f_{13}(\mathbf{x}) = z_1^2 + 100\,\sqrt{\sum_{i = 2}^{D} z_i^2} + f_\mathrm{opt}</span></p>
+<ul>
+<li><span class="math inline">\mathbf{z}= \mathbf{Q}\Lambda^{\!10}\mathbf{R}(\mathbf{x}- \mathbf{x^\mathrm{opt}})</span></li>
+</ul>
+<p><strong>Properties:</strong></p>
+<p>As for the Bent Cigar function, a ridge defined as <span class="math inline">\sum_{i=2}^D z_i^2 = 0</span> must be followed. The ridge is non-differentiable and the gradient is constant when the ridge is approached from any given point. Following the gradient becomes ineffective close to the ridge where the ridge needs to be followed in <span class="math inline">z_1</span>-direction to its optimum. The necessary change in “search behavior” close to the ridge is difficult to diagnose, because the gradient towards the ridge does not flatten out.<br>
+<strong>Information gained from this function:</strong></p>
+<ul>
+<li>In comparison to f12: What is the effect of non-smoothness, non-differentiabale ridge?</li>
+</ul>
+</section>
+</div>
+<div id="text-f14">
+<section id="f14" class="level3">
+<h3 class="anchored" data-anchor-id="f14">f<sub>14</sub>: Different Powers Function</h3>
+<p><span class="math display">f_{14}(\mathbf{x}) = \sqrt{\sum_{i = 1}^{D}|z_i|^{2+4\frac{i - 1}{D- 1}}} + f_\mathrm{opt}</span></p>
+<ul>
+<li><span class="math inline">\mathbf{z}= \mathbf{R}(\mathbf{x}- \mathbf{x^\mathrm{opt}})</span></li>
+</ul>
+<p><strong>Properties:</strong></p>
+<p>Due to the different exponents the sensitivies of the <span class="math inline">z_i</span>-variables become more and more different when approaching the optimum.</p>
+</section>
+</div>
+<div id="text-f15">
+<section id="f15" class="level3">
+<h3 class="anchored" data-anchor-id="f15">f<sub>15</sub>: Rastrigin Function</h3>
+<p><span class="math display">f_{15}(\mathbf{x}) = 10 \left(D- \sum_{i = 1}^{D}\cos(2\pi z_i)\right)
+    + \|\mathbf{z}\|^2 + f_\mathrm{opt}</span></p>
+<ul>
+<li><span class="math inline">\mathbf{z}= \mathbf{R}\Lambda^{\!10}\mathbf{Q}\,T^{{0.2}}_\mathrm{asy}(T_\mathrm{\hspace*{-0.01emosz}}(\mathbf{R}(\mathbf{x}-\mathbf{x^\mathrm{opt}})))</span></li>
+</ul>
+<p><strong>Properties:</strong></p>
+<p>Prototypical highly multimodal function which has originally a very regular and symmetric structure for the placement of the optima. The transformations <span class="math inline">T^{{}}_\mathrm{asy}</span>&nbsp;and <span class="math inline">T_\mathrm{\hspace*{-0.01em}osz}</span>&nbsp;alleviate the symmetry and regularity of the original Rastrigin function.</p>
+<ul>
+<li><p>non-separable less regular counterpart of <span class="math inline">f_3</span></p></li>
+<li><p>roughly <span class="math inline">10^D</span> local optima</p></li>
+<li><p>conditioning is about <span class="math inline">10</span></p></li>
+</ul>
+<p><strong>Information gained from this function:</strong></p>
+<ul>
+<li>in comparison to f3: What is the effect of non-separability for a highly multimodal function?</li>
+</ul>
+</section>
+</div>
+<div id="text-f16">
+<section id="f16" class="level3">
+<h3 class="anchored" data-anchor-id="f16">f<sub>16</sub>: Weierstrass Function</h3>
+<p><span class="math display">f_{16}(\mathbf{x}) = 10 \left( \frac{1}{D}
+   \sum_{i = 1}^{D}\sum_{k = 0}^{11} 1/2^k \cos(2\pi3^k(z_i + 1/2))
+            - f_0 \right)^3 + \frac{10}{D}f_{\mathrm{pen}}(\mathbf{x}) + f_\mathrm{opt}</span></p>
+<ul>
+<li><p><span class="math inline">\mathbf{z}= \mathbf{R}\Lambda^{\!1/100}\mathbf{Q}\,T_\mathrm{\hspace*{-0.01emosz}}(\mathbf{R}(\mathbf{x}-\mathbf{x^\mathrm{opt}}))</span></p></li>
+<li><p><span class="math inline">f_0 = \sum_{k = 0}^{11} 1/2^k \cos(2\pi3^k 1/2)</span></p></li>
+</ul>
+<p><strong>Properties:</strong></p>
+<p>Highly rugged and moderately repetitive landscape, where the global optimum is not unique.</p>
+<ul>
+<li><p>the term <span class="math inline">\sum_k 1/2^k \cos(2\pi3^k\dots)</span> introduces the ruggedness, where lower frequencies have a larger weight <span class="math inline">1/2^k</span>.</p></li>
+<li><p>rotated, locally irregular, non-unique global optimum</p></li>
+</ul>
+<p><strong>Information gained from this function:</strong></p>
+<ul>
+<li>in comparison to f17: Does ruggedness or a repetitive landscape deter the search behavior?</li>
+</ul>
+</section>
+</div>
+<div id="text-f17">
+<section id="f17" class="level3">
+<h3 class="anchored" data-anchor-id="f17">f<sub>17</sub>: Schaffers F7 Function</h3>
+<p><span class="math display">f_{17}(\mathbf{x}) = \left(\frac{1}{D- 1}\sum_{i = 1}^{D- 1} \sqrt{s_i} +
+      \sqrt{s_i} \sin^2\!\left(50\,s_i^{1/5}\right)\right)^2 + 10\,f_{\mathrm{pen}}(\mathbf{x}) + f_\mathrm{opt}</span></p>
+<ul>
+<li><p><span class="math inline">\mathbf{z}= \Lambda^{\!10}\mathbf{Q}\,T^{{0.5}}_\mathrm{asy}(\mathbf{R}(\mathbf{x}-\mathbf{x^\mathrm{opt}}))</span></p></li>
+<li><p><span class="math inline">s_i = \sqrt{z_i^2 + z_{i+1}^2}</span> for <span class="math inline">i=1,\dots,D</span></p></li>
+</ul>
+<p><strong>Properties:</strong></p>
+<p>A highly multimodal function where frequency and amplitude of the modulation vary.</p>
+<ul>
+<li><p>asymmetric, rotated</p></li>
+<li><p>conditioning is low</p></li>
+</ul>
+</section>
+</div>
+<div id="text-f18">
+<section id="f18" class="level3">
+<h3 class="anchored" data-anchor-id="f18">f<sub>18</sub>: Schaffers F7 Function, moderately ill-conditioned</h3>
+<p><span class="math display">f_{18}(\mathbf{x}) = \left(\frac{1}{D- 1}\sum_{i = 1}^{D- 1} \sqrt{s_i} +
+      \sqrt{s_i} \sin^2\!\left(50\,s_i^{1/5}\right)\right)^2 + 10\,f_{\mathrm{pen}}(\mathbf{x}) + f_\mathrm{opt}</span></p>
+<ul>
+<li><p><span class="math inline">\mathbf{z}= \Lambda^{\!1000}\mathbf{Q}\,T^{{0.5}}_\mathrm{asy}(\mathbf{R}(\mathbf{x}-\mathbf{x^\mathrm{opt}}))</span></p></li>
+<li><p><span class="math inline">s_i = \sqrt{z_i^2 + z_{i+1}^2}</span> for <span class="math inline">i=1,\dots,D</span></p></li>
+</ul>
+<p><strong>Properties:</strong></p>
+<p>Moderately ill-conditioned counterpart to <span class="math inline">f_{17}</span></p>
+<ul>
+<li>conditioning of about <span class="math inline">1000</span></li>
+</ul>
+<p><strong>Information gained from this function:</strong></p>
+<ul>
+<li>In comparison to f17: What is the effect of ill-conditioning?</li>
+</ul>
+</section>
+</div>
+<div id="text-f19">
+<section id="f19" class="level3">
+<h3 class="anchored" data-anchor-id="f19">f<sub>19</sub>: Composite Griewank-Rosenbrock Function F8F2</h3>
+<p><span class="math display">f_{19}(\mathbf{x}) = \frac{10}{D-1} \sum_{i=1}^{D-1} \left( \frac{s_i}{4000} - \cos(s_i) \right) + 10 + f_\mathrm{opt}</span></p>
+<ul>
+<li><p><span class="math inline">\mathbf{z}= \max\!\left(1,\frac{\sqrt{D}}{8}\right)\mathbf{R}\mathbf{x}+ 0.5</span></p></li>
+<li><p><span class="math inline">s_i = 100\,(z_i^2 - z_{i+1})^2 + (z_i-1)^2</span> for <span class="math inline">i=1,\dots,D</span></p></li>
+<li><p><span class="math inline">\mathbf{z^\mathrm{opt}}=\mathbf{1}</span></p></li>
+</ul>
+<p><strong>Properties:</strong></p>
+<p>Resembling the Rosenbrock function in a highly multimodal way.</p>
+</section>
+</div>
+<div id="text-f20">
+<section id="f20" class="level3">
+<h3 class="anchored" data-anchor-id="f20">f<sub>20</sub>: Schwefel Function</h3>
+<p><span class="math display">f_{20}(\mathbf{x}) = - \frac{1}{100D}%  % kept in the final print
+\sum_{i = 1}^{D}z_i\sin(\sqrt{|z_i|}) + 4.189828872724339
+     + 100f_{\mathrm{pen}}(\mathbf{z}/100) + f_\mathrm{opt}</span></p>
+<ul>
+<li><p><span class="math inline">\hat{\mathbf{x}} = 2\times\mathbf{1_-^+}\otimes\mathbf{x}</span></p></li>
+<li><p><span class="math inline">\hat{z}_{1} = \hat{x}_{1}</span>,<span class="math inline">\quad \hat{z}_{i+1} = \hat{x}_{i+1} + 0.25 \left({\hat{x}_{i}} - 2|x_i^{\text{opt}}| \right)</span>,<span class="math inline">\quad \text{for } i = 1, \ldots, D - 1</span></p></li>
+<li><p><span class="math inline">\mathbf{z}= 100 (\Lambda^{10} (\hat{\mathbf{z}} - 2\left|\mathbf{x^\mathrm{opt}}\right|)</span> + <span class="math inline">2\left|\mathbf{x^\mathrm{opt}}\right|)</span></p></li>
+<li><p><span class="math inline">\mathbf{x^\mathrm{opt}}= 4.2096874633/2 \;\mathbf{1_-^+}</span>, where <span class="math inline">\mathbf{1}_-^+</span>&nbsp;is the same realization as above</p></li>
+</ul>
+<p><strong>Properties:</strong></p>
+<p>The most prominent <span class="math inline">2^D</span> minima are located comparatively close to the corners of the unpenalized search area.</p>
+<ul>
+<li>the penalization is essential, as otherwise more and better minima occur further away from the search space origin</li>
+</ul>
+</section>
+</div>
+<div id="text-f21">
+<section id="f21" class="level3">
+<h3 class="anchored" data-anchor-id="f21">f<sub>21</sub>: Gallagher’s Gaussian 101-me Peaks Function</h3>
+<p><span class="math display">f_{21}(\mathbf{x}) = T_\mathrm{\hspace*{-0.01emosz}}\left( 10 - \max_{i=1}^{101}
+       w_i \exp\left(-\frac{1}{2D}\,
+           (\mathbf{x}-\mathbf{y}_i)^{\mathrm{T}}\mathbf{R}^{\mathrm{T}}
+           \mathbf{C}_i \mathbf{R}(\mathbf{x}-\mathbf{y}_i) \right) \right)^2 + f_{\mathrm{pen}}(\mathbf{x}) + f_\mathrm{opt}</span></p>
+<ul>
+<li><p><span class="math inline">w_i = \begin{cases}  1.1 + 8 \times\dfrac{i-2}{99} &amp; \text{for~} i=2,\dots,101 \\  10 &amp; \text{for~} i = 1  \end{cases}</span>, three optima have a value larger than <span class="math inline">9</span></p></li>
+<li><p><span class="math inline">\mathbf{C}_i=\Lambda^{\!\alpha_i}/\alpha_i^{1/4}</span> where <span class="math inline">\Lambda^{\!\alpha_i}</span> is defined as usual, but with randomly permuted diagonal elements. For <span class="math inline">i=2,\dots,101</span>, <span class="math inline">\alpha_i</span> is drawn uniformly randomly from the set <span class="math inline">\left\{1000^{2\frac{j}{99}} ~|~ j =  0,\dots,99\right\}</span> without replacement, and <span class="math inline">\alpha_i=1000</span> for <span class="math inline">i=1</span>.</p></li>
+<li><p>the local optima <span class="math inline">\mathbf{y}_i</span> are uniformly drawn from the domain <span class="math inline">[-5,5]^D</span> for <span class="math inline">i=2,\dots,101</span> and <span class="math inline">\mathbf{y}_{1}\in[-4,4]^D</span>. The global optimum is at <span class="math inline">\mathbf{x^\mathrm{opt}}=\mathbf{y}_1</span>.</p></li>
+</ul>
+<p><strong>Properties:</strong></p>
+<p>The function consists of <span class="math inline">101</span> optima with position and height being unrelated and randomly chosen (different for each instantiation of the function).</p>
+<ul>
+<li>the conditioning around the global optimum is about <span class="math inline">30</span></li>
+</ul>
+<p><strong>Information gained from this function:</strong></p>
+<ul>
+<li>Is the search effective without any global structure?</li>
+</ul>
+</section>
+</div>
+<div id="text-f22">
+<section id="f22" class="level3">
+<h3 class="anchored" data-anchor-id="f22">f<sub>22</sub>: Gallagher’s Gaussian 21-hi Peaks Function</h3>
+<p><span class="math display">f_{22}(\mathbf{x}) = T_\mathrm{\hspace*{-0.01emosz}}\left( 10 - \max_{i=1}^{21}
+       w_i \exp\left(-\frac{1}{2D}\,
+           (\mathbf{x}-\mathbf{y}_i)^{\mathrm{T}}\mathbf{R}^{\mathrm{T}}
+           \mathbf{C}_i \mathbf{R}(\mathbf{x}-\mathbf{y}_i) \right) \right)^2 + f_{\mathrm{pen}}(\mathbf{x}) + f_\mathrm{opt}</span></p>
+<ul>
+<li><p><span class="math inline">w_i = \begin{cases}  1.1 + 8 \times\dfrac{i-2}{19} &amp; \text{for~} i=2,\dots,21 \\  10 &amp; \text{for~} i = 1  \end{cases}</span>, two optima have a value larger than <span class="math inline">9</span></p></li>
+<li><p><span class="math inline">\mathbf{C}_i=\Lambda^{\!\alpha_i}/\alpha_i^{1/4}</span> where <span class="math inline">\Lambda^{\!\alpha_i}</span> is defined as usual, but with randomly permuted diagonal elements. For <span class="math inline">i=2,\dots,21</span>, <span class="math inline">\alpha_i</span> is drawn uniformly randomly from the set <span class="math inline">\left\{1000^{2\frac{j}{19}} ~|~ j =  0,\dots,19\right\}</span> without replacement, and <span class="math inline">\alpha_i=1000^2</span> for <span class="math inline">i=1</span>.</p></li>
+<li><p>the local optima <span class="math inline">\mathbf{y}_i</span> are uniformly drawn from the domain <span class="math inline">[-4.9,4.9]^D</span> for <span class="math inline">i=2,\dots,21</span> and <span class="math inline">\mathbf{y}_{1}\in</span>[<del><span class="math inline">[-4,4]^D</span></del>&nbsp;<span class="math inline">\longrightarrow</span>]&nbsp; <span class="math inline">[-3.92,3.92]^D</span>]. The global optimum is at <span class="math inline">\mathbf{x^\mathrm{opt}}=\mathbf{y}_1</span>.</p></li>
+</ul>
+<p><strong>Properties:</strong></p>
+<p>The function consists of <span class="math inline">21</span> optima with position and height being unrelated and randomly chosen (different for each instantiation of the function).</p>
+<ul>
+<li>the conditioning around the global optimum is about <span class="math inline">1000</span></li>
+</ul>
+<p><strong>Information gained from this function:</strong></p>
+<ul>
+<li>In comparison to f21: What is the effect of higher condition?</li>
+</ul>
+</section>
+</div>
+<div id="text-f23">
+<section id="f23" class="level3">
+<h3 class="anchored" data-anchor-id="f23">f<sub>23</sub>: Katsuura Function</h3>
+<p><span class="math display">f_{23}(\mathbf{x}) = \frac{10}{D^{2}} \prod_{i=1}^D\left(1 + i\sum_{j=1}^{32}
+     \frac{\left|2^j z_i - [2^j z_i]\right|}{2^j} \right)^{10/D^{1.2}}
+       - \frac{10}{D^{2}} + f_{\mathrm{pen}}(\mathbf{x}) + f_{\mathrm{opt}}(\mathbf{x})</span></p>
+<ul>
+<li><span class="math inline">\mathbf{z}= \mathbf{Q}\,\Lambda^{\!100}\mathbf{R}(\mathbf{x}-\mathbf{x^\mathrm{opt}})</span></li>
+</ul>
+<p><strong>Properties:</strong></p>
+<p>Highly rugged and highly repetitive function with more than <span class="math inline">10^D</span> global optima.</p>
+</section>
+</div>
+<div id="text-f24">
+<section id="f24" class="level3">
+<h3 class="anchored" data-anchor-id="f24">f<sub>24</sub>: Lunacek bi-Rastrigin Function</h3>
+<p><span class="math display">f_{24}(\mathbf{x}) = \mathrm{min}\left(\sum_{i = 1}^{D}(\hat{x}_i - \mu_0)^2,
+                       d\,D+ s\sum_{i = 1}^{D}(\hat{x}_i - \mu_1)^2\right)
+           + 10\left(D- \sum_{i=1}^D\cos(2\pi z_i)\right) + 10^4\,f^{{}_\mathrm{pen}}(\mathbf{x}) + f_{\mathrm{opt}}(\mathbf{x})</span></p>
+<ul>
+<li><p><span class="math inline">\hat{\mathbf{x}} = 2\,\mathrm{{sign}}(\mathbf{x^\mathrm{opt}})\otimes\mathbf{x}</span>, <span class="math inline">\mathbf{x^\mathrm{opt}}=</span> [<del><span class="math inline">\mu_0</span></del>&nbsp;<span class="math inline">\longrightarrow</span>]&nbsp; <span class="math inline">\frac{\mu_0}{2}</span> <span class="math inline">\mathbf{1_-^+}</span></p></li>
+<li><p><span class="math inline">\mathbf{z}= \mathbf{Q}\Lambda^{\!100}\mathbf{R}(\hat{\mathbf{x}}-\mu_0\,\mathbf{1})</span></p></li>
+<li><p><span class="math inline">\mu_0 = 2.5</span>, <span class="math inline">\mu_1 = -\sqrt{\dfrac{\mu_0^2-d}{s}}</span>, <span class="math inline">s = 1 - \dfrac{1}{2\sqrt{D+20}-8.2}</span>, <span class="math inline">d=1</span></p></li>
+</ul>
+<p><strong>Properties:</strong></p>
+<p>Highly multimodal function with two funnels around [<del><span class="math inline">\mu_0\mathbf{1_-^+}</span></del>&nbsp;<span class="math inline">\longrightarrow</span>]&nbsp; <span class="math inline">\frac{\mu_0}{2}\mathbf{1_-^+}</span> and [<del><span class="math inline">-\mu_1\mathbf{1_-^+}</span></del>&nbsp;<span class="math inline">\longrightarrow</span>]&nbsp; <span class="math inline">\frac{\mu_1}{2}\mathbf{1_-^+}</span> being superimposed by the cosine. Presumably different approaches need to be used for “selecting the funnel” and for search the highly multimodal function “within” the funnel. The function was constructed to be deceptive for evolutionary algorithms with large population size.</p>
+<ul>
+<li>the funnel of the local optimum at [<del><span class="math inline">-\mu_1 \mathbf{1_-^+}</span></del>]&nbsp; <span class="math inline">\frac{\mu_1}{2}\mathbf{1_-^+}</span> has roughly <span class="math inline">70\%</span> of the search space volume within <span class="math inline">[-5,5]^D</span>.</li>
+</ul>
+<p><strong>Information gained from this function:</strong> Can the search behavior be local on the global scale but global on a local scale?</p>
+</section>
+</div>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var filterRegex = new RegExp(".*numbbo/bbob-plots.*");
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+          // target, if specified
+          link.setAttribute("target", "_blank");
+          // default icon
+          link.classList.add("external");
+      }
+    }
+});
+</script>
+</div> <!-- /content -->
+<script type="text/javascript" defer="" src="../assets/bbob/js/bbob.js"></script>
+
+
+
+</body></html>

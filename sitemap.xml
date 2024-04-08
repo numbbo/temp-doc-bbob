@@ -1,11 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://numbbo.github.io/temp-doc-bbob/vis.html</loc>
-    <lastmod>2024-03-20T17:20:16.756Z</lastmod>
+    <loc>https://numbbo.github.io/temp-doc-bbob/noisy/vis.html</loc>
+    <lastmod>2024-04-08T15:36:10.565Z</lastmod>
   </url>
   <url>
-    <loc>https://numbbo.github.io/temp-doc-bbob/def.html</loc>
-    <lastmod>2024-03-20T17:20:16.046Z</lastmod>
+    <loc>https://numbbo.github.io/temp-doc-bbob/mixed-integer/vis.html</loc>
+    <lastmod>2024-04-08T15:36:09.336Z</lastmod>
+  </url>
+  <url>
+    <loc>https://numbbo.github.io/temp-doc-bbob/bbob/vis.html</loc>
+    <lastmod>2024-04-08T15:36:08.282Z</lastmod>
+  </url>
+  <url>
+    <loc>https://numbbo.github.io/temp-doc-bbob/bbob/def.html</loc>
+    <lastmod>2024-04-08T15:36:07.525Z</lastmod>
+  </url>
+  <url>
+    <loc>https://numbbo.github.io/temp-doc-bbob/mixed-integer/def.html</loc>
+    <lastmod>2024-04-08T15:36:08.857Z</lastmod>
+  </url>
+  <url>
+    <loc>https://numbbo.github.io/temp-doc-bbob/noisy/def.html</loc>
+    <lastmod>2024-04-08T15:36:09.975Z</lastmod>
   </url>
 </urlset>
