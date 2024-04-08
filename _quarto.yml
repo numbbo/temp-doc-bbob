@@ -29,19 +29,19 @@ website:
   sidebar:
     style: "docked"
     contents:
-      - section: "BBOB"
+      - section: "`bbob`"
         contents:
           - text: "Function Definitions"
             href: "bbob/def.html"
           - text: "Visualizations"
             href: "bbob/vis.html"
-      - section: "Noisy"
+      - section: "`bbob-noisy`"
         contents:
           - text: "Function Definitions"
             href: "noisy/def.html"
           - text: "Visualizations"
             href: "noisy/vis.html"
-      - section: "Mixed-integer"
+      - section: "`bbob-mixint`"
         contents:
           - text: "Function Definitions"
             href: "mixed-integer/def.html"
