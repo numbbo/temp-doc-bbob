@@ -29,7 +29,7 @@ columns (click on <b>Dimension</b>/<b>Function</b>/<b>Instance</b>/<b>Visualizat
 </td>
 <td class="select" align="center">
 <button id="funPrev" onclick="getPrev(this)" class="button">&minus;</button>
-<select id="fun" onchange="changePlot()" class="dropdown"></select>
+<select id="fun" style="width:auto" onchange="changePlot()" class="dropdown"></select>
 <button id="funNext" onclick="getNext(this)" class="button">+</button>
 </td>
 <td class="select" align="center">
