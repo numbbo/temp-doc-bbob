@@ -108,13 +108,12 @@ function changePlot() {
 		}
 	}
 
-	for (let iFun = 0; iFun < valuesFun.length; iFun++) {
-		textName = "text-f" + valuesFun[iFun];
-		if ((selectedNode === "funAll") || (valuesFun[iFun] == chosenFun[0])) {
-			document.getElementById(textName).setAttribute("style", "display:block;");
-		}
-		else {
-			document.getElementById(textName).setAttribute("style", "display:none;");
+	let divs = document.getElementsByClassName('noisy');
+	for (let div of divs) {
+		if ((selectedNode === "funAll") || (div.id.includes(chosenFun[0]))) {
+			div.setAttribute("style", "display:block;");
+		} else{
+			div.setAttribute("style", "display:none;");
 		}
 	}
 	
