@@ -1,4 +1,6 @@
+<div id="text-g1">
 ## Separable Functions
+</div>
 
 <div id="text-f1">
 ### f<sub>1</sub>: Sphere Function {#f1}
@@ -124,7 +126,9 @@ initial convex hull of solutions right into the domain boundary.
     the domain boundary? Can the step size be increased accordingly?
 </div>
 
+<div id="text-g2">
 ## Functions with Low or Moderate Conditioning
+</div>
 
 <div id="text-f6">
 ### f<sub>6</sub>: Attractive Sector Function {#f6}
@@ -223,7 +227,9 @@ rotated version of the previously defined Rosenbrock function.
     partial separability?
 </div>
 
+<div id="text-g3">
 ## Functions with High Conditioning and Unimodal
+</div>
 
 <div id="text-f10">
 ### f<sub>10</sub>: Ellipsoidal Function {#f10}
@@ -322,7 +328,9 @@ Due to the different exponents the sensitivies of the $z_i$-variables
 become more and more different when approaching the optimum.
 </div>
 
+<div id="text-g4">
 ## Multi-Modal Functions with Adequate Global Structure
+</div>
 
 <div id="text-f15">
 ### f<sub>15</sub>: Rastrigin Function {#f15}
@@ -434,7 +442,9 @@ $$f_{19}(\mathbf{x}) = \frac{10}{D-1} \sum_{i=1}^{D-1} \left( \frac{s_i}{4000} -
 Resembling the Rosenbrock function in a highly multimodal way.
 </div>
 
+<div id="text-g5">
 ## Multi-Modal Functions with Weak Global Structure
+</div>
 
 <div id="text-f20">
 ### f<sub>20</sub>: Schwefel Function {#f20}
