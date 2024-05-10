@@ -8,6 +8,6 @@ format:
     toc-depth: 4
 ---
 
-{{< include ../assets/bbob-noisy/func_def/intro.md >}}
+{{< include ../assets/bbob-noisy/md/intro.md >}}
 
-{{< include ../assets/bbob-noisy/func_def/functions.md >}}
+{{< include ../assets/bbob-noisy/md/functions.md >}}

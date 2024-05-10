@@ -52,8 +52,8 @@ columns (click on <b>Dimension</b>/<b>Function</b>/<b>Instance</b>/<b>Visualizat
 
 ## Plot explanation
 
-{{< include ../assets/bbob-noisy/func_def/plots.md >}}
+{{< include ../assets/bbob-noisy/md/plots.md >}}
 
 ## Problem definition
 
-{{< include ../assets/bbob-noisy/func_def/functions.md >}}
+{{< include ../assets/bbob-noisy/md/functions.md >}}

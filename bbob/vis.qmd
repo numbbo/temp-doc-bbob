@@ -53,8 +53,8 @@ columns (click on <b>Dimension</b>/<b>Function</b>/<b>Instance</b>/<b>Visualizat
 
 ## Plot explanation
 
-{{< include ../assets/bbob/func_def/plots.md >}}
+{{< include ../assets/bbob/md/plots.md >}}
 
 ## Problem definition
 
-{{< include ../assets/bbob/func_def/functions.md >}}
+{{< include ../assets/bbob/md/functions.md >}}

@@ -9,6 +9,6 @@ format:
 ---
 
 
-{{< include ../assets/bbob/func_def/intro.md >}}
+{{< include ../assets/bbob/md/intro.md >}}
 
-{{< include ../assets/bbob/func_def/functions.md >}}
+{{< include ../assets/bbob/md/functions.md >}}

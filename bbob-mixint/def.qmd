@@ -6,4 +6,4 @@ format:
       margin-width: 450px
 ---
 
-{{< include ../assets/bbob-mixint/func_def/functions.md >}}
+{{< include ../assets/bbob-mixint/md/functions.md >}}
