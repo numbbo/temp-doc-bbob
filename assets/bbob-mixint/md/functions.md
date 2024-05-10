@@ -50,7 +50,7 @@ values. This discretization is done as follows:
                \end{array}\right.$$
 
 The values $y_j, j = 1, \dots, l,$ in
-Step (1) are
+Step (1) are
 chosen in such a way that the corresponding shifted values $z_j$ remain
 within $[-4, 4]$ if $x_i^{\text{opt}}$ is also in $[-4, 4]$. If not, the
 shift is larger, but $z_j, j = 1, \dots, l,$ never go beyond
