@@ -10,7 +10,7 @@ $$f_{1}(\mathbf{x}) = \|\mathbf{z}\|^2 + f_\mathrm{opt}$$
 **Properties:**
 
 Presumably the most easy continuous domain search problem, given the
-volume of the searched solution is small (i.e. where pure monte-carlo
+volume of the searched solution is small (i.e. where pure monte-carlo
 random search is too expensive).
 
 -   unimodal
@@ -41,7 +41,7 @@ irregularities.
 
 **Information gained from this function:**
 
--   In comparison to f10: Is separability exploited?
+-   In comparison to f<sub>10</sub>: Is separability exploited?
 </div>
 <div id="text-f3">
 ### f<sub>3</sub>: Rastrigin Function {#f3}
@@ -54,7 +54,7 @@ $$f_{3}(\mathbf{x}) = 10 \left(D- \sum_{i = 1}^{D}\cos(2\pi z_i)\right) + \|\mat
 
 Highly multimodal function with a comparatively regular structure for
 the placement of the optima. The transformations
-$T^{{}}_\mathrm{asy}$ and $T_\mathrm{\hspace*{-0.01em}osz}$ alleviate
+$T^{{}}_\mathrm{asy}$ and $T_\mathrm{\hspace*{-0.01em}osz}$ alleviate
 the symmetry and regularity of the original Rastrigin function
 
 -   roughly $10^D$ local optima
@@ -63,7 +63,7 @@ the symmetry and regularity of the original Rastrigin function
 
 **Information gained from this function:**
 
--   In comparison to f15: Is separability exploited?
+-   In comparison to f<sub>15</sub>: Is separability exploited?
 </div>
 <div id="text-f4">
 ### f<sub>4</sub>: Büche-Rastrigin Function {#f4}
@@ -92,7 +92,7 @@ symmetrically distributed search operators.
 
 **Information gained from this function:**
 
--   In comparison to f3: What is the effect of asymmetry?
+-   In comparison to f<sub>3</sub>: What is the effect of asymmetry?
 </div>
 <div id="text-f5">
 ### f<sub>5</sub>: Linear Slope {#f5}
@@ -116,7 +116,7 @@ $$f_{5}(\mathbf{x}) = \sum_{i = 1}^{D} 5\,|s_i| - s_i z_i
 Purely linear function testing whether the search can go outside the
 initial convex hull of solutions right into the domain boundary.
 
--   $\mathbf{x}^\mathrm{opt}$ is on the domain boundary
+-   $\mathbf{x}^\mathrm{opt}$ is on the domain boundary
 
 **Information gained from this function:**
 
@@ -148,7 +148,7 @@ function values. The optimum is located at the tip of this cone.
 
 **Information gained from this function:**
 
--   In comparison to f1: What is the effect of a highly asymmetric
+-   In comparison to f<sub>1</sub>: What is the effect of a highly asymmetric
     landscape?
 </div>
 <div id="text-f7">
@@ -218,7 +218,7 @@ rotated version of the previously defined Rosenbrock function.
 
 **Information gained from this function:**
 
--   In comparison to f8: Can the search follow a long path with
+-   In comparison to f<sub>8</sub>: Can the search follow a long path with
     $D-1$ changes in the direction without exploiting
     partial separability?
 </div>
@@ -241,11 +241,9 @@ irregularities, non-separable counterpart to $f_2$.
 
 **Information gained from this function:**
 
--   In comparison to f2: What is the effect of rotation
+-   In comparison to f<sub>2</sub>: What is the effect of rotation
     (non-separability)?
 
-Note: The 3d plot shows only a part of the complete function in the
-vicinity of the optimum.
 </div>
 <div id="text-f11">
 ### f<sub>11</sub>: Discus Function {#f11}
@@ -264,11 +262,9 @@ others.
 
 **Information gained from this function:**
 
--   In comparison to f1: What is the effect of constraint-like
+-   In comparison to f<sub>1</sub>: What is the effect of constraint-like
     penalization?
 
-Note: The 3d plot shows only a part of the complete function in the
-vicinity of the optimum.
 </div>
 <div id="text-f12">
 ### f<sub>12</sub>: Bent Cigar Function {#f12}
@@ -290,8 +286,6 @@ being quadratic.
 
 -   Can the search continuously change its search direction?
 
-Note: The 3d plot shows only a part of the complete function in the
-vicinity of the optimum.
 </div>
 <div id="text-f13">
 ### f<sub>13</sub>: Sharp Ridge Function {#f13}
@@ -312,7 +306,7 @@ behavior" close to the ridge is difficult to diagnose, because the
 gradient towards the ridge does not flatten out.\
 **Information gained from this function:**
 
--   In comparison to f12: What is the effect of non-smoothness,
+-   In comparison to f<sub>12</sub>: What is the effect of non-smoothness,
     non-differentiabale ridge?
 </div>
 <div id="text-f14">
@@ -342,8 +336,8 @@ $$f_{15}(\mathbf{x}) = 10 \left(D- \sum_{i = 1}^{D}\cos(2\pi z_i)\right)
 
 Prototypical highly multimodal function which has originally a very
 regular and symmetric structure for the placement of the optima. The
-transformations $T^{{}}_\mathrm{asy}$ and
-$T_\mathrm{\hspace*{-0.01em}osz}$ alleviate the symmetry and regularity
+transformations $T^{{}}_\mathrm{asy}$ and
+$T_\mathrm{\hspace*{-0.01em}osz}$ alleviate the symmetry and regularity
 of the original Rastrigin function.
 
 -   non-separable less regular counterpart of $f_3$
@@ -354,7 +348,7 @@ of the original Rastrigin function.
 
 **Information gained from this function:**
 
--   in comparison to f3: What is the effect of non-separability for a
+-   in comparison to f<sub>3</sub>: What is the effect of non-separability for a
     highly multimodal function?
 </div>
 <div id="text-f16">
@@ -380,7 +374,7 @@ optimum is not unique.
 
 **Information gained from this function:**
 
--   in comparison to f17: Does ruggedness or a repetitive landscape
+-   in comparison to f<sub>17</sub>: Does ruggedness or a repetitive landscape
     deter the search behavior?
 </div>
 <div id="text-f17">
@@ -421,7 +415,7 @@ Moderately ill-conditioned counterpart to $f_{17}$
 
 **Information gained from this function:**
 
--   In comparison to f17: What is the effect of ill-conditioning?
+-   In comparison to f<sub>17</sub>: What is the effect of ill-conditioning?
 </div>
 <div id="text-f19">
 ### f<sub>19</sub>: Composite Griewank-Rosenbrock Function F8F2 {#f19}
@@ -456,7 +450,7 @@ $$f_{20}(\mathbf{x}) = - \frac{1}{100D}%  % kept in the final print
 -   $\mathbf{z}= 100 (\Lambda^{10} (\hat{\mathbf{z}} - 2\left|\mathbf{x^\mathrm{opt}}\right|)$ + $2\left|\mathbf{x^\mathrm{opt}}\right|)$
 
 -   $\mathbf{x^\mathrm{opt}}= 4.2096874633/2 \;\mathbf{1_-^+}$,
-    where $\mathbf{1}_-^+$ is the same realization as above
+    where $\mathbf{1}_-^+$ is the same realization as above
 
 **Properties:**
 
@@ -480,7 +474,8 @@ $$f_{21}(\mathbf{x}) = T_\mathrm{\hspace*{-0.01emosz}}\left( 10 - \max_{i=1}^{10
     	      \end{cases}$, three optima have a value larger than $9$
 
 -   $\mathbf{C}_i=\Lambda^{\!\alpha_i}/\alpha_i^{1/4}$
-    where $\Lambda^{\!\alpha_i}$ is defined as usual, but with randomly permuted diagonal
+    where $\Lambda^{\!\alpha_i}$ is defined as usual (see [Symbols and Definitions](#symbols-and-definitions)), 
+-   but with randomly permuted diagonal
     elements. For $i=2,\dots,101$, $\alpha_i$ is drawn uniformly
     randomly from the set $\left\{1000^{2\frac{j}{99}} ~|~ j =
       0,\dots,99\right\}$ without replacement, and $\alpha_i=1000$ for
@@ -519,7 +514,8 @@ $$f_{22}(\mathbf{x}) = T_\mathrm{\hspace*{-0.01emosz}}\left( 10 - \max_{i=1}^{21
     	      \end{cases}$, two optima have a value larger than $9$
 
 -   $\mathbf{C}_i=\Lambda^{\!\alpha_i}/\alpha_i^{1/4}$
-    where $\Lambda^{\!\alpha_i}$ is defined as usual, but with randomly permuted diagonal
+    where $\Lambda^{\!\alpha_i}$ is defined as usual (see [Symbols and Definitions](#symbols-and-definitions)), 
+-   but with randomly permuted diagonal
     elements. For $i=2,\dots,21$, $\alpha_i$ is drawn uniformly randomly
     from the set $\left\{1000^{2\frac{j}{19}} ~|~ j =
       0,\dots,19\right\}$ without replacement, and $\alpha_i=1000^2$ for
@@ -527,8 +523,7 @@ $$f_{22}(\mathbf{x}) = T_\mathrm{\hspace*{-0.01emosz}}\left( 10 - \max_{i=1}^{21
 
 -   the local optima $\mathbf{y}_i$ are uniformly drawn
     from the domain $[-4.9,4.9]^D$ for $i=2,\dots,21$ and
-    $\mathbf{y}_{1}\in$\[~~$[-4,4]^D$~~ $\longrightarrow$\] 
-    $[-3.92,3.92]^D$\]. The global optimum is at
+    $\mathbf{y}_{1}\in [-3.92,3.92]^D$. The global optimum is at
     $\mathbf{x^\mathrm{opt}}=\mathbf{y}_1$.
 
 **Properties:**
@@ -541,14 +536,14 @@ function).
 
 **Information gained from this function:**
 
--   In comparison to f21: What is the effect of higher condition?
+-   In comparison to f<sub>21</sub>: What is the effect of higher condition?
 </div>
 <div id="text-f23">
 ### f<sub>23</sub>: Katsuura Function {#f23}
 
 $$f_{23}(\mathbf{x}) = \frac{10}{D^{2}} \prod_{i=1}^D\left(1 + i\sum_{j=1}^{32} 
      \frac{\left|2^j z_i - [2^j z_i]\right|}{2^j} \right)^{10/D^{1.2}}
-       - \frac{10}{D^{2}} + f_{\mathrm{pen}}(\mathbf{x}) + f_{\mathrm{opt}}(\mathbf{x})$$
+       - \frac{10}{D^{2}} + f_{\mathrm{pen}}(\mathbf{x}) + f_{\mathrm{opt}}$$
 
 -   $\mathbf{z}= \mathbf{Q}\,\Lambda^{\!100}\mathbf{R}(\mathbf{x}-\mathbf{x^\mathrm{opt}})$
 
@@ -562,11 +557,11 @@ $10^D$ global optima.
 
 $$f_{24}(\mathbf{x}) = \mathrm{min}\left(\sum_{i = 1}^{D}(\hat{x}_i - \mu_0)^2,
                        d\,D+ s\sum_{i = 1}^{D}(\hat{x}_i - \mu_1)^2\right)
-           + 10\left(D- \sum_{i=1}^D\cos(2\pi z_i)\right) + 10^4\,f^{{}_\mathrm{pen}}(\mathbf{x}) + f_{\mathrm{opt}}(\mathbf{x})$$
+           + 10\left(D- \sum_{i=1}^D\cos(2\pi z_i)\right) + 10^4\,f^{{}_\mathrm{pen}}(\mathbf{x}) + f_{\mathrm{opt}}$$
 
 -   $\hat{\mathbf{x}} = 2\,\mathrm{{sign}}(\mathbf{x^\mathrm{opt}})\otimes\mathbf{x}$,
     $\mathbf{x^\mathrm{opt}}=$
-    \[~~$\mu_0$~~ $\longrightarrow$\]  $\frac{\mu_0}{2}$
+    $\frac{\mu_0}{2}$
     $\mathbf{1_-^+}$
 
 -   $\mathbf{z}= \mathbf{Q}\Lambda^{\!100}\mathbf{R}(\hat{\mathbf{x}}-\mu_0\,\mathbf{1})$
@@ -578,17 +573,14 @@ $$f_{24}(\mathbf{x}) = \mathrm{min}\left(\sum_{i = 1}^{D}(\hat{x}_i - \mu_0)^2,
 
 Highly multimodal function with two
 funnels around
-\[~~$\mu_0\mathbf{1_-^+}$~~ $\longrightarrow$\] 
 $\frac{\mu_0}{2}\mathbf{1_-^+}$ and
-\[~~$-\mu_1\mathbf{1_-^+}$~~ $\longrightarrow$\] 
 $\frac{\mu_1}{2}\mathbf{1_-^+}$ being superimposed by the
 cosine. Presumably different approaches need to be used for "selecting
-the funnel" and for search the highly multimodal function "within" the
+the funnel" and for searching the highly multimodal function "within" the
 funnel. The function was constructed to be deceptive for evolutionary
 algorithms with large population size.
 
 -   the funnel of the local optimum at
-    \[~~$-\mu_1 \mathbf{1_-^+}$~~\] 
     $\frac{\mu_1}{2}\mathbf{1_-^+}$ has roughly $70\%$ of
     the search space volume within $[-5,5]^D$.
 

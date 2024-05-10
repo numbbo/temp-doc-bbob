@@ -52,13 +52,13 @@ All functions are defined and can be evaluated over
 $\mathcal{R}^{D}$, while the actual search
 domain is given as $[-5,5]^{D}$.
 
-**Location of the optimal $\mathbf{x}^\mathrm{opt}$ and of $f_\mathrm{opt}=f(\mathbf{x^\mathrm{opt}})$:**
+**Location of the optimal $\mathbf{x}^\mathrm{opt}$ and of $f_\mathrm{opt}=f(\mathbf{x^\mathrm{opt}})$:**
 
 All functions have their global optimum in $[-5,5]^{D}$.
 The majority of functions has the global optimum in
 $[-4,4]^{D}$ and for many of them
-$\mathbf{x}^\mathrm{opt}$ is drawn uniformly from this compact. The
-value for $f_\mathrm{opt}$ is drawn from a Cauchy distributed random
+$\mathbf{x}^\mathrm{opt}$ is drawn uniformly from this compact. The
+value for $f_\mathrm{opt}$ is drawn from a Cauchy distributed random
 variable, with zero median and with roughly 50% of the values between
 -100 and 100. The value is rounded after two decimal places and set to
 $\pm1000$ if its absolute value exceeds $1000$. In the function
@@ -71,7 +71,7 @@ stated otherwise.
 **Boundary Handling:**
 
 On some functions a penalty boundary handling is applied as given with
-$f^{{}}_\mathrm{pen}$.
+$f^{{}}_\mathrm{pen}$ (see [Symbols and Definitions](#symbols-and-definitions)).
 
 **Linear Transformations:**
 
@@ -87,14 +87,19 @@ $x$- or $f$-space. Both transformations
 $T_\mathrm{\hspace*{-0.01emosz}}:\mathcal{R}^n\to\mathcal{R}^n$,
 $n\in\{1,D\}$, and
 $T^{{}_\mathrm{asy}}:\mathcal{R}^D\to\mathcal{R}^D$
-are defined coordinate-wise (see below). They are smooth and have,
-coordinate-wise, a strictly positive derivative. $T_\mathrm{\hspace*{-0.01emosz}}$ is oscillating about the
-identity, where the oscillation is scale invariant w.r.t. the origin.
-$T^{{}}_\mathrm{asy}$ is the identity for negative values. When
-$T^{{}}_\mathrm{asy}$ is applied, a portion of $1/2^D$ of
+are defined coordinate-wise (see [Symbols and Definitions](#symbols-and-definitions)). They are smooth and have,
+coordinate-wise, a strictly positive derivative. 
+They are shown in @fig-bbob-trans.
+$T_\mathrm{\hspace*{-0.01emosz}}$ is oscillating about the
+identity, where the oscillation is scale invariant w.r.t. the origin.
+$T^{{}}_\mathrm{asy}$ is the identity for negative values. When
+$T^{{}}_\mathrm{asy}$ is applied, a portion of $1/2^D$ of
 the search space remains untransformed.
 
-## Symbols and Definitions []{#sec:symbols label="sec:symbols"}
+![$T_\mathrm{\hspace*{-0.01emosz}}$ (blue) and $D$-th coordinate of $T^{{}_\mathrm{asy}}$ for
+$\beta = 0.1, 0.2, 0.5$ (green)](../assets/bbob/images/bbob_transformations.png){#fig-bbob-trans}
+
+## Symbols and Definitions
 
 Used symbols and definitions of, e.g., auxiliary functions are given in
 the following. Vectors are typeset in bold and refer to column vectors.
@@ -113,7 +118,7 @@ $\mathbf{0}$    $=(0,\dots,0)^{\mathrm{T}}$ all zero vector
 
 $\mathbf{1}$    $=(1,\dots,1)^{\mathrm{T}}$ all one vector
 
-$\Lambda^{\!\alpha}$    is a diagonal matrix in $D$ dimensions with the $i$th diagonal
+$\Lambda^{\!\alpha}$    is a diagonal matrix in $D$ dimensions with the $i$th diagonal
     element as $\lambda_{ii} =
       \alpha^{\frac{1}{2}\frac{i-1}{D-1}}$, for
     $i=1,\dots,D$.
@@ -125,8 +130,8 @@ $\mathbf{1}_-^+$    a $D$-dimensional vector with entries of $-1$ or $1$ with eq
     probability independently drawn.
 
 $\mathbf{Q}$, $\mathbf{R}$    orthogonal (rotation) matrices. For one function in one dimension a
-    different realization for respectively $\mathbf{Q}$ and
-    $\mathbf{R}$ is used for each instantiation of the function.
+    different realization for respectively $\mathbf{Q}$ and
+    $\mathbf{R}$ is used for each instantiation of the function.
     Orthogonal matrices are generated from standard normally distributed
     entries by Gram-Schmidt orthonormalization. Columns and rows of an
     orthogonal matrix form an orthonormal basis.
@@ -138,7 +143,7 @@ $T^{{\beta}}_\mathrm{asy}$    $:\mathcal{R}^D\to\mathcal{R}^D$,
      \begin{cases}
        x_i^{1+\beta \frac{i-1}{D-1}\sqrt{x_i}} & \text{~if~} x_i>0\\ 
        x_i                                        & \text{~otherwise~}
-     \end{cases}$, for $i=1,\dots,D$.
+     \end{cases}$, for $i=1,\dots,D$. See @fig-bbob-trans.
 
 $T_\mathrm{\hspace*{-0.01em}osz}$    $:\mathcal{R}^n\to\mathcal{R}^n$, for any
     positive integer $n$ ($n=1$ and $n=D$ are used in the
@@ -158,7 +163,7 @@ $T_\mathrm{\hspace*{-0.01em}osz}$    $:\mathcal{R}^n\to\mathcal{R}^n$, for any
            \end{cases}$ and $c_2 = \begin{cases}
            7.9 & \text{if~} x > 0\\
            3.1 & \text{otherwise}
-           \end{cases}$.
+           \end{cases}$. See @fig-bbob-trans.
 
 $\mathbf{x}^\mathrm{opt}$    optimal solution vector, such that
     $f(\mathbf{x^\mathrm{opt}})$ is minimal.
