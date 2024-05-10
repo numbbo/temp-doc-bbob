@@ -42,7 +42,7 @@ function value (they are randomly shifted in $f$-space). Consequently,
 for each function different *instances* can be generated: for each
 instance the randomly chosen values are drawn anew. Apart from the
 first subgroup, the benchmarks are non-separable. Other specific
-properties are discussed in the appendix.
+properties are discussed in [Function Properties](#function-properties).
 
 ## General Setup
 
