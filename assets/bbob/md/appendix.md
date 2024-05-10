@@ -1,3 +1,3 @@
-## Function Properties
+## Function properties
 
 TBA
