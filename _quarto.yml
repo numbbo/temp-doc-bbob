@@ -35,15 +35,15 @@ website:
       - section: "`bbob-noisy`"
         contents:
           - text: "Function definitions"
-            href: "noisy/def.html"
+            href: "bbob-noisy/def.html"
           - text: "Visualizations"
-            href: "noisy/vis.html"
+            href: "bbob-noisy/vis.html"
       - section: "`bbob-mixint`"
         contents:
           - text: "Function definitions"
-            href: "mixed-integer/def.html"
+            href: "bbob-mixint/def.html"
           - text: "Visualizations"
-            href: "mixed-integer/vis.html"
+            href: "bbob-mixint/vis.html"
   search: 
     location: navbar
     type: overlay

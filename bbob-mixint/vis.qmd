@@ -3,7 +3,7 @@ title: Visualizations of problem landscapes
 format:
   html:
     include-after-body: 
-      - text: <script type="text/javascript" defer src="../assets/mixed-integer/js/bbob.js"></script>
+      - text: <script type="text/javascript" defer src="../assets/bbob-mixint/js/bbob.js"></script>
 ---
 
 ### Plots
