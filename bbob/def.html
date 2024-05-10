@@ -20,7 +20,60 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -81,7 +134,10 @@ ul.task-list li input[type="checkbox"] {
 <link rel="stylesheet" href="../assets/css/custom.css">
 <meta property="og:title" content="The bbob test suite - Function definitions">
 <meta property="og:description" content="">
+<meta property="og:image" content="https://numbbo.github.io/temp-doc-bbob/assets/bbob/images/bbob_transformations.png">
 <meta property="og:site-name" content="The bbob test suite">
+<meta property="og:image:height" content="1800">
+<meta property="og:image:width" content="2400">
 </head>
 
 <body class="nav-sidebar docked nav-fixed">
@@ -151,13 +207,13 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../noisy/def.html" class="sidebar-item-text sidebar-link">
+  <a href="../bbob-noisy/def.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Function definitions</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../noisy/vis.html" class="sidebar-item-text sidebar-link">
+  <a href="../bbob-noisy/vis.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Visualizations</span></a>
   </div>
 </li>
@@ -174,13 +230,13 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../mixed-integer/def.html" class="sidebar-item-text sidebar-link">
+  <a href="../bbob-mixint/def.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Function definitions</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../mixed-integer/vis.html" class="sidebar-item-text sidebar-link">
+  <a href="../bbob-mixint/vis.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Visualizations</span></a>
   </div>
 </li>
@@ -197,41 +253,48 @@ ul.task-list li input[type="checkbox"] {
    
   <ul>
   <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a></li>
-  <li><a href="#general-setup" id="toc-general-setup" class="nav-link" data-scroll-target="#general-setup">General Setup</a>
-  <ul class="collapse">
-  <li><a href="#search-space" id="toc-search-space" class="nav-link" data-scroll-target="#search-space">Search Space</a></li>
-  <li><a href="#location-of-the-optimal-mathbfxmathrmopt-and-of-f_mathrmoptfmathbfxmathrmopt" id="toc-location-of-the-optimal-mathbfxmathrmopt-and-of-f_mathrmoptfmathbfxmathrmopt" class="nav-link" data-scroll-target="#location-of-the-optimal-mathbfxmathrmopt-and-of-f_mathrmoptfmathbfxmathrmopt">Location of the optimal <span class="math inline">\mathbf{x}^\mathrm{opt}</span>&nbsp;and of <span class="math inline">f_\mathrm{opt}=f(\mathbf{x^\mathrm{opt}})</span></a></li>
-  <li><a href="#boundary-handling" id="toc-boundary-handling" class="nav-link" data-scroll-target="#boundary-handling">Boundary Handling</a></li>
-  <li><a href="#linear-transformations" id="toc-linear-transformations" class="nav-link" data-scroll-target="#linear-transformations">Linear Transformations</a></li>
-  <li><a href="#non-linear-transformations-and-symmetry-breaking" id="toc-non-linear-transformations-and-symmetry-breaking" class="nav-link" data-scroll-target="#non-linear-transformations-and-symmetry-breaking">Non-Linear Transformations and Symmetry Breaking</a></li>
-  </ul></li>
-  <li><a href="#symbols-and-definitions" id="toc-symbols-and-definitions" class="nav-link" data-scroll-target="#symbols-and-definitions">Symbols and Definitions <span id="sec:symbols" label="sec:symbols"></span></a>
+  <li><a href="#general-setup" id="toc-general-setup" class="nav-link" data-scroll-target="#general-setup">General Setup</a></li>
+  <li><a href="#symbols-and-definitions" id="toc-symbols-and-definitions" class="nav-link" data-scroll-target="#symbols-and-definitions">Symbols and Definitions</a></li>
+  <li><a href="#separable-functions" id="toc-separable-functions" class="nav-link" data-scroll-target="#separable-functions">Separable Functions</a>
   <ul class="collapse">
   <li><a href="#f1" id="toc-f1" class="nav-link" data-scroll-target="#f1">f<sub>1</sub>: Sphere Function</a></li>
   <li><a href="#f2" id="toc-f2" class="nav-link" data-scroll-target="#f2">f<sub>2</sub>: Ellipsoidal Function</a></li>
   <li><a href="#f3" id="toc-f3" class="nav-link" data-scroll-target="#f3">f<sub>3</sub>: Rastrigin Function</a></li>
   <li><a href="#f4" id="toc-f4" class="nav-link" data-scroll-target="#f4">f<sub>4</sub>: Büche-Rastrigin Function</a></li>
   <li><a href="#f5" id="toc-f5" class="nav-link" data-scroll-target="#f5">f<sub>5</sub>: Linear Slope</a></li>
+  </ul></li>
+  <li><a href="#functions-with-low-or-moderate-conditioning" id="toc-functions-with-low-or-moderate-conditioning" class="nav-link" data-scroll-target="#functions-with-low-or-moderate-conditioning">Functions with Low or Moderate Conditioning</a>
+  <ul class="collapse">
   <li><a href="#f6" id="toc-f6" class="nav-link" data-scroll-target="#f6">f<sub>6</sub>: Attractive Sector Function</a></li>
   <li><a href="#f7" id="toc-f7" class="nav-link" data-scroll-target="#f7">f<sub>7</sub>: Step Ellipsoidal Function</a></li>
   <li><a href="#f8" id="toc-f8" class="nav-link" data-scroll-target="#f8">f<sub>8</sub>: Rosenbrock Function, original</a></li>
   <li><a href="#f9" id="toc-f9" class="nav-link" data-scroll-target="#f9">f<sub>9</sub>: Rosenbrock Function, rotated</a></li>
+  </ul></li>
+  <li><a href="#functions-with-high-conditioning-and-unimodal" id="toc-functions-with-high-conditioning-and-unimodal" class="nav-link" data-scroll-target="#functions-with-high-conditioning-and-unimodal">Functions with High Conditioning and Unimodal</a>
+  <ul class="collapse">
   <li><a href="#f10" id="toc-f10" class="nav-link" data-scroll-target="#f10">f<sub>10</sub>: Ellipsoidal Function</a></li>
   <li><a href="#f11" id="toc-f11" class="nav-link" data-scroll-target="#f11">f<sub>11</sub>: Discus Function</a></li>
   <li><a href="#f12" id="toc-f12" class="nav-link" data-scroll-target="#f12">f<sub>12</sub>: Bent Cigar Function</a></li>
   <li><a href="#f13" id="toc-f13" class="nav-link" data-scroll-target="#f13">f<sub>13</sub>: Sharp Ridge Function</a></li>
   <li><a href="#f14" id="toc-f14" class="nav-link" data-scroll-target="#f14">f<sub>14</sub>: Different Powers Function</a></li>
+  </ul></li>
+  <li><a href="#multi-modal-functions-with-adequate-global-structure" id="toc-multi-modal-functions-with-adequate-global-structure" class="nav-link" data-scroll-target="#multi-modal-functions-with-adequate-global-structure">Multi-Modal Functions with Adequate Global Structure</a>
+  <ul class="collapse">
   <li><a href="#f15" id="toc-f15" class="nav-link" data-scroll-target="#f15">f<sub>15</sub>: Rastrigin Function</a></li>
   <li><a href="#f16" id="toc-f16" class="nav-link" data-scroll-target="#f16">f<sub>16</sub>: Weierstrass Function</a></li>
   <li><a href="#f17" id="toc-f17" class="nav-link" data-scroll-target="#f17">f<sub>17</sub>: Schaffers F7 Function</a></li>
   <li><a href="#f18" id="toc-f18" class="nav-link" data-scroll-target="#f18">f<sub>18</sub>: Schaffers F7 Function, moderately ill-conditioned</a></li>
   <li><a href="#f19" id="toc-f19" class="nav-link" data-scroll-target="#f19">f<sub>19</sub>: Composite Griewank-Rosenbrock Function F8F2</a></li>
+  </ul></li>
+  <li><a href="#multi-modal-functions-with-weak-global-structure" id="toc-multi-modal-functions-with-weak-global-structure" class="nav-link" data-scroll-target="#multi-modal-functions-with-weak-global-structure">Multi-Modal Functions with Weak Global Structure</a>
+  <ul class="collapse">
   <li><a href="#f20" id="toc-f20" class="nav-link" data-scroll-target="#f20">f<sub>20</sub>: Schwefel Function</a></li>
   <li><a href="#f21" id="toc-f21" class="nav-link" data-scroll-target="#f21">f<sub>21</sub>: Gallagher’s Gaussian 101-me Peaks Function</a></li>
   <li><a href="#f22" id="toc-f22" class="nav-link" data-scroll-target="#f22">f<sub>22</sub>: Gallagher’s Gaussian 21-hi Peaks Function</a></li>
   <li><a href="#f23" id="toc-f23" class="nav-link" data-scroll-target="#f23">f<sub>23</sub>: Katsuura Function</a></li>
   <li><a href="#f24" id="toc-f24" class="nav-link" data-scroll-target="#f24">f<sub>24</sub>: Lunacek bi-Rastrigin Function</a></li>
   </ul></li>
+  <li><a href="#function-properties" id="toc-function-properties" class="nav-link" data-scroll-target="#function-properties">Function Properties</a></li>
   </ul>
 </nav>
     </div>
@@ -257,50 +320,62 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="introduction" class="level2">
 <h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
-<p>This document is based on the BBOB 2009 function document. In the following, <span class="math inline">24</span> noise-free real-parameter single-objective benchmark functions are presented. Our intention behind the selection of benchmark functions was to evaluate the performance of algorithms with regard to typical difficulties which we believe occur in continuous domain search. We hope that the function collection reflects, at least to a certain extend and with a few exceptions, a more difficult portion of the problem distribution that will be seen in practice (easy functions are evidently of lesser interest).</p>
+<p>This is an online-friendly presentation of the <code>bbob</code> functions, copied from the BBOB 2009 function document <span class="citation" data-cites="bbob2019">(<a href="#ref-bbob2019" role="doc-biblioref">Finck et al. 2009</a>)</span>. You may cite this work in a scientific context as</p>
+<blockquote class="blockquote">
+<p>Steffen Finck, Nikolaus Hansen, Raymond Ros, and Anne Auger. Real-Parameter Black-Box Optimization Benchmarking 2009: Noiseless Functions Definitions. Technical report, RR-6829. INRIA, 2009. <a href="https://inria.hal.science/inria-00362633v2/document">https://inria.hal.science/inria-00362633v2/document</a></p>
+</blockquote>
+<div class="sourceCode" id="cb1"><pre class="sourceCode bibtex code-with-copy"><code class="sourceCode bibtex"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="va">@techreport</span>{<span class="ot">bbob2019</span>,</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    <span class="dt">author</span> = {Finck, Steffen and Hansen, Nikolaus and Ros, Raymond and Auger, Anne},</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>    <span class="dt">title</span> = {Real-Parameter Black-Box Optimization Benchmarking 2009: Noiseless Functions Definitions},</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>    <span class="dt">institution</span> = {INRIA},</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>    <span class="dt">year</span> = {2009},</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>    <span class="dt">number</span> = {RR-6829},</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>    <span class="dt">note</span> = {Updated version as of February 2019},</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>    <span class="dt">url</span> = {https://inria.hal.science/inria-00362633v2/document}</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>In the following, 24 noise-free real-parameter single-objective benchmark functions are presented. Our intention behind the selection of benchmark functions was to evaluate the performance of algorithms with regard to typical difficulties which we believe occur in continuous domain search. We hope that the function collection reflects, at least to a certain extend and with a few exceptions, a more difficult portion of the problem distribution that will be seen in practice (easy functions are evidently of lesser interest).</p>
 <p>We prefer benchmark functions that are comprehensible such that algorithm behaviours can be understood in the topological context. In this way, a desired search behaviour can be pictured and deficiencies of algorithms can be profoundly analysed. Last but not least, this can eventually lead to a systematic improvement of algorithms.</p>
 <p>All benchmark functions are scalable with the dimension. Most functions have no specific value of their optimal solution (they are randomly shifted in <span class="math inline">x</span>-space). All functions have an artificially chosen optimal function value (they are randomly shifted in <span class="math inline">f</span>-space). Consequently, for each function different <em>instances</em> can be generated: for each instance the randomly chosen values are drawn anew. Apart from the first subgroup, the benchmarks are non-separable. Other specific properties are discussed in the appendix.</p>
 </section>
 <section id="general-setup" class="level2">
 <h2 class="anchored" data-anchor-id="general-setup">General Setup</h2>
-<section id="search-space" class="level3">
-<h3 class="anchored" data-anchor-id="search-space">Search Space</h3>
+<p><strong>Search Space:</strong></p>
 <p>All functions are defined and can be evaluated over <span class="math inline">\mathcal{R}^{D}</span>, while the actual search domain is given as <span class="math inline">[-5,5]^{D}</span>.</p>
-</section>
-<section id="location-of-the-optimal-mathbfxmathrmopt-and-of-f_mathrmoptfmathbfxmathrmopt" class="level3">
-<h3 class="anchored" data-anchor-id="location-of-the-optimal-mathbfxmathrmopt-and-of-f_mathrmoptfmathbfxmathrmopt">Location of the optimal <span class="math inline">\mathbf{x}^\mathrm{opt}</span>&nbsp;and of <span class="math inline">f_\mathrm{opt}=f(\mathbf{x^\mathrm{opt}})</span></h3>
-<p>All functions have their global optimum in <span class="math inline">[-5,5]^{D}</span>. The majority of functions has the global optimum in <span class="math inline">[-4,4]^{D}</span> and for many of them <span class="math inline">\mathbf{x}^\mathrm{opt}</span>&nbsp;is drawn uniformly from this compact. The value for <span class="math inline">f_\mathrm{opt}</span>&nbsp;is drawn from a Cauchy distributed random variable, with zero median and with roughly 50% of the values between -100 and 100. The value is rounded after two decimal places and set to <span class="math inline">\pm1000</span> if its absolute value exceeds <span class="math inline">1000</span>. In the function definitions a transformed variable vector <span class="math inline">\mathbf{z}</span> is often used instead of the argument <span class="math inline">\mathbf{x}</span>. The vector <span class="math inline">\mathbf{z}</span> has its optimum in <span class="math inline">\mathbf{z^\mathrm{opt}}=\mathbf{0}</span>, if not stated otherwise.</p>
-</section>
-<section id="boundary-handling" class="level3">
-<h3 class="anchored" data-anchor-id="boundary-handling">Boundary Handling</h3>
-<p>On some functions a penalty boundary handling is applied as given with <span class="math inline">f^{{}}_\mathrm{pen}</span>.</p>
-</section>
-<section id="linear-transformations" class="level3">
-<h3 class="anchored" data-anchor-id="linear-transformations">Linear Transformations</h3>
+<p><strong>Location of the optimal <span class="math inline">\mathbf{x}^\mathrm{opt}</span> and of <span class="math inline">f_\mathrm{opt}=f(\mathbf{x^\mathrm{opt}})</span>:</strong></p>
+<p>All functions have their global optimum in <span class="math inline">[-5,5]^{D}</span>. The majority of functions has the global optimum in <span class="math inline">[-4,4]^{D}</span> and for many of them <span class="math inline">\mathbf{x}^\mathrm{opt}</span> is drawn uniformly from this compact. The value for <span class="math inline">f_\mathrm{opt}</span> is drawn from a Cauchy distributed random variable, with zero median and with roughly 50% of the values between -100 and 100. The value is rounded after two decimal places and set to <span class="math inline">\pm1000</span> if its absolute value exceeds <span class="math inline">1000</span>. In the function definitions a transformed variable vector <span class="math inline">\mathbf{z}</span> is often used instead of the argument <span class="math inline">\mathbf{x}</span>. The vector <span class="math inline">\mathbf{z}</span> has its optimum in <span class="math inline">\mathbf{z^\mathrm{opt}}=\mathbf{0}</span>, if not stated otherwise.</p>
+<p><strong>Boundary Handling:</strong></p>
+<p>On some functions a penalty boundary handling is applied as given with <span class="math inline">f^{{}}_\mathrm{pen}</span> (see <a href="#symbols-and-definitions">Symbols and Definitions</a>).</p>
+<p><strong>Linear Transformations:</strong></p>
 <p>Linear transformations of the search space are applied to derive non-separable functions from separable ones and to control the conditioning of the function.</p>
-</section>
-<section id="non-linear-transformations-and-symmetry-breaking" class="level3">
-<h3 class="anchored" data-anchor-id="non-linear-transformations-and-symmetry-breaking">Non-Linear Transformations and Symmetry Breaking</h3>
-<p>In order to make relatively simple, but well understood functions less regular, on some functions non-linear transformations are applied in <span class="math inline">x</span>- or <span class="math inline">f</span>-space. Both transformations <span class="math inline">T_\mathrm{\hspace*{-0.01emosz}}:\mathcal{R}^n\to\mathcal{R}^n</span>, <span class="math inline">n\in\{1,D\}</span>, and <span class="math inline">T^{{}_\mathrm{asy}}:\mathcal{R}^D\to\mathcal{R}^D</span> are defined coordinate-wise (see below). They are smooth and have, coordinate-wise, a strictly positive derivative. <span class="math inline">T_\mathrm{\hspace*{-0.01emosz}}</span> is oscillating about the identity, where the oscillation is scale invariant w.r.t.&nbsp;the origin. <span class="math inline">T^{{}}_\mathrm{asy}</span>&nbsp;is the identity for negative values. When <span class="math inline">T^{{}}_\mathrm{asy}</span>&nbsp;is applied, a portion of <span class="math inline">1/2^D</span> of the search space remains untransformed.</p>
-</section>
+<p><strong>Non-Linear Transformations and Symmetry Breaking:</strong></p>
+<p>In order to make relatively simple, but well understood functions less regular, on some functions non-linear transformations are applied in <span class="math inline">x</span>- or <span class="math inline">f</span>-space. Both transformations <span class="math inline">T_\mathrm{\hspace*{-0.01emosz}}:\mathcal{R}^n\to\mathcal{R}^n</span>, <span class="math inline">n\in\{1,D\}</span>, and <span class="math inline">T^{{}_\mathrm{asy}}:\mathcal{R}^D\to\mathcal{R}^D</span> are defined coordinate-wise (see <a href="#symbols-and-definitions">Symbols and Definitions</a>). They are smooth and have, coordinate-wise, a strictly positive derivative. They are shown in <a href="#fig-bbob-trans">Figure&nbsp;1</a>. <span class="math inline">T_\mathrm{\hspace*{-0.01emosz}}</span> is oscillating about the identity, where the oscillation is scale invariant w.r.t. the origin. <span class="math inline">T^{{}}_\mathrm{asy}</span> is the identity for negative values. When <span class="math inline">T^{{}}_\mathrm{asy}</span> is applied, a portion of <span class="math inline">1/2^D</span> of the search space remains untransformed.</p>
+<div id="fig-bbob-trans" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="../assets/bbob/images/bbob_transformations.png" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">Figure&nbsp;1: <span class="math inline">T_\mathrm{\hspace*{-0.01emosz}}</span> (blue) and <span class="math inline">D</span>-th coordinate of <span class="math inline">T^{{}_\mathrm{asy}}</span> for <span class="math inline">\beta = 0.1, 0.2, 0.5</span> (green)</figcaption>
+</figure>
+</div>
 </section>
 <section id="symbols-and-definitions" class="level2">
-<h2 class="anchored" data-anchor-id="symbols-and-definitions">Symbols and Definitions <span id="sec:symbols" label="sec:symbols"></span></h2>
+<h2 class="anchored" data-anchor-id="symbols-and-definitions">Symbols and Definitions</h2>
 <p>Used symbols and definitions of, e.g., auxiliary functions are given in the following. Vectors are typeset in bold and refer to column vectors.</p>
 <p><span class="math inline">\otimes</span> indicates element-wise multiplication of two <span class="math inline">D</span>-dimensional vectors, <span class="math inline">\otimes:\mathcal{R}^D\times\mathcal{R}^D\to\mathcal{R}^D,  (\mathbf{x},\mathbf{y})\mapsto\mathrm{{diag}}(\mathbf{x})\times\mathbf{y}=(x_i\times y_i)_{i=1,\dots,D}</span></p>
 <p><span class="math inline">\|.\|</span> denotes the Euclidean norm, <span class="math inline">\|\mathbf{x}\|^2=\sum_i x_i^2</span>.</p>
 <p><span class="math inline">[.]</span> denotes the nearest integer value</p>
 <p><span class="math inline">\mathbf{0}</span> <span class="math inline">=(0,\dots,0)^{\mathrm{T}}</span> all zero vector</p>
 <p><span class="math inline">\mathbf{1}</span> <span class="math inline">=(1,\dots,1)^{\mathrm{T}}</span> all one vector</p>
-<p><span class="math inline">\Lambda^{\!\alpha}</span> is a diagonal matrix in <span class="math inline">D</span>&nbsp;dimensions with the <span class="math inline">i</span>th diagonal element as <span class="math inline">\lambda_{ii} =  \alpha^{\frac{1}{2}\frac{i-1}{D-1}}</span>, for <span class="math inline">i=1,\dots,D</span>.</p>
+<p><span class="math inline">\Lambda^{\!\alpha}</span> is a diagonal matrix in <span class="math inline">D</span> dimensions with the <span class="math inline">i</span>th diagonal element as <span class="math inline">\lambda_{ii} =  \alpha^{\frac{1}{2}\frac{i-1}{D-1}}</span>, for <span class="math inline">i=1,\dots,D</span>.</p>
 <p><span class="math inline">f^{{}}_\mathrm{pen}</span> <span class="math inline">:\mathcal{R}^D\to\mathcal{R}</span>, <span class="math inline">\mathbf{x}\mapsto\sum_{i=1}^D\max(0,|x_i| - 5)^2</span></p>
 <p><span class="math inline">\mathbf{1}_-^+</span> a <span class="math inline">D</span>-dimensional vector with entries of <span class="math inline">-1</span> or <span class="math inline">1</span> with equal probability independently drawn.</p>
-<p><span class="math inline">\mathbf{Q}</span>, <span class="math inline">\mathbf{R}</span> orthogonal (rotation) matrices. For one function in one dimension a different realization for respectively <span class="math inline">\mathbf{Q}</span>&nbsp;and <span class="math inline">\mathbf{R}</span>&nbsp;is used for each instantiation of the function. Orthogonal matrices are generated from standard normally distributed entries by Gram-Schmidt orthonormalization. Columns and rows of an orthogonal matrix form an orthonormal basis.</p>
+<p><span class="math inline">\mathbf{Q}</span>, <span class="math inline">\mathbf{R}</span> orthogonal (rotation) matrices. For one function in one dimension a different realization for respectively <span class="math inline">\mathbf{Q}</span> and <span class="math inline">\mathbf{R}</span> is used for each instantiation of the function. Orthogonal matrices are generated from standard normally distributed entries by Gram-Schmidt orthonormalization. Columns and rows of an orthogonal matrix form an orthonormal basis.</p>
 <p><span class="math inline">\mathbf{R}</span> see <span class="math inline">\mathbf{Q}</span></p>
-<p><span class="math inline">T^{{\beta}}_\mathrm{asy}</span> <span class="math inline">:\mathcal{R}^D\to\mathcal{R}^D</span>, <span class="math inline">x_i\mapsto  \begin{cases}  x_i^{1+\beta \frac{i-1}{D-1}\sqrt{x_i}} &amp; \text{~if~} x_i&gt;0\\  x_i &amp; \text{~otherwise~}  \end{cases}</span>, for <span class="math inline">i=1,\dots,D</span>.</p>
+<p><span class="math inline">T^{{\beta}}_\mathrm{asy}</span> <span class="math inline">:\mathcal{R}^D\to\mathcal{R}^D</span>, <span class="math inline">x_i\mapsto  \begin{cases}  x_i^{1+\beta \frac{i-1}{D-1}\sqrt{x_i}} &amp; \text{~if~} x_i&gt;0\\  x_i &amp; \text{~otherwise~}  \end{cases}</span>, for <span class="math inline">i=1,\dots,D</span>. See <a href="#fig-bbob-trans">Figure&nbsp;1</a>.</p>
 <p><span class="math inline">T_\mathrm{\hspace*{-0.01em}osz}</span> <span class="math inline">:\mathcal{R}^n\to\mathcal{R}^n</span>, for any positive integer <span class="math inline">n</span> (<span class="math inline">n=1</span> and <span class="math inline">n=D</span> are used in the following), maps element-wise <span class="math display">x\mapsto\mathrm{{sign}}(x)\exp\left(\hat{x} +
-       0.049\left(\sin(c_1 \hat{x}) + \sin(c_2 \hat{x})\right)\right)</span> with <span class="math inline">\hat{x}= \begin{cases}  \log(|x|) &amp; \text{if~} x\not=0 \\  0 &amp; \text{otherwise}  \end{cases}</span>, <span class="math inline">\mathrm{{sign}}(x) = \begin{cases} -1 &amp; \text{if~} x &lt; 0 \\  0 &amp; \text{if~} x = 0 \\  1 &amp; \text{otherwise}  \end{cases}</span>, <span class="math inline">c_1 = \begin{cases}  10 &amp; \text{if~} x &gt; 0\\  5.5 &amp; \text{otherwise}  \end{cases}</span> and <span class="math inline">c_2 = \begin{cases}  7.9 &amp; \text{if~} x &gt; 0\\  3.1 &amp; \text{otherwise}  \end{cases}</span>.</p>
+       0.049\left(\sin(c_1 \hat{x}) + \sin(c_2 \hat{x})\right)\right)</span> with <span class="math inline">\hat{x}= \begin{cases}  \log(|x|) &amp; \text{if~} x\not=0 \\  0 &amp; \text{otherwise}  \end{cases}</span>, <span class="math inline">\mathrm{{sign}}(x) = \begin{cases} -1 &amp; \text{if~} x &lt; 0 \\  0 &amp; \text{if~} x = 0 \\  1 &amp; \text{otherwise}  \end{cases}</span>, <span class="math inline">c_1 = \begin{cases}  10 &amp; \text{if~} x &gt; 0\\  5.5 &amp; \text{otherwise}  \end{cases}</span> and <span class="math inline">c_2 = \begin{cases}  7.9 &amp; \text{if~} x &gt; 0\\  3.1 &amp; \text{otherwise}  \end{cases}</span>. See <a href="#fig-bbob-trans">Figure&nbsp;1</a>.</p>
 <p><span class="math inline">\mathbf{x}^\mathrm{opt}</span> optimal solution vector, such that <span class="math inline">f(\mathbf{x^\mathrm{opt}})</span> is minimal.</p>
+</section>
+<section id="separable-functions" class="level2">
+<h2 class="anchored" data-anchor-id="separable-functions">Separable Functions</h2>
 <div id="text-f1">
 <section id="f1" class="level3">
 <h3 class="anchored" data-anchor-id="f1">f<sub>1</sub>: Sphere Function</h3>
@@ -335,7 +410,7 @@ ul.task-list li input[type="checkbox"] {
 </ul>
 <p><strong>Information gained from this function:</strong></p>
 <ul>
-<li>In comparison to f10: Is separability exploited?</li>
+<li>In comparison to f<sub>10</sub>: Is separability exploited?</li>
 </ul>
 </section>
 </div>
@@ -347,14 +422,14 @@ ul.task-list li input[type="checkbox"] {
 <li><span class="math inline">\mathbf{z}= \Lambda^{\!10}T^{{0.2}}_{\mathrm{asy}}(T_\mathrm{\hspace*{-0.01emosz}}(\mathbf{x}-\mathbf{x^\mathrm{opt}}))</span></li>
 </ul>
 <p><strong>Properties:</strong></p>
-<p>Highly multimodal function with a comparatively regular structure for the placement of the optima. The transformations <span class="math inline">T^{{}}_\mathrm{asy}</span>&nbsp;and <span class="math inline">T_\mathrm{\hspace*{-0.01em}osz}</span>&nbsp;alleviate the symmetry and regularity of the original Rastrigin function</p>
+<p>Highly multimodal function with a comparatively regular structure for the placement of the optima. The transformations <span class="math inline">T^{{}}_\mathrm{asy}</span> and <span class="math inline">T_\mathrm{\hspace*{-0.01em}osz}</span> alleviate the symmetry and regularity of the original Rastrigin function</p>
 <ul>
 <li><p>roughly <span class="math inline">10^D</span> local optima</p></li>
 <li><p>conditioning is about <span class="math inline">10</span></p></li>
 </ul>
 <p><strong>Information gained from this function:</strong></p>
 <ul>
-<li>In comparison to f15: Is separability exploited?</li>
+<li>In comparison to f<sub>15</sub>: Is separability exploited?</li>
 </ul>
 </section>
 </div>
@@ -374,7 +449,7 @@ ul.task-list li input[type="checkbox"] {
 </ul>
 <p><strong>Information gained from this function:</strong></p>
 <ul>
-<li>In comparison to f3: What is the effect of asymmetry?</li>
+<li>In comparison to f<sub>3</sub>: What is the effect of asymmetry?</li>
 </ul>
 </section>
 </div>
@@ -391,7 +466,7 @@ ul.task-list li input[type="checkbox"] {
 <p><strong>Properties:</strong></p>
 <p>Purely linear function testing whether the search can go outside the initial convex hull of solutions right into the domain boundary.</p>
 <ul>
-<li><span class="math inline">\mathbf{x}^\mathrm{opt}</span>&nbsp;is on the domain boundary</li>
+<li><span class="math inline">\mathbf{x}^\mathrm{opt}</span> is on the domain boundary</li>
 </ul>
 <p><strong>Information gained from this function:</strong></p>
 <ul>
@@ -399,6 +474,9 @@ ul.task-list li input[type="checkbox"] {
 </ul>
 </section>
 </div>
+</section>
+<section id="functions-with-low-or-moderate-conditioning" class="level2">
+<h2 class="anchored" data-anchor-id="functions-with-low-or-moderate-conditioning">Functions with Low or Moderate Conditioning</h2>
 <div id="text-f6">
 <section id="f6" class="level3">
 <h3 class="anchored" data-anchor-id="f6">f<sub>6</sub>: Attractive Sector Function</h3>
@@ -414,7 +492,7 @@ ul.task-list li input[type="checkbox"] {
 </ul>
 <p><strong>Information gained from this function:</strong></p>
 <ul>
-<li>In comparison to f1: What is the effect of a highly asymmetric landscape?</li>
+<li>In comparison to f<sub>1</sub>: What is the effect of a highly asymmetric landscape?</li>
 </ul>
 </section>
 </div>
@@ -471,10 +549,13 @@ denotes the rounding procedure in order to produce the plateaus.</p></li>
 <p>rotated version of the previously defined Rosenbrock function.</p>
 <p><strong>Information gained from this function:</strong></p>
 <ul>
-<li>In comparison to f8: Can the search follow a long path with <span class="math inline">D-1</span> changes in the direction without exploiting partial separability?</li>
+<li>In comparison to f<sub>8</sub>: Can the search follow a long path with <span class="math inline">D-1</span> changes in the direction without exploiting partial separability?</li>
 </ul>
 </section>
 </div>
+</section>
+<section id="functions-with-high-conditioning-and-unimodal" class="level2">
+<h2 class="anchored" data-anchor-id="functions-with-high-conditioning-and-unimodal">Functions with High Conditioning and Unimodal</h2>
 <div id="text-f10">
 <section id="f10" class="level3">
 <h3 class="anchored" data-anchor-id="f10">f<sub>10</sub>: Ellipsoidal Function</h3>
@@ -489,9 +570,8 @@ denotes the rounding procedure in order to produce the plateaus.</p></li>
 </ul>
 <p><strong>Information gained from this function:</strong></p>
 <ul>
-<li>In comparison to f2: What is the effect of rotation (non-separability)?</li>
+<li>In comparison to f<sub>2</sub>: What is the effect of rotation (non-separability)?</li>
 </ul>
-<p>Note: The 3d plot shows only a part of the complete function in the vicinity of the optimum.</p>
 </section>
 </div>
 <div id="text-f11">
@@ -508,9 +588,8 @@ denotes the rounding procedure in order to produce the plateaus.</p></li>
 </ul>
 <p><strong>Information gained from this function:</strong></p>
 <ul>
-<li>In comparison to f1: What is the effect of constraint-like penalization?</li>
+<li>In comparison to f<sub>1</sub>: What is the effect of constraint-like penalization?</li>
 </ul>
-<p>Note: The 3d plot shows only a part of the complete function in the vicinity of the optimum.</p>
 </section>
 </div>
 <div id="text-f12">
@@ -529,7 +608,6 @@ denotes the rounding procedure in order to produce the plateaus.</p></li>
 <ul>
 <li>Can the search continuously change its search direction?</li>
 </ul>
-<p>Note: The 3d plot shows only a part of the complete function in the vicinity of the optimum.</p>
 </section>
 </div>
 <div id="text-f13">
@@ -543,7 +621,7 @@ denotes the rounding procedure in order to produce the plateaus.</p></li>
 <p>As for the Bent Cigar function, a ridge defined as <span class="math inline">\sum_{i=2}^D z_i^2 = 0</span> must be followed. The ridge is non-differentiable and the gradient is constant when the ridge is approached from any given point. Following the gradient becomes ineffective close to the ridge where the ridge needs to be followed in <span class="math inline">z_1</span>-direction to its optimum. The necessary change in “search behavior” close to the ridge is difficult to diagnose, because the gradient towards the ridge does not flatten out.<br>
 <strong>Information gained from this function:</strong></p>
 <ul>
-<li>In comparison to f12: What is the effect of non-smoothness, non-differentiabale ridge?</li>
+<li>In comparison to f<sub>12</sub>: What is the effect of non-smoothness, non-differentiabale ridge?</li>
 </ul>
 </section>
 </div>
@@ -558,6 +636,9 @@ denotes the rounding procedure in order to produce the plateaus.</p></li>
 <p>Due to the different exponents the sensitivies of the <span class="math inline">z_i</span>-variables become more and more different when approaching the optimum.</p>
 </section>
 </div>
+</section>
+<section id="multi-modal-functions-with-adequate-global-structure" class="level2">
+<h2 class="anchored" data-anchor-id="multi-modal-functions-with-adequate-global-structure">Multi-Modal Functions with Adequate Global Structure</h2>
 <div id="text-f15">
 <section id="f15" class="level3">
 <h3 class="anchored" data-anchor-id="f15">f<sub>15</sub>: Rastrigin Function</h3>
@@ -567,7 +648,7 @@ denotes the rounding procedure in order to produce the plateaus.</p></li>
 <li><span class="math inline">\mathbf{z}= \mathbf{R}\Lambda^{\!10}\mathbf{Q}\,T^{{0.2}}_\mathrm{asy}(T_\mathrm{\hspace*{-0.01emosz}}(\mathbf{R}(\mathbf{x}-\mathbf{x^\mathrm{opt}})))</span></li>
 </ul>
 <p><strong>Properties:</strong></p>
-<p>Prototypical highly multimodal function which has originally a very regular and symmetric structure for the placement of the optima. The transformations <span class="math inline">T^{{}}_\mathrm{asy}</span>&nbsp;and <span class="math inline">T_\mathrm{\hspace*{-0.01em}osz}</span>&nbsp;alleviate the symmetry and regularity of the original Rastrigin function.</p>
+<p>Prototypical highly multimodal function which has originally a very regular and symmetric structure for the placement of the optima. The transformations <span class="math inline">T^{{}}_\mathrm{asy}</span> and <span class="math inline">T_\mathrm{\hspace*{-0.01em}osz}</span> alleviate the symmetry and regularity of the original Rastrigin function.</p>
 <ul>
 <li><p>non-separable less regular counterpart of <span class="math inline">f_3</span></p></li>
 <li><p>roughly <span class="math inline">10^D</span> local optima</p></li>
@@ -575,7 +656,7 @@ denotes the rounding procedure in order to produce the plateaus.</p></li>
 </ul>
 <p><strong>Information gained from this function:</strong></p>
 <ul>
-<li>in comparison to f3: What is the effect of non-separability for a highly multimodal function?</li>
+<li>in comparison to f<sub>3</sub>: What is the effect of non-separability for a highly multimodal function?</li>
 </ul>
 </section>
 </div>
@@ -597,7 +678,7 @@ denotes the rounding procedure in order to produce the plateaus.</p></li>
 </ul>
 <p><strong>Information gained from this function:</strong></p>
 <ul>
-<li>in comparison to f17: Does ruggedness or a repetitive landscape deter the search behavior?</li>
+<li>in comparison to f<sub>17</sub>: Does ruggedness or a repetitive landscape deter the search behavior?</li>
 </ul>
 </section>
 </div>
@@ -634,7 +715,7 @@ denotes the rounding procedure in order to produce the plateaus.</p></li>
 </ul>
 <p><strong>Information gained from this function:</strong></p>
 <ul>
-<li>In comparison to f17: What is the effect of ill-conditioning?</li>
+<li>In comparison to f<sub>17</sub>: What is the effect of ill-conditioning?</li>
 </ul>
 </section>
 </div>
@@ -651,6 +732,9 @@ denotes the rounding procedure in order to produce the plateaus.</p></li>
 <p>Resembling the Rosenbrock function in a highly multimodal way.</p>
 </section>
 </div>
+</section>
+<section id="multi-modal-functions-with-weak-global-structure" class="level2">
+<h2 class="anchored" data-anchor-id="multi-modal-functions-with-weak-global-structure">Multi-Modal Functions with Weak Global Structure</h2>
 <div id="text-f20">
 <section id="f20" class="level3">
 <h3 class="anchored" data-anchor-id="f20">f<sub>20</sub>: Schwefel Function</h3>
@@ -661,7 +745,7 @@ denotes the rounding procedure in order to produce the plateaus.</p></li>
 <li><p><span class="math inline">\hat{\mathbf{x}} = 2\times\mathbf{1_-^+}\otimes\mathbf{x}</span></p></li>
 <li><p><span class="math inline">\hat{z}_{1} = \hat{x}_{1}</span>,<span class="math inline">\quad \hat{z}_{i+1} = \hat{x}_{i+1} + 0.25 \left({\hat{x}_{i}} - 2|x_i^{\text{opt}}| \right)</span>,<span class="math inline">\quad \text{for } i = 1, \ldots, D - 1</span></p></li>
 <li><p><span class="math inline">\mathbf{z}= 100 (\Lambda^{10} (\hat{\mathbf{z}} - 2\left|\mathbf{x^\mathrm{opt}}\right|)</span> + <span class="math inline">2\left|\mathbf{x^\mathrm{opt}}\right|)</span></p></li>
-<li><p><span class="math inline">\mathbf{x^\mathrm{opt}}= 4.2096874633/2 \;\mathbf{1_-^+}</span>, where <span class="math inline">\mathbf{1}_-^+</span>&nbsp;is the same realization as above</p></li>
+<li><p><span class="math inline">\mathbf{x^\mathrm{opt}}= 4.2096874633/2 \;\mathbf{1_-^+}</span>, where <span class="math inline">\mathbf{1}_-^+</span> is the same realization as above</p></li>
 </ul>
 <p><strong>Properties:</strong></p>
 <p>The most prominent <span class="math inline">2^D</span> minima are located comparatively close to the corners of the unpenalized search area.</p>
@@ -679,7 +763,8 @@ denotes the rounding procedure in order to produce the plateaus.</p></li>
            \mathbf{C}_i \mathbf{R}(\mathbf{x}-\mathbf{y}_i) \right) \right)^2 + f_{\mathrm{pen}}(\mathbf{x}) + f_\mathrm{opt}</span></p>
 <ul>
 <li><p><span class="math inline">w_i = \begin{cases}  1.1 + 8 \times\dfrac{i-2}{99} &amp; \text{for~} i=2,\dots,101 \\  10 &amp; \text{for~} i = 1  \end{cases}</span>, three optima have a value larger than <span class="math inline">9</span></p></li>
-<li><p><span class="math inline">\mathbf{C}_i=\Lambda^{\!\alpha_i}/\alpha_i^{1/4}</span> where <span class="math inline">\Lambda^{\!\alpha_i}</span> is defined as usual, but with randomly permuted diagonal elements. For <span class="math inline">i=2,\dots,101</span>, <span class="math inline">\alpha_i</span> is drawn uniformly randomly from the set <span class="math inline">\left\{1000^{2\frac{j}{99}} ~|~ j =  0,\dots,99\right\}</span> without replacement, and <span class="math inline">\alpha_i=1000</span> for <span class="math inline">i=1</span>.</p></li>
+<li><p><span class="math inline">\mathbf{C}_i=\Lambda^{\!\alpha_i}/\alpha_i^{1/4}</span> where <span class="math inline">\Lambda^{\!\alpha_i}</span> is defined as usual (see <a href="#symbols-and-definitions">Symbols and Definitions</a>),</p></li>
+<li><p>but with randomly permuted diagonal elements. For <span class="math inline">i=2,\dots,101</span>, <span class="math inline">\alpha_i</span> is drawn uniformly randomly from the set <span class="math inline">\left\{1000^{2\frac{j}{99}} ~|~ j =  0,\dots,99\right\}</span> without replacement, and <span class="math inline">\alpha_i=1000</span> for <span class="math inline">i=1</span>.</p></li>
 <li><p>the local optima <span class="math inline">\mathbf{y}_i</span> are uniformly drawn from the domain <span class="math inline">[-5,5]^D</span> for <span class="math inline">i=2,\dots,101</span> and <span class="math inline">\mathbf{y}_{1}\in[-4,4]^D</span>. The global optimum is at <span class="math inline">\mathbf{x^\mathrm{opt}}=\mathbf{y}_1</span>.</p></li>
 </ul>
 <p><strong>Properties:</strong></p>
@@ -702,8 +787,9 @@ denotes the rounding procedure in order to produce the plateaus.</p></li>
            \mathbf{C}_i \mathbf{R}(\mathbf{x}-\mathbf{y}_i) \right) \right)^2 + f_{\mathrm{pen}}(\mathbf{x}) + f_\mathrm{opt}</span></p>
 <ul>
 <li><p><span class="math inline">w_i = \begin{cases}  1.1 + 8 \times\dfrac{i-2}{19} &amp; \text{for~} i=2,\dots,21 \\  10 &amp; \text{for~} i = 1  \end{cases}</span>, two optima have a value larger than <span class="math inline">9</span></p></li>
-<li><p><span class="math inline">\mathbf{C}_i=\Lambda^{\!\alpha_i}/\alpha_i^{1/4}</span> where <span class="math inline">\Lambda^{\!\alpha_i}</span> is defined as usual, but with randomly permuted diagonal elements. For <span class="math inline">i=2,\dots,21</span>, <span class="math inline">\alpha_i</span> is drawn uniformly randomly from the set <span class="math inline">\left\{1000^{2\frac{j}{19}} ~|~ j =  0,\dots,19\right\}</span> without replacement, and <span class="math inline">\alpha_i=1000^2</span> for <span class="math inline">i=1</span>.</p></li>
-<li><p>the local optima <span class="math inline">\mathbf{y}_i</span> are uniformly drawn from the domain <span class="math inline">[-4.9,4.9]^D</span> for <span class="math inline">i=2,\dots,21</span> and <span class="math inline">\mathbf{y}_{1}\in</span>[<del><span class="math inline">[-4,4]^D</span></del>&nbsp;<span class="math inline">\longrightarrow</span>]&nbsp; <span class="math inline">[-3.92,3.92]^D</span>]. The global optimum is at <span class="math inline">\mathbf{x^\mathrm{opt}}=\mathbf{y}_1</span>.</p></li>
+<li><p><span class="math inline">\mathbf{C}_i=\Lambda^{\!\alpha_i}/\alpha_i^{1/4}</span> where <span class="math inline">\Lambda^{\!\alpha_i}</span> is defined as usual (see <a href="#symbols-and-definitions">Symbols and Definitions</a>),</p></li>
+<li><p>but with randomly permuted diagonal elements. For <span class="math inline">i=2,\dots,21</span>, <span class="math inline">\alpha_i</span> is drawn uniformly randomly from the set <span class="math inline">\left\{1000^{2\frac{j}{19}} ~|~ j =  0,\dots,19\right\}</span> without replacement, and <span class="math inline">\alpha_i=1000^2</span> for <span class="math inline">i=1</span>.</p></li>
+<li><p>the local optima <span class="math inline">\mathbf{y}_i</span> are uniformly drawn from the domain <span class="math inline">[-4.9,4.9]^D</span> for <span class="math inline">i=2,\dots,21</span> and <span class="math inline">\mathbf{y}_{1}\in [-3.92,3.92]^D</span>. The global optimum is at <span class="math inline">\mathbf{x^\mathrm{opt}}=\mathbf{y}_1</span>.</p></li>
 </ul>
 <p><strong>Properties:</strong></p>
 <p>The function consists of <span class="math inline">21</span> optima with position and height being unrelated and randomly chosen (different for each instantiation of the function).</p>
@@ -712,7 +798,7 @@ denotes the rounding procedure in order to produce the plateaus.</p></li>
 </ul>
 <p><strong>Information gained from this function:</strong></p>
 <ul>
-<li>In comparison to f21: What is the effect of higher condition?</li>
+<li>In comparison to f<sub>21</sub>: What is the effect of higher condition?</li>
 </ul>
 </section>
 </div>
@@ -721,7 +807,7 @@ denotes the rounding procedure in order to produce the plateaus.</p></li>
 <h3 class="anchored" data-anchor-id="f23">f<sub>23</sub>: Katsuura Function</h3>
 <p><span class="math display">f_{23}(\mathbf{x}) = \frac{10}{D^{2}} \prod_{i=1}^D\left(1 + i\sum_{j=1}^{32}
      \frac{\left|2^j z_i - [2^j z_i]\right|}{2^j} \right)^{10/D^{1.2}}
-       - \frac{10}{D^{2}} + f_{\mathrm{pen}}(\mathbf{x}) + f_{\mathrm{opt}}(\mathbf{x})</span></p>
+       - \frac{10}{D^{2}} + f_{\mathrm{pen}}(\mathbf{x}) + f_{\mathrm{opt}}</span></p>
 <ul>
 <li><span class="math inline">\mathbf{z}= \mathbf{Q}\,\Lambda^{\!100}\mathbf{R}(\mathbf{x}-\mathbf{x^\mathrm{opt}})</span></li>
 </ul>
@@ -734,25 +820,34 @@ denotes the rounding procedure in order to produce the plateaus.</p></li>
 <h3 class="anchored" data-anchor-id="f24">f<sub>24</sub>: Lunacek bi-Rastrigin Function</h3>
 <p><span class="math display">f_{24}(\mathbf{x}) = \mathrm{min}\left(\sum_{i = 1}^{D}(\hat{x}_i - \mu_0)^2,
                        d\,D+ s\sum_{i = 1}^{D}(\hat{x}_i - \mu_1)^2\right)
-           + 10\left(D- \sum_{i=1}^D\cos(2\pi z_i)\right) + 10^4\,f^{{}_\mathrm{pen}}(\mathbf{x}) + f_{\mathrm{opt}}(\mathbf{x})</span></p>
+           + 10\left(D- \sum_{i=1}^D\cos(2\pi z_i)\right) + 10^4\,f^{{}_\mathrm{pen}}(\mathbf{x}) + f_{\mathrm{opt}}</span></p>
 <ul>
-<li><p><span class="math inline">\hat{\mathbf{x}} = 2\,\mathrm{{sign}}(\mathbf{x^\mathrm{opt}})\otimes\mathbf{x}</span>, <span class="math inline">\mathbf{x^\mathrm{opt}}=</span> [<del><span class="math inline">\mu_0</span></del>&nbsp;<span class="math inline">\longrightarrow</span>]&nbsp; <span class="math inline">\frac{\mu_0}{2}</span> <span class="math inline">\mathbf{1_-^+}</span></p></li>
+<li><p><span class="math inline">\hat{\mathbf{x}} = 2\,\mathrm{{sign}}(\mathbf{x^\mathrm{opt}})\otimes\mathbf{x}</span>, <span class="math inline">\mathbf{x^\mathrm{opt}}=</span> <span class="math inline">\frac{\mu_0}{2}</span> <span class="math inline">\mathbf{1_-^+}</span></p></li>
 <li><p><span class="math inline">\mathbf{z}= \mathbf{Q}\Lambda^{\!100}\mathbf{R}(\hat{\mathbf{x}}-\mu_0\,\mathbf{1})</span></p></li>
 <li><p><span class="math inline">\mu_0 = 2.5</span>, <span class="math inline">\mu_1 = -\sqrt{\dfrac{\mu_0^2-d}{s}}</span>, <span class="math inline">s = 1 - \dfrac{1}{2\sqrt{D+20}-8.2}</span>, <span class="math inline">d=1</span></p></li>
 </ul>
 <p><strong>Properties:</strong></p>
-<p>Highly multimodal function with two funnels around [<del><span class="math inline">\mu_0\mathbf{1_-^+}</span></del>&nbsp;<span class="math inline">\longrightarrow</span>]&nbsp; <span class="math inline">\frac{\mu_0}{2}\mathbf{1_-^+}</span> and [<del><span class="math inline">-\mu_1\mathbf{1_-^+}</span></del>&nbsp;<span class="math inline">\longrightarrow</span>]&nbsp; <span class="math inline">\frac{\mu_1}{2}\mathbf{1_-^+}</span> being superimposed by the cosine. Presumably different approaches need to be used for “selecting the funnel” and for search the highly multimodal function “within” the funnel. The function was constructed to be deceptive for evolutionary algorithms with large population size.</p>
+<p>Highly multimodal function with two funnels around <span class="math inline">\frac{\mu_0}{2}\mathbf{1_-^+}</span> and <span class="math inline">\frac{\mu_1}{2}\mathbf{1_-^+}</span> being superimposed by the cosine. Presumably different approaches need to be used for “selecting the funnel” and for searching the highly multimodal function “within” the funnel. The function was constructed to be deceptive for evolutionary algorithms with large population size.</p>
 <ul>
-<li>the funnel of the local optimum at [<del><span class="math inline">-\mu_1 \mathbf{1_-^+}</span></del>]&nbsp; <span class="math inline">\frac{\mu_1}{2}\mathbf{1_-^+}</span> has roughly <span class="math inline">70\%</span> of the search space volume within <span class="math inline">[-5,5]^D</span>.</li>
+<li>the funnel of the local optimum at <span class="math inline">\frac{\mu_1}{2}\mathbf{1_-^+}</span> has roughly <span class="math inline">70\%</span> of the search space volume within <span class="math inline">[-5,5]^D</span>.</li>
 </ul>
 <p><strong>Information gained from this function:</strong> Can the search behavior be local on the global scale but global on a local scale?</p>
 </section>
 </div>
+</section>
+<section id="function-properties" class="level2">
+<h2 class="anchored" data-anchor-id="function-properties">Function Properties</h2>
+<p>TBA</p>
+
 
 
 </section>
 
-</main> <!-- /main -->
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" role="list">
+<div id="ref-bbob2019" class="csl-entry" role="listitem">
+Finck, Steffen, Nikolaus Hansen, Raymond Ros, and Anne Auger. 2009. <span>“Real-Parameter Black-Box Optimization Benchmarking 2009: Noiseless Functions Definitions.”</span> RR-6829. INRIA. <a href="https://inria.hal.science/inria-00362633v2/document">https://inria.hal.science/inria-00362633v2/document</a>.
+</div>
+</div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {

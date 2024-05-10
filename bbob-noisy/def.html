@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>The bbob test suite - Visualizations of problem landscapes</title>
+<title>The bbob test suite - Function definitions</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -79,7 +79,7 @@ ul.task-list li input[type="checkbox"] {
   <script>window.define = window.backupDefine; window.backupDefine = undefined;</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css">
 
 <link rel="stylesheet" href="../assets/css/custom.css">
-<meta property="og:title" content="The bbob test suite - Visualizations of problem landscapes">
+<meta property="og:title" content="The bbob test suite - Function definitions">
 <meta property="og:description" content="">
 <meta property="og:site-name" content="The bbob test suite">
 </head>
@@ -105,7 +105,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../noisy/def.html"><code>bbob-noisy</code></a></li><li class="breadcrumb-item"><a href="../noisy/vis.html">Visualizations</a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../bbob-noisy/def.html"><code>bbob-noisy</code></a></li><li class="breadcrumb-item"><a href="../bbob-noisy/def.html">Function definitions</a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
     </div>
@@ -151,13 +151,13 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../noisy/def.html" class="sidebar-item-text sidebar-link">
+  <a href="../bbob-noisy/def.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Function definitions</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../noisy/vis.html" class="sidebar-item-text sidebar-link active">
+  <a href="../bbob-noisy/vis.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Visualizations</span></a>
   </div>
 </li>
@@ -174,13 +174,13 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../mixed-integer/def.html" class="sidebar-item-text sidebar-link">
+  <a href="../bbob-mixint/def.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Function definitions</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../mixed-integer/vis.html" class="sidebar-item-text sidebar-link">
+  <a href="../bbob-mixint/vis.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Visualizations</span></a>
   </div>
 </li>
@@ -192,32 +192,75 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
+        <nav id="TOC" role="doc-toc" class="toc-active" data-toc-expanded="4">
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#plots" id="toc-plots" class="nav-link active" data-scroll-target="#plots">Plots</a></li>
-  <li><a href="#plot-explanation" id="toc-plot-explanation" class="nav-link" data-scroll-target="#plot-explanation">Plot explanation</a></li>
-  <li><a href="#problem-definition" id="toc-problem-definition" class="nav-link" data-scroll-target="#problem-definition">Problem definition</a></li>
+  <li><a href="#symbols-and-definitions" id="toc-symbols-and-definitions" class="nav-link active" data-scroll-target="#symbols-and-definitions">Symbols and Definitions <span id="sec:symbols" label="sec:symbols"></span></a></li>
+  <li><a href="#general-setup" id="toc-general-setup" class="nav-link" data-scroll-target="#general-setup">General Setup</a>
+  <ul>
+  <li><a href="#search-space" id="toc-search-space" class="nav-link" data-scroll-target="#search-space">Search Space</a></li>
+  <li><a href="#location-of-the-optimal-mathbfxmathrmopt-and-of-f_mathrmoptfmathbfxmathrmopt" id="toc-location-of-the-optimal-mathbfxmathrmopt-and-of-f_mathrmoptfmathbfxmathrmopt" class="nav-link" data-scroll-target="#location-of-the-optimal-mathbfxmathrmopt-and-of-f_mathrmoptfmathbfxmathrmopt">Location of the optimal <span class="math inline">\mathbf{x}^\mathrm{opt}</span>&nbsp;and of <span class="math inline">f_\mathrm{opt}=f(\mathbf{x^\mathrm{opt}})</span></a></li>
+  <li><a href="#boundary-handling" id="toc-boundary-handling" class="nav-link" data-scroll-target="#boundary-handling">Boundary Handling</a></li>
+  <li><a href="#linear-transformations" id="toc-linear-transformations" class="nav-link" data-scroll-target="#linear-transformations">Linear Transformations</a></li>
+  <li><a href="#non-linear-transformations-and-symmetry-breaking" id="toc-non-linear-transformations-and-symmetry-breaking" class="nav-link" data-scroll-target="#non-linear-transformations-and-symmetry-breaking">Non-Linear Transformations and Symmetry Breaking</a></li>
+  </ul></li>
+  <li><a href="#noise-models" id="toc-noise-models" class="nav-link" data-scroll-target="#noise-models">Noise Models</a>
+  <ul>
+  <li><a href="#gaussian-noise" id="toc-gaussian-noise" class="nav-link" data-scroll-target="#gaussian-noise">Gaussian Noise</a></li>
+  <li><a href="#uniform-noise" id="toc-uniform-noise" class="nav-link" data-scroll-target="#uniform-noise">Uniform Noise</a></li>
+  <li><a href="#cauchy-noise" id="toc-cauchy-noise" class="nav-link" data-scroll-target="#cauchy-noise">Cauchy Noise</a></li>
+  <li><a href="#final-function-value" id="toc-final-function-value" class="nav-link" data-scroll-target="#final-function-value">Final Function Value</a></li>
+  </ul></li>
   <li><a href="#functions-with-moderate-noise" id="toc-functions-with-moderate-noise" class="nav-link" data-scroll-target="#functions-with-moderate-noise">Functions with moderate noise</a>
-  <ul class="collapse">
+  <ul>
   <li><a href="#sphere" id="toc-sphere" class="nav-link" data-scroll-target="#sphere">Sphere</a></li>
   </ul></li>
+  <li><a href="#f101-sphere-with-moderate-gaussian-noise" id="toc-f101-sphere-with-moderate-gaussian-noise" class="nav-link" data-scroll-target="#f101-sphere-with-moderate-gaussian-noise">f<sub>101</sub>: Sphere with moderate gaussian noise</a></li>
+  <li><a href="#f102-sphere-with-moderate-uniform-noise" id="toc-f102-sphere-with-moderate-uniform-noise" class="nav-link" data-scroll-target="#f102-sphere-with-moderate-uniform-noise">f<sub>102</sub>: Sphere with moderate uniform noise</a></li>
+  <li><a href="#f103-sphere-with-moderate-seldom-cauchy-noise" id="toc-f103-sphere-with-moderate-seldom-cauchy-noise" class="nav-link" data-scroll-target="#f103-sphere-with-moderate-seldom-cauchy-noise">f<sub>103</sub>: Sphere with moderate seldom cauchy noise</a></li>
   <li><a href="#rosenbrock" id="toc-rosenbrock" class="nav-link" data-scroll-target="#rosenbrock">Rosenbrock</a></li>
+  <li><a href="#f104-rosenbrock-with-moderate-gaussian-noise" id="toc-f104-rosenbrock-with-moderate-gaussian-noise" class="nav-link" data-scroll-target="#f104-rosenbrock-with-moderate-gaussian-noise">f<sub>104</sub>: Rosenbrock with moderate gaussian noise</a></li>
+  <li><a href="#f105-rosenbrock-with-moderate-uniform-noise" id="toc-f105-rosenbrock-with-moderate-uniform-noise" class="nav-link" data-scroll-target="#f105-rosenbrock-with-moderate-uniform-noise">f<sub>105</sub>: Rosenbrock with moderate uniform noise</a></li>
+  <li><a href="#f106-rosenbrock-with-moderate-seldom-cauchy-noise" id="toc-f106-rosenbrock-with-moderate-seldom-cauchy-noise" class="nav-link" data-scroll-target="#f106-rosenbrock-with-moderate-seldom-cauchy-noise">f<sub>106</sub>: Rosenbrock with moderate seldom cauchy noise</a></li>
   <li><a href="#functions-with-severe-noise" id="toc-functions-with-severe-noise" class="nav-link" data-scroll-target="#functions-with-severe-noise">Functions with severe noise</a>
-  <ul class="collapse">
+  <ul>
   <li><a href="#sphere-1" id="toc-sphere-1" class="nav-link" data-scroll-target="#sphere-1">Sphere</a></li>
   </ul></li>
+  <li><a href="#f107-sphere-with-gaussian-noise" id="toc-f107-sphere-with-gaussian-noise" class="nav-link" data-scroll-target="#f107-sphere-with-gaussian-noise">f<sub>107</sub>: Sphere with gaussian noise</a></li>
+  <li><a href="#f108-sphere-with-uniform-noise" id="toc-f108-sphere-with-uniform-noise" class="nav-link" data-scroll-target="#f108-sphere-with-uniform-noise">f<sub>108</sub>: Sphere with uniform noise</a></li>
+  <li><a href="#f109-sphere-with-seldom-cauchy-noise" id="toc-f109-sphere-with-seldom-cauchy-noise" class="nav-link" data-scroll-target="#f109-sphere-with-seldom-cauchy-noise">f<sub>109</sub>: Sphere with seldom cauchy noise</a></li>
   <li><a href="#rosenbrock-1" id="toc-rosenbrock-1" class="nav-link" data-scroll-target="#rosenbrock-1">Rosenbrock</a></li>
+  <li><a href="#f110-rosenbrock-with-gaussian-noise" id="toc-f110-rosenbrock-with-gaussian-noise" class="nav-link" data-scroll-target="#f110-rosenbrock-with-gaussian-noise">f<sub>110</sub>: Rosenbrock with gaussian noise</a></li>
+  <li><a href="#f111-rosenbrock-with-uniform-noise" id="toc-f111-rosenbrock-with-uniform-noise" class="nav-link" data-scroll-target="#f111-rosenbrock-with-uniform-noise">f<sub>111</sub>: Rosenbrock with uniform noise</a></li>
+  <li><a href="#f112-rosenbrock-with-seldom-cauchy-noise" id="toc-f112-rosenbrock-with-seldom-cauchy-noise" class="nav-link" data-scroll-target="#f112-rosenbrock-with-seldom-cauchy-noise">f<sub>112</sub>: Rosenbrock with seldom cauchy noise</a></li>
   <li><a href="#step-ellipsoid" id="toc-step-ellipsoid" class="nav-link" data-scroll-target="#step-ellipsoid">Step ellipsoid</a></li>
+  <li><a href="#f113-step-ellipsoid-with-gaussian-noise" id="toc-f113-step-ellipsoid-with-gaussian-noise" class="nav-link" data-scroll-target="#f113-step-ellipsoid-with-gaussian-noise">f<sub>113</sub>: Step ellipsoid with gaussian noise</a></li>
+  <li><a href="#f114-step-ellipsoid-with-uniform-noise" id="toc-f114-step-ellipsoid-with-uniform-noise" class="nav-link" data-scroll-target="#f114-step-ellipsoid-with-uniform-noise">f<sub>114</sub>: Step ellipsoid with uniform noise</a></li>
+  <li><a href="#f115-step-ellipsoid-with-seldom-cauchy-noise" id="toc-f115-step-ellipsoid-with-seldom-cauchy-noise" class="nav-link" data-scroll-target="#f115-step-ellipsoid-with-seldom-cauchy-noise">f<sub>115</sub>: Step ellipsoid with seldom cauchy noise</a></li>
   <li><a href="#ellipsoid" id="toc-ellipsoid" class="nav-link" data-scroll-target="#ellipsoid">Ellipsoid</a></li>
+  <li><a href="#f116-ellipsoid-with-gaussian-noise" id="toc-f116-ellipsoid-with-gaussian-noise" class="nav-link" data-scroll-target="#f116-ellipsoid-with-gaussian-noise">f<sub>116</sub>: Ellipsoid with gaussian noise</a></li>
+  <li><a href="#f117-ellipsoid-with-uniform-noise" id="toc-f117-ellipsoid-with-uniform-noise" class="nav-link" data-scroll-target="#f117-ellipsoid-with-uniform-noise">f<sub>117</sub>: Ellipsoid with uniform noise</a></li>
+  <li><a href="#f118-ellipsoid-with-seldom-cauchy-noise" id="toc-f118-ellipsoid-with-seldom-cauchy-noise" class="nav-link" data-scroll-target="#f118-ellipsoid-with-seldom-cauchy-noise">f<sub>118</sub>: Ellipsoid with seldom cauchy noise</a></li>
   <li><a href="#different-powers" id="toc-different-powers" class="nav-link" data-scroll-target="#different-powers">Different Powers</a></li>
+  <li><a href="#f119-different-powers-with-gaussian-noise" id="toc-f119-different-powers-with-gaussian-noise" class="nav-link" data-scroll-target="#f119-different-powers-with-gaussian-noise">f<sub>119</sub>: Different Powers with gaussian noise</a></li>
+  <li><a href="#f120-different-powers-with-uniform-noise" id="toc-f120-different-powers-with-uniform-noise" class="nav-link" data-scroll-target="#f120-different-powers-with-uniform-noise">f<sub>120</sub>: Different Powers with uniform noise</a></li>
+  <li><a href="#f121-different-powers-with-seldom-cauchy-noise" id="toc-f121-different-powers-with-seldom-cauchy-noise" class="nav-link" data-scroll-target="#f121-different-powers-with-seldom-cauchy-noise">f<sub>121</sub>: Different Powers with seldom cauchy noise</a></li>
   <li><a href="#highly-multi-modal-functions-with-severe-noise" id="toc-highly-multi-modal-functions-with-severe-noise" class="nav-link" data-scroll-target="#highly-multi-modal-functions-with-severe-noise">Highly multi-modal functions with severe noise</a>
-  <ul class="collapse">
+  <ul>
   <li><a href="#schaffers-f7" id="toc-schaffers-f7" class="nav-link" data-scroll-target="#schaffers-f7">Schaffer’s F7</a></li>
   </ul></li>
+  <li><a href="#f122-schaffers-f7-with-gaussian-noise" id="toc-f122-schaffers-f7-with-gaussian-noise" class="nav-link" data-scroll-target="#f122-schaffers-f7-with-gaussian-noise">f<sub>122</sub>: Schaffer’s F7 with gaussian noise</a></li>
+  <li><a href="#f123-schaffers-f7-with-uniform-noise" id="toc-f123-schaffers-f7-with-uniform-noise" class="nav-link" data-scroll-target="#f123-schaffers-f7-with-uniform-noise">f<sub>123</sub>: Schaffer’s F7 with uniform noise</a></li>
+  <li><a href="#f124-schaffers-f7-with-seldom-cauchy-noise" id="toc-f124-schaffers-f7-with-seldom-cauchy-noise" class="nav-link" data-scroll-target="#f124-schaffers-f7-with-seldom-cauchy-noise">f<sub>124</sub>: Schaffer’s F7 with seldom cauchy noise</a></li>
   <li><a href="#composite-griewank-rosenbrock" id="toc-composite-griewank-rosenbrock" class="nav-link" data-scroll-target="#composite-griewank-rosenbrock">Composite Griewank-Rosenbrock</a></li>
+  <li><a href="#f125-composite-griewank-rosenbrock-with-gaussian-noise" id="toc-f125-composite-griewank-rosenbrock-with-gaussian-noise" class="nav-link" data-scroll-target="#f125-composite-griewank-rosenbrock-with-gaussian-noise">f<sub>125</sub>: Composite Griewank-Rosenbrock with gaussian noise</a></li>
+  <li><a href="#f126-composite-griewank-rosenbrock-with-uniform-noise" id="toc-f126-composite-griewank-rosenbrock-with-uniform-noise" class="nav-link" data-scroll-target="#f126-composite-griewank-rosenbrock-with-uniform-noise">f<sub>126</sub>: Composite Griewank-Rosenbrock with uniform noise</a></li>
+  <li><a href="#f127-composite-griewank-rosenbrock-with-seldom-cauchy-noise" id="toc-f127-composite-griewank-rosenbrock-with-seldom-cauchy-noise" class="nav-link" data-scroll-target="#f127-composite-griewank-rosenbrock-with-seldom-cauchy-noise">f<sub>127</sub>: Composite Griewank-Rosenbrock with seldom cauchy noise</a></li>
   <li><a href="#gallaghers-gaussian-peaks-globally-rotated" id="toc-gallaghers-gaussian-peaks-globally-rotated" class="nav-link" data-scroll-target="#gallaghers-gaussian-peaks-globally-rotated">Gallagher’s Gaussian Peaks, globally rotated</a></li>
+  <li><a href="#f128-gallaghers-gaussian-peaks-101-me-with-gaussian-noise" id="toc-f128-gallaghers-gaussian-peaks-101-me-with-gaussian-noise" class="nav-link" data-scroll-target="#f128-gallaghers-gaussian-peaks-101-me-with-gaussian-noise">f<sub>128</sub>: Gallagher’s Gaussian Peaks 101-me with gaussian noise</a></li>
+  <li><a href="#f129-gallaghers-gaussian-peaks-101-me-with-uniform-noise" id="toc-f129-gallaghers-gaussian-peaks-101-me-with-uniform-noise" class="nav-link" data-scroll-target="#f129-gallaghers-gaussian-peaks-101-me-with-uniform-noise">f<sub>129</sub>: Gallagher’s Gaussian Peaks 101-me with uniform noise</a></li>
+  <li><a href="#f130-gallaghers-gaussian-peaks-101-me-with-seldom-cauchy-noise" id="toc-f130-gallaghers-gaussian-peaks-101-me-with-seldom-cauchy-noise" class="nav-link" data-scroll-target="#f130-gallaghers-gaussian-peaks-101-me-with-seldom-cauchy-noise">f<sub>130</sub>: Gallagher’s Gaussian Peaks 101-me with seldom cauchy noise</a></li>
   </ul>
 </nav>
     </div>
@@ -226,7 +269,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Visualizations of problem landscapes</h1>
+<h1 class="title">Function definitions</h1>
 </div>
 
 
@@ -241,75 +284,71 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<section id="plots" class="level3">
-<h3 class="anchored" data-anchor-id="plots">Plots</h3>
-<p>Show plots in <button id="colPrev" onclick="getPrev(this)" class="button">−</button> <select id="col" onchange="changePlot()" class="dropdown"></select> <button id="colNext" onclick="getNext(this)" class="button">+</button> columns (click on <b>Dimension</b>/<b>Function</b>/<b>Instance</b>/<b>Visualization type</b> below to show all plots for the chosen category)</p>
-
-<table border="0" width="100%">
-<tbody><tr>
-<td align="center" onclick="selectNode(this)" id="dimAll" class="off">
-<b>Dimension</b>
-</td>
-<td align="center" onclick="selectNode(this)" id="funAll" class="off">
-<b>Function</b>
-</td>
-<td align="center" onclick="selectNode(this)" id="insAll" class="off">
-<b>Instance</b>
-</td>
-<td align="center" onclick="selectNode(this)" id="typAll" class="on">
-<b>Visualization type</b>
-</td>
-</tr>
-<tr>
-<td class="select" align="center">
-<button id="dimPrev" onclick="getPrev(this)" class="button">
-−
-</button>
-<select id="dim" onchange="changePlot()" class="dropdown"></select> <button id="dimNext" onclick="getNext(this)" class="button">+</button>
-</td>
-<td class="select" align="center">
-<button id="funPrev" onclick="getPrev(this)" class="button">
-−
-</button>
-<select id="fun" style="width:auto" onchange="changePlot()" class="dropdown"></select> <button id="funNext" onclick="getNext(this)" class="button">+</button>
-</td>
-<td class="select" align="center">
-<button id="insPrev" onclick="getPrev(this)" class="button">
-−
-</button>
-<select id="ins" onchange="changePlot()" class="dropdown"></select> <button id="insNext" onclick="getNext(this)" class="button">+</button>
-</td>
-<td class="select" align="center">
-<button id="typPrev" onclick="getPrev(this)" class="button">
-<i class="arrow left"></i>
-</button>
-<select id="typ" onchange="changePlot()" style="width:220px;height:30px;"> </select> <button id="typNext" onclick="getNext(this)" class="button"><i class="arrow right"></i></button>
-</td>
-</tr>
-
-</tbody></table>
-<!-- <textarea id="result" num=7></textarea> -->
-<div id="images" width="100%">
-
-</div>
+<section id="symbols-and-definitions" class="level2">
+<h2 class="anchored" data-anchor-id="symbols-and-definitions">Symbols and Definitions <span id="sec:symbols" label="sec:symbols"></span></h2>
+<p>Used symbols and definitions of, e.g., auxiliary functions are given in the following. Vectors are typeset in bold and refer to column vectors.</p>
+<p><span class="math inline">\otimes</span> : indicates element-wise multiplication of two <span class="math inline">D</span>-dimensional vectors, <span class="math inline">\otimes:\mathcal{R}^D\times\mathcal{R}^D\to\mathcal{R}^D,  (\mathbf{x},\mathbf{y})\mapsto\mathrm{{diag}}(\mathbf{x})\times\mathbf{y}=(x_i\times y_i)_{i=1,\dots,D}</span></p>
+<p><span class="math inline">\|.\|</span> : denotes the Euclidean norm, <span class="math inline">\|\mathbf{x}\|^2=\sum_i x_i^2</span>.</p>
+<p><span class="math inline">[.]</span> : denotes the nearest integer value</p>
+<p><span class="math inline">\mathbf{0}</span> : <span class="math inline">=(0,\dots,0)^{\mathrm{T}}</span> all zero vector</p>
+<p><span class="math inline">\mathbf{1}</span> : <span class="math inline">=(1,\dots,1)^{\mathrm{T}}</span> all one vector</p>
+<p><span class="math inline">\Lambda^{\!\alpha}</span> : is a diagonal matrix in <span class="math inline">D</span>&nbsp;dimensions with the <span class="math inline">i</span>th diagonal element as <span class="math inline">\lambda_{ii} = \alpha^{\frac{1}{2}\frac{i-1}{D-1}}</span></p>
+<p><span class="math inline">f^{{}}_\mathrm{pen}</span> : <span class="math inline">:\mathcal{R}^D\to\mathcal{R}</span>, <span class="math inline">\mathbf{x}\mapsto 100\sum_{i=1}^D\max(0,|x_i| - 5)^2</span></p>
+<p><span class="math inline">\mathbf{1}_-^+</span> : a <span class="math inline">D</span>-dimensional vector with entries of <span class="math inline">-1</span> or <span class="math inline">1</span> both drawn equal probability.</p>
+<p><span class="math inline">\mathbf{Q}</span>, <span class="math inline">\mathbf{R}</span> : orthogonal (rotation) matrices. For each function instance in each dimension a single realization for respectively <span class="math inline">\mathbf{Q}</span>&nbsp;and <span class="math inline">\mathbf{R}</span>&nbsp;is used. Rotation matrices are generated from standard normally distributed entries by Gram-Schmidt orthogonalization. Columns and rows of a rotation matrix form an orthogonal basis.</p>
+<p><span class="math inline">\mathbf{R}</span> : see <span class="math inline">\mathbf{Q}</span></p>
+<p><span class="math inline">T^{{\beta}_\mathrm{asy}}</span> : <span class="math inline">:\mathcal{R}^D\to\mathcal{R}^D</span>, <span class="math inline">x_i\mapsto  \begin{cases}  x_i^{1+\beta \frac{i-1}{D-1}\sqrt{x_i}} &amp; \text{~if~} x_i&gt;0\\  x_i &amp; \text{~otherwise~}  \end{cases}</span>, for <span class="math inline">i=1,\dots,D</span>.</p>
+<p><span class="math inline">T_\mathrm{\hspace*{-0.01em}osz}</span> : <span class="math inline">:\mathcal{R}^n\to\mathcal{R}^n</span>, for any positive integer <span class="math inline">n</span>, maps element-wise <span class="math display">x\mapsto\mathrm{{sign}}(x)\exp\left(\hat{x} +
+       0.049\left(\sin(c_1 \hat{x}) + \sin(c_2 \hat{x})\right)\right)</span> with <span class="math inline">\hat{x}= \begin{cases}  \log(|x|) &amp; \text{if~} x\not=0 \\  \in\mathcal{R}&amp; \text{otherwise}  \end{cases}</span>, <span class="math inline">\mathrm{{sign}}(x) = \begin{cases} -1 &amp; \text{if~} x &lt; 0 \\  0 &amp; \text{if~} x = 0 \\  1 &amp; \text{otherwise}  \end{cases}</span>, <span class="math inline">c_1 = \begin{cases}  10 &amp; \text{if~} x &gt; 0\\  5.5 &amp; \text{otherwise}  \end{cases}</span> and <span class="math inline">c_2 = \begin{cases}  7.9 &amp; \text{if~} x &gt; 0\\  3.1 &amp; \text{otherwise}  \end{cases}</span></p>
+<p><span class="math inline">\mathbf{x}^\mathrm{opt}</span> : optimal solution vector, such that <span class="math inline">f(\mathbf{x^\mathrm{opt}})</span> is minimal.</p>
 </section>
-<section id="plot-explanation" class="level2">
-<h2 class="anchored" data-anchor-id="plot-explanation">Plot explanation</h2>
-<p>The benchmark function definitions in the next section are accompanied with a number of figures.</p>
-<ol type="1">
-<li><p>a (3-D) surface plot, where <span class="math inline">D=2</span></p></li>
-<li><p>a contour plot, where <span class="math inline">D=2</span></p></li>
-<li><p>two projected contour plots, where <span class="math inline">D=20</span>. Plotted are, starting from the optimum <span class="math inline">\mathbf{x}^\mathrm{opt}</span>, first versus second variable (left) and first versus fifth variable (right).</p></li>
-<li><p>sections (<span class="math inline">f</span> versus <span class="math inline">x</span>) through the global optimum along the first variable <span class="math inline">x_1</span>, the second variable <span class="math inline">x_2</span>, and the all-ones vector. The sections for different dimensions appear</p>
-<ol type="1">
-<li><p>in a non-log plot (above), where the maximum <span class="math inline">f</span>-value is normalized to one for each single graph.</p></li>
-<li><p>in a semi-log plot (middle row)</p></li>
-<li><p>in a log-log plot (below) starting close to the global optimum along <span class="math inline">x_1</span>, <span class="math inline">-x_1</span>, <span class="math inline">x_2</span>, <span class="math inline">-x_2</span>, <span class="math inline">\mathbf{1}</span>, and <span class="math inline">-\mathbf{1}</span>.</p></li>
-</ol></li>
-</ol>
+<section id="general-setup" class="level2">
+<h2 class="anchored" data-anchor-id="general-setup">General Setup</h2>
+<section id="search-space" class="level3">
+<h3 class="anchored" data-anchor-id="search-space">Search Space</h3>
+<p>All functions are defined and can be evaluated over <span class="math inline">\mathcal{R}^{D}</span>, while the actual search domain is given as <span class="math inline">[-5,5]^{D}</span>.</p>
 </section>
-<section id="problem-definition" class="level2">
-<h2 class="anchored" data-anchor-id="problem-definition">Problem definition</h2>
+<section id="location-of-the-optimal-mathbfxmathrmopt-and-of-f_mathrmoptfmathbfxmathrmopt" class="level3">
+<h3 class="anchored" data-anchor-id="location-of-the-optimal-mathbfxmathrmopt-and-of-f_mathrmoptfmathbfxmathrmopt">Location of the optimal <span class="math inline">\mathbf{x}^\mathrm{opt}</span>&nbsp;and of <span class="math inline">f_\mathrm{opt}=f(\mathbf{x^\mathrm{opt}})</span></h3>
+<p>All functions have their global optimum in <span class="math inline">[-5,5]^{D}</span>. The majority of functions has the global optimum in <span class="math inline">[-4,4]^{D}</span>. The value for <span class="math inline">f_\mathrm{opt}</span>&nbsp;is drawn from a cauchy distributed random variable, with roughly 50% of the values between -100 and 100. The value is rounded after two decimal places and the maximum and minimum are set to <span class="math inline">1000</span> and <span class="math inline">-1000</span> respectively. In the function definitions a transformed variable vector <span class="math inline">\mathbf{z}</span> is often used instead of the argument <span class="math inline">\mathbf{x}</span>. The vector <span class="math inline">\mathbf{z}</span> has its optimum in <span class="math inline">\mathbf{z^\mathrm{opt}}=\mathbf{0}</span>, if not stated otherwise.</p>
+</section>
+<section id="boundary-handling" class="level3">
+<h3 class="anchored" data-anchor-id="boundary-handling">Boundary Handling</h3>
+<p>On all functions a penalty boundary handling is applied as given with <span class="math inline">f^{{}}_\mathrm{pen}</span>.</p>
+</section>
+<section id="linear-transformations" class="level3">
+<h3 class="anchored" data-anchor-id="linear-transformations">Linear Transformations</h3>
+<p>Linear transformations of the search space are applied to derive non-separable functions from separable ones and to control the conditioning of the function.</p>
+</section>
+<section id="non-linear-transformations-and-symmetry-breaking" class="level3">
+<h3 class="anchored" data-anchor-id="non-linear-transformations-and-symmetry-breaking">Non-Linear Transformations and Symmetry Breaking</h3>
+<p>In order to make relatively simple, but well understood functions less regular, on some functions non-linear transformations are applied in <span class="math inline">x</span>- or <span class="math inline">f</span>-space. Both transformations <span class="math inline">T_\mathrm{\hspace*{-0.01emosz}}:\mathcal{R}^n\to\mathcal{R}^n</span>, <span class="math inline">n\in\{1,D\}</span>, and <span class="math inline">T^{{}_\mathrm{asy}}:\mathcal{R}^D\to\mathcal{R}^D</span> are defined coordinate-wise. They are smooth and have, coordinate-wise, a strictly positive derivative. <span class="math inline">T_\mathrm{\hspace*{-0.01emosz}}</span> is oscillating about the identity, where the oscillation is scale invariant w.r.t.&nbsp;the origin. <span class="math inline">T^{{}}_\mathrm{asy}</span>&nbsp;is the identity for negative values. When <span class="math inline">T^{{}}_\mathrm{asy}</span>&nbsp;is applied, a portion of <span class="math inline">1/2^D</span> of the search space remains untransformed.</p>
+</section>
+</section>
+<section id="noise-models" class="level2">
+<h2 class="anchored" data-anchor-id="noise-models">Noise Models</h2>
+<p>In this benchmarking suite three different noise models are used. The first two, <span class="math inline">f_{\mathrm{GN}}\left({}\right)</span>&nbsp;and <span class="math inline">f_{\mathrm{UN}}\left({}\right)</span>, are multiplicative noise models while the third model, <span class="math inline">f_{\mathrm{CN}}\left({}\right)</span>, is an additive noise model. All noise models are applied to a function value <span class="math inline">f</span> under the assumption that <span class="math inline">f\ge0</span>. All noise models reveal <em>stochastic dominance</em> between any two solutions and are therefore utility-free.</p>
+<section id="gaussian-noise" class="level3">
+<h3 class="anchored" data-anchor-id="gaussian-noise">Gaussian Noise</h3>
+<p>The Gaussian noise model is scale invariant and defined as <span class="math display">f_{\mathrm{GN}\left({f,\beta}\right)} = f\times\exp(\beta\,\mathcal{N}(0,1))\enspace.</span> The noise strength is controlled with <span class="math inline">\beta</span>. The distribution of the noise is log-normal, thus no negative noise values can be sampled. For the benchmark functions with moderate noise <span class="math inline">\beta = 0.01</span>, otherwise <span class="math inline">\beta = 1</span>. For small values of <span class="math inline">\beta</span> this noise model resembles <span class="math inline">f\times(1+\beta\,\mathcal{N}(0,1))</span>.</p>
+</section>
+<section id="uniform-noise" class="level3">
+<h3 class="anchored" data-anchor-id="uniform-noise">Uniform Noise</h3>
+<p>The uniform noise model is introduced as a more severe noise model than the Gaussian and is defined as <span class="math display">
+  f_{\mathrm{UN}\left({f,\alpha,\beta}\right)} = f\times\mathcal{U}(0,1)^{\beta}\max\left(1, \left(\dfrac{10^9}{f + \epsilon}\right)^{\alpha\,\mathcal{U}(0,1)}\right)\enspace.</span> The noise model uses two random factors. The first factor is in the interval <span class="math inline">[0,1]</span>, uniformly distributed for <span class="math inline">\beta=1</span>. The second factor, <span class="math inline">\max(\dots)</span>, is <span class="math inline">\ge1</span>. The parameters <span class="math inline">\alpha</span> and <span class="math inline">\beta</span> control the noise strength. For moderate noise <span class="math inline">\alpha = 0.01\left(0.49 + {1}/{D}\right)</span> and <span class="math inline">\beta = 0.01</span>, otherwise <span class="math inline">\alpha = 0.49 + {1}/{D}</span> and <span class="math inline">\beta = 1</span>. Furthermore, <span class="math inline">\epsilon</span> is set to <span class="math inline">10^{-99}</span> in order to prevent division by zero.</p>
+<p>The uniform noise model is not scale invariant. Due to the last factor the noise strength increases with decreasing (positive) value of <span class="math inline">f</span>. Therefore the noise strength becomes more severe when approaching the optimum.</p>
+</section>
+<section id="cauchy-noise" class="level3">
+<h3 class="anchored" data-anchor-id="cauchy-noise">Cauchy Noise</h3>
+<p>The Cauchy noise model represents a different type of noise with two important aspects. First, only a comparatively small percentage of function values is disturbed by noise. Second, the noise distribution is comparatively “weird”. Large outliers occur once in a while, and because they stem from a continuous distribution they cannot be easily diagnosed. The Cauchy noise model is defined as <span class="math display">f_{\mathrm{CN}\left({f,\alpha,p}\right)} = f + \alpha\,\max\left(0, 1000 + \mathbb{I}_{\left\{\mathcal{U}(0,1) &lt; p\right\}}\dfrac{\mathcal{N}(0,1)}{|\mathcal{N}(0,1)|+\epsilon}\right)\enspace,</span> where <span class="math inline">\alpha</span> defines the noise strength and <span class="math inline">p</span> determines the frequency of the noise disturbance. In the moderate noise case <span class="math inline">\alpha = 0.01</span> and <span class="math inline">p = 0.05</span>, otherwise <span class="math inline">\alpha = 1</span> and <span class="math inline">p = 0.2</span>. The summand of <span class="math inline">1000</span> was chosen to sample positive and negative “outliers” (as the function value is cut from below, see next paragraph) and <span class="math inline">\epsilon</span> is set to <span class="math inline">10^{-199}</span>.</p>
+</section>
+<section id="final-function-value" class="level3">
+<h3 class="anchored" data-anchor-id="final-function-value">Final Function Value</h3>
+<p>In order to achieve a convenient testing for the target function value, in all noise models <span class="math inline">1.01\times10^{-8}</span> is added to the function value and, if the input argument <span class="math inline">f</span> is smaller than <span class="math inline">10^{-8}</span>, the undisturbed <span class="math inline">f</span> is returned.</p>
+<p><span class="math display">f_\mathrm{XX}(f,\dots) \gets \begin{cases}f_\mathrm{XX}(f,\dots) + 1.01\times10^{-8}&amp; \text{if~} f\ge10^{-8}\\
+                                 f &amp; \text{otherwise}
+\end{cases}</span></p>
+</section>
 </section>
 <div id="101,102,103" class="noisy">
 <section id="functions-with-moderate-noise" class="level2">
@@ -906,7 +945,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
-<script type="text/javascript" defer="" src="../assets/noisy/js/bbob.js"></script>
 
 
 

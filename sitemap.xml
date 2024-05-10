@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://numbbo.github.io/temp-doc-bbob/noisy/vis.html</loc>
-    <lastmod>2024-04-08T15:45:17.369Z</lastmod>
-  </url>
-  <url>
-    <loc>https://numbbo.github.io/temp-doc-bbob/mixed-integer/vis.html</loc>
-    <lastmod>2024-04-08T15:45:16.117Z</lastmod>
-  </url>
-  <url>
     <loc>https://numbbo.github.io/temp-doc-bbob/bbob/vis.html</loc>
-    <lastmod>2024-04-08T15:45:15.013Z</lastmod>
+    <lastmod>2024-05-10T14:10:22.591Z</lastmod>
+  </url>
+  <url>
+    <loc>https://numbbo.github.io/temp-doc-bbob/bbob-noisy/vis.html</loc>
+    <lastmod>2024-05-10T14:10:21.100Z</lastmod>
+  </url>
+  <url>
+    <loc>https://numbbo.github.io/temp-doc-bbob/bbob-mixint/vis.html</loc>
+    <lastmod>2024-05-10T14:10:19.818Z</lastmod>
+  </url>
+  <url>
+    <loc>https://numbbo.github.io/temp-doc-bbob/bbob-mixint/def.html</loc>
+    <lastmod>2024-05-10T14:10:19.332Z</lastmod>
+  </url>
+  <url>
+    <loc>https://numbbo.github.io/temp-doc-bbob/bbob-noisy/def.html</loc>
+    <lastmod>2024-05-10T14:10:20.495Z</lastmod>
   </url>
   <url>
     <loc>https://numbbo.github.io/temp-doc-bbob/bbob/def.html</loc>
-    <lastmod>2024-04-08T15:45:14.258Z</lastmod>
-  </url>
-  <url>
-    <loc>https://numbbo.github.io/temp-doc-bbob/mixed-integer/def.html</loc>
-    <lastmod>2024-04-08T15:45:15.614Z</lastmod>
-  </url>
-  <url>
-    <loc>https://numbbo.github.io/temp-doc-bbob/noisy/def.html</loc>
-    <lastmod>2024-04-08T15:45:16.771Z</lastmod>
+    <lastmod>2024-05-10T14:10:21.862Z</lastmod>
   </url>
 </urlset>

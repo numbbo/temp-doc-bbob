@@ -151,13 +151,13 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../noisy/def.html" class="sidebar-item-text sidebar-link">
+  <a href="../bbob-noisy/def.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Function definitions</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../noisy/vis.html" class="sidebar-item-text sidebar-link">
+  <a href="../bbob-noisy/vis.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Visualizations</span></a>
   </div>
 </li>
@@ -174,13 +174,13 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../mixed-integer/def.html" class="sidebar-item-text sidebar-link">
+  <a href="../bbob-mixint/def.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Function definitions</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../mixed-integer/vis.html" class="sidebar-item-text sidebar-link">
+  <a href="../bbob-mixint/vis.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Visualizations</span></a>
   </div>
 </li>
@@ -199,6 +199,11 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#plots" id="toc-plots" class="nav-link active" data-scroll-target="#plots">Plots</a></li>
   <li><a href="#plot-explanation" id="toc-plot-explanation" class="nav-link" data-scroll-target="#plot-explanation">Plot explanation</a></li>
   <li><a href="#problem-definition" id="toc-problem-definition" class="nav-link" data-scroll-target="#problem-definition">Problem definition</a></li>
+  <li><a href="#separable-functions" id="toc-separable-functions" class="nav-link" data-scroll-target="#separable-functions">Separable Functions</a></li>
+  <li><a href="#functions-with-low-or-moderate-conditioning" id="toc-functions-with-low-or-moderate-conditioning" class="nav-link" data-scroll-target="#functions-with-low-or-moderate-conditioning">Functions with Low or Moderate Conditioning</a></li>
+  <li><a href="#functions-with-high-conditioning-and-unimodal" id="toc-functions-with-high-conditioning-and-unimodal" class="nav-link" data-scroll-target="#functions-with-high-conditioning-and-unimodal">Functions with High Conditioning and Unimodal</a></li>
+  <li><a href="#multi-modal-functions-with-adequate-global-structure" id="toc-multi-modal-functions-with-adequate-global-structure" class="nav-link" data-scroll-target="#multi-modal-functions-with-adequate-global-structure">Multi-Modal Functions with Adequate Global Structure</a></li>
+  <li><a href="#multi-modal-functions-with-weak-global-structure" id="toc-multi-modal-functions-with-weak-global-structure" class="nav-link" data-scroll-target="#multi-modal-functions-with-weak-global-structure">Multi-Modal Functions with Weak Global Structure</a></li>
   </ul>
 </nav>
     </div>
@@ -291,6 +296,9 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="problem-definition" class="level2">
 <h2 class="anchored" data-anchor-id="problem-definition">Problem definition</h2>
+</section>
+<section id="separable-functions" class="level2">
+<h2 class="anchored" data-anchor-id="separable-functions">Separable Functions</h2>
 <div id="text-f1">
 <section id="f1" class="level3">
 <h3 class="anchored" data-anchor-id="f1">f<sub>1</sub>: Sphere Function</h3>
@@ -325,7 +333,7 @@ ul.task-list li input[type="checkbox"] {
 </ul>
 <p><strong>Information gained from this function:</strong></p>
 <ul>
-<li>In comparison to f10: Is separability exploited?</li>
+<li>In comparison to f<sub>10</sub>: Is separability exploited?</li>
 </ul>
 </section>
 </div>
@@ -337,14 +345,14 @@ ul.task-list li input[type="checkbox"] {
 <li><span class="math inline">\mathbf{z}= \Lambda^{\!10}T^{{0.2}}_{\mathrm{asy}}(T_\mathrm{\hspace*{-0.01emosz}}(\mathbf{x}-\mathbf{x^\mathrm{opt}}))</span></li>
 </ul>
 <p><strong>Properties:</strong></p>
-<p>Highly multimodal function with a comparatively regular structure for the placement of the optima. The transformations <span class="math inline">T^{{}}_\mathrm{asy}</span>&nbsp;and <span class="math inline">T_\mathrm{\hspace*{-0.01em}osz}</span>&nbsp;alleviate the symmetry and regularity of the original Rastrigin function</p>
+<p>Highly multimodal function with a comparatively regular structure for the placement of the optima. The transformations <span class="math inline">T^{{}}_\mathrm{asy}</span> and <span class="math inline">T_\mathrm{\hspace*{-0.01em}osz}</span> alleviate the symmetry and regularity of the original Rastrigin function</p>
 <ul>
 <li><p>roughly <span class="math inline">10^D</span> local optima</p></li>
 <li><p>conditioning is about <span class="math inline">10</span></p></li>
 </ul>
 <p><strong>Information gained from this function:</strong></p>
 <ul>
-<li>In comparison to f15: Is separability exploited?</li>
+<li>In comparison to f<sub>15</sub>: Is separability exploited?</li>
 </ul>
 </section>
 </div>
@@ -364,7 +372,7 @@ ul.task-list li input[type="checkbox"] {
 </ul>
 <p><strong>Information gained from this function:</strong></p>
 <ul>
-<li>In comparison to f3: What is the effect of asymmetry?</li>
+<li>In comparison to f<sub>3</sub>: What is the effect of asymmetry?</li>
 </ul>
 </section>
 </div>
@@ -381,7 +389,7 @@ ul.task-list li input[type="checkbox"] {
 <p><strong>Properties:</strong></p>
 <p>Purely linear function testing whether the search can go outside the initial convex hull of solutions right into the domain boundary.</p>
 <ul>
-<li><span class="math inline">\mathbf{x}^\mathrm{opt}</span>&nbsp;is on the domain boundary</li>
+<li><span class="math inline">\mathbf{x}^\mathrm{opt}</span> is on the domain boundary</li>
 </ul>
 <p><strong>Information gained from this function:</strong></p>
 <ul>
@@ -389,6 +397,9 @@ ul.task-list li input[type="checkbox"] {
 </ul>
 </section>
 </div>
+</section>
+<section id="functions-with-low-or-moderate-conditioning" class="level2">
+<h2 class="anchored" data-anchor-id="functions-with-low-or-moderate-conditioning">Functions with Low or Moderate Conditioning</h2>
 <div id="text-f6">
 <section id="f6" class="level3">
 <h3 class="anchored" data-anchor-id="f6">f<sub>6</sub>: Attractive Sector Function</h3>
@@ -404,7 +415,7 @@ ul.task-list li input[type="checkbox"] {
 </ul>
 <p><strong>Information gained from this function:</strong></p>
 <ul>
-<li>In comparison to f1: What is the effect of a highly asymmetric landscape?</li>
+<li>In comparison to f<sub>1</sub>: What is the effect of a highly asymmetric landscape?</li>
 </ul>
 </section>
 </div>
@@ -461,10 +472,13 @@ denotes the rounding procedure in order to produce the plateaus.</p></li>
 <p>rotated version of the previously defined Rosenbrock function.</p>
 <p><strong>Information gained from this function:</strong></p>
 <ul>
-<li>In comparison to f8: Can the search follow a long path with <span class="math inline">D-1</span> changes in the direction without exploiting partial separability?</li>
+<li>In comparison to f<sub>8</sub>: Can the search follow a long path with <span class="math inline">D-1</span> changes in the direction without exploiting partial separability?</li>
 </ul>
 </section>
 </div>
+</section>
+<section id="functions-with-high-conditioning-and-unimodal" class="level2">
+<h2 class="anchored" data-anchor-id="functions-with-high-conditioning-and-unimodal">Functions with High Conditioning and Unimodal</h2>
 <div id="text-f10">
 <section id="f10" class="level3">
 <h3 class="anchored" data-anchor-id="f10">f<sub>10</sub>: Ellipsoidal Function</h3>
@@ -479,9 +493,8 @@ denotes the rounding procedure in order to produce the plateaus.</p></li>
 </ul>
 <p><strong>Information gained from this function:</strong></p>
 <ul>
-<li>In comparison to f2: What is the effect of rotation (non-separability)?</li>
+<li>In comparison to f<sub>2</sub>: What is the effect of rotation (non-separability)?</li>
 </ul>
-<p>Note: The 3d plot shows only a part of the complete function in the vicinity of the optimum.</p>
 </section>
 </div>
 <div id="text-f11">
@@ -498,9 +511,8 @@ denotes the rounding procedure in order to produce the plateaus.</p></li>
 </ul>
 <p><strong>Information gained from this function:</strong></p>
 <ul>
-<li>In comparison to f1: What is the effect of constraint-like penalization?</li>
+<li>In comparison to f<sub>1</sub>: What is the effect of constraint-like penalization?</li>
 </ul>
-<p>Note: The 3d plot shows only a part of the complete function in the vicinity of the optimum.</p>
 </section>
 </div>
 <div id="text-f12">
@@ -519,7 +531,6 @@ denotes the rounding procedure in order to produce the plateaus.</p></li>
 <ul>
 <li>Can the search continuously change its search direction?</li>
 </ul>
-<p>Note: The 3d plot shows only a part of the complete function in the vicinity of the optimum.</p>
 </section>
 </div>
 <div id="text-f13">
@@ -533,7 +544,7 @@ denotes the rounding procedure in order to produce the plateaus.</p></li>
 <p>As for the Bent Cigar function, a ridge defined as <span class="math inline">\sum_{i=2}^D z_i^2 = 0</span> must be followed. The ridge is non-differentiable and the gradient is constant when the ridge is approached from any given point. Following the gradient becomes ineffective close to the ridge where the ridge needs to be followed in <span class="math inline">z_1</span>-direction to its optimum. The necessary change in “search behavior” close to the ridge is difficult to diagnose, because the gradient towards the ridge does not flatten out.<br>
 <strong>Information gained from this function:</strong></p>
 <ul>
-<li>In comparison to f12: What is the effect of non-smoothness, non-differentiabale ridge?</li>
+<li>In comparison to f<sub>12</sub>: What is the effect of non-smoothness, non-differentiabale ridge?</li>
 </ul>
 </section>
 </div>
@@ -548,6 +559,9 @@ denotes the rounding procedure in order to produce the plateaus.</p></li>
 <p>Due to the different exponents the sensitivies of the <span class="math inline">z_i</span>-variables become more and more different when approaching the optimum.</p>
 </section>
 </div>
+</section>
+<section id="multi-modal-functions-with-adequate-global-structure" class="level2">
+<h2 class="anchored" data-anchor-id="multi-modal-functions-with-adequate-global-structure">Multi-Modal Functions with Adequate Global Structure</h2>
 <div id="text-f15">
 <section id="f15" class="level3">
 <h3 class="anchored" data-anchor-id="f15">f<sub>15</sub>: Rastrigin Function</h3>
@@ -557,7 +571,7 @@ denotes the rounding procedure in order to produce the plateaus.</p></li>
 <li><span class="math inline">\mathbf{z}= \mathbf{R}\Lambda^{\!10}\mathbf{Q}\,T^{{0.2}}_\mathrm{asy}(T_\mathrm{\hspace*{-0.01emosz}}(\mathbf{R}(\mathbf{x}-\mathbf{x^\mathrm{opt}})))</span></li>
 </ul>
 <p><strong>Properties:</strong></p>
-<p>Prototypical highly multimodal function which has originally a very regular and symmetric structure for the placement of the optima. The transformations <span class="math inline">T^{{}}_\mathrm{asy}</span>&nbsp;and <span class="math inline">T_\mathrm{\hspace*{-0.01em}osz}</span>&nbsp;alleviate the symmetry and regularity of the original Rastrigin function.</p>
+<p>Prototypical highly multimodal function which has originally a very regular and symmetric structure for the placement of the optima. The transformations <span class="math inline">T^{{}}_\mathrm{asy}</span> and <span class="math inline">T_\mathrm{\hspace*{-0.01em}osz}</span> alleviate the symmetry and regularity of the original Rastrigin function.</p>
 <ul>
 <li><p>non-separable less regular counterpart of <span class="math inline">f_3</span></p></li>
 <li><p>roughly <span class="math inline">10^D</span> local optima</p></li>
@@ -565,7 +579,7 @@ denotes the rounding procedure in order to produce the plateaus.</p></li>
 </ul>
 <p><strong>Information gained from this function:</strong></p>
 <ul>
-<li>in comparison to f3: What is the effect of non-separability for a highly multimodal function?</li>
+<li>in comparison to f<sub>3</sub>: What is the effect of non-separability for a highly multimodal function?</li>
 </ul>
 </section>
 </div>
@@ -587,7 +601,7 @@ denotes the rounding procedure in order to produce the plateaus.</p></li>
 </ul>
 <p><strong>Information gained from this function:</strong></p>
 <ul>
-<li>in comparison to f17: Does ruggedness or a repetitive landscape deter the search behavior?</li>
+<li>in comparison to f<sub>17</sub>: Does ruggedness or a repetitive landscape deter the search behavior?</li>
 </ul>
 </section>
 </div>
@@ -624,7 +638,7 @@ denotes the rounding procedure in order to produce the plateaus.</p></li>
 </ul>
 <p><strong>Information gained from this function:</strong></p>
 <ul>
-<li>In comparison to f17: What is the effect of ill-conditioning?</li>
+<li>In comparison to f<sub>17</sub>: What is the effect of ill-conditioning?</li>
 </ul>
 </section>
 </div>
@@ -641,6 +655,9 @@ denotes the rounding procedure in order to produce the plateaus.</p></li>
 <p>Resembling the Rosenbrock function in a highly multimodal way.</p>
 </section>
 </div>
+</section>
+<section id="multi-modal-functions-with-weak-global-structure" class="level2">
+<h2 class="anchored" data-anchor-id="multi-modal-functions-with-weak-global-structure">Multi-Modal Functions with Weak Global Structure</h2>
 <div id="text-f20">
 <section id="f20" class="level3">
 <h3 class="anchored" data-anchor-id="f20">f<sub>20</sub>: Schwefel Function</h3>
@@ -651,7 +668,7 @@ denotes the rounding procedure in order to produce the plateaus.</p></li>
 <li><p><span class="math inline">\hat{\mathbf{x}} = 2\times\mathbf{1_-^+}\otimes\mathbf{x}</span></p></li>
 <li><p><span class="math inline">\hat{z}_{1} = \hat{x}_{1}</span>,<span class="math inline">\quad \hat{z}_{i+1} = \hat{x}_{i+1} + 0.25 \left({\hat{x}_{i}} - 2|x_i^{\text{opt}}| \right)</span>,<span class="math inline">\quad \text{for } i = 1, \ldots, D - 1</span></p></li>
 <li><p><span class="math inline">\mathbf{z}= 100 (\Lambda^{10} (\hat{\mathbf{z}} - 2\left|\mathbf{x^\mathrm{opt}}\right|)</span> + <span class="math inline">2\left|\mathbf{x^\mathrm{opt}}\right|)</span></p></li>
-<li><p><span class="math inline">\mathbf{x^\mathrm{opt}}= 4.2096874633/2 \;\mathbf{1_-^+}</span>, where <span class="math inline">\mathbf{1}_-^+</span>&nbsp;is the same realization as above</p></li>
+<li><p><span class="math inline">\mathbf{x^\mathrm{opt}}= 4.2096874633/2 \;\mathbf{1_-^+}</span>, where <span class="math inline">\mathbf{1}_-^+</span> is the same realization as above</p></li>
 </ul>
 <p><strong>Properties:</strong></p>
 <p>The most prominent <span class="math inline">2^D</span> minima are located comparatively close to the corners of the unpenalized search area.</p>
@@ -669,7 +686,8 @@ denotes the rounding procedure in order to produce the plateaus.</p></li>
            \mathbf{C}_i \mathbf{R}(\mathbf{x}-\mathbf{y}_i) \right) \right)^2 + f_{\mathrm{pen}}(\mathbf{x}) + f_\mathrm{opt}</span></p>
 <ul>
 <li><p><span class="math inline">w_i = \begin{cases}  1.1 + 8 \times\dfrac{i-2}{99} &amp; \text{for~} i=2,\dots,101 \\  10 &amp; \text{for~} i = 1  \end{cases}</span>, three optima have a value larger than <span class="math inline">9</span></p></li>
-<li><p><span class="math inline">\mathbf{C}_i=\Lambda^{\!\alpha_i}/\alpha_i^{1/4}</span> where <span class="math inline">\Lambda^{\!\alpha_i}</span> is defined as usual, but with randomly permuted diagonal elements. For <span class="math inline">i=2,\dots,101</span>, <span class="math inline">\alpha_i</span> is drawn uniformly randomly from the set <span class="math inline">\left\{1000^{2\frac{j}{99}} ~|~ j =  0,\dots,99\right\}</span> without replacement, and <span class="math inline">\alpha_i=1000</span> for <span class="math inline">i=1</span>.</p></li>
+<li><p><span class="math inline">\mathbf{C}_i=\Lambda^{\!\alpha_i}/\alpha_i^{1/4}</span> where <span class="math inline">\Lambda^{\!\alpha_i}</span> is defined as usual (see <a href="#symbols-and-definitions">Symbols and Definitions</a>),</p></li>
+<li><p>but with randomly permuted diagonal elements. For <span class="math inline">i=2,\dots,101</span>, <span class="math inline">\alpha_i</span> is drawn uniformly randomly from the set <span class="math inline">\left\{1000^{2\frac{j}{99}} ~|~ j =  0,\dots,99\right\}</span> without replacement, and <span class="math inline">\alpha_i=1000</span> for <span class="math inline">i=1</span>.</p></li>
 <li><p>the local optima <span class="math inline">\mathbf{y}_i</span> are uniformly drawn from the domain <span class="math inline">[-5,5]^D</span> for <span class="math inline">i=2,\dots,101</span> and <span class="math inline">\mathbf{y}_{1}\in[-4,4]^D</span>. The global optimum is at <span class="math inline">\mathbf{x^\mathrm{opt}}=\mathbf{y}_1</span>.</p></li>
 </ul>
 <p><strong>Properties:</strong></p>
@@ -692,8 +710,9 @@ denotes the rounding procedure in order to produce the plateaus.</p></li>
            \mathbf{C}_i \mathbf{R}(\mathbf{x}-\mathbf{y}_i) \right) \right)^2 + f_{\mathrm{pen}}(\mathbf{x}) + f_\mathrm{opt}</span></p>
 <ul>
 <li><p><span class="math inline">w_i = \begin{cases}  1.1 + 8 \times\dfrac{i-2}{19} &amp; \text{for~} i=2,\dots,21 \\  10 &amp; \text{for~} i = 1  \end{cases}</span>, two optima have a value larger than <span class="math inline">9</span></p></li>
-<li><p><span class="math inline">\mathbf{C}_i=\Lambda^{\!\alpha_i}/\alpha_i^{1/4}</span> where <span class="math inline">\Lambda^{\!\alpha_i}</span> is defined as usual, but with randomly permuted diagonal elements. For <span class="math inline">i=2,\dots,21</span>, <span class="math inline">\alpha_i</span> is drawn uniformly randomly from the set <span class="math inline">\left\{1000^{2\frac{j}{19}} ~|~ j =  0,\dots,19\right\}</span> without replacement, and <span class="math inline">\alpha_i=1000^2</span> for <span class="math inline">i=1</span>.</p></li>
-<li><p>the local optima <span class="math inline">\mathbf{y}_i</span> are uniformly drawn from the domain <span class="math inline">[-4.9,4.9]^D</span> for <span class="math inline">i=2,\dots,21</span> and <span class="math inline">\mathbf{y}_{1}\in</span>[<del><span class="math inline">[-4,4]^D</span></del>&nbsp;<span class="math inline">\longrightarrow</span>]&nbsp; <span class="math inline">[-3.92,3.92]^D</span>]. The global optimum is at <span class="math inline">\mathbf{x^\mathrm{opt}}=\mathbf{y}_1</span>.</p></li>
+<li><p><span class="math inline">\mathbf{C}_i=\Lambda^{\!\alpha_i}/\alpha_i^{1/4}</span> where <span class="math inline">\Lambda^{\!\alpha_i}</span> is defined as usual (see <a href="#symbols-and-definitions">Symbols and Definitions</a>),</p></li>
+<li><p>but with randomly permuted diagonal elements. For <span class="math inline">i=2,\dots,21</span>, <span class="math inline">\alpha_i</span> is drawn uniformly randomly from the set <span class="math inline">\left\{1000^{2\frac{j}{19}} ~|~ j =  0,\dots,19\right\}</span> without replacement, and <span class="math inline">\alpha_i=1000^2</span> for <span class="math inline">i=1</span>.</p></li>
+<li><p>the local optima <span class="math inline">\mathbf{y}_i</span> are uniformly drawn from the domain <span class="math inline">[-4.9,4.9]^D</span> for <span class="math inline">i=2,\dots,21</span> and <span class="math inline">\mathbf{y}_{1}\in [-3.92,3.92]^D</span>. The global optimum is at <span class="math inline">\mathbf{x^\mathrm{opt}}=\mathbf{y}_1</span>.</p></li>
 </ul>
 <p><strong>Properties:</strong></p>
 <p>The function consists of <span class="math inline">21</span> optima with position and height being unrelated and randomly chosen (different for each instantiation of the function).</p>
@@ -702,7 +721,7 @@ denotes the rounding procedure in order to produce the plateaus.</p></li>
 </ul>
 <p><strong>Information gained from this function:</strong></p>
 <ul>
-<li>In comparison to f21: What is the effect of higher condition?</li>
+<li>In comparison to f<sub>21</sub>: What is the effect of higher condition?</li>
 </ul>
 </section>
 </div>
@@ -711,7 +730,7 @@ denotes the rounding procedure in order to produce the plateaus.</p></li>
 <h3 class="anchored" data-anchor-id="f23">f<sub>23</sub>: Katsuura Function</h3>
 <p><span class="math display">f_{23}(\mathbf{x}) = \frac{10}{D^{2}} \prod_{i=1}^D\left(1 + i\sum_{j=1}^{32}
      \frac{\left|2^j z_i - [2^j z_i]\right|}{2^j} \right)^{10/D^{1.2}}
-       - \frac{10}{D^{2}} + f_{\mathrm{pen}}(\mathbf{x}) + f_{\mathrm{opt}}(\mathbf{x})</span></p>
+       - \frac{10}{D^{2}} + f_{\mathrm{pen}}(\mathbf{x}) + f_{\mathrm{opt}}</span></p>
 <ul>
 <li><span class="math inline">\mathbf{z}= \mathbf{Q}\,\Lambda^{\!100}\mathbf{R}(\mathbf{x}-\mathbf{x^\mathrm{opt}})</span></li>
 </ul>
@@ -724,16 +743,16 @@ denotes the rounding procedure in order to produce the plateaus.</p></li>
 <h3 class="anchored" data-anchor-id="f24">f<sub>24</sub>: Lunacek bi-Rastrigin Function</h3>
 <p><span class="math display">f_{24}(\mathbf{x}) = \mathrm{min}\left(\sum_{i = 1}^{D}(\hat{x}_i - \mu_0)^2,
                        d\,D+ s\sum_{i = 1}^{D}(\hat{x}_i - \mu_1)^2\right)
-           + 10\left(D- \sum_{i=1}^D\cos(2\pi z_i)\right) + 10^4\,f^{{}_\mathrm{pen}}(\mathbf{x}) + f_{\mathrm{opt}}(\mathbf{x})</span></p>
+           + 10\left(D- \sum_{i=1}^D\cos(2\pi z_i)\right) + 10^4\,f^{{}_\mathrm{pen}}(\mathbf{x}) + f_{\mathrm{opt}}</span></p>
 <ul>
-<li><p><span class="math inline">\hat{\mathbf{x}} = 2\,\mathrm{{sign}}(\mathbf{x^\mathrm{opt}})\otimes\mathbf{x}</span>, <span class="math inline">\mathbf{x^\mathrm{opt}}=</span> [<del><span class="math inline">\mu_0</span></del>&nbsp;<span class="math inline">\longrightarrow</span>]&nbsp; <span class="math inline">\frac{\mu_0}{2}</span> <span class="math inline">\mathbf{1_-^+}</span></p></li>
+<li><p><span class="math inline">\hat{\mathbf{x}} = 2\,\mathrm{{sign}}(\mathbf{x^\mathrm{opt}})\otimes\mathbf{x}</span>, <span class="math inline">\mathbf{x^\mathrm{opt}}=</span> <span class="math inline">\frac{\mu_0}{2}</span> <span class="math inline">\mathbf{1_-^+}</span></p></li>
 <li><p><span class="math inline">\mathbf{z}= \mathbf{Q}\Lambda^{\!100}\mathbf{R}(\hat{\mathbf{x}}-\mu_0\,\mathbf{1})</span></p></li>
 <li><p><span class="math inline">\mu_0 = 2.5</span>, <span class="math inline">\mu_1 = -\sqrt{\dfrac{\mu_0^2-d}{s}}</span>, <span class="math inline">s = 1 - \dfrac{1}{2\sqrt{D+20}-8.2}</span>, <span class="math inline">d=1</span></p></li>
 </ul>
 <p><strong>Properties:</strong></p>
-<p>Highly multimodal function with two funnels around [<del><span class="math inline">\mu_0\mathbf{1_-^+}</span></del>&nbsp;<span class="math inline">\longrightarrow</span>]&nbsp; <span class="math inline">\frac{\mu_0}{2}\mathbf{1_-^+}</span> and [<del><span class="math inline">-\mu_1\mathbf{1_-^+}</span></del>&nbsp;<span class="math inline">\longrightarrow</span>]&nbsp; <span class="math inline">\frac{\mu_1}{2}\mathbf{1_-^+}</span> being superimposed by the cosine. Presumably different approaches need to be used for “selecting the funnel” and for search the highly multimodal function “within” the funnel. The function was constructed to be deceptive for evolutionary algorithms with large population size.</p>
+<p>Highly multimodal function with two funnels around <span class="math inline">\frac{\mu_0}{2}\mathbf{1_-^+}</span> and <span class="math inline">\frac{\mu_1}{2}\mathbf{1_-^+}</span> being superimposed by the cosine. Presumably different approaches need to be used for “selecting the funnel” and for searching the highly multimodal function “within” the funnel. The function was constructed to be deceptive for evolutionary algorithms with large population size.</p>
 <ul>
-<li>the funnel of the local optimum at [<del><span class="math inline">-\mu_1 \mathbf{1_-^+}</span></del>]&nbsp; <span class="math inline">\frac{\mu_1}{2}\mathbf{1_-^+}</span> has roughly <span class="math inline">70\%</span> of the search space volume within <span class="math inline">[-5,5]^D</span>.</li>
+<li>the funnel of the local optimum at <span class="math inline">\frac{\mu_1}{2}\mathbf{1_-^+}</span> has roughly <span class="math inline">70\%</span> of the search space volume within <span class="math inline">[-5,5]^D</span>.</li>
 </ul>
 <p><strong>Information gained from this function:</strong> Can the search behavior be local on the global scale but global on a local scale?</p>
 </section>
