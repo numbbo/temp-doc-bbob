@@ -32,6 +32,12 @@ window.onload=function() {
         }
     }
     selectNode(document.getElementById(selectedNode));
+
+    /* Hide all groups */
+	for (let i = 1; i <= 5; i++) {
+		textName = "text-g" + i;
+		document.getElementById(textName).setAttribute("style", "display:none;");
+	}
 }
 
 /* Create a string with all options according to the given subject, values, labels and default value */

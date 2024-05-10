@@ -9,7 +9,7 @@ $$f_\mathrm{sphere}(\mathbf{x}) = \|\mathbf{z}\|^2$$
 **Properties:**
 
 Presumably the most easy continuous domain search problem, given the
-volume of the searched solution is small (i.e. where pure monte-carlo
+volume of the searched solution is small (i.e. where pure monte-carlo
 random search is too expensive).
 
 -   unimodal
@@ -84,7 +84,7 @@ $$f_\mathrm{sphere}(\mathbf{x}) = \|\mathbf{z}\|^2$$
 **Properties:**
 
 Presumably the most easy continuous domain search problem, given the
-volume of the searched solution is small (i.e. where pure monte-carlo
+volume of the searched solution is small (i.e. where pure monte-carlo
 random search is too expensive).
 
 -   unimodal

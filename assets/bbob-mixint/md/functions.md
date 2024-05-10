@@ -50,7 +50,7 @@ values. This discretization is done as follows:
                \end{array}\right.$$
 
 The values $y_j, j = 1, \dots, l,$ in
-Step (1) are
+Step (1) are
 chosen in such a way that the corresponding shifted values $z_j$ remain
 within $[-4, 4]$ if $x_i^{\text{opt}}$ is also in $[-4, 4]$. If not, the
 shift is larger, but $z_j, j = 1, \dots, l,$ never go beyond
@@ -122,11 +122,11 @@ the suite.
 
 ::: {#fig-1 layout-ncol=3}
 
-![bbob suite](https://raw.githubusercontent.com/LukaMarkicevic/temp-doc-bbob/main/assets/mixed-integer/images/1.png){#fig-a}
+![bbob suite](../assets/bbob-mixint/images/1.png){#fig-a}
 
-![bbob-mixint suite before scaling](https://raw.githubusercontent.com/LukaMarkicevic/temp-doc-bbob/main/assets/mixed-integer/images/2.png){#fig-b}
+![bbob-mixint suite before scaling](../assets/bbob-mixint/images/2.png){#fig-b}
 
-![bbob-mixint suite](https://raw.githubusercontent.com/LukaMarkicevic/temp-doc-bbob/main/assets/mixed-integer/images/3.png){#fig-c}
+![bbob-mixint suite](../assets/bbob-mixint/images/3.png){#fig-c}
 
 Estimation of targets reached by the domain middle (in logarithmic scale). They are computed as the distance between
 the f -value of the domain middle and the optimal solution for the bbob suite (a), or the median of the distances between the

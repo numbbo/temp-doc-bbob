@@ -199,11 +199,11 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#plots" id="toc-plots" class="nav-link active" data-scroll-target="#plots">Plots</a></li>
   <li><a href="#plot-explanation" id="toc-plot-explanation" class="nav-link" data-scroll-target="#plot-explanation">Plot explanation</a></li>
   <li><a href="#problem-definition" id="toc-problem-definition" class="nav-link" data-scroll-target="#problem-definition">Problem definition</a></li>
-  <li><a href="#separable-functions" id="toc-separable-functions" class="nav-link" data-scroll-target="#separable-functions">Separable Functions</a></li>
-  <li><a href="#functions-with-low-or-moderate-conditioning" id="toc-functions-with-low-or-moderate-conditioning" class="nav-link" data-scroll-target="#functions-with-low-or-moderate-conditioning">Functions with Low or Moderate Conditioning</a></li>
-  <li><a href="#functions-with-high-conditioning-and-unimodal" id="toc-functions-with-high-conditioning-and-unimodal" class="nav-link" data-scroll-target="#functions-with-high-conditioning-and-unimodal">Functions with High Conditioning and Unimodal</a></li>
-  <li><a href="#multi-modal-functions-with-adequate-global-structure" id="toc-multi-modal-functions-with-adequate-global-structure" class="nav-link" data-scroll-target="#multi-modal-functions-with-adequate-global-structure">Multi-Modal Functions with Adequate Global Structure</a></li>
-  <li><a href="#multi-modal-functions-with-weak-global-structure" id="toc-multi-modal-functions-with-weak-global-structure" class="nav-link" data-scroll-target="#multi-modal-functions-with-weak-global-structure">Multi-Modal Functions with Weak Global Structure</a></li>
+  <li><a href="#separable-functions" id="toc-separable-functions" class="nav-link" data-scroll-target="#separable-functions">Separable functions</a></li>
+  <li><a href="#functions-with-low-or-moderate-conditioning" id="toc-functions-with-low-or-moderate-conditioning" class="nav-link" data-scroll-target="#functions-with-low-or-moderate-conditioning">Functions with low or moderate conditioning</a></li>
+  <li><a href="#functions-with-high-conditioning-and-unimodal" id="toc-functions-with-high-conditioning-and-unimodal" class="nav-link" data-scroll-target="#functions-with-high-conditioning-and-unimodal">Functions with high conditioning and unimodal</a></li>
+  <li><a href="#multi-modal-functions-with-adequate-global-structure" id="toc-multi-modal-functions-with-adequate-global-structure" class="nav-link" data-scroll-target="#multi-modal-functions-with-adequate-global-structure">Multi-modal functions with adequate global structure</a></li>
+  <li><a href="#multi-modal-functions-with-weak-global-structure" id="toc-multi-modal-functions-with-weak-global-structure" class="nav-link" data-scroll-target="#multi-modal-functions-with-weak-global-structure">Multi-modal functions with weak global structure</a></li>
   </ul>
 </nav>
     </div>
@@ -297,11 +297,14 @@ ul.task-list li input[type="checkbox"] {
 <section id="problem-definition" class="level2">
 <h2 class="anchored" data-anchor-id="problem-definition">Problem definition</h2>
 </section>
+<div id="text-g1">
 <section id="separable-functions" class="level2">
-<h2 class="anchored" data-anchor-id="separable-functions">Separable Functions</h2>
+<h2 class="anchored" data-anchor-id="separable-functions">Separable functions</h2>
+</section>
+</div>
 <div id="text-f1">
 <section id="f1" class="level3">
-<h3 class="anchored" data-anchor-id="f1">f<sub>1</sub>: Sphere Function</h3>
+<h3 class="anchored" data-anchor-id="f1">f<sub>1</sub>: Sphere function</h3>
 <p><span class="math display">f_{1}(\mathbf{x}) = \|\mathbf{z}\|^2 + f_\mathrm{opt}</span></p>
 <ul>
 <li><span class="math inline">\mathbf{z}= \mathbf{x}- \mathbf{x^\mathrm{opt}}</span></li>
@@ -320,7 +323,7 @@ ul.task-list li input[type="checkbox"] {
 </div>
 <div id="text-f2">
 <section id="f2" class="level3">
-<h3 class="anchored" data-anchor-id="f2">f<sub>2</sub>: Ellipsoidal Function</h3>
+<h3 class="anchored" data-anchor-id="f2">f<sub>2</sub>: Ellipsoidal function</h3>
 <p><span class="math display">f_{2}(\mathbf{x}) = \sum_{i = 1}^{D} 10^{6\frac{i-1}{D-1}}\,z_i^2 + f_\mathrm{opt}\\</span></p>
 <ul>
 <li><span class="math inline">\mathbf{z}= T_\mathrm{\hspace*{-0.01emosz}}(\mathbf{x}- \mathbf{x^\mathrm{opt}})</span></li>
@@ -339,7 +342,7 @@ ul.task-list li input[type="checkbox"] {
 </div>
 <div id="text-f3">
 <section id="f3" class="level3">
-<h3 class="anchored" data-anchor-id="f3">f<sub>3</sub>: Rastrigin Function</h3>
+<h3 class="anchored" data-anchor-id="f3">f<sub>3</sub>: Rastrigin function</h3>
 <p><span class="math display">f_{3}(\mathbf{x}) = 10 \left(D- \sum_{i = 1}^{D}\cos(2\pi z_i)\right) + \|\mathbf{z}\|^2 + f_\mathrm{opt}</span></p>
 <ul>
 <li><span class="math inline">\mathbf{z}= \Lambda^{\!10}T^{{0.2}}_{\mathrm{asy}}(T_\mathrm{\hspace*{-0.01emosz}}(\mathbf{x}-\mathbf{x^\mathrm{opt}}))</span></li>
@@ -358,7 +361,7 @@ ul.task-list li input[type="checkbox"] {
 </div>
 <div id="text-f4">
 <section id="f4" class="level3">
-<h3 class="anchored" data-anchor-id="f4">f<sub>4</sub>: Büche-Rastrigin Function</h3>
+<h3 class="anchored" data-anchor-id="f4">f<sub>4</sub>: Büche-Rastrigin function</h3>
 <p><span class="math display">f_{4}(\mathbf{x}) = 10 \left(D- \sum_{i = 1}^{D}\cos(2\pi z_i)\right) +
              \sum_{i = 1}^{D}z_i^2 + 100\,f_{\mathrm{pen}}(\mathbf{x}) + f_\mathrm{opt}</span></p>
 <ul>
@@ -378,7 +381,7 @@ ul.task-list li input[type="checkbox"] {
 </div>
 <div id="text-f5">
 <section id="f5" class="level3">
-<h3 class="anchored" data-anchor-id="f5">f<sub>5</sub>: Linear Slope</h3>
+<h3 class="anchored" data-anchor-id="f5">f<sub>5</sub>: Linear slope</h3>
 <p><span class="math display">f_{5}(\mathbf{x}) = \sum_{i = 1}^{D} 5\,|s_i| - s_i z_i  
    + f_\mathrm{opt}</span></p>
 <ul>
@@ -397,12 +400,14 @@ ul.task-list li input[type="checkbox"] {
 </ul>
 </section>
 </div>
-</section>
+<div id="text-g2">
 <section id="functions-with-low-or-moderate-conditioning" class="level2">
-<h2 class="anchored" data-anchor-id="functions-with-low-or-moderate-conditioning">Functions with Low or Moderate Conditioning</h2>
+<h2 class="anchored" data-anchor-id="functions-with-low-or-moderate-conditioning">Functions with low or moderate conditioning</h2>
+</section>
+</div>
 <div id="text-f6">
 <section id="f6" class="level3">
-<h3 class="anchored" data-anchor-id="f6">f<sub>6</sub>: Attractive Sector Function</h3>
+<h3 class="anchored" data-anchor-id="f6">f<sub>6</sub>: Attractive sector function</h3>
 <p><span class="math display">f_{6}(\mathbf{x}) = T_\mathrm{\hspace*{-0.01emosz}}\left(\sum_{i = 1}^{D} (s_i z_i)^2\right)^{0.9} + f_\mathrm{opt}</span></p>
 <ul>
 <li><p><span class="math inline">\mathbf{z}= \mathbf{Q}\Lambda^{\!10}\mathbf{R}(\mathbf{x}- \mathbf{x^\mathrm{opt}})</span></p></li>
@@ -421,7 +426,7 @@ ul.task-list li input[type="checkbox"] {
 </div>
 <div id="text-f7">
 <section id="f7" class="level3">
-<h3 class="anchored" data-anchor-id="f7">f<sub>7</sub>: Step Ellipsoidal Function</h3>
+<h3 class="anchored" data-anchor-id="f7">f<sub>7</sub>: Step ellipsoidal function</h3>
 <p><span class="math display">f_{7}(\mathbf{x}) = 0.1 \max\left(|\hat{z}_1|/10^4,\, \sum_{i = 1}^{D}
                          10^{2\frac{i-1}{D-1}} z_i^2\right) + f_{\mathrm{pen}}(\mathbf{x}) + f_\mathrm{opt}</span></p>
 <ul>
@@ -443,7 +448,7 @@ denotes the rounding procedure in order to produce the plateaus.</p></li>
 </div>
 <div id="text-f8">
 <section id="f8" class="level3">
-<h3 class="anchored" data-anchor-id="f8">f<sub>8</sub>: Rosenbrock Function, original</h3>
+<h3 class="anchored" data-anchor-id="f8">f<sub>8</sub>: Rosenbrock function, original</h3>
 <p><span class="math display">f_{8}(\mathbf{x}) = \sum_{i = 1}^{D-1} \left( 100\,\left(z_i^2 - z_{i+1}\right)^2 + (z_i-1)^2 \right) + f_\mathrm{opt}</span></p>
 <ul>
 <li><p><span class="math inline">\mathbf{z}= \max\!\left(1,\frac{\sqrt{D}}{8}\right)(\mathbf{x}- \mathbf{x^\mathrm{opt}}) + 1</span></p></li>
@@ -462,7 +467,7 @@ denotes the rounding procedure in order to produce the plateaus.</p></li>
 </div>
 <div id="text-f9">
 <section id="f9" class="level3">
-<h3 class="anchored" data-anchor-id="f9">f<sub>9</sub>: Rosenbrock Function, rotated</h3>
+<h3 class="anchored" data-anchor-id="f9">f<sub>9</sub>: Rosenbrock function, rotated</h3>
 <p><span class="math display">f_{9}(\mathbf{x}) = \sum_{i = 1}^{D-1} \left( 100\,\left(z_i^2 - z_{i+1}\right)^2 + (z_i-1)^2 \right) + f_\mathrm{opt}</span></p>
 <ul>
 <li><p><span class="math inline">\mathbf{z}= \max\left(1,\frac{\sqrt{D}}{8}\right)\mathbf{R}\mathbf{x}+ \mathbf{1}/2</span></p></li>
@@ -476,12 +481,14 @@ denotes the rounding procedure in order to produce the plateaus.</p></li>
 </ul>
 </section>
 </div>
-</section>
+<div id="text-g3">
 <section id="functions-with-high-conditioning-and-unimodal" class="level2">
-<h2 class="anchored" data-anchor-id="functions-with-high-conditioning-and-unimodal">Functions with High Conditioning and Unimodal</h2>
+<h2 class="anchored" data-anchor-id="functions-with-high-conditioning-and-unimodal">Functions with high conditioning and unimodal</h2>
+</section>
+</div>
 <div id="text-f10">
 <section id="f10" class="level3">
-<h3 class="anchored" data-anchor-id="f10">f<sub>10</sub>: Ellipsoidal Function</h3>
+<h3 class="anchored" data-anchor-id="f10">f<sub>10</sub>: Ellipsoidal function</h3>
 <p><span class="math display">f_{10}(\mathbf{x}) = \sum_{i = 1}^{D} 10^{6\frac{i-1}{D-1}}z_i^2 + f_\mathrm{opt}</span></p>
 <ul>
 <li><span class="math inline">\mathbf{z}= T_\mathrm{\hspace*{-0.01emosz}}(\mathbf{R}(\mathbf{x}- \mathbf{x^\mathrm{opt}}))</span></li>
@@ -499,7 +506,7 @@ denotes the rounding procedure in order to produce the plateaus.</p></li>
 </div>
 <div id="text-f11">
 <section id="f11" class="level3">
-<h3 class="anchored" data-anchor-id="f11">f<sub>11</sub>: Discus Function</h3>
+<h3 class="anchored" data-anchor-id="f11">f<sub>11</sub>: Discus function</h3>
 <p><span class="math display">f_{11}(\mathbf{x}) = 10^6 z_1^2 + \sum_{i = 2}^{D} z_i^2 + f_\mathrm{opt}</span></p>
 <ul>
 <li><span class="math inline">\mathbf{z}= T_\mathrm{\hspace*{-0.01emosz}}(\mathbf{R}(\mathbf{x}- \mathbf{x^\mathrm{opt}}))</span></li>
@@ -517,7 +524,7 @@ denotes the rounding procedure in order to produce the plateaus.</p></li>
 </div>
 <div id="text-f12">
 <section id="f12" class="level3">
-<h3 class="anchored" data-anchor-id="f12">f<sub>12</sub>: Bent Cigar Function</h3>
+<h3 class="anchored" data-anchor-id="f12">f<sub>12</sub>: Bent cigar function</h3>
 <p><span class="math display">f_{12}(\mathbf{x}) = z_1^2 + 10^6\sum_{i = 2}^{D} z_i^2 + f_\mathrm{opt}</span></p>
 <ul>
 <li><span class="math inline">\mathbf{z}= \mathbf{R}\,T^{{0.5}}_\mathrm{asy}(\mathbf{R}(\mathbf{x}- \mathbf{x^\mathrm{opt}}))</span></li>
@@ -535,7 +542,7 @@ denotes the rounding procedure in order to produce the plateaus.</p></li>
 </div>
 <div id="text-f13">
 <section id="f13" class="level3">
-<h3 class="anchored" data-anchor-id="f13">f<sub>13</sub>: Sharp Ridge Function</h3>
+<h3 class="anchored" data-anchor-id="f13">f<sub>13</sub>: Sharp ridge function</h3>
 <p><span class="math display">f_{13}(\mathbf{x}) = z_1^2 + 100\,\sqrt{\sum_{i = 2}^{D} z_i^2} + f_\mathrm{opt}</span></p>
 <ul>
 <li><span class="math inline">\mathbf{z}= \mathbf{Q}\Lambda^{\!10}\mathbf{R}(\mathbf{x}- \mathbf{x^\mathrm{opt}})</span></li>
@@ -550,7 +557,7 @@ denotes the rounding procedure in order to produce the plateaus.</p></li>
 </div>
 <div id="text-f14">
 <section id="f14" class="level3">
-<h3 class="anchored" data-anchor-id="f14">f<sub>14</sub>: Different Powers Function</h3>
+<h3 class="anchored" data-anchor-id="f14">f<sub>14</sub>: Different powers function</h3>
 <p><span class="math display">f_{14}(\mathbf{x}) = \sqrt{\sum_{i = 1}^{D}|z_i|^{2+4\frac{i - 1}{D- 1}}} + f_\mathrm{opt}</span></p>
 <ul>
 <li><span class="math inline">\mathbf{z}= \mathbf{R}(\mathbf{x}- \mathbf{x^\mathrm{opt}})</span></li>
@@ -559,12 +566,14 @@ denotes the rounding procedure in order to produce the plateaus.</p></li>
 <p>Due to the different exponents the sensitivies of the <span class="math inline">z_i</span>-variables become more and more different when approaching the optimum.</p>
 </section>
 </div>
-</section>
+<div id="text-g4">
 <section id="multi-modal-functions-with-adequate-global-structure" class="level2">
-<h2 class="anchored" data-anchor-id="multi-modal-functions-with-adequate-global-structure">Multi-Modal Functions with Adequate Global Structure</h2>
+<h2 class="anchored" data-anchor-id="multi-modal-functions-with-adequate-global-structure">Multi-modal functions with adequate global structure</h2>
+</section>
+</div>
 <div id="text-f15">
 <section id="f15" class="level3">
-<h3 class="anchored" data-anchor-id="f15">f<sub>15</sub>: Rastrigin Function</h3>
+<h3 class="anchored" data-anchor-id="f15">f<sub>15</sub>: Rastrigin function</h3>
 <p><span class="math display">f_{15}(\mathbf{x}) = 10 \left(D- \sum_{i = 1}^{D}\cos(2\pi z_i)\right)
     + \|\mathbf{z}\|^2 + f_\mathrm{opt}</span></p>
 <ul>
@@ -585,7 +594,7 @@ denotes the rounding procedure in order to produce the plateaus.</p></li>
 </div>
 <div id="text-f16">
 <section id="f16" class="level3">
-<h3 class="anchored" data-anchor-id="f16">f<sub>16</sub>: Weierstrass Function</h3>
+<h3 class="anchored" data-anchor-id="f16">f<sub>16</sub>: Weierstrass function</h3>
 <p><span class="math display">f_{16}(\mathbf{x}) = 10 \left( \frac{1}{D}
    \sum_{i = 1}^{D}\sum_{k = 0}^{11} 1/2^k \cos(2\pi3^k(z_i + 1/2))
             - f_0 \right)^3 + \frac{10}{D}f_{\mathrm{pen}}(\mathbf{x}) + f_\mathrm{opt}</span></p>
@@ -607,7 +616,7 @@ denotes the rounding procedure in order to produce the plateaus.</p></li>
 </div>
 <div id="text-f17">
 <section id="f17" class="level3">
-<h3 class="anchored" data-anchor-id="f17">f<sub>17</sub>: Schaffers F7 Function</h3>
+<h3 class="anchored" data-anchor-id="f17">f<sub>17</sub>: Schaffers F7 function</h3>
 <p><span class="math display">f_{17}(\mathbf{x}) = \left(\frac{1}{D- 1}\sum_{i = 1}^{D- 1} \sqrt{s_i} +
       \sqrt{s_i} \sin^2\!\left(50\,s_i^{1/5}\right)\right)^2 + 10\,f_{\mathrm{pen}}(\mathbf{x}) + f_\mathrm{opt}</span></p>
 <ul>
@@ -624,7 +633,7 @@ denotes the rounding procedure in order to produce the plateaus.</p></li>
 </div>
 <div id="text-f18">
 <section id="f18" class="level3">
-<h3 class="anchored" data-anchor-id="f18">f<sub>18</sub>: Schaffers F7 Function, moderately ill-conditioned</h3>
+<h3 class="anchored" data-anchor-id="f18">f<sub>18</sub>: Schaffers F7 function, moderately ill-conditioned</h3>
 <p><span class="math display">f_{18}(\mathbf{x}) = \left(\frac{1}{D- 1}\sum_{i = 1}^{D- 1} \sqrt{s_i} +
       \sqrt{s_i} \sin^2\!\left(50\,s_i^{1/5}\right)\right)^2 + 10\,f_{\mathrm{pen}}(\mathbf{x}) + f_\mathrm{opt}</span></p>
 <ul>
@@ -644,7 +653,7 @@ denotes the rounding procedure in order to produce the plateaus.</p></li>
 </div>
 <div id="text-f19">
 <section id="f19" class="level3">
-<h3 class="anchored" data-anchor-id="f19">f<sub>19</sub>: Composite Griewank-Rosenbrock Function F8F2</h3>
+<h3 class="anchored" data-anchor-id="f19">f<sub>19</sub>: Composite Griewank-Rosenbrock function F8F2</h3>
 <p><span class="math display">f_{19}(\mathbf{x}) = \frac{10}{D-1} \sum_{i=1}^{D-1} \left( \frac{s_i}{4000} - \cos(s_i) \right) + 10 + f_\mathrm{opt}</span></p>
 <ul>
 <li><p><span class="math inline">\mathbf{z}= \max\!\left(1,\frac{\sqrt{D}}{8}\right)\mathbf{R}\mathbf{x}+ 0.5</span></p></li>
@@ -655,12 +664,14 @@ denotes the rounding procedure in order to produce the plateaus.</p></li>
 <p>Resembling the Rosenbrock function in a highly multimodal way.</p>
 </section>
 </div>
-</section>
+<div id="text-g5">
 <section id="multi-modal-functions-with-weak-global-structure" class="level2">
-<h2 class="anchored" data-anchor-id="multi-modal-functions-with-weak-global-structure">Multi-Modal Functions with Weak Global Structure</h2>
+<h2 class="anchored" data-anchor-id="multi-modal-functions-with-weak-global-structure">Multi-modal functions with weak global structure</h2>
+</section>
+</div>
 <div id="text-f20">
 <section id="f20" class="level3">
-<h3 class="anchored" data-anchor-id="f20">f<sub>20</sub>: Schwefel Function</h3>
+<h3 class="anchored" data-anchor-id="f20">f<sub>20</sub>: Schwefel function</h3>
 <p><span class="math display">f_{20}(\mathbf{x}) = - \frac{1}{100D}%  % kept in the final print
 \sum_{i = 1}^{D}z_i\sin(\sqrt{|z_i|}) + 4.189828872724339
      + 100f_{\mathrm{pen}}(\mathbf{z}/100) + f_\mathrm{opt}</span></p>
@@ -679,14 +690,14 @@ denotes the rounding procedure in order to produce the plateaus.</p></li>
 </div>
 <div id="text-f21">
 <section id="f21" class="level3">
-<h3 class="anchored" data-anchor-id="f21">f<sub>21</sub>: Gallagher’s Gaussian 101-me Peaks Function</h3>
+<h3 class="anchored" data-anchor-id="f21">f<sub>21</sub>: Gallagher’s Gaussian 101-me peaks function</h3>
 <p><span class="math display">f_{21}(\mathbf{x}) = T_\mathrm{\hspace*{-0.01emosz}}\left( 10 - \max_{i=1}^{101}
        w_i \exp\left(-\frac{1}{2D}\,
            (\mathbf{x}-\mathbf{y}_i)^{\mathrm{T}}\mathbf{R}^{\mathrm{T}}
            \mathbf{C}_i \mathbf{R}(\mathbf{x}-\mathbf{y}_i) \right) \right)^2 + f_{\mathrm{pen}}(\mathbf{x}) + f_\mathrm{opt}</span></p>
 <ul>
 <li><p><span class="math inline">w_i = \begin{cases}  1.1 + 8 \times\dfrac{i-2}{99} &amp; \text{for~} i=2,\dots,101 \\  10 &amp; \text{for~} i = 1  \end{cases}</span>, three optima have a value larger than <span class="math inline">9</span></p></li>
-<li><p><span class="math inline">\mathbf{C}_i=\Lambda^{\!\alpha_i}/\alpha_i^{1/4}</span> where <span class="math inline">\Lambda^{\!\alpha_i}</span> is defined as usual (see <a href="#symbols-and-definitions">Symbols and Definitions</a>),</p></li>
+<li><p><span class="math inline">\mathbf{C}_i=\Lambda^{\!\alpha_i}/\alpha_i^{1/4}</span> where <span class="math inline">\Lambda^{\!\alpha_i}</span> is defined as usual (see <a href="#symbols-and-definitions">Symbols and definitions</a>),</p></li>
 <li><p>but with randomly permuted diagonal elements. For <span class="math inline">i=2,\dots,101</span>, <span class="math inline">\alpha_i</span> is drawn uniformly randomly from the set <span class="math inline">\left\{1000^{2\frac{j}{99}} ~|~ j =  0,\dots,99\right\}</span> without replacement, and <span class="math inline">\alpha_i=1000</span> for <span class="math inline">i=1</span>.</p></li>
 <li><p>the local optima <span class="math inline">\mathbf{y}_i</span> are uniformly drawn from the domain <span class="math inline">[-5,5]^D</span> for <span class="math inline">i=2,\dots,101</span> and <span class="math inline">\mathbf{y}_{1}\in[-4,4]^D</span>. The global optimum is at <span class="math inline">\mathbf{x^\mathrm{opt}}=\mathbf{y}_1</span>.</p></li>
 </ul>
@@ -703,14 +714,14 @@ denotes the rounding procedure in order to produce the plateaus.</p></li>
 </div>
 <div id="text-f22">
 <section id="f22" class="level3">
-<h3 class="anchored" data-anchor-id="f22">f<sub>22</sub>: Gallagher’s Gaussian 21-hi Peaks Function</h3>
+<h3 class="anchored" data-anchor-id="f22">f<sub>22</sub>: Gallagher’s Gaussian 21-hi peaks function</h3>
 <p><span class="math display">f_{22}(\mathbf{x}) = T_\mathrm{\hspace*{-0.01emosz}}\left( 10 - \max_{i=1}^{21}
        w_i \exp\left(-\frac{1}{2D}\,
            (\mathbf{x}-\mathbf{y}_i)^{\mathrm{T}}\mathbf{R}^{\mathrm{T}}
            \mathbf{C}_i \mathbf{R}(\mathbf{x}-\mathbf{y}_i) \right) \right)^2 + f_{\mathrm{pen}}(\mathbf{x}) + f_\mathrm{opt}</span></p>
 <ul>
 <li><p><span class="math inline">w_i = \begin{cases}  1.1 + 8 \times\dfrac{i-2}{19} &amp; \text{for~} i=2,\dots,21 \\  10 &amp; \text{for~} i = 1  \end{cases}</span>, two optima have a value larger than <span class="math inline">9</span></p></li>
-<li><p><span class="math inline">\mathbf{C}_i=\Lambda^{\!\alpha_i}/\alpha_i^{1/4}</span> where <span class="math inline">\Lambda^{\!\alpha_i}</span> is defined as usual (see <a href="#symbols-and-definitions">Symbols and Definitions</a>),</p></li>
+<li><p><span class="math inline">\mathbf{C}_i=\Lambda^{\!\alpha_i}/\alpha_i^{1/4}</span> where <span class="math inline">\Lambda^{\!\alpha_i}</span> is defined as usual (see <a href="#symbols-and-definitions">Symbols and definitions</a>),</p></li>
 <li><p>but with randomly permuted diagonal elements. For <span class="math inline">i=2,\dots,21</span>, <span class="math inline">\alpha_i</span> is drawn uniformly randomly from the set <span class="math inline">\left\{1000^{2\frac{j}{19}} ~|~ j =  0,\dots,19\right\}</span> without replacement, and <span class="math inline">\alpha_i=1000^2</span> for <span class="math inline">i=1</span>.</p></li>
 <li><p>the local optima <span class="math inline">\mathbf{y}_i</span> are uniformly drawn from the domain <span class="math inline">[-4.9,4.9]^D</span> for <span class="math inline">i=2,\dots,21</span> and <span class="math inline">\mathbf{y}_{1}\in [-3.92,3.92]^D</span>. The global optimum is at <span class="math inline">\mathbf{x^\mathrm{opt}}=\mathbf{y}_1</span>.</p></li>
 </ul>
@@ -727,7 +738,7 @@ denotes the rounding procedure in order to produce the plateaus.</p></li>
 </div>
 <div id="text-f23">
 <section id="f23" class="level3">
-<h3 class="anchored" data-anchor-id="f23">f<sub>23</sub>: Katsuura Function</h3>
+<h3 class="anchored" data-anchor-id="f23">f<sub>23</sub>: Katsuura function</h3>
 <p><span class="math display">f_{23}(\mathbf{x}) = \frac{10}{D^{2}} \prod_{i=1}^D\left(1 + i\sum_{j=1}^{32}
      \frac{\left|2^j z_i - [2^j z_i]\right|}{2^j} \right)^{10/D^{1.2}}
        - \frac{10}{D^{2}} + f_{\mathrm{pen}}(\mathbf{x}) + f_{\mathrm{opt}}</span></p>
@@ -740,7 +751,7 @@ denotes the rounding procedure in order to produce the plateaus.</p></li>
 </div>
 <div id="text-f24">
 <section id="f24" class="level3">
-<h3 class="anchored" data-anchor-id="f24">f<sub>24</sub>: Lunacek bi-Rastrigin Function</h3>
+<h3 class="anchored" data-anchor-id="f24">f<sub>24</sub>: Lunacek bi-Rastrigin function</h3>
 <p><span class="math display">f_{24}(\mathbf{x}) = \mathrm{min}\left(\sum_{i = 1}^{D}(\hat{x}_i - \mu_0)^2,
                        d\,D+ s\sum_{i = 1}^{D}(\hat{x}_i - \mu_1)^2\right)
            + 10\left(D- \sum_{i=1}^D\cos(2\pi z_i)\right) + 10^4\,f^{{}_\mathrm{pen}}(\mathbf{x}) + f_{\mathrm{opt}}</span></p>
@@ -759,7 +770,6 @@ denotes the rounding procedure in order to produce the plateaus.</p></li>
 </div>
 
 
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

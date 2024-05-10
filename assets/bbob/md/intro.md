@@ -42,9 +42,9 @@ function value (they are randomly shifted in $f$-space). Consequently,
 for each function different *instances* can be generated: for each
 instance the randomly chosen values are drawn anew. Apart from the
 first subgroup, the benchmarks are non-separable. Other specific
-properties are discussed in the appendix.
+properties are discussed in [Function Properties](#function-properties).
 
-## General Setup
+## General setup
 
 **Search Space:**
 
@@ -71,7 +71,7 @@ stated otherwise.
 **Boundary Handling:**
 
 On some functions a penalty boundary handling is applied as given with
-$f^{{}}_\mathrm{pen}$ (see [Symbols and Definitions](#symbols-and-definitions)).
+$f^{{}}_\mathrm{pen}$ (see [Symbols and definitions](#symbols-and-definitions)).
 
 **Linear Transformations:**
 
@@ -87,7 +87,7 @@ $x$- or $f$-space. Both transformations
 $T_\mathrm{\hspace*{-0.01emosz}}:\mathcal{R}^n\to\mathcal{R}^n$,
 $n\in\{1,D\}$, and
 $T^{{}_\mathrm{asy}}:\mathcal{R}^D\to\mathcal{R}^D$
-are defined coordinate-wise (see [Symbols and Definitions](#symbols-and-definitions)). They are smooth and have,
+are defined coordinate-wise (see [Symbols and definitions](#symbols-and-definitions)). They are smooth and have,
 coordinate-wise, a strictly positive derivative. 
 They are shown in @fig-bbob-trans.
 $T_\mathrm{\hspace*{-0.01emosz}}$ is oscillating about the
@@ -99,7 +99,7 @@ the search space remains untransformed.
 ![$T_\mathrm{\hspace*{-0.01emosz}}$ (blue) and $D$-th coordinate of $T^{{}_\mathrm{asy}}$ for
 $\beta = 0.1, 0.2, 0.5$ (green)](../assets/bbob/images/bbob_transformations.png){#fig-bbob-trans}
 
-## Symbols and Definitions
+## Symbols and definitions
 
 Used symbols and definitions of, e.g., auxiliary functions are given in
 the following. Vectors are typeset in bold and refer to column vectors.

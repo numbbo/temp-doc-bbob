@@ -1,4 +1,4 @@
-## Symbols and Definitions []{#sec:symbols label="sec:symbols"}
+## Symbols and definitions []{#sec:symbols label="sec:symbols"}
 
 Used symbols and definitions of, e.g., auxiliary functions are given in
 the following. Vectors are typeset in bold and refer to column vectors.
@@ -17,7 +17,7 @@ $\mathbf{0}$ :   $=(0,\dots,0)^{\mathrm{T}}$ all zero vector
 
 $\mathbf{1}$ :   $=(1,\dots,1)^{\mathrm{T}}$ all one vector
 
-$\Lambda^{\!\alpha}$ :   is a diagonal matrix in $D$ dimensions with the $i$th diagonal
+$\Lambda^{\!\alpha}$ :   is a diagonal matrix in $D$  dimensions with the $i$th diagonal
     element as
     $\lambda_{ii} = \alpha^{\frac{1}{2}\frac{i-1}{D-1}}$
 
@@ -28,8 +28,8 @@ $\mathbf{1}_-^+$ :   a $D$-dimensional vector with entries of $-1$ or $1$ both d
     equal probability.
 
 $\mathbf{Q}$, $\mathbf{R}$ :   orthogonal (rotation) matrices. For each function instance in each
-    dimension a single realization for respectively $\mathbf{Q}$ and
-    $\mathbf{R}$ is used. Rotation matrices are generated from standard
+    dimension a single realization for respectively $\mathbf{Q}$  and
+    $\mathbf{R}$  is used. Rotation matrices are generated from standard
     normally distributed entries by Gram-Schmidt orthogonalization.
     Columns and rows of a rotation matrix form an orthogonal basis.
 
@@ -72,11 +72,11 @@ All functions are defined and can be evaluated over
 $\mathcal{R}^{D}$, while the actual search
 domain is given as $[-5,5]^{D}$.
 
-### Location of the optimal $\mathbf{x}^\mathrm{opt}$ and of $f_\mathrm{opt}=f(\mathbf{x^\mathrm{opt}})$
+### Location of the optimal $\mathbf{x}^\mathrm{opt}$  and of $f_\mathrm{opt}=f(\mathbf{x^\mathrm{opt}})$
 
 All functions have their global optimum in $[-5,5]^{D}$.
 The majority of functions has the global optimum in
-$[-4,4]^{D}$. The value for $f_\mathrm{opt}$ is drawn from
+$[-4,4]^{D}$. The value for $f_\mathrm{opt}$  is drawn from
 a cauchy distributed random variable, with roughly 50% of the values
 between -100 and 100. The value is rounded after two decimal places and
 the maximum and minimum are set to $1000$ and $-1000$ respectively. In
@@ -109,16 +109,16 @@ $T^{{}_\mathrm{asy}}:\mathcal{R}^D\to\mathcal{R}^D$
 are defined coordinate-wise. They are smooth and have, coordinate-wise, a
 strictly positive derivative.
 $T_\mathrm{\hspace*{-0.01emosz}}$ is oscillating about the
-identity, where the oscillation is scale invariant w.r.t. the origin.
-$T^{{}}_\mathrm{asy}$ is the identity for negative values. When
-$T^{{}}_\mathrm{asy}$ is applied, a portion of $1/2^D$ of
+identity, where the oscillation is scale invariant w.r.t.  the origin.
+$T^{{}}_\mathrm{asy}$  is the identity for negative values. When
+$T^{{}}_\mathrm{asy}$  is applied, a portion of $1/2^D$ of
 the search space remains untransformed.
 
 
 ## Noise Models
 
 In this benchmarking suite three different noise models are used. The
-first two, $f_{\mathrm{GN}}\left({}\right)$ and
+first two, $f_{\mathrm{GN}}\left({}\right)$  and
 $f_{\mathrm{UN}}\left({}\right)$, are multiplicative noise models while
 the third model, $f_{\mathrm{CN}}\left({}\right)$, is an additive noise
 model. All noise models are applied to a function value $f$ under the
