@@ -1,7 +1,26 @@
 ## Introduction
 
-This document is based on the BBOB 2009 function document.
-In the following, $24$ noise-free real-parameter single-objective
+This is an online-friendly presentation of the `bbob` functions, copied 
+from the BBOB 2009 function document [@bbob2019]. You may cite this work 
+in a scientific context as
+
+> Steffen Finck, Nikolaus Hansen, Raymond Ros, and Anne Auger. Real-Parameter Black-Box Optimization 
+Benchmarking 2009: Noiseless Functions Definitions. Technical report, RR-6829. INRIA, 2009. 
+[https://inria.hal.science/inria-00362633v2/document](https://inria.hal.science/inria-00362633v2/document)
+
+```bibtex
+@techreport{bbob2019,
+    author = {Finck, Steffen and Hansen, Nikolaus and Ros, Raymond and Auger, Anne},
+    title = {Real-Parameter Black-Box Optimization Benchmarking 2009: Noiseless Functions Definitions},
+    institution = {INRIA},
+    year = {2009},
+    number = {RR-6829},
+    note = {Updated version as of February 2019},
+    url = {https://inria.hal.science/inria-00362633v2/document}
+}
+```
+
+In the following, 24 noise-free real-parameter single-objective
 benchmark functions are presented. Our intention behind the
 selection of benchmark functions was to evaluate the performance of
 algorithms with regard to typical difficulties which we believe occur in
