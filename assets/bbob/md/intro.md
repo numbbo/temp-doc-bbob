@@ -86,18 +86,18 @@ regular, on some functions non-linear transformations are applied in
 $x$- or $f$-space. Both transformations
 $T_\mathrm{\hspace*{-0.01emosz}}:\mathcal{R}^n\to\mathcal{R}^n$,
 $n\in\{1,D\}$, and
-$T^{{}_\mathrm{asy}}:\mathcal{R}^D\to\mathcal{R}^D$
+$T_\mathrm{asy}:\mathcal{R}^D\to\mathcal{R}^D$
 are defined coordinate-wise (see [Symbols and definitions](#symbols-and-definitions)). They are smooth and have,
 coordinate-wise, a strictly positive derivative. 
 They are shown in @fig-bbob-trans.
-$T_\mathrm{\hspace*{-0.01emosz}}$ is oscillating about the
+$T_\mathrm{osz}$ is oscillating about the
 identity, where the oscillation is scale invariant w.r.t. the origin.
 $T^{{}}_\mathrm{asy}$ is the identity for negative values. When
 $T^{{}}_\mathrm{asy}$ is applied, a portion of $1/2^D$ of
 the search space remains untransformed.
 
-![$T_\mathrm{\hspace*{-0.01emosz}}$ (blue) and $D$-th coordinate of $T^{{}_\mathrm{asy}}$ for
-$\beta = 0.1, 0.2, 0.5$ (green)](../assets/bbob/images/bbob_transformations.png){#fig-bbob-trans}
+![$T_\mathrm{osz}$ (blue) and $D$-th coordinate of $T_\mathrm{asy}$ for
+$\beta = 0.1, 0.2, 0.5$ (green)](../assets/bbob/images/bbob_transformations.png){#fig-bbob-trans width=80% fig-align="left"}
 
 ## Symbols and definitions
 
