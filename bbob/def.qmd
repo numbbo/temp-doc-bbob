@@ -3,7 +3,7 @@ title: Function definitions
 format: 
   html:
     grid:
-      margin-width: 450px
+      margin-width: 500px
     toc-depth: 3
     toc-expand: 3
 ---
@@ -12,3 +12,5 @@ format:
 {{< include ../assets/bbob/md/intro.md >}}
 
 {{< include ../assets/bbob/md/functions.md >}}
+
+{{< include ../assets/bbob/md/appendix.md >}}

@@ -27,13 +27,13 @@ properties are discussed in the appendix.
 
 ## General Setup
 
-### Search Space
+**Search Space:**
 
 All functions are defined and can be evaluated over
 $\mathcal{R}^{D}$, while the actual search
 domain is given as $[-5,5]^{D}$.
 
-### Location of the optimal $\mathbf{x}^\mathrm{opt}$ and of $f_\mathrm{opt}=f(\mathbf{x^\mathrm{opt}})$
+**Location of the optimal $\mathbf{x}^\mathrm{opt}$ and of $f_\mathrm{opt}=f(\mathbf{x^\mathrm{opt}})$:**
 
 All functions have their global optimum in $[-5,5]^{D}$.
 The majority of functions has the global optimum in
@@ -49,18 +49,18 @@ $\mathbf{z}$ has its optimum in
 $\mathbf{z^\mathrm{opt}}=\mathbf{0}$, if not
 stated otherwise.
 
-### Boundary Handling
+**Boundary Handling:**
 
 On some functions a penalty boundary handling is applied as given with
 $f^{{}}_\mathrm{pen}$.
 
-### Linear Transformations
+**Linear Transformations:**
 
 Linear transformations of the search space are applied to derive
 non-separable functions from separable ones and to control the
 conditioning of the function.
 
-### Non-Linear Transformations and Symmetry Breaking
+**Non-Linear Transformations and Symmetry Breaking:**
 
 In order to make relatively simple, but well understood functions less
 regular, on some functions non-linear transformations are applied in
