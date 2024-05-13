@@ -192,7 +192,7 @@ $$f_{8}(\mathbf{x}) = \sum_{i = 1}^{D-1} \left( 100\,\left(z_i^2 - z_{i+1}\right
 **Properties:**
 
 So-called banana function due to its 2-D contour lines as a bent ridge
-(or valley). In the beginning, the prominent
+(or valley) [@rosenbrock1960automatic]. In the beginning, the prominent
 first term of the function definition attracts to the point
 $\mathbf{z}=\mathbf{0}$. Then, a long bending
 valley needs to be followed to reach the global optimum. The ridge
@@ -465,7 +465,7 @@ $$f_{20}(\mathbf{x}) = - \frac{1}{100D}%  % kept in the final print
 **Properties:**
 
 The most prominent $2^D$ minima are located comparatively
-close to the corners of the unpenalized search area.
+close to the corners of the unpenalized search area [@schwefel1981numerical].
 
 -   the penalization is essential, as otherwise more and better minima
     occur further away from the search space origin
@@ -502,7 +502,7 @@ $$f_{21}(\mathbf{x}) = T_\mathrm{\hspace*{-0.01emosz}}\left( 10 - \max_{i=1}^{10
 
 The function consists of $101$ optima with position and height being
 unrelated and randomly chosen (different for each instantiation of the
-function).
+function), based on [@gallagher2006general].
 
 -   the conditioning around the global optimum is about $30$
 
@@ -540,7 +540,7 @@ $$f_{22}(\mathbf{x}) = T_\mathrm{\hspace*{-0.01emosz}}\left( 10 - \max_{i=1}^{21
 
 The function consists of $21$ optima with position and height being
 unrelated and randomly chosen (different for each instantiation of the
-function).
+function), based on [@gallagher2006general].
 
 -   the conditioning around the global optimum is about $1000$
 
@@ -559,8 +559,7 @@ $$f_{23}(\mathbf{x}) = \frac{10}{D^{2}} \prod_{i=1}^D\left(1 + i\sum_{j=1}^{32}
 
 **Properties:**
 
-Highly rugged and highly repetitive function with more than
-$10^D$ global optima.
+Highly rugged and highly repetitive function with more than $10^D$ global optima, based on the idea in [@katsuura1991continuous]
 </div>
 <div id="text-f24">
 ### f<sub>24</sub>: Lunacek bi-Rastrigin function {#f24}
@@ -581,7 +580,7 @@ $$f_{24}(\mathbf{x}) = \mathrm{min}\left(\sum_{i = 1}^{D}(\hat{x}_i - \mu_0)^2,
 
 **Properties:**
 
-Highly multimodal function with two
+Highly multimodal function based on [@lunacek2008impact] with two
 funnels around
 $\frac{\mu_0}{2}\mathbf{1_-^+}$ and
 $\frac{\mu_1}{2}\mathbf{1_-^+}$ being superimposed by the
