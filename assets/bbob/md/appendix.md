@@ -61,11 +61,3 @@ functions. These properties are not intrinsic, that is
 ${f_\mathrm{opt}}+{10^{-8}}$ is not intrinsically
 "very good". The value mainly reflects a scalar multiplier in the
 function definition.
-:::
-
-[^1]: For our experimental setup see
-    [@hansen2009exp; @hansen2016experimental] and for our performance
-    assessment methodology see [@hansen2016performance].
-
-[^2]: The implementation provides an instance ID as input, such that a
-    set of uniquely specified instances can be explicitly chosen.

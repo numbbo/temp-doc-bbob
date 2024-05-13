@@ -21,7 +21,9 @@ Benchmarking 2009: Noiseless Functions Definitions. Technical report, RR-6829. I
 ```
 
 In the following, 24 noise-free real-parameter single-objective
-benchmark functions are presented. Our intention behind the
+benchmark functions are presented^[For our experimental setup see
+    [@hansen2016exp; @finck2009real] and for our performance
+    assessment methodology see [@hansen2016coco].]. Our intention behind the
 selection of benchmark functions was to evaluate the performance of
 algorithms with regard to typical difficulties which we believe occur in
 continuous domain search. We hope that the function collection reflects,
@@ -40,7 +42,7 @@ have no specific value of their optimal solution (they are randomly
 shifted in $x$-space). All functions have an artificially chosen optimal
 function value (they are randomly shifted in $f$-space). Consequently,
 for each function different *instances* can be generated: for each
-instance the randomly chosen values are drawn anew. Apart from the
+instance the randomly chosen values are drawn anew^[The implementation provides an instance ID as input, such that a set of uniquely specified instances can be explicitly chosen.]. Apart from the
 first subgroup, the benchmarks are non-separable. Other specific
 properties are discussed in [Function Properties](#function-properties).
 
@@ -167,3 +169,10 @@ $T_\mathrm{\hspace*{-0.01em}osz}$    $:\mathcal{R}^n\to\mathcal{R}^n$, for any
 
 $\mathbf{x}^\mathrm{opt}$    optimal solution vector, such that
     $f(\mathbf{x^\mathrm{opt}})$ is minimal.
+
+[^1]: For our experimental setup see
+    [@hansen2009exp; @hansen2016experimental] and for our performance
+    assessment methodology see [@hansen2016performance].
+
+[^2]: The implementation provides an instance ID as input, such that a
+    set of uniquely specified instances can be explicitly chosen.

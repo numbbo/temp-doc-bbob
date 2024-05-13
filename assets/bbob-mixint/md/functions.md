@@ -1,8 +1,8 @@
 ## The `bbob-mixint` Suite
 
 The `bbob-mixint` suite is constructed by partially discretizing
-problems from the `bbob` and
-`bbob-largescale` suites. In the following, we first
+problems from the `bbob` [@wp200901_2010] and
+`bbob-largescale` [@vabh2018a] suites. In the following, we first
 explain how the discretization is performed, then describe the
 construction of the suite and finally show how the functions are scaled
 to adjust their difficulty.
@@ -60,15 +60,13 @@ $[-5, 5]^n$---the *region of interest* for all `bbob` problems.
 ### Suite Construction
 
 The `bbob` suite consists of problems with 24 different functions in 6
-dimensions, $n = 2, 3, 5, 10, 20, 40$, and 15 instances. Because the
+dimensions, $n = 2, 3, 5, 10, 20, 40$, and 15 instances (see [@wp200901_2010] for the function definitions). Because the
 discretization reduces the number of continuous variables, higher
-dimensions are used for the `bbob-mixint` suite to produce challenging
-problems. We chose $n = 5, 10, 20, 40, 80, 160$ as the dimensions of the
-`bbob-mixint` suite.
+dimensions are used for the `bbob-mixint` suite to produce challenging problems. We chose $n = 5, 10, 20, 40, 80, 160$ as the dimensions of the `bbob-mixint` suite.^[Note that the function definitions of all mentioned test suites are scalable in dimension. The six dimensions are only pre-chosen to facilitate the experimental setup.]
 
 Because the numerical effort for some `bbob` problems scales with $n^2$,
 we use these for dimensions $\leq 40$ only. For dimensions $>40$, we use
-the corresponding problems from the `bbob-largescale` suite which scale linearly with $n$.
+the corresponding problems from the `bbob-largescale` suite [@vabh2018a] which scale linearly with $n$.
 
 As all dimensions $n$ are multiples of 5, we define five arities for
 $n/5$ consecutive variables, respectively, as $l=2,4,8,16,\infty$. We
@@ -79,11 +77,11 @@ equally-numbered instances of the underlying `bbob` and
 ### Function Scaling {#sec:scaling}
 
 Initial experiments using the algorithms Random Search,
-CMA-ES and DE have shown that the new problems are of considerably
+CMA-ES [@hansen2014principled] and DE [@price97] have shown that the new problems are of considerably
 different difficulties. Some are extremely hard to solve, while for
 others, a non-negligible percentage of targets is met already after a
 handful of function evaluations. Because
-COCO's performance assessment
+[COCO](https://github.com/numbbo/coco)'s performance assessment
 aggregates results over function and target pairs, we scale function
 values to adjust for these different difficulties.
 
