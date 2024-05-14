@@ -22,8 +22,8 @@ Benchmarking 2009: Noiseless Functions Definitions. Technical report, RR-6829. I
 
 In the following, 24 noise-free real-parameter single-objective
 benchmark functions are presented^[For our experimental setup see
-    [@hansen2016exp; @finck2009real] and for our performance
-    assessment methodology see [@hansen2016coco].]. Our intention behind the
+    [@hansen2016exp; @hansen2009exp] and for our performance
+    assessment methodology see [@hansen2022performance].]. Our intention behind the
 selection of benchmark functions was to evaluate the performance of
 algorithms with regard to typical difficulties which we believe occur in
 continuous domain search. We hope that the function collection reflects,
@@ -172,7 +172,7 @@ $\mathbf{x}^\mathrm{opt}$    optimal solution vector, such that
 
 [^1]: For our experimental setup see
     [@hansen2009exp; @hansen2016experimental] and for our performance
-    assessment methodology see [@hansen2016performance].
+    assessment methodology see [@hansen2022performance].
 
 [^2]: The implementation provides an instance ID as input, such that a
     set of uniquely specified instances can be explicitly chosen.

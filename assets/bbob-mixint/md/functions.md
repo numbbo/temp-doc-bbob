@@ -1,7 +1,7 @@
 ## The `bbob-mixint` Suite
 
 The `bbob-mixint` suite is constructed by partially discretizing
-problems from the `bbob` [@wp200901_2010] and
+problems from the `bbob` [@bbob2019] and
 `bbob-largescale` [@vabh2018a] suites. In the following, we first
 explain how the discretization is performed, then describe the
 construction of the suite and finally show how the functions are scaled
