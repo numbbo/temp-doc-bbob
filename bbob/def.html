@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.553">
+<meta name="generator" content="quarto-1.3.450">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -22,7 +22,7 @@ ul.task-list li input[type="checkbox"] {
 }
 /* CSS for syntax highlighting */
 pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
@@ -58,7 +58,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 div.csl-bib-body { }
 div.csl-entry {
   clear: both;
-  margin-bottom: 0em;
 }
 .hanging-indent div.csl-entry {
   margin-left:2em;
@@ -100,12 +99,7 @@ div.csl-indent {
   "collapse-after": 3,
   "panel-placement": "end",
   "type": "overlay",
-  "limit": 50,
-  "keyboard-shortcut": [
-    "f",
-    "/",
-    "s"
-  ],
+  "limit": 20,
   "language": {
     "search-no-results-text": "No results",
     "search-matching-documents-text": "matching documents",
@@ -114,7 +108,6 @@ div.csl-indent {
     "search-more-match-text": "more match in this document",
     "search-more-matches-text": "more matches in this document",
     "search-clear-button-title": "Clear",
-    "search-text-placeholder": "",
     "search-detached-cancel-button-title": "Cancel",
     "search-submit-button-title": "Submit",
     "search-label": "Search"
@@ -138,70 +131,46 @@ div.csl-indent {
   </script>
   <script>window.define = window.backupDefine; window.backupDefine = undefined;</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css">
 
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
-
 <link rel="stylesheet" href="../assets/css/custom.css">
 <meta property="og:title" content="The bbob test suite - Function definitions">
 <meta property="og:description" content="">
-<meta property="og:site_name" content="The bbob test suite">
+<meta property="og:image" content="https://numbbo.github.io/temp-doc-bbob/assets/bbob/images/bbob_transformations.png">
+<meta property="og:site-name" content="The bbob test suite">
+<meta property="og:image:height" content="1800">
+<meta property="og:image:width" content="2400">
 </head>
 
 <body class="nav-sidebar docked nav-fixed">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
       <div class="navbar-container container-fluid">
-      <div class="navbar-brand-container mx-auto">
+      <div class="navbar-brand-container">
     <a href="../index.html" class="navbar-brand navbar-brand-logo">
     <img src="../images/favicon.png" alt="" class="navbar-logo">
     </a>
   </div>
-        <div class="quarto-navbar-tools tools-end">
+        <div class="quarto-navbar-tools ms-auto">
 </div>
           <div id="quarto-search" class="" title="Search"></div>
       </div> <!-- /container-fluid -->
     </nav>
   <nav class="quarto-secondary-nav">
     <div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../bbob/def.html"><code>bbob</code></a></li><li class="breadcrumb-item"><a href="../bbob/def.html">Function definitions</a></li></ol></nav>
-        <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
-        </a>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../bbob/def.html"><code>bbob</code></a></li><li class="breadcrumb-item"><a href="../bbob/def.html">Function definitions</a></li></ol></nav>
+      <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+      </a>
     </div>
   </nav>
 </header>
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation docked overflow-auto">
     <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item sidebar-item-section">
@@ -276,7 +245,7 @@ window.Quarto = {
     </ul>
     </div>
 </nav>
-<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active" data-toc-expanded="3">
@@ -322,7 +291,7 @@ window.Quarto = {
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../bbob/def.html"><code>bbob</code></a></li><li class="breadcrumb-item"><a href="../bbob/def.html">Function definitions</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
 <h1 class="title">Function definitions</h1>
 </div>
@@ -337,13 +306,11 @@ window.Quarto = {
   </div>
   
 
-
 </header>
-
 
 <section id="introduction" class="level2">
 <h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
-<p>This is an online-friendly presentation of the <code>bbob</code> functions, copied from the BBOB 2009 function document <span class="citation" data-cites="bbob2019">(<a href="#ref-bbob2019" role="doc-biblioref">S. Finck et al. 2009</a>)</span>. You may cite this work in a scientific context as</p>
+<p>This is an online-friendly presentation of the <code>bbob</code> functions, copied from the BBOB 2009 function document <span class="citation" data-cites="bbob2019">(<a href="#ref-bbob2019" role="doc-biblioref">Finck et al. 2009</a>)</span>. You may cite this work in a scientific context as</p>
 <blockquote class="blockquote">
 <p>Steffen Finck, Nikolaus Hansen, Raymond Ros, and Anne Auger. Real-Parameter Black-Box Optimization Benchmarking 2009: Noiseless Functions Definitions. Technical report, RR-6829. INRIA, 2009. <a href="https://inria.hal.science/inria-00362633v2/document">https://inria.hal.science/inria-00362633v2/document</a></p>
 </blockquote>
@@ -371,52 +338,30 @@ window.Quarto = {
 <p><strong>Linear Transformations:</strong></p>
 <p>Linear transformations of the search space are applied to derive non-separable functions from separable ones and to control the conditioning of the function.</p>
 <p><strong>Non-Linear Transformations and Symmetry Breaking:</strong></p>
-<p>In order to make relatively simple, but well understood functions less regular, on some functions non-linear transformations are applied in <span class="math inline">x</span>- or <span class="math inline">f</span>-space. Both transformations <span class="math inline">T_\mathrm{\hspace*{-0.01emosz}}:\mathcal{R}^n\to\mathcal{R}^n</span>, <span class="math inline">n\in\{1,D\}</span>, and <span class="math inline">T_\mathrm{asy}:\mathcal{R}^D\to\mathcal{R}^D</span> are defined coordinate-wise (see <a href="#symbols-and-definitions">Symbols and definitions</a>). They are smooth and have, coordinate-wise, a strictly positive derivative. They are shown in <a href="#fig-bbob-trans" class="quarto-xref">Figure&nbsp;1</a>. <span class="math inline">T_\mathrm{osz}</span> is oscillating about the identity, where the oscillation is scale invariant w.r.t. the origin. <span class="math inline">T^{{}}_\mathrm{asy}</span> is the identity for negative values. When <span class="math inline">T^{{}}_\mathrm{asy}</span> is applied, a portion of <span class="math inline">1/2^D</span> of the search space remains untransformed.</p>
-<div id="fig-bbob-trans" class="quarto-figure quarto-figure-left quarto-float anchored" data-fig-align="left">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-bbob-trans-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="../assets/bbob/images/bbob_transformations.png" class="img-fluid quarto-figure quarto-figure-left figure-img" style="width:80.0%">
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-bbob-trans-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;1: <span class="math inline">T_\mathrm{osz}</span> (blue) and <span class="math inline">D</span>-th coordinate of <span class="math inline">T_\mathrm{asy}</span> for <span class="math inline">\beta = 0.1, 0.2, 0.5</span> (green)
-</figcaption>
+<p>In order to make relatively simple, but well understood functions less regular, on some functions non-linear transformations are applied in <span class="math inline">x</span>- or <span class="math inline">f</span>-space. Both transformations <span class="math inline">T_\mathrm{\hspace*{-0.01emosz}}:\mathcal{R}^n\to\mathcal{R}^n</span>, <span class="math inline">n\in\{1,D\}</span>, and <span class="math inline">T_\mathrm{asy}:\mathcal{R}^D\to\mathcal{R}^D</span> are defined coordinate-wise (see <a href="#symbols-and-definitions">Symbols and definitions</a>). They are smooth and have, coordinate-wise, a strictly positive derivative. They are shown in <a href="#fig-bbob-trans">Figure&nbsp;1</a>. <span class="math inline">T_\mathrm{osz}</span> is oscillating about the identity, where the oscillation is scale invariant w.r.t. the origin. <span class="math inline">T^{{}}_\mathrm{asy}</span> is the identity for negative values. When <span class="math inline">T^{{}}_\mathrm{asy}</span> is applied, a portion of <span class="math inline">1/2^D</span> of the search space remains untransformed.</p>
+<div id="fig-bbob-trans" class="quarto-figure quarto-figure-left anchored">
+<figure class="figure">
+<p><img src="../assets/bbob/images/bbob_transformations.png" class="img-fluid figure-img" style="width:80.0%"></p>
+<figcaption class="figure-caption">Figure&nbsp;1: <span class="math inline">T_\mathrm{osz}</span> (blue) and <span class="math inline">D</span>-th coordinate of <span class="math inline">T_\mathrm{asy}</span> for <span class="math inline">\beta = 0.1, 0.2, 0.5</span> (green)</figcaption>
 </figure>
 </div>
 </section>
 <section id="symbols-and-definitions" class="level2">
 <h2 class="anchored" data-anchor-id="symbols-and-definitions">Symbols and definitions</h2>
 <p>Used symbols and definitions of, e.g., auxiliary functions are given in the following. Vectors are typeset in bold and refer to column vectors.</p>
-<p><span class="math inline">\otimes</span> indicates element-wise multiplication of two <span class="math inline">D</span>-dimensional vectors, <span class="math inline">\otimes:\mathcal{R}^D\times\mathcal{R}^D\to\mathcal{R}^D,
-        (\mathbf{x},\mathbf{y})\mapsto\mathrm{{diag}}(\mathbf{x})\times\mathbf{y}=(x_i\times y_i)_{i=1,\dots,D}</span></p>
+<p><span class="math inline">\otimes</span> indicates element-wise multiplication of two <span class="math inline">D</span>-dimensional vectors, <span class="math inline">\otimes:\mathcal{R}^D\times\mathcal{R}^D\to\mathcal{R}^D,  (\mathbf{x},\mathbf{y})\mapsto\mathrm{{diag}}(\mathbf{x})\times\mathbf{y}=(x_i\times y_i)_{i=1,\dots,D}</span></p>
 <p><span class="math inline">\|.\|</span> denotes the Euclidean norm, <span class="math inline">\|\mathbf{x}\|^2=\sum_i x_i^2</span>.</p>
 <p><span class="math inline">[.]</span> denotes the nearest integer value</p>
 <p><span class="math inline">\mathbf{0}</span> <span class="math inline">=(0,\dots,0)^{\mathrm{T}}</span> all zero vector</p>
 <p><span class="math inline">\mathbf{1}</span> <span class="math inline">=(1,\dots,1)^{\mathrm{T}}</span> all one vector</p>
-<p><span class="math inline">\Lambda^{\!\alpha}</span> is a diagonal matrix in <span class="math inline">D</span> dimensions with the <span class="math inline">i</span>th diagonal element as <span class="math inline">\lambda_{ii} =
-      \alpha^{\frac{1}{2}\frac{i-1}{D-1}}</span>, for <span class="math inline">i=1,\dots,D</span>.</p>
+<p><span class="math inline">\Lambda^{\!\alpha}</span> is a diagonal matrix in <span class="math inline">D</span> dimensions with the <span class="math inline">i</span>th diagonal element as <span class="math inline">\lambda_{ii} =  \alpha^{\frac{1}{2}\frac{i-1}{D-1}}</span>, for <span class="math inline">i=1,\dots,D</span>.</p>
 <p><span class="math inline">f^{{}}_\mathrm{pen}</span> <span class="math inline">:\mathcal{R}^D\to\mathcal{R}</span>, <span class="math inline">\mathbf{x}\mapsto\sum_{i=1}^D\max(0,|x_i| - 5)^2</span></p>
 <p><span class="math inline">\mathbf{1}_-^+</span> a <span class="math inline">D</span>-dimensional vector with entries of <span class="math inline">-1</span> or <span class="math inline">1</span> with equal probability independently drawn.</p>
 <p><span class="math inline">\mathbf{Q}</span>, <span class="math inline">\mathbf{R}</span> orthogonal (rotation) matrices. For one function in one dimension a different realization for respectively <span class="math inline">\mathbf{Q}</span> and <span class="math inline">\mathbf{R}</span> is used for each instantiation of the function. Orthogonal matrices are generated from standard normally distributed entries by Gram-Schmidt orthonormalization. Columns and rows of an orthogonal matrix form an orthonormal basis.</p>
 <p><span class="math inline">\mathbf{R}</span> see <span class="math inline">\mathbf{Q}</span></p>
-<p><span class="math inline">T^{{\beta}}_\mathrm{asy}</span> <span class="math inline">:\mathcal{R}^D\to\mathcal{R}^D</span>, <span class="math inline">x_i\mapsto
-     \begin{cases}
-       x_i^{1+\beta \frac{i-1}{D-1}\sqrt{x_i}} &amp; \text{~if~} x_i&gt;0\\
-       x_i                                        &amp; \text{~otherwise~}
-     \end{cases}</span>, for <span class="math inline">i=1,\dots,D</span>. See <a href="#fig-bbob-trans" class="quarto-xref">Figure&nbsp;1</a>.</p>
+<p><span class="math inline">T^{{\beta}}_\mathrm{asy}</span> <span class="math inline">:\mathcal{R}^D\to\mathcal{R}^D</span>, <span class="math inline">x_i\mapsto  \begin{cases}  x_i^{1+\beta \frac{i-1}{D-1}\sqrt{x_i}} &amp; \text{~if~} x_i&gt;0\\  x_i &amp; \text{~otherwise~}  \end{cases}</span>, for <span class="math inline">i=1,\dots,D</span>. See <a href="#fig-bbob-trans">Figure&nbsp;1</a>.</p>
 <p><span class="math inline">T_\mathrm{\hspace*{-0.01em}osz}</span> <span class="math inline">:\mathcal{R}^n\to\mathcal{R}^n</span>, for any positive integer <span class="math inline">n</span> (<span class="math inline">n=1</span> and <span class="math inline">n=D</span> are used in the following), maps element-wise <span class="math display">x\mapsto\mathrm{{sign}}(x)\exp\left(\hat{x} +
-       0.049\left(\sin(c_1 \hat{x}) + \sin(c_2 \hat{x})\right)\right)</span> with <span class="math inline">\hat{x}= \begin{cases}
-            \log(|x|) &amp; \text{if~} x\not=0 \\
-                    0 &amp; \text{otherwise}
-            \end{cases}</span>, <span class="math inline">\mathrm{{sign}}(x) = \begin{cases} -1 &amp; \text{if~} x &lt; 0 \\
-                                0 &amp; \text{if~} x = 0 \\
-                                1 &amp; \text{otherwise}
-                 \end{cases}</span>, <span class="math inline">c_1 = \begin{cases}
-           10 &amp; \text{if~} x &gt; 0\\
-           5.5 &amp; \text{otherwise}
-           \end{cases}</span> and <span class="math inline">c_2 = \begin{cases}
-           7.9 &amp; \text{if~} x &gt; 0\\
-           3.1 &amp; \text{otherwise}
-           \end{cases}</span>. See <a href="#fig-bbob-trans" class="quarto-xref">Figure&nbsp;1</a>.</p>
+       0.049\left(\sin(c_1 \hat{x}) + \sin(c_2 \hat{x})\right)\right)</span> with <span class="math inline">\hat{x}= \begin{cases}  \log(|x|) &amp; \text{if~} x\not=0 \\  0 &amp; \text{otherwise}  \end{cases}</span>, <span class="math inline">\mathrm{{sign}}(x) = \begin{cases} -1 &amp; \text{if~} x &lt; 0 \\  0 &amp; \text{if~} x = 0 \\  1 &amp; \text{otherwise}  \end{cases}</span>, <span class="math inline">c_1 = \begin{cases}  10 &amp; \text{if~} x &gt; 0\\  5.5 &amp; \text{otherwise}  \end{cases}</span> and <span class="math inline">c_2 = \begin{cases}  7.9 &amp; \text{if~} x &gt; 0\\  3.1 &amp; \text{otherwise}  \end{cases}</span>. See <a href="#fig-bbob-trans">Figure&nbsp;1</a>.</p>
 <p><span class="math inline">\mathbf{x}^\mathrm{opt}</span> optimal solution vector, such that <span class="math inline">f(\mathbf{x^\mathrm{opt}})</span> is minimal.</p>
 </section>
 <div id="text-g1">
@@ -487,14 +432,8 @@ Figure&nbsp;1: <span class="math inline">T_\mathrm{osz}</span> (blue) and <span 
 <p><span class="math display">f_{4}(\mathbf{x}) = 10 \left(D- \sum_{i = 1}^{D}\cos(2\pi z_i)\right) +
              \sum_{i = 1}^{D}z_i^2 + 100\,f_{\mathrm{pen}}(\mathbf{x}) + f_\mathrm{opt}</span></p>
 <ul>
-<li><p><span class="math inline">z_i = s_i\,T_\mathrm{\hspace*{-0.01emosz}}(x_i - x_i^\mathrm{opt}) \quad \text{for} \; i = 1
-        \ldots D</span></p></li>
-<li><p><span class="math inline">s_i = \begin{cases}
-          10\times10^{\frac{1}{2}\,\frac{i-1}{D-1}} &amp;
-       \text{~if~} z_i&gt;0 \text{~and~} i = 1,3,5,\ldots
-         \\
-         10^{\frac{1}{2}\frac{i-1}{D-1}} &amp; \text{~otherwise~}
-  \end{cases}</span> for <span class="math inline">i= 1,\dots,D</span></p></li>
+<li><p><span class="math inline">z_i = s_i\,T_\mathrm{\hspace*{-0.01emosz}}(x_i - x_i^\mathrm{opt}) \quad \text{for} \; i = 1  \ldots D</span></p></li>
+<li><p><span class="math inline">s_i = \begin{cases}  10\times10^{\frac{1}{2}\,\frac{i-1}{D-1}} &amp;  \text{~if~} z_i&gt;0 \text{~and~} i = 1,3,5,\ldots  \\  10^{\frac{1}{2}\frac{i-1}{D-1}} &amp; \text{~otherwise~}  \end{cases}</span> for <span class="math inline">i= 1,\dots,D</span></p></li>
 </ul>
 <p><strong>Properties:</strong></p>
 <p>Highly multimodal function with a structured but highly asymmetric placement of the optima. Constructed as a deceptive function for symmetrically distributed search operators.</p>
@@ -539,10 +478,7 @@ Figure&nbsp;1: <span class="math inline">T_\mathrm{osz}</span> (blue) and <span 
 <p><span class="math display">f_{6}(\mathbf{x}) = T_\mathrm{\hspace*{-0.01emosz}}\left(\sum_{i = 1}^{D} (s_i z_i)^2\right)^{0.9} + f_\mathrm{opt}</span></p>
 <ul>
 <li><p><span class="math inline">\mathbf{z}= \mathbf{Q}\Lambda^{\!10}\mathbf{R}(\mathbf{x}- \mathbf{x^\mathrm{opt}})</span></p></li>
-<li><p><span class="math inline">s_i = \begin{cases}
-          10^2&amp; \text{if~} z_i\times x_i^\mathrm{opt}&gt; 0\\
-          1 &amp; \text{otherwise}
-          \end{cases}</span></p></li>
+<li><p><span class="math inline">s_i = \begin{cases}  10^2&amp; \text{if~} z_i\times x_i^\mathrm{opt}&gt; 0\\  1 &amp; \text{otherwise}  \end{cases}</span></p></li>
 </ul>
 <p><strong>Properties:</strong></p>
 <p>Highly asymmetric function, where only one “hypercone” (with angular base area) with a volume of roughly <span class="math inline">{1}/{2^D}</span> yields low function values. The optimum is located at the tip of this cone.</p>
@@ -562,7 +498,7 @@ Figure&nbsp;1: <span class="math inline">T_\mathrm{osz}</span> (blue) and <span 
                          10^{2\frac{i-1}{D-1}} z_i^2\right) + f_{\mathrm{pen}}(\mathbf{x}) + f_\mathrm{opt}</span></p>
 <ul>
 <li><p><span class="math inline">\hat{\mathbf{z}} = \Lambda^{\!10}\mathbf{R}(\mathbf{x}- \mathbf{x^\mathrm{opt}})</span></p></li>
-<li><p><span class="math inline">\hat{z_i} = \begin{cases} \lfloor0.5+\hat{z}_i\rfloor &amp;  \text{if~} \left|\hat{z}_i\right| &gt; 0.5 \\ {\lfloor0.5+10\,\hat{z}_i\rfloor}/{10} &amp; \text{otherwise} \end{cases}</span> for <span class="math inline">i=1,\dots,D</span>,<br>
+<li><p><span class="math inline">\hat{z_i} = \begin{cases} \lfloor0.5+\hat{z}_i\rfloor &amp; \text{if~} \left|\hat{z}_i\right| &gt; 0.5 \\ {\lfloor0.5+10\,\hat{z}_i\rfloor}/{10} &amp; \text{otherwise} \end{cases}</span> for <span class="math inline">i=1,\dots,D</span>,<br>
 denotes the rounding procedure in order to produce the plateaus.</p></li>
 <li><p><span class="math inline">\mathbf{z}= \mathbf{Q}\tilde{\mathbf{z}}</span></p></li>
 </ul>
@@ -827,13 +763,9 @@ denotes the rounding procedure in order to produce the plateaus.</p></li>
            (\mathbf{x}-\mathbf{y}_i)^{\mathrm{T}}\mathbf{R}^{\mathrm{T}}
            \mathbf{C}_i \mathbf{R}(\mathbf{x}-\mathbf{y}_i) \right) \right)^2 + f_{\mathrm{pen}}(\mathbf{x}) + f_\mathrm{opt}</span></p>
 <ul>
-<li><p><span class="math inline">w_i = \begin{cases}
-              1.1 + 8 \times\dfrac{i-2}{99} &amp; \text{for~} i=2,\dots,101 \\
-          10 &amp; \text{for~} i = 1
-          \end{cases}</span>, three optima have a value larger than <span class="math inline">9</span></p></li>
+<li><p><span class="math inline">w_i = \begin{cases}  1.1 + 8 \times\dfrac{i-2}{99} &amp; \text{for~} i=2,\dots,101 \\  10 &amp; \text{for~} i = 1  \end{cases}</span>, three optima have a value larger than <span class="math inline">9</span></p></li>
 <li><p><span class="math inline">\mathbf{C}_i=\Lambda^{\!\alpha_i}/\alpha_i^{1/4}</span> where <span class="math inline">\Lambda^{\!\alpha_i}</span> is defined as usual (see <a href="#symbols-and-definitions">Symbols and definitions</a>),</p></li>
-<li><p>but with randomly permuted diagonal elements. For <span class="math inline">i=2,\dots,101</span>, <span class="math inline">\alpha_i</span> is drawn uniformly randomly from the set <span class="math inline">\left\{1000^{2\frac{j}{99}} ~|~ j =
-  0,\dots,99\right\}</span> without replacement, and <span class="math inline">\alpha_i=1000</span> for <span class="math inline">i=1</span>.</p></li>
+<li><p>but with randomly permuted diagonal elements. For <span class="math inline">i=2,\dots,101</span>, <span class="math inline">\alpha_i</span> is drawn uniformly randomly from the set <span class="math inline">\left\{1000^{2\frac{j}{99}} ~|~ j =  0,\dots,99\right\}</span> without replacement, and <span class="math inline">\alpha_i=1000</span> for <span class="math inline">i=1</span>.</p></li>
 <li><p>the local optima <span class="math inline">\mathbf{y}_i</span> are uniformly drawn from the domain <span class="math inline">[-5,5]^D</span> for <span class="math inline">i=2,\dots,101</span> and <span class="math inline">\mathbf{y}_{1}\in[-4,4]^D</span>. The global optimum is at <span class="math inline">\mathbf{x^\mathrm{opt}}=\mathbf{y}_1</span>.</p></li>
 </ul>
 <p><strong>Properties:</strong></p>
@@ -855,13 +787,9 @@ denotes the rounding procedure in order to produce the plateaus.</p></li>
            (\mathbf{x}-\mathbf{y}_i)^{\mathrm{T}}\mathbf{R}^{\mathrm{T}}
            \mathbf{C}_i \mathbf{R}(\mathbf{x}-\mathbf{y}_i) \right) \right)^2 + f_{\mathrm{pen}}(\mathbf{x}) + f_\mathrm{opt}</span></p>
 <ul>
-<li><p><span class="math inline">w_i = \begin{cases}
-              1.1 + 8 \times\dfrac{i-2}{19} &amp; \text{for~} i=2,\dots,21 \\
-          10 &amp; \text{for~} i = 1
-          \end{cases}</span>, two optima have a value larger than <span class="math inline">9</span></p></li>
+<li><p><span class="math inline">w_i = \begin{cases}  1.1 + 8 \times\dfrac{i-2}{19} &amp; \text{for~} i=2,\dots,21 \\  10 &amp; \text{for~} i = 1  \end{cases}</span>, two optima have a value larger than <span class="math inline">9</span></p></li>
 <li><p><span class="math inline">\mathbf{C}_i=\Lambda^{\!\alpha_i}/\alpha_i^{1/4}</span> where <span class="math inline">\Lambda^{\!\alpha_i}</span> is defined as usual (see <a href="#symbols-and-definitions">Symbols and definitions</a>),</p></li>
-<li><p>but with randomly permuted diagonal elements. For <span class="math inline">i=2,\dots,21</span>, <span class="math inline">\alpha_i</span> is drawn uniformly randomly from the set <span class="math inline">\left\{1000^{2\frac{j}{19}} ~|~ j =
-  0,\dots,19\right\}</span> without replacement, and <span class="math inline">\alpha_i=1000^2</span> for <span class="math inline">i=1</span>.</p></li>
+<li><p>but with randomly permuted diagonal elements. For <span class="math inline">i=2,\dots,21</span>, <span class="math inline">\alpha_i</span> is drawn uniformly randomly from the set <span class="math inline">\left\{1000^{2\frac{j}{19}} ~|~ j =  0,\dots,19\right\}</span> without replacement, and <span class="math inline">\alpha_i=1000^2</span> for <span class="math inline">i=1</span>.</p></li>
 <li><p>the local optima <span class="math inline">\mathbf{y}_i</span> are uniformly drawn from the domain <span class="math inline">[-4.9,4.9]^D</span> for <span class="math inline">i=2,\dots,21</span> and <span class="math inline">\mathbf{y}_{1}\in [-3.92,3.92]^D</span>. The global optimum is at <span class="math inline">\mathbf{x^\mathrm{opt}}=\mathbf{y}_1</span>.</p></li>
 </ul>
 <p><strong>Properties:</strong></p>
@@ -939,30 +867,30 @@ denotes the rounding procedure in order to produce the plateaus.</p></li>
 </section>
 
 
-<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
-<div id="ref-finck2009real" class="csl-entry" role="listitem">
-Finck, Nikolaus Hansen—Anne Auger—Steffen, and Raymond Ros. 2009. <span>“Real-Parameter Black-Box Optimization Benchmarking 2009: Experimental Setup.”</span>
-</div>
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" role="list">
 <div id="ref-bbob2019" class="csl-entry" role="listitem">
 Finck, Steffen, Nikolaus Hansen, Raymond Ros, and Anne Auger. 2009. <span>“Real-Parameter Black-Box Optimization Benchmarking 2009: Noiseless Functions Definitions.”</span> RR-6829. INRIA. <a href="https://inria.hal.science/inria-00362633v2/document">https://inria.hal.science/inria-00362633v2/document</a>.
 </div>
 <div id="ref-gallagher2006general" class="csl-entry" role="listitem">
-Gallagher, Marcus, and Bo Yuan. 2006. <span>“A General-Purpose Tunable Landscape Generator.”</span> <em>IEEE Transactions on Evolutionary Computation</em> 10 (5): 590–603.
+Gallagher, Marcus, and Bo Yuan. 2006. <span>“A General-Purpose Tunable Landscape Generator.”</span> <em>IEEE Transactions on Evolutionary Computation</em> 10 (5): 590–603. <a href="https://doi.org/10.1109/TEVC.2005.863628">https://doi.org/10.1109/TEVC.2005.863628</a>.
 </div>
-<div id="ref-hansen2016coco" class="csl-entry" role="listitem">
-Hansen, Nikolaus, Anne Auger, Dimo Brockhoff, Dejan Tušar, and Tea Tušar. 2016. <span>“COCO: Performance Assessment.”</span> <em>arXiv Preprint arXiv:1605.03560</em>.
+<div id="ref-hansen2022performance" class="csl-entry" role="listitem">
+Hansen, Nikolaus, Anne Auger, Dimo Brockhoff, and Tea and Tušar. 2022. <span>“Anytime Performance Assessment in Blackbox Optimization Benchmarking.”</span> <em>IEEE Transactions on Evolutionary Computation</em> 26 (6): 1293–1305. <a href="https://doi.org/10.1109/TEVC.2022.3210897">https://doi.org/10.1109/TEVC.2022.3210897</a>.
+</div>
+<div id="ref-hansen2009exp" class="csl-entry" role="listitem">
+Hansen, Nikolaus, Anne Auger, Steffen Finck, and Raymond Ros. 2009. <span>“Real-Parameter Black-Box Optimization Benchmarking 2009: Experimental Setup.”</span> RR-6828. INRIA. <a href="https://inria.hal.science/inria-00362649v2/document">https://inria.hal.science/inria-00362649v2/document</a>.
 </div>
 <div id="ref-hansen2016exp" class="csl-entry" role="listitem">
-Hansen, Nikolaus, Tea Tusar, Olaf Mersmann, Anne Auger, and Dimo Brockhoff. 2016. <span>“COCO: The Experimental Procedure.”</span> <em>arXiv Preprint arXiv:1603.08776</em>.
+Hansen, Nikolaus, Tea Tušar, Olaf Mersmann, Anne Auger, and Dimo Brockhoff. 2016. <span>“<span>COCO</span>: <span>The</span> Experimental Procedure.”</span> <em>arXiv Preprint arXiv:1603.08776</em>. <a href="https://arxiv.org/abs/1603.08776">https://arxiv.org/abs/1603.08776</a>.
 </div>
 <div id="ref-katsuura1991continuous" class="csl-entry" role="listitem">
-Katsuura, Hidefumi. 1991. <span>“Continuous Nowhere-Differentiable Functions—an Application of Contraction Mappings.”</span> <em>The American Mathematical Monthly</em> 98 (5): 411–16.
+Katsuura, Hidefumi. 1991. <span>“Continuous Nowhere-Differentiable Functions – an Application of Contraction Mappings.”</span> <em>The American Mathematical Monthly</em> 98 (5): 411–16. <a href="https://doi.org/10.1080/00029890.1991.12000778">https://doi.org/10.1080/00029890.1991.12000778</a>.
 </div>
 <div id="ref-lunacek2008impact" class="csl-entry" role="listitem">
-Lunacek, Monte, Darrell Whitley, and Andrew Sutton. 2008. <span>“The Impact of Global Structure on Search.”</span> In <em>Parallel Problem Solving from Nature–PPSN x: 10th International Conference, Dortmund, Germany, September 13-17, 2008. Proceedings 10</em>, 498–507. Springer.
+Lunacek, Monte, Darrell Whitley, and Andrew Sutton. 2008. <span>“The Impact of Global Structure on Search.”</span> In <em>Proceedings of the International Conference on Parallel Problem Solving from Nature <span>(PPSN X)</span></em>, 5199:498–507. Lecture Notes in Computer Science. Springer. <a href="https://doi.org/10.1007/978-3-540-87700-4\_50">https://doi.org/10.1007/978-3-540-87700-4\_50</a>.
 </div>
 <div id="ref-rosenbrock1960automatic" class="csl-entry" role="listitem">
-Rosenbrock, HoHo. 1960. <span>“An Automatic Method for Finding the Greatest or Least Value of a Function.”</span> <em>The Computer Journal</em> 3 (3): 175–84.
+Rosenbrock, H. H. 1960. <span>“An Automatic Method for Finding the Greatest or Least Value of a Function.”</span> <em>The Computer Journal</em> 3 (3): 175–84. <a href="https://doi.org/10.1093/comjnl/3.3.175">https://doi.org/10.1093/comjnl/3.3.175</a>.
 </div>
 <div id="ref-schwefel1981numerical" class="csl-entry" role="listitem">
 Schwefel, Hans-Paul. 1981. <em>Numerical Optimization of Computer Models</em>. John Wiley &amp; Sons, Inc.
@@ -970,7 +898,7 @@ Schwefel, Hans-Paul. 1981. <em>Numerical Optimization of Computer Models</em>. J
 </div></section><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
 
 <ol>
-<li id="fn1"><p>For our experimental setup see <span class="citation" data-cites="hansen2016exp finck2009real">(<a href="#ref-hansen2016exp" role="doc-biblioref">Hansen, Tusar, et al. 2016</a>; <a href="#ref-finck2009real" role="doc-biblioref">N. H. A. Finck and Ros 2009</a>)</span> and for our performance assessment methodology see <span class="citation" data-cites="hansen2016coco">(<a href="#ref-hansen2016coco" role="doc-biblioref">Hansen, Auger, et al. 2016</a>)</span>.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn1"><p>For our experimental setup see <span class="citation" data-cites="hansen2016exp hansen2009exp">(<a href="#ref-hansen2016exp" role="doc-biblioref">Hansen et al. 2016</a>, <a href="#ref-hansen2009exp" role="doc-biblioref">2009</a>)</span> and for our performance assessment methodology see <span class="citation" data-cites="hansen2022performance">(<a href="#ref-hansen2022performance" role="doc-biblioref">Hansen et al. 2022</a>)</span>.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 <li id="fn2"><p>The implementation provides an instance ID as input, such that a set of uniquely specified instances can be explicitly chosen.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 </ol>
 </section></div></main> <!-- /main -->
@@ -1053,34 +981,10 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // clear code selection
     e.clearSelection();
   });
-    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
-    var mailtoRegex = new RegExp(/^mailto:/);
-      var filterRegex = new RegExp(".*numbbo/bbob-plots.*");
-    var isInternal = (href) => {
-        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
-    }
-    // Inspect non-navigation links and adorn them if external
- 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
-    for (var i=0; i<links.length; i++) {
-      const link = links[i];
-      if (!isInternal(link.href)) {
-        // undo the damage that might have been done by quarto-nav.js in the case of
-        // links that we want to consider external
-        if (link.dataset.originalHref !== undefined) {
-          link.href = link.dataset.originalHref;
-        }
-          // target, if specified
-          link.setAttribute("target", "_blank");
-          if (link.getAttribute("rel") === null) {
-            link.setAttribute("rel", "noopener");
-          }
-          // default icon
-          link.classList.add("external");
-      }
-    }
-  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+  function tippyHover(el, contentFn) {
     const config = {
       allowHTML: true,
+      content: contentFn,
       maxWidth: 500,
       delay: 100,
       arrow: false,
@@ -1090,17 +994,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       interactive: true,
       interactiveBorder: 10,
       theme: 'quarto',
-      placement: 'bottom-start',
+      placement: 'bottom-start'
     };
-    if (contentFn) {
-      config.content = contentFn;
-    }
-    if (onTriggerFn) {
-      config.onTrigger = onTriggerFn;
-    }
-    if (onUntriggerFn) {
-      config.onUntrigger = onUntriggerFn;
-    }
     window.tippy(el, config); 
   }
   const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
@@ -1112,130 +1007,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
-      if (note) {
-        return note.innerHTML;
-      } else {
-        return "";
-      }
-    });
-  }
-  const xrefs = window.document.querySelectorAll('a.quarto-xref');
-  const processXRef = (id, note) => {
-    // Strip column container classes
-    const stripColumnClz = (el) => {
-      el.classList.remove("page-full", "page-columns");
-      if (el.children) {
-        for (const child of el.children) {
-          stripColumnClz(child);
-        }
-      }
-    }
-    stripColumnClz(note)
-    if (id === null || id.startsWith('sec-')) {
-      // Special case sections, only their first couple elements
-      const container = document.createElement("div");
-      if (note.children && note.children.length > 2) {
-        container.appendChild(note.children[0].cloneNode(true));
-        for (let i = 1; i < note.children.length; i++) {
-          const child = note.children[i];
-          if (child.tagName === "P" && child.innerText === "") {
-            continue;
-          } else {
-            container.appendChild(child.cloneNode(true));
-            break;
-          }
-        }
-        if (window.Quarto?.typesetMath) {
-          window.Quarto.typesetMath(container);
-        }
-        return container.innerHTML
-      } else {
-        if (window.Quarto?.typesetMath) {
-          window.Quarto.typesetMath(note);
-        }
-        return note.innerHTML;
-      }
-    } else {
-      // Remove any anchor links if they are present
-      const anchorLink = note.querySelector('a.anchorjs-link');
-      if (anchorLink) {
-        anchorLink.remove();
-      }
-      if (window.Quarto?.typesetMath) {
-        window.Quarto.typesetMath(note);
-      }
-      // TODO in 1.5, we should make sure this works without a callout special case
-      if (note.classList.contains("callout")) {
-        return note.outerHTML;
-      } else {
-        return note.innerHTML;
-      }
-    }
-  }
-  for (var i=0; i<xrefs.length; i++) {
-    const xref = xrefs[i];
-    tippyHover(xref, undefined, function(instance) {
-      instance.disable();
-      let url = xref.getAttribute('href');
-      let hash = undefined; 
-      if (url.startsWith('#')) {
-        hash = url;
-      } else {
-        try { hash = new URL(url).hash; } catch {}
-      }
-      if (hash) {
-        const id = hash.replace(/^#\/?/, "");
-        const note = window.document.getElementById(id);
-        if (note !== null) {
-          try {
-            const html = processXRef(id, note.cloneNode(true));
-            instance.setContent(html);
-          } finally {
-            instance.enable();
-            instance.show();
-          }
-        } else {
-          // See if we can fetch this
-          fetch(url.split('#')[0])
-          .then(res => res.text())
-          .then(html => {
-            const parser = new DOMParser();
-            const htmlDoc = parser.parseFromString(html, "text/html");
-            const note = htmlDoc.getElementById(id);
-            if (note !== null) {
-              const html = processXRef(id, note);
-              instance.setContent(html);
-            } 
-          }).finally(() => {
-            instance.enable();
-            instance.show();
-          });
-        }
-      } else {
-        // See if we can fetch a full url (with no hash to target)
-        // This is a special case and we should probably do some content thinning / targeting
-        fetch(url)
-        .then(res => res.text())
-        .then(html => {
-          const parser = new DOMParser();
-          const htmlDoc = parser.parseFromString(html, "text/html");
-          const note = htmlDoc.querySelector('main.content');
-          if (note !== null) {
-            // This should only happen for chapter cross references
-            // (since there is no id in the URL)
-            // remove the first header
-            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
-              note.children[0].remove();
-            }
-            const html = processXRef(null, note);
-            instance.setContent(html);
-          } 
-        }).finally(() => {
-          instance.enable();
-          instance.show();
-        });
-      }
-    }, function(instance) {
+      return note.innerHTML;
     });
   }
       let selectedAnnoteEl;
@@ -1279,7 +1051,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
             }
             div.style.top = top - 2 + "px";
             div.style.height = height + 4 + "px";
-            div.style.left = 0;
             let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
             if (gutterDiv === null) {
               gutterDiv = window.document.createElement("div");
@@ -1305,32 +1076,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         });
         selectedAnnoteEl = undefined;
       };
-        // Handle positioning of the toggle
-    window.addEventListener(
-      "resize",
-      throttle(() => {
-        elRect = undefined;
-        if (selectedAnnoteEl) {
-          selectCodeLines(selectedAnnoteEl);
-        }
-      }, 10)
-    );
-    function throttle(fn, ms) {
-    let throttle = false;
-    let timer;
-      return (...args) => {
-        if(!throttle) { // first call gets through
-            fn.apply(this, args);
-            throttle = true;
-        } else { // all the others get throttled
-            if(timer) clearTimeout(timer); // cancel #2
-            timer = setTimeout(() => {
-              fn.apply(this, args);
-              timer = throttle = false;
-            }, ms);
-        }
-      };
-    }
       // Attach click handler to the DT
       const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
       for (const annoteDlNode of annoteDls) {
@@ -1388,10 +1133,25 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       });
     }
   }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var filterRegex = new RegExp(".*numbbo/bbob-plots.*");
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+          // target, if specified
+          link.setAttribute("target", "_blank");
+          // default icon
+          link.classList.add("external");
+      }
+    }
 });
 </script>
 </div> <!-- /content -->
-
 
 
 

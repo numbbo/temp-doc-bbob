@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.553">
+<meta name="generator" content="quarto-1.3.450">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -24,7 +24,6 @@ ul.task-list li input[type="checkbox"] {
 div.csl-bib-body { }
 div.csl-entry {
   clear: both;
-  margin-bottom: 0em;
 }
 .hanging-indent div.csl-entry {
   margin-left:2em;
@@ -66,12 +65,7 @@ div.csl-indent {
   "collapse-after": 3,
   "panel-placement": "end",
   "type": "overlay",
-  "limit": 50,
-  "keyboard-shortcut": [
-    "f",
-    "/",
-    "s"
-  ],
+  "limit": 20,
   "language": {
     "search-no-results-text": "No results",
     "search-matching-documents-text": "matching documents",
@@ -80,7 +74,6 @@ div.csl-indent {
     "search-more-match-text": "more match in this document",
     "search-more-matches-text": "more matches in this document",
     "search-clear-button-title": "Clear",
-    "search-text-placeholder": "",
     "search-detached-cancel-button-title": "Cancel",
     "search-submit-button-title": "Submit",
     "search-label": "Search"
@@ -104,70 +97,46 @@ div.csl-indent {
   </script>
   <script>window.define = window.backupDefine; window.backupDefine = undefined;</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css">
 
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
-
 <link rel="stylesheet" href="../assets/css/custom.css">
 <meta property="og:title" content="The bbob test suite - Function definitions">
 <meta property="og:description" content="">
-<meta property="og:site_name" content="The bbob test suite">
+<meta property="og:image" content="https://numbbo.github.io/temp-doc-bbob/assets/bbob-mixint/images/1.png">
+<meta property="og:site-name" content="The bbob test suite">
+<meta property="og:image:height" content="1200">
+<meta property="og:image:width" content="800">
 </head>
 
 <body class="nav-sidebar docked nav-fixed">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
       <div class="navbar-container container-fluid">
-      <div class="navbar-brand-container mx-auto">
+      <div class="navbar-brand-container">
     <a href="../index.html" class="navbar-brand navbar-brand-logo">
     <img src="../images/favicon.png" alt="" class="navbar-logo">
     </a>
   </div>
-        <div class="quarto-navbar-tools tools-end">
+        <div class="quarto-navbar-tools ms-auto">
 </div>
           <div id="quarto-search" class="" title="Search"></div>
       </div> <!-- /container-fluid -->
     </nav>
   <nav class="quarto-secondary-nav">
     <div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../bbob-mixint/def.html"><code>bbob-mixint</code></a></li><li class="breadcrumb-item"><a href="../bbob-mixint/def.html">Function definitions</a></li></ol></nav>
-        <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
-        </a>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../bbob-mixint/def.html"><code>bbob-mixint</code></a></li><li class="breadcrumb-item"><a href="../bbob-mixint/def.html">Function definitions</a></li></ol></nav>
+      <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+      </a>
     </div>
   </nav>
 </header>
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation docked overflow-auto">
     <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item sidebar-item-section">
@@ -242,7 +211,7 @@ window.Quarto = {
     </ul>
     </div>
 </nav>
-<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
@@ -261,7 +230,7 @@ window.Quarto = {
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../bbob-mixint/def.html"><code>bbob-mixint</code></a></li><li class="breadcrumb-item"><a href="../bbob-mixint/def.html">Function definitions</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
 <h1 class="title">Function definitions</h1>
 </div>
@@ -276,13 +245,11 @@ window.Quarto = {
   </div>
   
 
-
 </header>
-
 
 <section id="the-bbob-mixint-suite" class="level2">
 <h2 class="anchored" data-anchor-id="the-bbob-mixint-suite">The <code>bbob-mixint</code> Suite</h2>
-<p>The <code>bbob-mixint</code> suite is constructed by partially discretizing problems from the <code>bbob</code> <span class="citation" data-cites="wp200901_2010">(<a href="#ref-wp200901_2010" role="doc-biblioref">Finck et al. 2009</a>)</span> and <code>bbob-largescale</code> <span class="citation" data-cites="vabh2018a">(<a href="#ref-vabh2018a" role="doc-biblioref">Varelas et al. 2018</a>)</span> suites. In the following, we first explain how the discretization is performed, then describe the construction of the suite and finally show how the functions are scaled to adjust their difficulty.</p>
+<p>The <code>bbob-mixint</code> suite is constructed by partially discretizing problems from the <code>bbob</code> <span class="citation" data-cites="bbob2019">(<a href="#ref-bbob2019" role="doc-biblioref">Finck et al. 2009</a>)</span> and <code>bbob-largescale</code> <span class="citation" data-cites="vabh2018a">(<a href="#ref-vabh2018a" role="doc-biblioref">Varelas et al. 2018</a>)</span> suites. In the following, we first explain how the discretization is performed, then describe the construction of the suite and finally show how the functions are scaled to adjust their difficulty.</p>
 <section id="sec:disc" class="level3">
 <h3 class="anchored" data-anchor-id="sec:disc">Discretization</h3>
 <p>Consider a <code>bbob</code>(or <code>bbob-largescale</code>) problem with the function <span class="math inline">f: \mathbb{R}^n \to \mathbb{R}</span> and optimal value <span class="math inline">f^{\textrm{opt}} = f(\mathbf{x}^{\textrm{opt}})</span>. The resulting mixed-integer function will have the form <span class="math display">\overline{f}: \mathbb{Z}^k \times \mathbb{R}^{(n-k)} \to \mathbb{R},</span> that is, it will be defined on <span class="math inline">k</span> integer and <span class="math inline">n-k</span> continuous variables. While all <code>bbob</code> functions are defined for any <span class="math inline">\mathbf{x} \in \mathbb{R}^n</span>, all but the linear slope function have their optimal solution within <span class="math inline">[-4, 4]^n</span>. The partial discretization is performed in such a way that the optimal value is preserved, that is <span class="math inline">\vphantom{f}\smash{\overline f}^{\textrm{opt}} = f^{\textrm{opt}}</span>.</p>
@@ -303,7 +270,7 @@ window.Quarto = {
 </section>
 <section id="suite-construction" class="level3">
 <h3 class="anchored" data-anchor-id="suite-construction">Suite Construction</h3>
-<p>The <code>bbob</code> suite consists of problems with 24 different functions in 6 dimensions, <span class="math inline">n = 2, 3, 5, 10, 20, 40</span>, and 15 instances (see&nbsp;<span class="citation" data-cites="wp200901_2010">(<a href="#ref-wp200901_2010" role="doc-biblioref">Finck et al. 2009</a>)</span> for the function definitions). Because the discretization reduces the number of continuous variables, higher dimensions are used for the <code>bbob-mixint</code> suite to produce challenging problems. We chose <span class="math inline">n = 5, 10, 20, 40, 80, 160</span> as the dimensions of the <code>bbob-mixint</code> suite.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
+<p>The <code>bbob</code> suite consists of problems with 24 different functions in 6 dimensions, <span class="math inline">n = 2, 3, 5, 10, 20, 40</span>, and 15 instances (see&nbsp;<span class="citation" data-cites="wp200901_2010">(<a href="#ref-wp200901_2010" role="doc-biblioref"><strong>wp200901_2010?</strong></a>)</span> for the function definitions). Because the discretization reduces the number of continuous variables, higher dimensions are used for the <code>bbob-mixint</code> suite to produce challenging problems. We chose <span class="math inline">n = 5, 10, 20, 40, 80, 160</span> as the dimensions of the <code>bbob-mixint</code> suite.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
 <p>Because the numerical effort for some <code>bbob</code> problems scales with <span class="math inline">n^2</span>, we use these for dimensions <span class="math inline">\leq 40</span> only. For dimensions <span class="math inline">&gt;40</span>, we use the corresponding problems from the <code>bbob-largescale</code> suite <span class="citation" data-cites="vabh2018a">(<a href="#ref-vabh2018a" role="doc-biblioref">Varelas et al. 2018</a>)</span> which scale linearly with <span class="math inline">n</span>.</p>
 <p>As all dimensions <span class="math inline">n</span> are multiples of 5, we define five arities for <span class="math inline">n/5</span> consecutive variables, respectively, as <span class="math inline">l=2,4,8,16,\infty</span>. We use instances <span class="math inline">1</span>–<span class="math inline">15</span> to instantiate each problem. They match the equally-numbered instances of the underlying <code>bbob</code> and <code>bbob-largescale</code> problems.</p>
 </section>
@@ -313,50 +280,34 @@ window.Quarto = {
 <p>In order to decide on the scaling factors, we look at how many targets can be reached just by evaluating the domain middle (often the first guess of an optimization algorithm). However, because two values could be interpreted as the ‘middle’ value for variables of even arity, we need to sample among a large set of possible domain middle points. Figure 1 (b) shows the difference between the median <span class="math inline">f</span>-value of 1000 domain middle samples and the <span class="math inline">f</span>-value of the optimal solution for each problem instance in the <code>bbob-mixint</code> suite prior to scaling. In comparison, Figure 1 (a) shows the difference between the <span class="math inline">f</span>-value of the domain middle and of the optimal solution for each problem instance for the <code>bbob</code> suite (note that no sampling is required here since it is clear which point is the domain middle in a continuous domain).</p>
 <p>Keeping in mind that in COCO the easiest target defaults to 100, we see that for a number of <code>bbob-mixint</code> functions (<span class="math inline">f_2</span>, <span class="math inline">f_6</span>, <span class="math inline">f_{10}</span> to <span class="math inline">f_{13}</span> and <span class="math inline">f_{20}</span>), the domain middle rarely (if ever) achieves this target. On the other hand, for functions such as <span class="math inline">f_{17}</span>, <span class="math inline">f_{19}</span> and <span class="math inline">f_{23}</span>, evaluating the domain middle already guarantees reaching targets of 10 and less. We also see that the distances for the <code>bbob-mixint</code> suite are very similar to those for the <code>bbob</code> suite, albeit a bit larger in general. Based on these findings and the preliminary algorithm results, we choose to multiply the <span class="math inline">f</span>-values of the functions with the scaling factors shown in Table. This setting is mindful of the connections between some functions, for example, the same scaling factors are used for the original (<span class="math inline">f_8</span>) and rotated (<span class="math inline">f_9</span>) Rosenbrock functions. Figure 1 (c) shows the result for all (scaled) <code>bbob-mixint</code> problems. Now the <span class="math inline">f</span>-differences between the domain middle and the optimal solution are more uniform across the problems in the suite.</p>
 <div id="fig-1" class="quarto-layout-panel">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<div class="quarto-layout-row">
-<div class="quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-1" style="flex-basis: 33.3%;justify-content: flex-start;">
-<div id="fig-a" class="quarto-figure quarto-figure-center quarto-float anchored">
-<figure class="quarto-float quarto-subfloat-fig figure">
-<div aria-describedby="fig-a-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="../assets/bbob-mixint/images/1.png" class="img-fluid figure-img" data-ref-parent="fig-1">
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-a-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-(a) bbob suite
-</figcaption>
+<figure class="figure">
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="quarto-layout-cell quarto-layout-cell-subref" style="flex-basis: 33.3%;justify-content: center;">
+<div id="fig-a" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="../assets/bbob-mixint/images/1.png" class="img-fluid figure-img" data-ref-parent="fig-1"></p>
+<figcaption class="figure-caption">(a) bbob suite</figcaption>
 </figure>
 </div>
 </div>
-<div class="quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-1" style="flex-basis: 33.3%;justify-content: flex-start;">
-<div id="fig-b" class="quarto-figure quarto-figure-center quarto-float anchored">
-<figure class="quarto-float quarto-subfloat-fig figure">
-<div aria-describedby="fig-b-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="../assets/bbob-mixint/images/2.png" class="img-fluid figure-img" data-ref-parent="fig-1">
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-b-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-(b) bbob-mixint suite before scaling
-</figcaption>
+<div class="quarto-layout-cell quarto-layout-cell-subref" style="flex-basis: 33.3%;justify-content: center;">
+<div id="fig-b" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="../assets/bbob-mixint/images/2.png" class="img-fluid figure-img" data-ref-parent="fig-1"></p>
+<figcaption class="figure-caption">(b) bbob-mixint suite before scaling</figcaption>
 </figure>
 </div>
 </div>
-<div class="quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-1" style="flex-basis: 33.3%;justify-content: flex-start;">
-<div id="fig-c" class="quarto-figure quarto-figure-center quarto-float anchored">
-<figure class="quarto-float quarto-subfloat-fig figure">
-<div aria-describedby="fig-c-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="../assets/bbob-mixint/images/3.png" class="img-fluid figure-img" data-ref-parent="fig-1">
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-c-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-(c) bbob-mixint suite
-</figcaption>
+<div class="quarto-layout-cell quarto-layout-cell-subref" style="flex-basis: 33.3%;justify-content: center;">
+<div id="fig-c" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="../assets/bbob-mixint/images/3.png" class="img-fluid figure-img" data-ref-parent="fig-1"></p>
+<figcaption class="figure-caption">(c) bbob-mixint suite</figcaption>
 </figure>
 </div>
 </div>
 </div>
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;1: Estimation of targets reached by the domain middle (in logarithmic scale). They are computed as the distance between the f -value of the domain middle and the optimal solution for the bbob suite (a), or the median of the distances between the f -values of 1000 domain middle samples and the optimal solution for the bbob-mixint suite before (b) and after (c) scaling. Each circle depicts one problem instance for instances 1–15.
-</figcaption>
+<p></p><figcaption class="figure-caption">Figure&nbsp;1: Estimation of targets reached by the domain middle (in logarithmic scale). They are computed as the distance between the f -value of the domain middle and the optimal solution for the bbob suite (a), or the median of the distances between the f -values of 1000 domain middle samples and the optimal solution for the bbob-mixint suite before (b) and after (c) scaling. Each circle depicts one problem instance for instances 1–15.</figcaption><p></p>
 </figure>
 </div>
 <table class="table">
@@ -454,18 +405,18 @@ Figure&nbsp;1: Estimation of targets reached by the domain middle (in logarithmi
 </section>
 
 
-<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
-<div id="ref-wp200901_2010" class="csl-entry" role="listitem">
-Finck, S., N. Hansen, R. Ros, and A. Auger. 2009. <span>“Real-Parameter Black-Box Optimization Benchmarking 2009: Presentation of the Noiseless Functions.”</span> 2009/20. Research Center PPE, Austria. <a href="http://coco.lri.fr/downloads/download15.03/bbobdocfunctions.pdf">http://coco.lri.fr/downloads/download15.03/bbobdocfunctions.pdf</a>.
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" role="list">
+<div id="ref-bbob2019" class="csl-entry" role="listitem">
+Finck, Steffen, Nikolaus Hansen, Raymond Ros, and Anne Auger. 2009. <span>“Real-Parameter Black-Box Optimization Benchmarking 2009: Noiseless Functions Definitions.”</span> RR-6829. INRIA. <a href="https://inria.hal.science/inria-00362633v2/document">https://inria.hal.science/inria-00362633v2/document</a>.
 </div>
 <div id="ref-hansen2014principled" class="csl-entry" role="listitem">
-Hansen, N., and A. Auger. 2014. <span>“Principled Design of Continuous Stochastic Search: From Theory to Practice.”</span> In <em>Theory and Principled Methods for the Design of Metaheuristics</em>, edited by Y. Borenstein and A. Moraglio, 145–80. Natural Computing Series. Berlin, Heidelberg: Springer.
+Hansen, Nikolaus, and Anne Auger. 2014. <span>“Principled Design of Continuous Stochastic Search: From Theory to Practice.”</span> In <em>Theory and Principled Methods for the Design of Metaheuristics</em>, edited by Yossi Borenstein and Alberto Moraglio, 145–80. Natural Computing Series. Berlin, Heidelberg: Springer.
 </div>
 <div id="ref-price97" class="csl-entry" role="listitem">
-Storn, R., and K. V. Price. 1997. <span>“Differential Evolution – <span>A</span> Simple and Efficient Heuristic for Global Optimization over Continuous Spaces.”</span> <em>Journal of Global Optimization</em> 11 (4): 341–59.
+Storn, Rainer, and Kenneth V. Price. 1997. <span>“Differential Evolution – <span>A</span> Simple and Efficient Heuristic for Global Optimization over Continuous Spaces.”</span> <em>Journal of Global Optimization</em> 11 (4): 341–59.
 </div>
 <div id="ref-vabh2018a" class="csl-entry" role="listitem">
-Varelas, K., A. Auger, D. Brockhoff, N. Hansen, O. A. ElHara, Y. Semet, R. Kassab, and F. Barbaresco. 2018. <span>“A Comparative Study of Large-Scale Variants of CMA-ES.”</span> In <em>Proceedings of the International Conference on Parallel Problem Solving from Nature (PPSN XV)</em>, 11101:3–15. Lecture Notes in Computer Science. Springer.
+Varelas, Konstantinos, Anne Auger, Dimo Brockhoff, Nikolaus Hansen, Ouassim Ait ElHara, Yann Semet, Rami Kassab, and Frédéric Barbaresco. 2018. <span>“A Comparative Study of Large-Scale Variants of <span>CMA-ES</span>.”</span> In <em>Proceedings of the International Conference on Parallel Problem Solving from Nature <span>(PPSN XV)</span></em>, 11101:3–15. Lecture Notes in Computer Science. Springer.
 </div>
 </div></section><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
 
@@ -552,34 +503,10 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // clear code selection
     e.clearSelection();
   });
-    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
-    var mailtoRegex = new RegExp(/^mailto:/);
-      var filterRegex = new RegExp(".*numbbo/bbob-plots.*");
-    var isInternal = (href) => {
-        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
-    }
-    // Inspect non-navigation links and adorn them if external
- 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
-    for (var i=0; i<links.length; i++) {
-      const link = links[i];
-      if (!isInternal(link.href)) {
-        // undo the damage that might have been done by quarto-nav.js in the case of
-        // links that we want to consider external
-        if (link.dataset.originalHref !== undefined) {
-          link.href = link.dataset.originalHref;
-        }
-          // target, if specified
-          link.setAttribute("target", "_blank");
-          if (link.getAttribute("rel") === null) {
-            link.setAttribute("rel", "noopener");
-          }
-          // default icon
-          link.classList.add("external");
-      }
-    }
-  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+  function tippyHover(el, contentFn) {
     const config = {
       allowHTML: true,
+      content: contentFn,
       maxWidth: 500,
       delay: 100,
       arrow: false,
@@ -589,17 +516,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       interactive: true,
       interactiveBorder: 10,
       theme: 'quarto',
-      placement: 'bottom-start',
+      placement: 'bottom-start'
     };
-    if (contentFn) {
-      config.content = contentFn;
-    }
-    if (onTriggerFn) {
-      config.onTrigger = onTriggerFn;
-    }
-    if (onUntriggerFn) {
-      config.onUntrigger = onUntriggerFn;
-    }
     window.tippy(el, config); 
   }
   const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
@@ -611,130 +529,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
-      if (note) {
-        return note.innerHTML;
-      } else {
-        return "";
-      }
-    });
-  }
-  const xrefs = window.document.querySelectorAll('a.quarto-xref');
-  const processXRef = (id, note) => {
-    // Strip column container classes
-    const stripColumnClz = (el) => {
-      el.classList.remove("page-full", "page-columns");
-      if (el.children) {
-        for (const child of el.children) {
-          stripColumnClz(child);
-        }
-      }
-    }
-    stripColumnClz(note)
-    if (id === null || id.startsWith('sec-')) {
-      // Special case sections, only their first couple elements
-      const container = document.createElement("div");
-      if (note.children && note.children.length > 2) {
-        container.appendChild(note.children[0].cloneNode(true));
-        for (let i = 1; i < note.children.length; i++) {
-          const child = note.children[i];
-          if (child.tagName === "P" && child.innerText === "") {
-            continue;
-          } else {
-            container.appendChild(child.cloneNode(true));
-            break;
-          }
-        }
-        if (window.Quarto?.typesetMath) {
-          window.Quarto.typesetMath(container);
-        }
-        return container.innerHTML
-      } else {
-        if (window.Quarto?.typesetMath) {
-          window.Quarto.typesetMath(note);
-        }
-        return note.innerHTML;
-      }
-    } else {
-      // Remove any anchor links if they are present
-      const anchorLink = note.querySelector('a.anchorjs-link');
-      if (anchorLink) {
-        anchorLink.remove();
-      }
-      if (window.Quarto?.typesetMath) {
-        window.Quarto.typesetMath(note);
-      }
-      // TODO in 1.5, we should make sure this works without a callout special case
-      if (note.classList.contains("callout")) {
-        return note.outerHTML;
-      } else {
-        return note.innerHTML;
-      }
-    }
-  }
-  for (var i=0; i<xrefs.length; i++) {
-    const xref = xrefs[i];
-    tippyHover(xref, undefined, function(instance) {
-      instance.disable();
-      let url = xref.getAttribute('href');
-      let hash = undefined; 
-      if (url.startsWith('#')) {
-        hash = url;
-      } else {
-        try { hash = new URL(url).hash; } catch {}
-      }
-      if (hash) {
-        const id = hash.replace(/^#\/?/, "");
-        const note = window.document.getElementById(id);
-        if (note !== null) {
-          try {
-            const html = processXRef(id, note.cloneNode(true));
-            instance.setContent(html);
-          } finally {
-            instance.enable();
-            instance.show();
-          }
-        } else {
-          // See if we can fetch this
-          fetch(url.split('#')[0])
-          .then(res => res.text())
-          .then(html => {
-            const parser = new DOMParser();
-            const htmlDoc = parser.parseFromString(html, "text/html");
-            const note = htmlDoc.getElementById(id);
-            if (note !== null) {
-              const html = processXRef(id, note);
-              instance.setContent(html);
-            } 
-          }).finally(() => {
-            instance.enable();
-            instance.show();
-          });
-        }
-      } else {
-        // See if we can fetch a full url (with no hash to target)
-        // This is a special case and we should probably do some content thinning / targeting
-        fetch(url)
-        .then(res => res.text())
-        .then(html => {
-          const parser = new DOMParser();
-          const htmlDoc = parser.parseFromString(html, "text/html");
-          const note = htmlDoc.querySelector('main.content');
-          if (note !== null) {
-            // This should only happen for chapter cross references
-            // (since there is no id in the URL)
-            // remove the first header
-            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
-              note.children[0].remove();
-            }
-            const html = processXRef(null, note);
-            instance.setContent(html);
-          } 
-        }).finally(() => {
-          instance.enable();
-          instance.show();
-        });
-      }
-    }, function(instance) {
+      return note.innerHTML;
     });
   }
       let selectedAnnoteEl;
@@ -778,7 +573,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
             }
             div.style.top = top - 2 + "px";
             div.style.height = height + 4 + "px";
-            div.style.left = 0;
             let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
             if (gutterDiv === null) {
               gutterDiv = window.document.createElement("div");
@@ -804,32 +598,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         });
         selectedAnnoteEl = undefined;
       };
-        // Handle positioning of the toggle
-    window.addEventListener(
-      "resize",
-      throttle(() => {
-        elRect = undefined;
-        if (selectedAnnoteEl) {
-          selectCodeLines(selectedAnnoteEl);
-        }
-      }, 10)
-    );
-    function throttle(fn, ms) {
-    let throttle = false;
-    let timer;
-      return (...args) => {
-        if(!throttle) { // first call gets through
-            fn.apply(this, args);
-            throttle = true;
-        } else { // all the others get throttled
-            if(timer) clearTimeout(timer); // cancel #2
-            timer = setTimeout(() => {
-              fn.apply(this, args);
-              timer = throttle = false;
-            }, ms);
-        }
-      };
-    }
       // Attach click handler to the DT
       const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
       for (const annoteDlNode of annoteDls) {
@@ -887,10 +655,25 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       });
     }
   }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var filterRegex = new RegExp(".*numbbo/bbob-plots.*");
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+          // target, if specified
+          link.setAttribute("target", "_blank");
+          // default icon
+          link.classList.add("external");
+      }
+    }
 });
 </script>
 </div> <!-- /content -->
-
 
 
 

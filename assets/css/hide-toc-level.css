@@ -1,0 +1,17 @@
+/* Hides all function group names from the TOC */
+#toc-separable-functions {
+    display: none;
+}
+#toc-functions-with-low-or-moderate-conditioning {
+    display: none;
+}
+#toc-functions-with-high-conditioning-and-unimodal {
+    display: none;
+}
+#toc-multi-modal-functions-with-adequate-global-structure {
+    display: none;
+}
+#toc-multi-modal-functions-with-weak-global-structure {
+    display: none;
+}
+

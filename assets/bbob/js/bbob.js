@@ -2,7 +2,7 @@
 plotPath = "https://raw.githubusercontent.com/numbbo/bbob-plots/main/bbob/"
 
 /* Define some global variables */
-var labelsTyp = ["Search space cuts: lin-lin", "Search space cuts: lin-log", "Search space cuts: log-log", "Heatmap", "Rank ratio heatmap", "Surface plot"];
+var labelsTyp = ["Search space cuts: lin-lin", "Search space cuts: lin-log", "Search space cuts: log-log", "Function value heatmap", "Normalized rank heatmap", "Surface plot"];
 var valuesTyp = ["cuts-lin-lin", "cuts-lin-log", "cuts-log-log", "heatmap", "heatmap-rank", "surface"];
 var allNodes = ["dimAll", "funAll", "insAll", "typAll"];
 var selectedNode = "typAll";
