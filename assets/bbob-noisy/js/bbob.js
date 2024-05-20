@@ -108,6 +108,15 @@ function changePlot() {
 		}
 	}
 
+	/* Make sure only the correct plot descriptions are shown */
+	let allTextNames = ["text-cuts", "text-heatmap", "text-heatmap-rank", "text-surface"];
+	let chosenTextName = chosenTyp[0].includes("cuts") ? "text-cuts" : "text-" + chosenTyp[0];
+
+	allTextNames.forEach(textName => {
+		document.getElementById(textName).style.display = (selectedNode === "typAll" || textName === chosenTextName) ? "block" : "none";
+	});
+
+	/* Make sure only the correct function description is shown */
 	let divs = document.getElementsByClassName('noisy');
 	for (let div of divs) {
 		if ((selectedNode === "funAll") || (div.id.includes(chosenFun[0]))) {

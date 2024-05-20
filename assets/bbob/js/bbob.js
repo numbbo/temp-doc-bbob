@@ -113,7 +113,15 @@ function changePlot() {
 			}
 		}
 	}
+	/* Make sure only the correct plot descriptions are shown */
+	let allTextNames = ["text-cuts", "text-heatmap", "text-heatmap-rank", "text-surface"];
+	let chosenTextName = chosenTyp[0].includes("cuts") ? "text-cuts" : "text-" + chosenTyp[0];
 
+	allTextNames.forEach(textName => {
+		document.getElementById(textName).style.display = (selectedNode === "typAll" || textName === chosenTextName) ? "block" : "none";
+	});
+
+	/* Make sure only the correct function description is shown */
 	for (let iFun = 0; iFun < valuesFun.length; iFun++) {
 		textName = "text-f" + valuesFun[iFun];
 		if ((selectedNode === "funAll") || (valuesFun[iFun] == chosenFun[0])) {
