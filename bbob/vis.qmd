@@ -5,7 +5,8 @@ format:
     include-after-body: 
       - text: <script type="text/javascript" defer src="../assets/bbob/js/bbob.js"></script>
     toc-depth: 2
-    css: "../assets/css/hide-toc-level.css"
+    css: "../assets/css/hide-toc-groups.css"
+citeproc: false
 ---
 
 ## Plots
