@@ -20,7 +20,26 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -473,7 +492,7 @@ denotes the rounding procedure in order to produce the plateaus.</p></li>
 <li><p><span class="math inline">\mathbf{z^\mathrm{opt}}=\mathbf{1}</span></p></li>
 </ul>
 <p><strong>Properties:</strong></p>
-<p>So-called banana function due to its 2-D contour lines as a bent ridge (or valley) <span class="citation" data-cites="rosenbrock1960automatic">[@rosenbrock1960automatic]</span>. In the beginning, the prominent first term of the function definition attracts to the point <span class="math inline">\mathbf{z}=\mathbf{0}</span>. Then, a long bending valley needs to be followed to reach the global optimum. The ridge changes its orientation <span class="math inline">D-1</span> times. Exceptionally, here <span class="math inline">\mathbf{x^\mathrm{opt}}\in[-3,3]^D</span>.</p>
+<p>So-called banana function due to its 2-D contour lines as a bent ridge (or valley) <span class="citation" data-cites="rosenbrock1960automatic">(<a href="#ref-rosenbrock1960automatic" role="doc-biblioref">Rosenbrock 1960</a>)</span>. In the beginning, the prominent first term of the function definition attracts to the point <span class="math inline">\mathbf{z}=\mathbf{0}</span>. Then, a long bending valley needs to be followed to reach the global optimum. The ridge changes its orientation <span class="math inline">D-1</span> times. Exceptionally, here <span class="math inline">\mathbf{x^\mathrm{opt}}\in[-3,3]^D</span>.</p>
 <ul>
 <li>tri-band dependency structure, in larger dimensions the function has a local optimum with an attraction volume of about 25%</li>
 </ul>
@@ -700,7 +719,7 @@ denotes the rounding procedure in order to produce the plateaus.</p></li>
 <li><p><span class="math inline">\mathbf{x^\mathrm{opt}}= 4.2096874633/2 \;\mathbf{1_-^+}</span>, where <span class="math inline">\mathbf{1}_-^+</span> is the same realization as above</p></li>
 </ul>
 <p><strong>Properties:</strong></p>
-<p>The most prominent <span class="math inline">2^D</span> minima are located comparatively close to the corners of the unpenalized search area <span class="citation" data-cites="schwefel1981numerical">[@schwefel1981numerical]</span>.</p>
+<p>The most prominent <span class="math inline">2^D</span> minima are located comparatively close to the corners of the unpenalized search area <span class="citation" data-cites="schwefel1981numerical">(<a href="#ref-schwefel1981numerical" role="doc-biblioref">Schwefel 1981</a>)</span>.</p>
 <ul>
 <li>the penalization is essential, as otherwise more and better minima occur further away from the search space origin</li>
 </ul>
@@ -720,7 +739,7 @@ denotes the rounding procedure in order to produce the plateaus.</p></li>
 <li><p>the local optima <span class="math inline">\mathbf{y}_i</span> are uniformly drawn from the domain <span class="math inline">[-5,5]^D</span> for <span class="math inline">i=2,\dots,101</span> and <span class="math inline">\mathbf{y}_{1}\in[-4,4]^D</span>. The global optimum is at <span class="math inline">\mathbf{x^\mathrm{opt}}=\mathbf{y}_1</span>.</p></li>
 </ul>
 <p><strong>Properties:</strong></p>
-<p>The function consists of <span class="math inline">101</span> optima with position and height being unrelated and randomly chosen (different for each instantiation of the function), based on <span class="citation" data-cites="gallagher2006general">[@gallagher2006general]</span>.</p>
+<p>The function consists of <span class="math inline">101</span> optima with position and height being unrelated and randomly chosen (different for each instantiation of the function), based on <span class="citation" data-cites="gallagher2006general">(<a href="#ref-gallagher2006general" role="doc-biblioref">Gallagher and Yuan 2006</a>)</span>.</p>
 <ul>
 <li>the conditioning around the global optimum is about <span class="math inline">30</span></li>
 </ul>
@@ -744,7 +763,7 @@ denotes the rounding procedure in order to produce the plateaus.</p></li>
 <li><p>the local optima <span class="math inline">\mathbf{y}_i</span> are uniformly drawn from the domain <span class="math inline">[-4.9,4.9]^D</span> for <span class="math inline">i=2,\dots,21</span> and <span class="math inline">\mathbf{y}_{1}\in [-3.92,3.92]^D</span>. The global optimum is at <span class="math inline">\mathbf{x^\mathrm{opt}}=\mathbf{y}_1</span>.</p></li>
 </ul>
 <p><strong>Properties:</strong></p>
-<p>The function consists of <span class="math inline">21</span> optima with position and height being unrelated and randomly chosen (different for each instantiation of the function), based on <span class="citation" data-cites="gallagher2006general">[@gallagher2006general]</span>.</p>
+<p>The function consists of <span class="math inline">21</span> optima with position and height being unrelated and randomly chosen (different for each instantiation of the function), based on <span class="citation" data-cites="gallagher2006general">(<a href="#ref-gallagher2006general" role="doc-biblioref">Gallagher and Yuan 2006</a>)</span>.</p>
 <ul>
 <li>the conditioning around the global optimum is about <span class="math inline">1000</span></li>
 </ul>
@@ -764,7 +783,7 @@ denotes the rounding procedure in order to produce the plateaus.</p></li>
 <li><span class="math inline">\mathbf{z}= \mathbf{Q}\,\Lambda^{\!100}\mathbf{R}(\mathbf{x}-\mathbf{x^\mathrm{opt}})</span></li>
 </ul>
 <p><strong>Properties:</strong></p>
-<p>Highly rugged and highly repetitive function with more than <span class="math inline">10^D</span> global optima, based on the idea in <span class="citation" data-cites="katsuura1991continuous">[@katsuura1991continuous]</span></p>
+<p>Highly rugged and highly repetitive function with more than <span class="math inline">10^D</span> global optima, based on the idea in <span class="citation" data-cites="katsuura1991continuous">(<a href="#ref-katsuura1991continuous" role="doc-biblioref">Katsuura 1991</a>)</span></p>
 </section>
 </div>
 <div id="text-f24">
@@ -779,7 +798,7 @@ denotes the rounding procedure in order to produce the plateaus.</p></li>
 <li><p><span class="math inline">\mu_0 = 2.5</span>, <span class="math inline">\mu_1 = -\sqrt{\dfrac{\mu_0^2-d}{s}}</span>, <span class="math inline">s = 1 - \dfrac{1}{2\sqrt{D+20}-8.2}</span>, <span class="math inline">d=1</span></p></li>
 </ul>
 <p><strong>Properties:</strong></p>
-<p>Highly multimodal function based on <span class="citation" data-cites="lunacek2008impact">[@lunacek2008impact]</span> with two funnels around <span class="math inline">\frac{\mu_0}{2}\mathbf{1_-^+}</span> and <span class="math inline">\frac{\mu_1}{2}\mathbf{1_-^+}</span> being superimposed by the cosine. Presumably different approaches need to be used for “selecting the funnel” and for searching the highly multimodal function “within” the funnel. The function was constructed to be deceptive for evolutionary algorithms with large population size.</p>
+<p>Highly multimodal function based on <span class="citation" data-cites="lunacek2008impact">(<a href="#ref-lunacek2008impact" role="doc-biblioref">Lunacek, Whitley, and Sutton 2008</a>)</span> with two funnels around <span class="math inline">\frac{\mu_0}{2}\mathbf{1_-^+}</span> and <span class="math inline">\frac{\mu_1}{2}\mathbf{1_-^+}</span> being superimposed by the cosine. Presumably different approaches need to be used for “selecting the funnel” and for searching the highly multimodal function “within” the funnel. The function was constructed to be deceptive for evolutionary algorithms with large population size.</p>
 <ul>
 <li>the funnel of the local optimum at <span class="math inline">\frac{\mu_1}{2}\mathbf{1_-^+}</span> has roughly <span class="math inline">70\%</span> of the search space volume within <span class="math inline">[-5,5]^D</span>.</li>
 </ul>
@@ -789,7 +808,24 @@ denotes the rounding procedure in order to produce the plateaus.</p></li>
 
 
 
-</main> <!-- /main -->
+
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" role="list">
+<div id="ref-gallagher2006general" class="csl-entry" role="listitem">
+Gallagher, Marcus, and Bo Yuan. 2006. <span>“A General-Purpose Tunable Landscape Generator.”</span> <em>IEEE Transactions on Evolutionary Computation</em> 10 (5): 590–603. <a href="https://doi.org/10.1109/TEVC.2005.863628">https://doi.org/10.1109/TEVC.2005.863628</a>.
+</div>
+<div id="ref-katsuura1991continuous" class="csl-entry" role="listitem">
+Katsuura, Hidefumi. 1991. <span>“Continuous Nowhere-Differentiable Functions – an Application of Contraction Mappings.”</span> <em>The American Mathematical Monthly</em> 98 (5): 411–16. <a href="https://doi.org/10.1080/00029890.1991.12000778">https://doi.org/10.1080/00029890.1991.12000778</a>.
+</div>
+<div id="ref-lunacek2008impact" class="csl-entry" role="listitem">
+Lunacek, Monte, Darrell Whitley, and Andrew Sutton. 2008. <span>“The Impact of Global Structure on Search.”</span> In <em>Proceedings of the International Conference on Parallel Problem Solving from Nature <span>(PPSN X)</span></em>, 5199:498–507. Lecture Notes in Computer Science. Springer. <a href="https://doi.org/10.1007/978-3-540-87700-4\_50">https://doi.org/10.1007/978-3-540-87700-4\_50</a>.
+</div>
+<div id="ref-rosenbrock1960automatic" class="csl-entry" role="listitem">
+Rosenbrock, H. H. 1960. <span>“An Automatic Method for Finding the Greatest or Least Value of a Function.”</span> <em>The Computer Journal</em> 3 (3): 175–84. <a href="https://doi.org/10.1093/comjnl/3.3.175">https://doi.org/10.1093/comjnl/3.3.175</a>.
+</div>
+<div id="ref-schwefel1981numerical" class="csl-entry" role="listitem">
+Schwefel, Hans-Paul. 1981. <em>Numerical Optimization of Computer Models</em>. John Wiley &amp; Sons, Inc.
+</div>
+</div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
