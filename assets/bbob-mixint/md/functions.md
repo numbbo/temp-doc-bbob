@@ -60,7 +60,7 @@ $[-5, 5]^n$---the *region of interest* for all `bbob` problems.
 ### Suite Construction
 
 The `bbob` suite consists of problems with 24 different functions in 6
-dimensions, $n = 2, 3, 5, 10, 20, 40$, and 15 instances (see [@wp200901_2010] for the function definitions). Because the
+dimensions, $n = 2, 3, 5, 10, 20, 40$, and 15 instances (see [@bbob2019] for the function definitions). Because the
 discretization reduces the number of continuous variables, higher
 dimensions are used for the `bbob-mixint` suite to produce challenging problems. We chose $n = 5, 10, 20, 40, 80, 160$ as the dimensions of the `bbob-mixint` suite.^[Note that the function definitions of all mentioned test suites are scalable in dimension. The six dimensions are only pre-chosen to facilitate the experimental setup.]
 
