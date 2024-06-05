@@ -1,23 +1,43 @@
-The benchmark function definitions in the next section are accompanied
-with a number of figures.
+<div id="text-cuts">
+### Search space cuts
 
-1.  a (3-D) surface plot, where $D=2$
+The plots with search space cuts show the function value $f$ along various lines in the search space that go through 
+the global optimum $\mathbf{x}_\mathrm{opt}$. The colored lines change the value of only one variable $x_i$ 
+at a time keeping the rest fixed to $\mathbf{x}_\mathrm{opt}$. The gray line represents the line that goes through 
+$\mathbf{x}_\mathrm{opt}$ in the direction of the all-ones vector (i.e., in the diagonal direction). 
+To improve visibility, only five colored lines are shown in the larger dimensions ($D \geq 10$), corresponding to $x_1$, $x_2$, 
+$x_{\lfloor D/2 \rfloor}$, $x_{D-1}$ and $x_D$, where $D$ is the search space dimension.
+The plots are shown in three variants:
 
-2.  a contour plot, where $D=2$
+* **lin-lin**: both axes are linear,
+* **lin-log**: the x-axis is linear, the y-axis shows the difference between $f$ and the optimal value $f_\mathrm{opt}$ 
+on a logarithmic scale,
+* **log-log**: both axes are logarithmic, the x-axis shows the absolute difference to $\mathbf{x}_\mathrm{opt}$ 
+(positive directions presented as $x_i$ and negative as $-x_i$), the y-axis shows the difference between $f$ and 
+$f_\mathrm{opt}$. 
+</div>
+<div id="text-heatmap">
+### Function value heatmap
 
-3.  two projected contour plots, where $D=20$. Plotted are,
-    starting from the optimum $\mathbf{x}^\mathrm{opt}$, first versus
-    second variable (left) and first versus fifth variable (right).
+The function value heatmap shows the function values $f$ on a 2-D view of the search space that contains the optimal
+solution and is approximated by a grid. In addition to color-coded function values, the plots include level sets in 
+gray hues. For dimensions larger than 2, the heatmaps of pairs of variables are organized into a matrix. To improve 
+visibility, only five variables are included in the matrix in the larger dimensions ($D \geq 10$), corresponding to 
+$x_1$, $x_2$, $x_{\lfloor D/2 \rfloor}$, $x_{D-1}$ and $x_D$, where $D$ is the search space dimension.
+</div>
+<div id="text-heatmap-rank">
+### Normalized rank heatmap
 
-4.  sections ($f$ versus $x$) through the global optimum along the first
-    variable $x_1$, the second variable $x_2$, and the all-ones vector.
-    The sections for different dimensions appear
+The normalized rank heatmap shows, instead of absolute function values $f$, their normalized rank with 0 corresponding
+to the best rank and 1 to the worst one on a 2-D view of the search space that contains the optimal solution and is 
+approximated by a grid. In addition to color-coded ranks, the plots include level sets in gray hues. For dimensions 
+larger than 2, the heatmaps of pairs of variables are organized into a matrix. To improve visibility, only five 
+variables are included in the matrix in the larger dimensions ($D \geq 10$), corresponding to $x_1$, $x_2$, 
+$x_{\lfloor D/2 \rfloor}$, $x_{D-1}$ and $x_D$, where $D$ is the search space dimension.
+</div>
+<div id="text-surface">
+### Surface plot
 
-    1.  in a non-log plot (above), where the maximum $f$-value is
-        normalized to one for each single graph.
-
-    2.  in a semi-log plot (middle row)
-
-    3.  in a log-log plot (below) starting close to the global optimum
-        along $x_1$, $-x_1$, $x_2$, $-x_2$, $\mathbf{1}$,
-        and $-\mathbf{1}$.
+The surface plot shows the function values $f$ on a 3-D view of the search space and is available only for 2-D problems.
+To improve visibility, the z-axis is inverted, so that the global optimum is at the top of the plot.
+</div>

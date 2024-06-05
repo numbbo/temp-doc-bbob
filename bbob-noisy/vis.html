@@ -197,7 +197,13 @@ ul.task-list li input[type="checkbox"] {
    
   <ul>
   <li><a href="#plots" id="toc-plots" class="nav-link active" data-scroll-target="#plots">Plots</a></li>
-  <li><a href="#plot-explanation" id="toc-plot-explanation" class="nav-link" data-scroll-target="#plot-explanation">Plot explanation</a></li>
+  <li><a href="#plot-explanation" id="toc-plot-explanation" class="nav-link" data-scroll-target="#plot-explanation">Plot explanation</a>
+  <ul class="collapse">
+  <li><a href="#search-space-cuts" id="toc-search-space-cuts" class="nav-link" data-scroll-target="#search-space-cuts">Search space cuts</a></li>
+  <li><a href="#function-value-heatmap" id="toc-function-value-heatmap" class="nav-link" data-scroll-target="#function-value-heatmap">Function value heatmap</a></li>
+  <li><a href="#normalized-rank-heatmap" id="toc-normalized-rank-heatmap" class="nav-link" data-scroll-target="#normalized-rank-heatmap">Normalized rank heatmap</a></li>
+  <li><a href="#surface-plot" id="toc-surface-plot" class="nav-link" data-scroll-target="#surface-plot">Surface plot</a></li>
+  </ul></li>
   <li><a href="#problem-definition" id="toc-problem-definition" class="nav-link" data-scroll-target="#problem-definition">Problem definition</a></li>
   <li><a href="#functions-with-moderate-noise" id="toc-functions-with-moderate-noise" class="nav-link" data-scroll-target="#functions-with-moderate-noise">Functions with moderate noise</a>
   <ul class="collapse">
@@ -295,18 +301,35 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="plot-explanation" class="level2">
 <h2 class="anchored" data-anchor-id="plot-explanation">Plot explanation</h2>
-<p>The benchmark function definitions in the next section are accompanied with a number of figures.</p>
-<ol type="1">
-<li><p>a (3-D) surface plot, where <span class="math inline">D=2</span></p></li>
-<li><p>a contour plot, where <span class="math inline">D=2</span></p></li>
-<li><p>two projected contour plots, where <span class="math inline">D=20</span>. Plotted are, starting from the optimum <span class="math inline">\mathbf{x}^\mathrm{opt}</span>, first versus second variable (left) and first versus fifth variable (right).</p></li>
-<li><p>sections (<span class="math inline">f</span> versus <span class="math inline">x</span>) through the global optimum along the first variable <span class="math inline">x_1</span>, the second variable <span class="math inline">x_2</span>, and the all-ones vector. The sections for different dimensions appear</p>
-<ol type="1">
-<li><p>in a non-log plot (above), where the maximum <span class="math inline">f</span>-value is normalized to one for each single graph.</p></li>
-<li><p>in a semi-log plot (middle row)</p></li>
-<li><p>in a log-log plot (below) starting close to the global optimum along <span class="math inline">x_1</span>, <span class="math inline">-x_1</span>, <span class="math inline">x_2</span>, <span class="math inline">-x_2</span>, <span class="math inline">\mathbf{1}</span>, and <span class="math inline">-\mathbf{1}</span>.</p></li>
-</ol></li>
-</ol>
+<div id="text-cuts">
+<section id="search-space-cuts" class="level3">
+<h3 class="anchored" data-anchor-id="search-space-cuts">Search space cuts</h3>
+<p>The plots with search space cuts show the function value <span class="math inline">f</span> along various lines in the search space that go through the global optimum <span class="math inline">\mathbf{x}_\mathrm{opt}</span>. The colored lines change the value of only one variable <span class="math inline">x_i</span> at a time keeping the rest fixed to <span class="math inline">\mathbf{x}_\mathrm{opt}</span>. The gray line represents the line that goes through <span class="math inline">\mathbf{x}_\mathrm{opt}</span> in the direction of the all-ones vector (i.e., in the diagonal direction). To improve visibility, only five colored lines are shown in the larger dimensions (<span class="math inline">D \geq 10</span>), corresponding to <span class="math inline">x_1</span>, <span class="math inline">x_2</span>, <span class="math inline">x_{\lfloor D/2 \rfloor}</span>, <span class="math inline">x_{D-1}</span> and <span class="math inline">x_D</span>, where <span class="math inline">D</span> is the search space dimension. The plots are shown in three variants:</p>
+<ul>
+<li><strong>lin-lin</strong>: both axes are linear,</li>
+<li><strong>lin-log</strong>: the x-axis is linear, the y-axis shows the difference between <span class="math inline">f</span> and the optimal value <span class="math inline">f_\mathrm{opt}</span> on a logarithmic scale,</li>
+<li><strong>log-log</strong>: both axes are logarithmic, the x-axis shows the absolute difference to <span class="math inline">\mathbf{x}_\mathrm{opt}</span> (positive directions presented as <span class="math inline">x_i</span> and negative as <span class="math inline">-x_i</span>), the y-axis shows the difference between <span class="math inline">f</span> and <span class="math inline">f_\mathrm{opt}</span>.</li>
+</ul>
+</section>
+</div>
+<div id="text-heatmap">
+<section id="function-value-heatmap" class="level3">
+<h3 class="anchored" data-anchor-id="function-value-heatmap">Function value heatmap</h3>
+<p>The function value heatmap shows the function values <span class="math inline">f</span> on a 2-D view of the search space that contains the optimal solution and is approximated by a grid. In addition to color-coded function values, the plots include level sets in gray hues. For dimensions larger than 2, the heatmaps of pairs of variables are organized into a matrix. To improve visibility, only five variables are included in the matrix in the larger dimensions (<span class="math inline">D \geq 10</span>), corresponding to <span class="math inline">x_1</span>, <span class="math inline">x_2</span>, <span class="math inline">x_{\lfloor D/2 \rfloor}</span>, <span class="math inline">x_{D-1}</span> and <span class="math inline">x_D</span>, where <span class="math inline">D</span> is the search space dimension.</p>
+</section>
+</div>
+<div id="text-heatmap-rank">
+<section id="normalized-rank-heatmap" class="level3">
+<h3 class="anchored" data-anchor-id="normalized-rank-heatmap">Normalized rank heatmap</h3>
+<p>The normalized rank heatmap shows, instead of absolute function values <span class="math inline">f</span>, their normalized rank with 0 corresponding to the best rank and 1 to the worst one on a 2-D view of the search space that contains the optimal solution and is approximated by a grid. In addition to color-coded ranks, the plots include level sets in gray hues. For dimensions larger than 2, the heatmaps of pairs of variables are organized into a matrix. To improve visibility, only five variables are included in the matrix in the larger dimensions (<span class="math inline">D \geq 10</span>), corresponding to <span class="math inline">x_1</span>, <span class="math inline">x_2</span>, <span class="math inline">x_{\lfloor D/2 \rfloor}</span>, <span class="math inline">x_{D-1}</span> and <span class="math inline">x_D</span>, where <span class="math inline">D</span> is the search space dimension.</p>
+</section>
+</div>
+<div id="text-surface">
+<section id="surface-plot" class="level3">
+<h3 class="anchored" data-anchor-id="surface-plot">Surface plot</h3>
+<p>The surface plot shows the function values <span class="math inline">f</span> on a 3-D view of the search space and is available only for 2-D problems. To improve visibility, the z-axis is inverted, so that the global optimum is at the top of the plot.</p>
+</section>
+</div>
 </section>
 <section id="problem-definition" class="level2">
 <h2 class="anchored" data-anchor-id="problem-definition">Problem definition</h2>
