@@ -6,7 +6,6 @@ format:
       - text: <script type="text/javascript" defer src="../assets/bbob/js/bbob.js"></script>
     toc-depth: 2
     css: "../assets/css/hide-toc-groups.css"
-citeproc: false
 ---
 
 ## Plots
