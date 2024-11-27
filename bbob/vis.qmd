@@ -14,39 +14,44 @@ Show plots in
 <button id="colPrev" onclick="getPrev(this)" class="button">&minus;</button>
 <select id="col" onchange="changePlot()" class="dropdown"></select>
 <button id="colNext" onclick="getNext(this)" class="button">+</button> 
-columns (click on <b>Dimension</b>/<b>Function</b>/<b>Instance</b>/<b>Visualization type</b> below to show all plots for the chosen category)
+columns 
 
-<table BORDER="0" width=100%>
-<tr>
-<td align="center" onclick="selectNode(this)" id="dimAll" class="off"><b>Dimension</b></td>
-<td align="center" onclick="selectNode(this)" id="funAll" class="off"><b>Function</b></td>
-<td align="center" onclick="selectNode(this)" id="insAll" class="off"><b>Instance</b></td>
-<td align="center" onclick="selectNode(this)" id="typAll" class="on"><b>Visualization type</b></td>
-</tr>
-<tr>
-<td class="select" align="center">
-<button id="dimPrev" onclick="getPrev(this)" class="button">&minus;</button>
-<select id="dim" onchange="changePlot()" class="dropdown"></select>
-<button id="dimNext" onclick="getNext(this)" class="button">+</button>
-</td>
-<td class="select" align="center">
-<button id="funPrev" onclick="getPrev(this)" class="button">&minus;</button>
-<select id="fun" onchange="changePlot()" class="dropdown"></select>
-<button id="funNext" onclick="getNext(this)" class="button">+</button>
-</td>
-<td class="select" align="center">
-<button id="insPrev" onclick="getPrev(this)" class="button">&minus;</button>
-<select id="ins" onchange="changePlot()" class="dropdown"></select>
-<button id="insNext" onclick="getNext(this)" class="button">+</button>
-</td>
-<td class="select" align="center">
-<button id="typPrev" onclick="getPrev(this)" class="button"><i class="arrow left"></i></button>
-<select id="typ" onchange="changePlot()" style="width:220px;height:30px;">
-</select>
-<button id="typNext" onclick="getNext(this)" class="button"><i class="arrow right"></i></button>
-</td>
-</tr>
-</table>
+Click on <b>Dimension</b>/<b>Function</b>/<b>Instance</b>/<b>Visualization type</b> below to show all plots for the chosen category
+
+<div class="wrapper">
+  <div class="col1"><table BORDER="0" width=100%>
+    <tr><td align="center" onclick="selectNode(this)" id="dimAll" class="off"><b>Dimension</b></td></tr>
+    <tr><td class="select" align="center">
+    <button id="dimPrev" onclick="getPrev(this)" class="button">&minus;</button>
+    <select id="dim" onchange="changePlot()" class="dropdown"></select>
+    <button id="dimNext" onclick="getNext(this)" class="button">+</button>
+    </td></tr>
+  </table></div>
+  <div class="col3"><table BORDER="0" width=100%>
+    <tr><td align="center" onclick="selectNode(this)" id="funAll" class="off"><b>Function</b></td></tr>
+    <tr><td class="select" align="center">
+    <button id="funPrev" onclick="getPrev(this)" class="button">&minus;</button>
+    <select id="fun" onchange="changePlot()" class="dropdown" style="width:220px;height:30px;"></select>
+    <button id="funNext" onclick="getNext(this)" class="button">+</button>
+    </td></tr>
+  </table></div>
+  <div class="col1"><table BORDER="0" width=100%>
+    <tr><td align="center" onclick="selectNode(this)" id="insAll" class="off"><b>Instance</b></td></tr>
+    <tr><td class="select" align="center">
+    <button id="insPrev" onclick="getPrev(this)" class="button">&minus;</button>
+    <select id="ins" onchange="changePlot()" class="dropdown"></select>
+    <button id="insNext" onclick="getNext(this)" class="button">+</button>
+    </td></tr>
+  </table></div>
+  <div class="col3"><table BORDER="0" width=100%>
+    <tr><td align="center" onclick="selectNode(this)" id="typAll" class="on"><b>Visualization type</b></td></tr>
+    <tr><td class="select" align="center">
+    <button id="typPrev" onclick="getPrev(this)" class="button"><i class="arrow left"></i></button>
+    <select id="typ" onchange="changePlot()" style="width:220px;height:30px;"></select>
+    <button id="typNext" onclick="getNext(this)" class="button"><i class="arrow right"></i></button>
+    </td></tr>
+  </table></div>
+</div>
 
 <!-- <textarea id="result" num=7></textarea> -->
 

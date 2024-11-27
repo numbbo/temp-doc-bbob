@@ -2,8 +2,9 @@
 plotPath = "https://raw.githubusercontent.com/numbbo/bbob-plots/main/bbob-noisy/"
 
 /* Define some global variables */
-var labelsTyp = ["Search space cuts: lin-lin", "Search space cuts: lin-log", "Search space cuts: log-log", "Heatmap", "Rank ratio heatmap", "Surface plot"];
-var valuesTyp = ["cuts-lin-lin", "cuts-lin-log", "cuts-log-log", "heatmap", "heatmap-rank", "surface"];
+var labelsTyp = ["Level sets", "Normalized rank heatmap", "Surface plot", "Search space cuts: lin-lin", "Search space cuts: lin-log", 
+	"Search space cuts: log-log"];
+var valuesTyp = ["level-sets", "heatmap-rank", "surface", "cuts-lin-lin", "cuts-lin-log", "cuts-log-log"];
 var allNodes = ["dimAll", "funAll", "insAll", "typAll"];
 var selectedNode = "typAll";
 var valuesDim = ["2", "3", "5", "10", "20", "40"];
@@ -14,6 +15,38 @@ for (let i = 1; i <= 15; i++) {valuesIns.push(i);}
 var valuesCol = [];
 for (let i = 1; i <= 10; i++) {valuesCol.push(i);}
 var params = ["col", "dim", "fun", "ins", "typ"];
+var labelsFun = [
+	"f101 - Sphere w/ moderate Gaussian noise",
+	"f102 - Sphere w/ moderate uniform noise",
+	"f103 - Sphere w/ moderate Cauchy noise",
+	"f104 - Rosenbrock w/ moderate Gaussian noise",
+	"f105 - Rosenbrock w/ moderate uniform noise",
+	"f106 - Rosenbrock w/ moderate Cauchy noise",
+	"f107 - Sphere w/ Gaussian noise",
+	"f108 - Sphere w/ uniform noise",
+	"f109 - Sphere w/ Cauchy noise",
+	"f110 - Rosenbrock w/ Gaussian noise",
+	"f111 - Rosenbrock w/ uniform noise",
+	"f112 - Rosenbrock w/ Cauchy noise",
+	"f113 - Step ellipsoid w/ Gaussian noise",
+	"f114 - Step ellipsoid w/ uniform noise",
+	"f115 - Step ellipsoid w/ Cauchy noise",
+	"f116 - Ellipsoid w/ Gaussian noise",
+	"f117 - Ellipsoid w/ uniform noise",
+	"f118 - Ellipsoid w/ Cauchy noise",
+	"f119 - Different powers w/ Gaussian noise",
+	"f120 - Different powers w/ uniform noise",
+	"f121 - Different powers w/ Cauchy noise",
+	"f122 - Schaffer F7 w/ Gaussian noise",
+	"f123 - Schaffer F7 w/ uniform noise",
+	"f124 - Schaffer F7 w/ Cauchy noise",
+	"f125 - Griewank-Rosenbrock w/ Gaussian noise",
+	"f126 - Griewank-Rosenbrock w/ uniform noise",
+	"f127 - Griewank-Rosenbrock w/ Cauchy noise",
+	"f128 - Gallagher 101 peaks w/ Gaussian noise",
+	"f129 - Gallagher 101 peaks w/ uniform noise",
+	"f130 - Gallagher 101 peaks w/ Cauchy noise"
+]
 
 /* Fill the table with values from the URL parameters. If any are missing, use the defaults (all plot types are shown,
    there are five plots per row, the first option is chosen for all other select elements) */
@@ -21,7 +54,7 @@ window.onload=function() {
     /* Fill the dropdowns with values */
     fill_options("col", valuesCol, valuesCol, "3");
     fill_options("dim", valuesDim, valuesDim, "2");
-    fill_options("fun", valuesFun, valuesFun, "101");
+    fill_options("fun", valuesFun, labelsFun, "101");
     fill_options("ins", valuesIns, valuesIns, "1");
     fill_options("typ", valuesTyp, labelsTyp, "cuts-lin-lin");
 

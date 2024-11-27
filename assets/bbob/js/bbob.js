@@ -2,13 +2,40 @@
 plotPath = "https://raw.githubusercontent.com/numbbo/bbob-plots/main/bbob/"
 
 /* Define some global variables */
-var labelsTyp = ["Search space cuts: lin-lin", "Search space cuts: lin-log", "Search space cuts: log-log", "Function value heatmap", "Normalized rank heatmap", "Surface plot"];
-var valuesTyp = ["cuts-lin-lin", "cuts-lin-log", "cuts-log-log", "heatmap", "heatmap-rank", "surface"];
+var labelsTyp = ["Level sets", "Normalized rank heatmap", "Surface plot", "Search space cuts: lin-lin", "Search space cuts: lin-log", 
+	"Search space cuts: log-log"];
+var valuesTyp = ["level-sets", "heatmap-rank", "surface", "cuts-lin-lin", "cuts-lin-log", "cuts-log-log"];
 var allNodes = ["dimAll", "funAll", "insAll", "typAll"];
 var selectedNode = "typAll";
 var valuesDim = ["2", "3", "5", "10", "20", "40"];
 var valuesFun = [];
 for (let i = 1; i <= 24; i++) {valuesFun.push(i);}
+var labelsFun = [
+	"f1 - Sphere",
+	"f2 - Ellipsoid separable",
+	"f3 - Rastrigin separable",
+	"f4 - Skew Rastrigin-Büche",
+	"f5 - Linear slope",
+	"f6 - Attractive sector",
+	"f7 - Step ellipsoid",
+	"f8 - Rosenbrock, original",
+	"f9 - Rosenbrock, rotated",
+	"f10 - Ellipsoid",
+	"f11 - Discus",
+	"f12 - Bent cigar",
+	"f13 - Sharp ridge",
+	"f14 - Different powers",
+	"f15 - Rastrigin",
+	"f16 - Weierstrass",
+	"f17 - Schaffer F7 (condition 10)",
+	"f18 - Schaffer F7 (condition 1000)",
+	"f19 - Griewank-Rosenbrock F8F2",
+	"f20 - Schwefel x*sin(x)",
+	"f21 - Gallagher 101 peaks",
+	"f22 - Gallagher 21 peaks",
+	"f23 - Katsuura",
+	"f24 - Lunacek bi-Rastrigin"
+];
 var valuesIns = [];
 for (let i = 1; i <= 15; i++) {valuesIns.push(i);}
 var valuesCol = [];
@@ -21,7 +48,7 @@ window.onload=function() {
     /* Fill the dropdowns with values */
     fill_options("col", valuesCol, valuesCol, "3");
     fill_options("dim", valuesDim, valuesDim, "2");
-    fill_options("fun", valuesFun, valuesFun, "1");
+    fill_options("fun", valuesFun, labelsFun, "1");
     fill_options("ins", valuesIns, valuesIns, "1");
     fill_options("typ", valuesTyp, labelsTyp, "cuts-lin-lin");
 
