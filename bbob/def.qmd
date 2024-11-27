@@ -9,8 +9,8 @@ format:
 ---
 
 
-{{< include ../assets/bbob/md/intro.md >}}
+{{< include overview.md >}}
 
-{{< include ../assets/bbob/md/functions.md >}}
+{{< include functions.md >}}
 
-{{< include ../assets/bbob/md/appendix.md >}}
+{{< include appendix.md >}}

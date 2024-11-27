@@ -3,7 +3,7 @@ title: Visualizations of problem landscapes
 format:
   html:
     include-after-body: 
-      - text: <script type="text/javascript" defer src="../assets/bbob-noisy/js/bbob.js"></script>
+      - text: <script type="text/javascript" defer src="../assets/js/viz-bbob-noisy.js"></script>
 ---
 
 ### Plots
@@ -57,8 +57,8 @@ Click on <b>Dimension</b>/<b>Function</b>/<b>Instance</b>/<b>Visualization type<
 
 ## Plot explanation
 
-{{< include ../assets/bbob-noisy/md/plots.md >}}
+{{< include plots.md >}}
 
 ## Problem definition
 
-{{< include ../assets/bbob-noisy/md/functions.md >}}
+{{< include functions.md >}}

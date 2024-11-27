@@ -53,7 +53,7 @@ format:
     toc: true
     toc-depth: 3
     theme: coco.scss
-    css: "assets/css/custom.css"
+    css: "assets/css/viz-tables.css"
     html-math-method: katex
     code-copy: true
     code-overflow: wrap

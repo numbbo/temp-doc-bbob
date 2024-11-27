@@ -8,6 +8,6 @@ format:
     toc-depth: 4
 ---
 
-{{< include ../assets/bbob-noisy/md/intro.md >}}
+{{< include overview.md >}}
 
-{{< include ../assets/bbob-noisy/md/functions.md >}}
+{{< include functions.md >}}

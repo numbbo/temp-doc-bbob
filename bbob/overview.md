@@ -99,7 +99,7 @@ $T^{{}}_\mathrm{asy}$ is applied, a portion of $1/2^D$ of
 the search space remains untransformed.
 
 ![$T_\mathrm{osz}$ (blue) and $D$-th coordinate of $T_\mathrm{asy}$ for
-$\beta = 0.1, 0.2, 0.5$ (green)](../assets/bbob/images/bbob_transformations.png){#fig-bbob-trans width=80% fig-align="left"}
+$\beta = 0.1, 0.2, 0.5$ (green)](../assets/bbob/images/bbob-transformations.png){#fig-bbob-trans width=80% fig-align="left"}
 
 ## Symbols and definitions
 

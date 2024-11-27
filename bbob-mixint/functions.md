@@ -120,11 +120,11 @@ the suite.
 
 ::: {#fig-1 layout-ncol=3}
 
-![bbob suite](../assets/bbob-mixint/images/1.png){#fig-a}
+![bbob suite](../assets/bbob-mixint/images/bbob-mixint-targets1.png){#fig-a}
 
-![bbob-mixint suite before scaling](../assets/bbob-mixint/images/2.png){#fig-b}
+![bbob-mixint suite before scaling](../assets/bbob-mixint/images/bbob-mixint-targets2.png){#fig-b}
 
-![bbob-mixint suite](../assets/bbob-mixint/images/3.png){#fig-c}
+![bbob-mixint suite](../assets/bbob-mixint/images/bbob-mixint-targets3.png){#fig-c}
 
 Estimation of targets reached by the domain middle (in logarithmic scale). They are computed as the distance between
 the f -value of the domain middle and the optimal solution for the bbob suite (a), or the median of the distances between the
