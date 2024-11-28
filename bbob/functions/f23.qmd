@@ -51,7 +51,7 @@ print(problem.info)
 Sometimes it can be useful to access a `bbob` problem without using it in a benchmarking experiment. For such needs, the problem can be instantiated for any instance number and dimension using the `BareProblem`
 interface. Note that the bare problem *cannot be observed/logged*. 
 
-```python
+```{python}
 import cocoex
 
 problem = cocoex.BareProblem(
