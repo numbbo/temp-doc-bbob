@@ -5,6 +5,7 @@ project:
     port: 4205
     browser: false
   resources: 
+    - env.yml
     - "assets/**/*"
   render:
     - "*.qmd"

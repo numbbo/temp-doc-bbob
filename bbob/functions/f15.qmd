@@ -1,5 +1,10 @@
 ---
 title: "f<sub>15</sub>: Rastrigin"
+format:
+  html:
+    include-after-body: 
+      - text: <script type="text/javascript" defer src="/assets/js/helpers.js"></script>
+      - text: <script type="text/javascript" defer src="/assets/js/viz-bbob-grid-plots.js"></script>
 ---
 <div id="text-f15">
 
@@ -7,6 +12,13 @@ $$f_{15}(\mathbf{x}) = 10 \left(D- \sum_{i = 1}^{D}\cos(2\pi z_i)\right)
     + \|\mathbf{z}\|^2 + f_\mathrm{opt}$$
 
 -   $\mathbf{z}= \mathbf{R}\Lambda^{\!10}\mathbf{Q}\,T^{{0.2}}_\mathrm{asy}(T_\mathrm{\hspace*{-0.01emosz}}(\mathbf{R}(\mathbf{x}-\mathbf{x^\mathrm{opt}})))$
+
+<details>
+<summary>**Symbols and definitions:**</summary>
+
+{{< include ../symbols.md >}}
+
+</details>
 
 **Properties:**
 
@@ -27,3 +39,46 @@ of the original Rastrigin function.
 -   in comparison to f<sub>3</sub>: What is the effect of non-separability for a
     highly multimodal function?
 </div>
+
+
+## Selected Problem Visualizations 
+
+Click on a plot to see the same visualization for other problem instances.
+
+<div id="plot-grid" class="plot-grid" data-num="15" ></div>
+
+## Python Usage Examples
+
+To limit benchmarking experiments only to the first ten instances of this problem from 2009 in dimensions 
+2 and 20, instantiate the `Suite` as follows:
+
+```{python}
+import cocoex
+
+suite = cocoex.Suite(
+  suite_name="bbob", 
+  suite_instance="year: 2009", 
+  suite_options="function_indices: 15 instance_indices: 1-10 dimensions: 2,20"
+)
+problem = suite[0]
+print(problem.info)  
+```
+
+Sometimes it can be useful to access a `bbob` problem without using it in a benchmarking experiment. For such needs, the problem can be instantiated for any instance number and dimension using the `BareProblem`
+interface. Note that the bare problem *cannot be observed/logged*. 
+
+```python
+import cocoex
+
+problem = cocoex.BareProblem(
+  suite_name="bbob", 
+  function=15, 
+  dimension=14, 
+  instance=42
+)
+problem(14 * [0])
+```
+
+## C Implementation
+
+You can find the C implementation of the problem [here](https://github.com/numbbo/coco-experiment/blob/main/src/f_rastrigin.c).

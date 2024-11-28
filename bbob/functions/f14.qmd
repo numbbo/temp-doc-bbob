@@ -1,5 +1,10 @@
 ---
 title: "f<sub>14</sub>: Sum of Different Powers"
+format:
+  html:
+    include-after-body: 
+      - text: <script type="text/javascript" defer src="/assets/js/helpers.js"></script>
+      - text: <script type="text/javascript" defer src="/assets/js/viz-bbob-grid-plots.js"></script>
 ---
 <div id="text-f14">
 
@@ -7,8 +12,58 @@ $$f_{14}(\mathbf{x}) = \sqrt{\sum_{i = 1}^{D}|z_i|^{2+4\frac{i - 1}{D- 1}}} + f_
 
 -   $\mathbf{z}= \mathbf{R}(\mathbf{x}- \mathbf{x^\mathrm{opt}})$
 
+<details>
+<summary>**Symbols and definitions:**</summary>
+
+{{< include ../symbols.md >}}
+
+</details>
+
 **Properties:**
 
 Due to the different exponents the sensitivies of the $z_i$-variables
 become more and more different when approaching the optimum.
 </div>
+
+
+## Selected Problem Visualizations 
+
+Click on a plot to see the same visualization for other problem instances.
+
+<div id="plot-grid" class="plot-grid" data-num="14" ></div>
+
+## Python Usage Examples
+
+To limit benchmarking experiments only to the first ten instances of this problem from 2009 in dimensions 
+2 and 20, instantiate the `Suite` as follows:
+
+```{python}
+import cocoex
+
+suite = cocoex.Suite(
+  suite_name="bbob", 
+  suite_instance="year: 2009", 
+  suite_options="function_indices: 14 instance_indices: 1-10 dimensions: 2,20"
+)
+problem = suite[0]
+print(problem.info)  
+```
+
+Sometimes it can be useful to access a `bbob` problem without using it in a benchmarking experiment. For such needs, the problem can be instantiated for any instance number and dimension using the `BareProblem`
+interface. Note that the bare problem *cannot be observed/logged*. 
+
+```python
+import cocoex
+
+problem = cocoex.BareProblem(
+  suite_name="bbob", 
+  function=14, 
+  dimension=14, 
+  instance=42
+)
+problem(14 * [0])
+```
+
+## C Implementation
+
+You can find the C implementation of the problem [here](https://github.com/numbbo/coco-experiment/blob/main/src/f_different_powers.c).

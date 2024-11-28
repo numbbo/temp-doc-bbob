@@ -32,7 +32,7 @@ Click on <b>Dimension</b>/<b>Function</b>/<b>Instance</b>/<b>Visualization type<
     <tr><td align="center" onclick="selectNode(this)" id="funAll" class="off"><b>Function</b></td></tr>
     <tr><td class="select" align="center">
     <button id="funPrev" onclick="getPrev(this)" class="button">&minus;</button>
-    <select id="fun" onchange="changePlot()" class="dropdown" style="width:220px;height:30px;"></select>
+    <select id="fun" onchange="changePlot()" class="dropdown" style="width:200px;height:30px;"></select>
     <button id="funNext" onclick="getNext(this)" class="button">+</button>
     </td></tr>
   </table></div>
@@ -48,13 +48,11 @@ Click on <b>Dimension</b>/<b>Function</b>/<b>Instance</b>/<b>Visualization type<
     <tr><td align="center" onclick="selectNode(this)" id="typAll" class="on"><b>Visualization type</b></td></tr>
     <tr><td class="select" align="center">
     <button id="typPrev" onclick="getPrev(this)" class="button"><i class="arrow left"></i></button>
-    <select id="typ" onchange="changePlot()" style="width:220px;height:30px;"></select>
+    <select id="typ" onchange="changePlot()" style="width:200px;height:30px;"></select>
     <button id="typNext" onclick="getNext(this)" class="button"><i class="arrow right"></i></button>
     </td></tr>
   </table></div>
 </div>
-
-<!-- <textarea id="result" num=7></textarea> -->
 
 <div id="images" width=100%></div>
 

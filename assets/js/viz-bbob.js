@@ -6,26 +6,26 @@ var allNodes = ["dimAll", "funAll", "insAll", "typAll"];
 var selectedNode = "typAll";
 var valuesDim = ["2", "3", "5", "10", "20", "40"];
 var valuesFun = [];
-for (let i = 1; i <= 24; i++) {valuesFun.push(i);}
+for (var i = 1; i <= 24; i++) {valuesFun.push(i);}
 var labelsFun = [
 	"f1 - Sphere",
 	"f2 - Ellipsoid separable",
 	"f3 - Rastrigin separable",
-	"f4 - Skew Rastrigin-Büche",
+	"f4 - Skew Rastrigin-Bueche",
 	"f5 - Linear slope",
 	"f6 - Attractive sector",
-	"f7 - Step ellipsoid",
-	"f8 - Rosenbrock, original",
-	"f9 - Rosenbrock, rotated",
+	"f7 - Step-ellipsoid",
+	"f8 - Rosenbrock original",
+	"f9 - Rosenbrock rotated",
 	"f10 - Ellipsoid",
 	"f11 - Discus",
 	"f12 - Bent cigar",
 	"f13 - Sharp ridge",
-	"f14 - Different powers",
+	"f14 - Sum of different powers",
 	"f15 - Rastrigin",
 	"f16 - Weierstrass",
-	"f17 - Schaffer F7 (condition 10)",
-	"f18 - Schaffer F7 (condition 1000)",
+	"f17 - Schaffer F7, condition 10",
+	"f18 - Schaffer F7, condition 1000",
 	"f19 - Griewank-Rosenbrock F8F2",
 	"f20 - Schwefel x*sin(x)",
 	"f21 - Gallagher 101 peaks",
@@ -34,9 +34,9 @@ var labelsFun = [
 	"f24 - Lunacek bi-Rastrigin"
 ];
 var valuesIns = [];
-for (let i = 1; i <= 15; i++) {valuesIns.push(i);}
+for (var i = 1; i <= 15; i++) {valuesIns.push(i);}
 var valuesCol = [];
-for (let i = 1; i <= 10; i++) {valuesCol.push(i);}
+for (var i = 1; i <= 10; i++) {valuesCol.push(i);}
 var params = ["col", "dim", "fun", "ins", "typ"];
 
 /* Fill the table with values from the URL parameters. If any are missing, use the defaults (all plot types are shown,
@@ -47,7 +47,7 @@ window.onload=function() {
     fill_options("dim", valuesDim, valuesDim, "2");
     fill_options("fun", valuesFun, labelsFun, "1");
     fill_options("ins", valuesIns, valuesIns, "1");
-    fill_options("typ", valuesTyp, labelsTyp, "cuts-lin-lin");
+    fill_options("typ", valuesTyp, labelsTyp, "level-sets");
 
     for (var i = 0; i < params.length; i++) {
         var value = getParam(params[i]);
@@ -57,11 +57,12 @@ window.onload=function() {
     }
     selectNode(document.getElementById(selectedNode));
 
-    /* Hide all groups */
-	for (let i = 1; i <= 5; i++) {
+    /* Hide all groups 
+	*** No longer needed as we are not showing the function definitions below ***
+	for (var i = 1; i <= 5; i++) {
 		textName = "text-g" + i;
 		document.getElementById(textName).setAttribute("style", "display:none;");
-	}
+	} */
 }
 
 /* Create a string with all options according to the given subject, values, labels and default value */
@@ -71,7 +72,7 @@ function fill_options(name, values, labels, default_value) {
     if ((!value) || (value === "all")) {
         value = default_value;
     }
-    for (let i = 0; i < values.length; i++) {
+    for (var i = 0; i < values.length; i++) {
         contents += "<option value=\"" + values[i] + "\">" + labels[i] + "</option>";
     }
     document.getElementById(name).innerHTML = contents;
@@ -80,14 +81,13 @@ function fill_options(name, values, labels, default_value) {
 
 /* Adds the plot to the div */
 function addPlot(plotName) {
-	let plotWidth = 100 / col.value;
+	var plotWidth = 100 / col.value;
 	var elemDiv = document.createElement('div');
 	var elemA = document.createElement('a');
 	var elemImg = document.createElement("img");
 	elemDiv.setAttribute("style", "display:inline-block; width:" + plotWidth + "%;");
 	elemA.setAttribute("href", plotPath + plotName);
 	elemImg.setAttribute("src", plotPath + plotName);
-	elemImg.setAttribute("alt", "");
 	elemImg.setAttribute("style", "width:100%;");
 	elemA.appendChild(elemImg);
 	elemDiv.appendChild(elemA);
@@ -98,12 +98,12 @@ function addPlot(plotName) {
 Exactly one of these categories contains all possible values, the rest only the
 chosen one. */
 function changePlot() {
-	let plotName;
-	let chosenDim = [dim.value];
-	let chosenFun = [fun.value];
-	let chosenIns = [ins.value];
-	let chosenTyp = [typ.value];
-	let textName;
+	var plotName;
+	var chosenDim = [dim.value];
+	var chosenFun = [fun.value];
+	var chosenIns = [ins.value];
+	var chosenTyp = [typ.value];
+	var textName;
 	if (selectedNode === "dimAll") {
 		chosenDim = [...valuesDim];
 	} else if (selectedNode === "funAll") {
@@ -114,28 +114,27 @@ function changePlot() {
 		chosenTyp = [...valuesTyp];
 	}
 	document.getElementById("images").innerHTML = "";
-    // document.getElementById("result").value = "";
-	for (let iDim = 0; iDim < chosenDim.length; iDim++) {
-		for (let iFun = 0; iFun < chosenFun.length; iFun++) {
-			for (let iIns = 0; iIns < chosenIns.length; iIns++) {
-				for (let iTyp = 0; iTyp < chosenTyp.length; iTyp++) {
+	for (var iDim = 0; iDim < chosenDim.length; iDim++) {
+		for (var iFun = 0; iFun < chosenFun.length; iFun++) {
+			for (var iIns = 0; iIns < chosenIns.length; iIns++) {
+				for (var iTyp = 0; iTyp < chosenTyp.length; iTyp++) {
 					plotName = chosenTyp[iTyp] + "-500/bbob_f" + pad(chosenFun[iFun], 1) + "_i" + pad(chosenIns[iIns], 0) + "_d" + pad(chosenDim[iDim], 0) + "_" + pad(chosenTyp[iTyp], 0) + ".png";
 					addPlot(plotName);
-					// document.getElementById("result").value += plotName + "\n";
 				}
 			}
 		}
 	}
 	/* Make sure only the correct plot descriptions are shown */
-	let allTextNames = ["text-cuts", "text-heatmap", "text-heatmap-rank", "text-surface"];
-	let chosenTextName = chosenTyp[0].includes("cuts") ? "text-cuts" : "text-" + chosenTyp[0];
+	var allTextNames = ["text-cuts", "text-level-sets", "text-heatmap-rank", "text-surface"];
+	var chosenTextName = chosenTyp[0].includes("cuts") ? "text-cuts" : "text-" + chosenTyp[0];
 
 	allTextNames.forEach(textName => {
 		document.getElementById(textName).style.display = (selectedNode === "typAll" || textName === chosenTextName) ? "block" : "none";
 	});
 
-	/* Make sure only the correct function description is shown */
-	for (let iFun = 0; iFun < valuesFun.length; iFun++) {
+	/* Make sure only the correct function description is shown 
+	*** No longer needed as we are not showing the function definitions below ***
+	for (var iFun = 0; iFun < valuesFun.length; iFun++) {
 		textName = "text-f" + valuesFun[iFun];
 		if ((selectedNode === "funAll") || (valuesFun[iFun] == chosenFun[0])) {
 			document.getElementById(textName).setAttribute("style", "display:block;");
@@ -143,7 +142,7 @@ function changePlot() {
 		else {
 			document.getElementById(textName).setAttribute("style", "display:none;");
 		}
-	}
+	} */
 	
 	/* Reflect the current state in the URL parameters */
 	setAllParams();
@@ -151,9 +150,9 @@ function changePlot() {
 
 /* Move the dropdown selection to the previous item in the list */
 function getPrev(ele) {
-	let select = document.getElementById(ele.id.substring(0, 3));
-	let len = select.length;
-	let curr_index = select.selectedIndex;
+	var select = document.getElementById(ele.id.substring(0, 3));
+	var len = select.length;
+	var curr_index = select.selectedIndex;
 	if (curr_index > 0) {
 		select.selectedIndex--;
 	} else {
@@ -164,9 +163,9 @@ function getPrev(ele) {
 
 /* Move the dropdown selection to the next item in the list */
 function getNext(ele) {
-	let select = document.getElementById(ele.id.substring(0, 3));
-	let len = select.length;
-	let curr_index = select.selectedIndex;
+	var select = document.getElementById(ele.id.substring(0, 3));
+	var len = select.length;
+	var curr_index = select.selectedIndex;
 	if (curr_index < len - 1) {
 		select.selectedIndex++;
 	} else {
@@ -194,7 +193,7 @@ function disableElements(ele, mode) {
 /* Select the table cell */
 function selectNode(node) {
   	selectedNode = node.id;
-	for (let i = 0; i < allNodes.length; i++) {
+	for (var i = 0; i < allNodes.length; i++) {
 		if (selectedNode === allNodes[i]) {
 			document.getElementById(allNodes[i]).className = "on";
 		  disableElements(allNodes[i].substring(0, 3), true);

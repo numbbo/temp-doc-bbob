@@ -1,5 +1,10 @@
 ---
 title: "f<sub>17</sub>: Schaffer F7, Condition 10"
+format:
+  html:
+    include-after-body: 
+      - text: <script type="text/javascript" defer src="/assets/js/helpers.js"></script>
+      - text: <script type="text/javascript" defer src="/assets/js/viz-bbob-grid-plots.js"></script>
 ---
 <div id="text-f17">
 
@@ -10,6 +15,13 @@ $$f_{17}(\mathbf{x}) = \left(\frac{1}{D- 1}\sum_{i = 1}^{D- 1} \sqrt{s_i} +
 
 -   $s_i = \sqrt{z_i^2 + z_{i+1}^2}$ for $i=1,\dots,D$
 
+<details>
+<summary>**Symbols and definitions:**</summary>
+
+{{< include ../symbols.md >}}
+
+</details>
+
 **Properties:**
 
 A highly multimodal function where frequency and amplitude of the
@@ -19,3 +31,46 @@ modulation vary.
 
 -   conditioning is low
 </div>
+
+
+## Selected Problem Visualizations 
+
+Click on a plot to see the same visualization for other problem instances.
+
+<div id="plot-grid" class="plot-grid" data-num="17" ></div>
+
+## Python Usage Examples
+
+To limit benchmarking experiments only to the first ten instances of this problem from 2009 in dimensions 
+2 and 20, instantiate the `Suite` as follows:
+
+```{python}
+import cocoex
+
+suite = cocoex.Suite(
+  suite_name="bbob", 
+  suite_instance="year: 2009", 
+  suite_options="function_indices: 17 instance_indices: 1-10 dimensions: 2,20"
+)
+problem = suite[0]
+print(problem.info)  
+```
+
+Sometimes it can be useful to access a `bbob` problem without using it in a benchmarking experiment. For such needs, the problem can be instantiated for any instance number and dimension using the `BareProblem`
+interface. Note that the bare problem *cannot be observed/logged*. 
+
+```python
+import cocoex
+
+problem = cocoex.BareProblem(
+  suite_name="bbob", 
+  function=17, 
+  dimension=14, 
+  instance=42
+)
+problem(14 * [0])
+```
+
+## C Implementation
+
+You can find the C implementation of the problem [here](https://github.com/numbbo/coco-experiment/blob/main/src/f_schaffers.c).

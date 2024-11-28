@@ -46,15 +46,14 @@ table {
 .wrapper {
   display: flex;
   flex-wrap: wrap;
-  /*grid-template-columns: 1fr 3fr 1fr 3fr;*/
 }
 
 .wrapper .col1 {
-  flex: 12.5%;
+  flex: 15%;
 }
 
 .wrapper .col3 {
-  flex: 37.5%;
+  flex: 35%;
 }
 
 @media only screen and (max-width: 1200px) {

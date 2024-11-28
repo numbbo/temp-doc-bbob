@@ -1,5 +1,10 @@
 ---
 title: "f<sub>8</sub>: Rosenbrock Original"
+format:
+  html:
+    include-after-body: 
+      - text: <script type="text/javascript" defer src="/assets/js/helpers.js"></script>
+      - text: <script type="text/javascript" defer src="/assets/js/viz-bbob-grid-plots.js"></script>
 ---
 <div id="text-f8">
 
@@ -8,6 +13,13 @@ $$f_{8}(\mathbf{x}) = \sum_{i = 1}^{D-1} \left( 100\,\left(z_i^2 - z_{i+1}\right
 -   $\mathbf{z}= \max\!\left(1,\frac{\sqrt{D}}{8}\right)(\mathbf{x}- \mathbf{x^\mathrm{opt}}) + 1$
 
 -   $\mathbf{z^\mathrm{opt}}=\mathbf{1}$
+
+<details>
+<summary>**Symbols and definitions:**</summary>
+
+{{< include ../symbols.md >}}
+
+</details>
 
 **Properties:**
 
@@ -27,3 +39,46 @@ $\mathbf{x^\mathrm{opt}}\in[-3,3]^D$.
 -   Can the search follow a long path with $D-1$ changes in
     the direction?
 </div>
+
+
+## Selected Problem Visualizations 
+
+Click on a plot to see the same visualization for other problem instances.
+
+<div id="plot-grid" class="plot-grid" data-num="8" ></div>
+
+## Python Usage Examples
+
+To limit benchmarking experiments only to the first ten instances of this problem from 2009 in dimensions 
+2 and 20, instantiate the `Suite` as follows:
+
+```{python}
+import cocoex
+
+suite = cocoex.Suite(
+  suite_name="bbob", 
+  suite_instance="year: 2009", 
+  suite_options="function_indices: 8 instance_indices: 1-10 dimensions: 2,20"
+)
+problem = suite[0]
+print(problem.info)  
+```
+
+Sometimes it can be useful to access a `bbob` problem without using it in a benchmarking experiment. For such needs, the problem can be instantiated for any instance number and dimension using the `BareProblem`
+interface. Note that the bare problem *cannot be observed/logged*. 
+
+```python
+import cocoex
+
+problem = cocoex.BareProblem(
+  suite_name="bbob", 
+  function=8, 
+  dimension=14, 
+  instance=42
+)
+problem(14 * [0])
+```
+
+## C Implementation
+
+You can find the C implementation of the problem [here](https://github.com/numbbo/coco-experiment/blob/main/src/f_rosenbrock.c).

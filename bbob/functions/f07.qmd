@@ -1,5 +1,10 @@
 ---
 title: "f<sub>7</sub>: Step-Ellipsoid"
+format:
+  html:
+    include-after-body: 
+      - text: <script type="text/javascript" defer src="/assets/js/helpers.js"></script>
+      - text: <script type="text/javascript" defer src="/assets/js/viz-bbob-grid-plots.js"></script>
 ---
 <div id="text-f7">
 
@@ -13,6 +18,13 @@ $$f_{7}(\mathbf{x}) = 0.1 \max\left(|\hat{z}_1|/10^4,\, \sum_{i = 1}^{D}
 
 -   $\mathbf{z}= \mathbf{Q}\tilde{\mathbf{z}}$
 
+<details>
+<summary>**Symbols and definitions:**</summary>
+
+{{< include ../symbols.md >}}
+
+</details>
+
 **Properties:**
 
 The function consists of many plateaus of different sizes. Apart from a
@@ -25,3 +37,46 @@ everywhere.
 
 -   Does the search get stuck on plateaus?
 </div>
+
+
+## Selected Problem Visualizations 
+
+Click on a plot to see the same visualization for other problem instances.
+
+<div id="plot-grid" class="plot-grid" data-num="7" ></div>
+
+## Python Usage Examples
+
+To limit benchmarking experiments only to the first ten instances of this problem from 2009 in dimensions 
+2 and 20, instantiate the `Suite` as follows:
+
+```{python}
+import cocoex
+
+suite = cocoex.Suite(
+  suite_name="bbob", 
+  suite_instance="year: 2009", 
+  suite_options="function_indices: 7 instance_indices: 1-10 dimensions: 2,20"
+)
+problem = suite[0]
+print(problem.info)  
+```
+
+Sometimes it can be useful to access a `bbob` problem without using it in a benchmarking experiment. For such needs, the problem can be instantiated for any instance number and dimension using the `BareProblem`
+interface. Note that the bare problem *cannot be observed/logged*. 
+
+```python
+import cocoex
+
+problem = cocoex.BareProblem(
+  suite_name="bbob", 
+  function=7, 
+  dimension=14, 
+  instance=42
+)
+problem(14 * [0])
+```
+
+## C Implementation
+
+You can find the C implementation of the problem [here](https://github.com/numbbo/coco-experiment/blob/main/src/f_step_ellipsoid.c).
