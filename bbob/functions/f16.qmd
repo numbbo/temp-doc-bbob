@@ -1,0 +1,28 @@
+---
+title: "f<sub>16</sub>: Weierstrass"
+---
+<div id="text-f16">
+
+$$f_{16}(\mathbf{x}) = 10 \left( \frac{1}{D} 
+   \sum_{i = 1}^{D}\sum_{k = 0}^{11} 1/2^k \cos(2\pi3^k(z_i + 1/2))
+            - f_0 \right)^3 + \frac{10}{D}f_{\mathrm{pen}}(\mathbf{x}) + f_\mathrm{opt}$$
+
+-   $\mathbf{z}= \mathbf{R}\Lambda^{\!1/100}\mathbf{Q}\,T_\mathrm{\hspace*{-0.01emosz}}(\mathbf{R}(\mathbf{x}-\mathbf{x^\mathrm{opt}}))$
+
+-   $f_0 = \sum_{k = 0}^{11} 1/2^k \cos(2\pi3^k 1/2)$
+
+**Properties:**
+
+Highly rugged and moderately repetitive landscape, where the global
+optimum is not unique.
+
+-   the term $\sum_k 1/2^k \cos(2\pi3^k\dots)$ introduces the
+    ruggedness, where lower frequencies have a larger weight $1/2^k$.
+
+-   rotated, locally irregular, non-unique global optimum
+
+**Information gained from this function:**
+
+-   in comparison to f<sub>17</sub>: Does ruggedness or a repetitive landscape
+    deter the search behavior?
+</div>

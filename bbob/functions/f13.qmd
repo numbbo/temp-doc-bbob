@@ -1,0 +1,24 @@
+---
+title: " f<sub>13</sub>: Sharp Ridge"
+---
+<div id="text-f13">
+
+$$f_{13}(\mathbf{x}) = z_1^2 + 100\,\sqrt{\sum_{i = 2}^{D} z_i^2} + f_\mathrm{opt}$$
+
+-   $\mathbf{z}= \mathbf{Q}\Lambda^{\!10}\mathbf{R}(\mathbf{x}- \mathbf{x^\mathrm{opt}})$
+
+**Properties:**
+
+As for the Bent Cigar function, a ridge defined as
+$\sum_{i=2}^D z_i^2 = 0$ must be followed. The ridge is
+non-differentiable and the gradient is constant when the ridge is
+approached from any given point. Following the gradient becomes
+ineffective close to the ridge where the ridge needs to be followed in
+$z_1$-direction to its optimum. The necessary change in "search
+behavior" close to the ridge is difficult to diagnose, because the
+gradient towards the ridge does not flatten out.\
+**Information gained from this function:**
+
+-   In comparison to f<sub>12</sub>: What is the effect of non-smoothness,
+    non-differentiabale ridge?
+</div>

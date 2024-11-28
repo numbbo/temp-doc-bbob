@@ -1,0 +1,29 @@
+---
+title: "f<sub>15</sub>: Rastrigin"
+---
+<div id="text-f15">
+
+$$f_{15}(\mathbf{x}) = 10 \left(D- \sum_{i = 1}^{D}\cos(2\pi z_i)\right) 
+    + \|\mathbf{z}\|^2 + f_\mathrm{opt}$$
+
+-   $\mathbf{z}= \mathbf{R}\Lambda^{\!10}\mathbf{Q}\,T^{{0.2}}_\mathrm{asy}(T_\mathrm{\hspace*{-0.01emosz}}(\mathbf{R}(\mathbf{x}-\mathbf{x^\mathrm{opt}})))$
+
+**Properties:**
+
+Prototypical highly multimodal function which has originally a very
+regular and symmetric structure for the placement of the optima. The
+transformations $T^{{}}_\mathrm{asy}$ and
+$T_\mathrm{\hspace*{-0.01em}osz}$ alleviate the symmetry and regularity
+of the original Rastrigin function.
+
+-   non-separable less regular counterpart of $f_3$
+
+-   roughly $10^D$ local optima
+
+-   conditioning is about $10$
+
+**Information gained from this function:**
+
+-   in comparison to f<sub>3</sub>: What is the effect of non-separability for a
+    highly multimodal function?
+</div>

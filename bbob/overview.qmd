@@ -1,0 +1,224 @@
+---
+title: The `bbob` Test Suite
+---
+
+## Introduction
+
+<div class="floater">
+<table class="floater-table">
+  <tr>
+    <td style="width: 260px;">
+    f<sub>1</sub>: [Sphere](functions/f01.qmd)<br>
+    f<sub>2</sub>: [Ellipsoid separable](functions/f02.qmd)<br>
+    f<sub>3</sub>: [Rastrigin separable](functions/f03.qmd)<br>
+    f<sub>4</sub>: [Skew Rastrigin-Bueche](functions/f04.qmd)<br>
+    f<sub>5</sub>: [Linear slope](functions/f05.qmd)<br>
+    </td>
+    <td>**Separable functions**</td>
+  </tr>
+  <tr>
+    <td>
+    f<sub>6</sub>: [Attractive sector](functions/f06.qmd)<br>
+    f<sub>7</sub>: [Step-ellipsoid](functions/f07.qmd)<br>
+    f<sub>8</sub>: [Rosenbrock original](functions/f08.qmd)<br>
+    f<sub>9</sub>: [Rosenbrock rotated](functions/f09.qmd)<br>
+    </td>
+    <td>**Functions with low or moderate conditioning**</td>
+  </tr>
+  <tr>
+    <td>
+    f<sub>10</sub>: [Ellipsoid](functions/f10.qmd)<br>
+    f<sub>11</sub>: [Discus](functions/f11.qmd)<br>
+    f<sub>12</sub>: [Bent cigar](functions/f12.qmd)<br>
+    f<sub>13</sub>: [Sharp ridge](functions/f13.qmd)<br>
+    f<sub>14</sub>: [Sum of different powers](functions/f14.qmd)<br>
+    </td>
+    <td>**Functions with high conditioning and unimodal**</td>
+  </tr>
+  <tr>
+    <td>
+    f<sub>15</sub>: [Rastrigin](functions/f15.qmd)<br>
+    f<sub>16</sub>: [Weierstrass](functions/f16.qmd)<br>
+    f<sub>17</sub>: [Schaffer F7, condition 10](functions/f17.qmd)<br>
+    f<sub>18</sub>: [Schaffer F7, condition 1000](functions/f18.qmd)<br>
+    f<sub>19</sub>: [Griewank-Rosenbrock F8F2](functions/f19.qmd)<br>
+    </td>
+    <td>**Multi-modal functions with adequate global structure**</td>
+  </tr>
+  <tr>
+    <td>
+    f<sub>20</sub>: [Schwefel x*sin(x)](functions/f20.qmd)<br>
+    f<sub>21</sub>: [Gallagher 101 peaks](functions/f21.qmd)<br>
+    f<sub>22</sub>: [Gallagher 21 peaks](functions/f22.qmd)<br>
+    f<sub>23</sub>: [Katsuura](functions/f23.qmd)<br>
+    f<sub>24</sub>: [Lunacek bi-Rastrigin](functions/f24.qmd)<br>
+    </td>
+    <td>**Multi-modal functions with weak global structure**</td>
+  </tr>
+</table>
+</div>
+
+This is an online-friendly presentation of the `bbob` functions, based on 
+the BBOB 2009 function document [@bbob2019]. You may cite this work 
+in a scientific context using
+
+```bibtex
+@techreport{bbob2019,
+    author = {Finck, Steffen and Hansen, Nikolaus and Ros, Raymond and Auger, Anne},
+    title = {Real-Parameter Black-Box Optimization Benchmarking 2009: Noiseless Functions Definitions},
+    institution = {INRIA},
+    year = {2009},
+    number = {RR-6829},
+    note = {Updated version as of February 2019},
+    url = {https://inria.hal.science/inria-00362633v2/document}
+}
+```
+
+We present here 24 noise-free real-parameter single-objective
+benchmark functions (see [@hansen2016exp; @hansen2009exp] 
+for our experimental setup and [@hansen2022performance] for our performance 
+assessment methodology). Our intention behind the
+selection of benchmark functions was to evaluate the performance of
+algorithms with regard to typical difficulties which we believe occur in
+continuous domain search. We hope that the function collection reflects,
+at least to a certain extend and with a few exceptions, a more difficult
+portion of the problem distribution that will be seen in practice (easy
+functions are evidently of lesser interest).
+
+We prefer benchmark functions that are comprehensible such that
+algorithm behaviors can be understood in the topological context. In
+this way, a desired search behavior can be pictured and deficiencies of
+algorithms can be profoundly analyzed. Last but not least, this can
+eventually lead to a systematic improvement of algorithms.
+
+All benchmark functions are scalable with the dimension. Most functions
+have no specific value of their optimal solution (they are randomly
+shifted in $x$-space). All functions have an artificially chosen optimal
+function value (they are randomly shifted in $f$-space). Consequently,
+for each function different *instances* can be generated: for each
+instance the randomly chosen values are drawn anew^[The implementation provides an instance ID as input, such that a set of uniquely specified instances can be explicitly chosen.]. Apart from the
+first subgroup, the benchmarks are non-separable. Other specific
+properties are discussed in [Function Properties](#function-properties).
+
+## General Setup
+
+#### Search Space
+
+All functions are defined and can be evaluated over
+$\mathcal{R}^{D}$, while the actual search
+domain is given as $[-5,5]^{D}$.
+
+#### Location of the Optimal $\mathbf{x}^\mathrm{opt}$ and of $f_\mathrm{opt}=f(\mathbf{x^\mathrm{opt}})$
+
+All functions have their global optimum in $[-5,5]^{D}$.
+The majority of functions has the global optimum in
+$[-4,4]^{D}$ and for many of them
+$\mathbf{x}^\mathrm{opt}$ is drawn uniformly from this compact. The
+value for $f_\mathrm{opt}$ is drawn from a Cauchy distributed random
+variable, with zero median and with roughly 50% of the values between
+-100 and 100. The value is rounded after two decimal places and set to
+$\pm1000$ if its absolute value exceeds $1000$. In the function
+definitions a transformed variable vector $\mathbf{z}$ is
+often used instead of the argument $\mathbf{x}$. The vector
+$\mathbf{z}$ has its optimum in
+$\mathbf{z^\mathrm{opt}}=\mathbf{0}$, if not
+stated otherwise.
+
+#### Boundary Handling
+
+On some functions a penalty boundary handling is applied as given with
+$f^{{}}_\mathrm{pen}$ (see [Symbols and definitions](#symbols-and-definitions)).
+
+#### Linear Transformations
+
+Linear transformations of the search space are applied to derive
+non-separable functions from separable ones and to control the
+conditioning of the function.
+
+#### *Non-Linear Transformations and Symmetry Breaking
+
+In order to make relatively simple, but well understood functions less
+regular, on some functions non-linear transformations are applied in
+$x$- or $f$-space. Both transformations
+$T_\mathrm{\hspace*{-0.01emosz}}:\mathcal{R}^n\to\mathcal{R}^n$,
+$n\in\{1,D\}$, and
+$T_\mathrm{asy}:\mathcal{R}^D\to\mathcal{R}^D$
+are defined coordinate-wise (see [Symbols and definitions](#symbols-and-definitions)). They are smooth and have,
+coordinate-wise, a strictly positive derivative. 
+They are shown in @fig-bbob-trans.
+$T_\mathrm{osz}$ is oscillating about the
+identity, where the oscillation is scale invariant w.r.t. the origin.
+$T^{{}}_\mathrm{asy}$ is the identity for negative values. When
+$T^{{}}_\mathrm{asy}$ is applied, a portion of $1/2^D$ of
+the search space remains untransformed.
+
+![$T_\mathrm{osz}$ (blue) and $D$-th coordinate of $T_\mathrm{asy}$ for
+$\beta = 0.1, 0.2, 0.5$ (green)](../assets/images/bbob-transformations.png){#fig-bbob-trans width=80% fig-align="left"}
+
+
+## Symbols and Definitions
+
+{{< include symbols.md >}}
+
+## Function properties
+
+#### Deceptive Functions
+
+All "deceptive" functions provide, beyond their deceptivity, a
+"structure" that can be exploited to solve them in a reasonable
+procedure.
+
+#### Ill-Conditioning
+
+Ill-conditioning is a typical challenge in real-parameter optimization
+and, besides multimodality, probably the most common one. Conditioning
+of a function can be rigorously formalized in the case of convex
+quadratic functions,
+$f({\mathbf{x}}) =\frac12 {\mathbf{x}}^{T} {\mathbf{H}}{\mathbf{x}}$
+where ${\mathbf{H}}$ is a symmetric definite positive matrix,
+as the condition number of the Hessian matrix ${\mathbf{H}}$.
+Since contour lines associated to a convex quadratic function are
+ellipsoids, the condition number corresponds to the square root of the
+ratio between the largest axis of the ellipsoid and the shortest axis.
+For more general functions, conditioning loosely refers to the square of
+the ratio between the largest direction and smallest of a contour line.
+The testbed contains ill-conditioned functions with a typical
+conditioning of $10^6$. We believe this a realistic requirement, while
+we have seen practical problems with conditioning as large as $10^{10}$.
+
+#### Regularity
+
+Functions from simple formulas are often highly regular. We have used a
+non-linear transformation, $T_\mathrm{\hspace*{-0.01em}osz}$, in order
+to introduce small, smooth but clearly visible irregularities.
+Furthermore, the testbed contains a few highly irregular functions.
+
+#### Separability
+
+In general, separable functions pose an essentially different search
+problem to solve, because the search process can be reduced to
+$D$ one-dimensional search procedures. Consequently, non-separable
+problems must be considered much more difficult and most benchmark
+functions are designed being non-separable. The typical well-established
+technique to generate non-separable functions from separable ones is the
+application of a rotation matrix $\mathcal{R}$.
+
+#### Symmetry
+
+Stochastic search procedures often rely on Gaussian distributions to
+generate new solutions and it has been argued that symmetric benchmark
+functions could be in favor of these operators. To avoid a bias in favor
+of highly symmetric operators we have used a symmetry breaking
+transformation, $T^{{}}_\mathrm{asy}$. We have also included some highly
+asymmetric functions.
+
+#### Target function value to reach
+
+The typical target function value for all functions is
+${f_\mathrm{opt}}+{10^{-8}}$. On many functions a
+value of ${f_\mathrm{opt}}+1$ is not very difficult to reach,
+but the difficulty versus function value is not uniform for all
+functions. These properties are not intrinsic, that is
+${f_\mathrm{opt}}+{10^{-8}}$ is not intrinsically
+"very good". The value mainly reflects a scalar multiplier in the
+function definition.

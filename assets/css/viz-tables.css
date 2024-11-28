@@ -66,7 +66,6 @@ table {
   }
 }
 
-
 @media only screen and (max-width: 800px) {
   .wrapper .col1 {
     flex: 100%;
@@ -75,6 +74,36 @@ table {
     flex: 100%;
   }
 }
+
+.plot-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.plot {
+  box-sizing: border-box;
+  padding: 10px;
+}
+.plot img {
+  width: 100%;
+  height: auto;
+}
+
+.floater {
+  float: right;
+  padding: 10pt;
+}
+
+.floater .floater-table {
+  width: 430px; 
+  /*border: none;*/
+}
+
+.floater .floater-table tr,
+.floater .floater-table td {
+  padding: 5px;
+}
+
 select {
   /* for Firefox */
   -moz-appearance: none;

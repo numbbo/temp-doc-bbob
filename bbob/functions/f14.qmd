@@ -1,0 +1,14 @@
+---
+title: "f<sub>14</sub>: Sum of Different Powers"
+---
+<div id="text-f14">
+
+$$f_{14}(\mathbf{x}) = \sqrt{\sum_{i = 1}^{D}|z_i|^{2+4\frac{i - 1}{D- 1}}} + f_\mathrm{opt}$$
+
+-   $\mathbf{z}= \mathbf{R}(\mathbf{x}- \mathbf{x^\mathrm{opt}})$
+
+**Properties:**
+
+Due to the different exponents the sensitivies of the $z_i$-variables
+become more and more different when approaching the optimum.
+</div>

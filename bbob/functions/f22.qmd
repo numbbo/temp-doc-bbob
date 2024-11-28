@@ -1,0 +1,40 @@
+---
+title: "f<sub>22</sub>: Gallagher 21 Peaks"
+---
+<div id="text-f22">
+
+$$f_{22}(\mathbf{x}) = T_\mathrm{\hspace*{-0.01emosz}}\left( 10 - \max_{i=1}^{21} 
+       w_i \exp\left(-\frac{1}{2D}\, 
+           (\mathbf{x}-\mathbf{y}_i)^{\mathrm{T}}\mathbf{R}^{\mathrm{T}}
+           \mathbf{C}_i \mathbf{R}(\mathbf{x}-\mathbf{y}_i) \right) \right)^2 + f_{\mathrm{pen}}(\mathbf{x}) + f_\mathrm{opt}$$
+
+-   $w_i = \begin{cases}
+                  1.1 + 8 \times\dfrac{i-2}{19} & \text{for~} i=2,\dots,21 \\
+    	      10 & \text{for~} i = 1 
+    	      \end{cases}$, two optima have a value larger than $9$
+
+-   $\mathbf{C}_i=\Lambda^{\!\alpha_i}/\alpha_i^{1/4}$
+    where $\Lambda^{\!\alpha_i}$ is defined as usual (see [Symbols and definitions](#symbols-and-definitions)), 
+-   but with randomly permuted diagonal
+    elements. For $i=2,\dots,21$, $\alpha_i$ is drawn uniformly randomly
+    from the set $\left\{1000^{2\frac{j}{19}} ~|~ j =
+      0,\dots,19\right\}$ without replacement, and $\alpha_i=1000^2$ for
+    $i=1$.
+
+-   the local optima $\mathbf{y}_i$ are uniformly drawn
+    from the domain $[-4.9,4.9]^D$ for $i=2,\dots,21$ and
+    $\mathbf{y}_{1}\in [-3.92,3.92]^D$. The global optimum is at
+    $\mathbf{x^\mathrm{opt}}=\mathbf{y}_1$.
+
+**Properties:**
+
+The function consists of $21$ optima with position and height being
+unrelated and randomly chosen (different for each instantiation of the
+function), based on [@gallagher2006general].
+
+-   the conditioning around the global optimum is about $1000$
+
+**Information gained from this function:**
+
+-   In comparison to f<sub>21</sub>: What is the effect of higher condition?
+</div>

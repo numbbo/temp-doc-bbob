@@ -1,0 +1,27 @@
+---
+title: "f<sub>7</sub>: Step-Ellipsoid"
+---
+<div id="text-f7">
+
+$$f_{7}(\mathbf{x}) = 0.1 \max\left(|\hat{z}_1|/10^4,\, \sum_{i = 1}^{D} 
+                         10^{2\frac{i-1}{D-1}} z_i^2\right) + f_{\mathrm{pen}}(\mathbf{x}) + f_\mathrm{opt}$$
+
+-   $\hat{\mathbf{z}} = \Lambda^{\!10}\mathbf{R}(\mathbf{x}- \mathbf{x^\mathrm{opt}})$
+
+-   $\hat{z_i} = \begin{cases} \lfloor0.5+\hat{z}_i\rfloor &  \text{if~} \left|\hat{z}_i\right| > 0.5 \\ {\lfloor0.5+10\,\hat{z}_i\rfloor}/{10} & \text{otherwise} \end{cases}$ for $i=1,\dots,D$,\
+    denotes the rounding procedure in order to produce the plateaus.
+
+-   $\mathbf{z}= \mathbf{Q}\tilde{\mathbf{z}}$
+
+**Properties:**
+
+The function consists of many plateaus of different sizes. Apart from a
+small area close to the global optimum, the gradient is zero almost
+everywhere.
+
+-   unimodal, non-separable, conditioning is about $100$
+
+**Information gained from this function:**
+
+-   Does the search get stuck on plateaus?
+</div>

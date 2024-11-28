@@ -16,34 +16,59 @@ bibliography: references.bib
 lang: en
 
 website:
-  title: "The bbob test suite"
+  title: The bbob test suite
   open-graph: true
-  favicon: "images/favicon.png"
+  favicon: images/favicon.png
   navbar:
     title: false
     background: primary
     logo: images/favicon.png
   sidebar:
-    style: "docked"
+    style: docked
     contents:
-      - section: "`bbob`"
+      - section: "<code>bbob</code>"
+        href: bbob/overview.qmd
         contents:
-          - text: "Function definitions"
-            href: "bbob/def.html"
-          - text: "Visualizations"
-            href: "bbob/vis.html"
-      - section: "`bbob-noisy`"
+          - text: Problem Visualizations
+            href: bbob/viz.qmd
+          - section: Function Definitions
+            contents:
+              - href: bbob/functions/f01.qmd
+              - href: bbob/functions/f02.qmd
+              - href: bbob/functions/f03.qmd
+              - href: bbob/functions/f04.qmd
+              - href: bbob/functions/f05.qmd
+              - href: bbob/functions/f06.qmd
+              - href: bbob/functions/f07.qmd
+              - href: bbob/functions/f08.qmd
+              - href: bbob/functions/f09.qmd
+              - href: bbob/functions/f10.qmd
+              - href: bbob/functions/f11.qmd
+              - href: bbob/functions/f12.qmd
+              - href: bbob/functions/f13.qmd
+              - href: bbob/functions/f14.qmd
+              - href: bbob/functions/f15.qmd
+              - href: bbob/functions/f16.qmd
+              - href: bbob/functions/f17.qmd
+              - href: bbob/functions/f18.qmd
+              - href: bbob/functions/f19.qmd
+              - href: bbob/functions/f20.qmd
+              - href: bbob/functions/f21.qmd
+              - href: bbob/functions/f22.qmd
+              - href: bbob/functions/f23.qmd
+              - href: bbob/functions/f24.qmd
+      - section: "<code>bbob-noisy</code>"
         contents:
-          - text: "Function definitions"
-            href: "bbob-noisy/def.html"
-          - text: "Visualizations"
-            href: "bbob-noisy/vis.html"
-      - section: "`bbob-mixint`"
+          - text: Function definitions
+            href: bbob-noisy/def.qmd
+          - text: Visualizations
+            href: bbob-noisy/vis.qmd
+      - section: "<code>bbob-mixint</code>"
         contents:
-          - text: "Function definitions"
-            href: "bbob-mixint/def.html"
-          - text: "Visualizations"
-            href: "bbob-mixint/vis.html"
+          - text: Function definitions
+            href: bbob-mixint/def.qmd
+          - text: Visualizations
+            href: bbob-mixint/vis.qmd
   search: 
     location: navbar
     type: overlay
@@ -53,7 +78,7 @@ format:
     toc: true
     toc-depth: 3
     theme: coco.scss
-    css: "assets/css/viz-tables.css"
+    css: assets/css/viz-tables.css
     html-math-method: katex
     code-copy: true
     code-overflow: wrap

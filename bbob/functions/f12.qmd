@@ -1,0 +1,23 @@
+---
+title: "f<sub>12</sub>: Bent Cigar"
+---
+<div id="text-f12">
+
+$$f_{12}(\mathbf{x}) = z_1^2 + 10^6\sum_{i = 2}^{D} z_i^2 + f_\mathrm{opt}$$
+
+-   $\mathbf{z}= \mathbf{R}\,T^{{0.5}}_\mathrm{asy}(\mathbf{R}(\mathbf{x}- \mathbf{x^\mathrm{opt}}))$
+
+**Properties:**
+
+A ridge defined as $\sum_{i=2}^{D} z_i^2 =0$ needs to be
+followed. The ridge is smooth but very narrow. Due to
+$T^{{1/2}}_\mathrm{asy}$ the overall shape deviates remarkably from
+being quadratic.
+
+-   conditioning is about $10^6$, rotated, unimodal
+
+**Information gained from this function:**
+
+-   Can the search continuously change its search direction?
+
+</div>

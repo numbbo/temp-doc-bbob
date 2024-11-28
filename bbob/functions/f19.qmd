@@ -1,0 +1,18 @@
+---
+title: "f<sub>19</sub>: Griewank-Rosenbrock F8F2"
+---
+<div id="text-f19">
+
+$$f_{19}(\mathbf{x}) = \frac{10}{D-1} \sum_{i=1}^{D-1} \left( \frac{s_i}{4000} - \cos(s_i) \right) + 10 + f_\mathrm{opt}$$
+
+-   $\mathbf{z}= \max\!\left(1,\frac{\sqrt{D}}{8}\right)\mathbf{R}\mathbf{x}+ 0.5$
+
+-   $s_i = 100\,(z_i^2 - z_{i+1})^2 + (z_i-1)^2$ for
+    $i=1,\dots,D$
+
+-   $\mathbf{z^\mathrm{opt}}=\mathbf{1}$
+
+**Properties:**
+
+Resembling the Rosenbrock function in a highly multimodal way.
+</div>

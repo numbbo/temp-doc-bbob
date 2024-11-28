@@ -1,0 +1,21 @@
+---
+title: "f<sub>17</sub>: Schaffer F7, Condition 10"
+---
+<div id="text-f17">
+
+$$f_{17}(\mathbf{x}) = \left(\frac{1}{D- 1}\sum_{i = 1}^{D- 1} \sqrt{s_i} + 
+      \sqrt{s_i} \sin^2\!\left(50\,s_i^{1/5}\right)\right)^2 + 10\,f_{\mathrm{pen}}(\mathbf{x}) + f_\mathrm{opt}$$
+
+-   $\mathbf{z}= \Lambda^{\!10}\mathbf{Q}\,T^{{0.5}}_\mathrm{asy}(\mathbf{R}(\mathbf{x}-\mathbf{x^\mathrm{opt}}))$
+
+-   $s_i = \sqrt{z_i^2 + z_{i+1}^2}$ for $i=1,\dots,D$
+
+**Properties:**
+
+A highly multimodal function where frequency and amplitude of the
+modulation vary.
+
+-   asymmetric, rotated
+
+-   conditioning is low
+</div>

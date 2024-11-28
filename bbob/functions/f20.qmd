@@ -1,0 +1,26 @@
+---
+title: "f<sub>20</sub>: Schwefel x*sin(x)"
+---
+<div id="text-f20">
+
+$$f_{20}(\mathbf{x}) = - \frac{1}{100D}%  % kept in the final print
+\sum_{i = 1}^{D}z_i\sin(\sqrt{|z_i|}) + 4.189828872724339 
+     + 100f_{\mathrm{pen}}(\mathbf{z}/100) + f_\mathrm{opt}$$
+
+-   $\hat{\mathbf{x}} = 2\times\mathbf{1_-^+}\otimes\mathbf{x}$
+
+-   $\hat{z}_{1} = \hat{x}_{1}$,$\quad \hat{z}_{i+1} = \hat{x}_{i+1} + 0.25 \left({\hat{x}_{i}} - 2|x_i^{\text{opt}}| \right)$,$\quad \text{for } i = 1, \ldots, D - 1$
+
+-   $\mathbf{z}= 100 (\Lambda^{10} (\hat{\mathbf{z}} - 2\left|\mathbf{x^\mathrm{opt}}\right|)$ + $2\left|\mathbf{x^\mathrm{opt}}\right|)$
+
+-   $\mathbf{x^\mathrm{opt}}= 4.2096874633/2 \;\mathbf{1_-^+}$,
+    where $\mathbf{1}_-^+$ is the same realization as above
+
+**Properties:**
+
+The most prominent $2^D$ minima are located comparatively
+close to the corners of the unpenalized search area [@schwefel1981numerical].
+
+-   the penalization is essential, as otherwise more and better minima
+    occur further away from the search space origin
+</div>

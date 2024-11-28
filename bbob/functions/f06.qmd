@@ -1,0 +1,27 @@
+---
+title: "f<sub>6</sub>: Attractive Sector"
+---
+<div id="text-f6">
+
+$$f_{6}(\mathbf{x}) = T_\mathrm{\hspace*{-0.01emosz}}\left(\sum_{i = 1}^{D} (s_i z_i)^2\right)^{0.9} + f_\mathrm{opt}$$
+
+-   $\mathbf{z}= \mathbf{Q}\Lambda^{\!10}\mathbf{R}(\mathbf{x}- \mathbf{x^\mathrm{opt}})$
+
+-   $s_i = \begin{cases}
+    	      10^2& \text{if~} z_i\times x_i^\mathrm{opt}> 0\\
+    	      1 & \text{otherwise}
+    	      \end{cases}$
+
+**Properties:**
+
+Highly asymmetric function, where only one "hypercone" (with angular
+base area) with a volume of roughly ${1}/{2^D}$ yields low
+function values. The optimum is located at the tip of this cone.
+
+-   unimodal
+
+**Information gained from this function:**
+
+-   In comparison to f<sub>1</sub>: What is the effect of a highly asymmetric
+    landscape?
+</div>

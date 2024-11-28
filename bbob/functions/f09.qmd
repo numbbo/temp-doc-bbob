@@ -1,0 +1,21 @@
+---
+title: "f<sub>9</sub>: Rosenbrock Rotated"
+---
+<div id="text-f9">
+
+$$f_{9}(\mathbf{x}) = \sum_{i = 1}^{D-1} \left( 100\,\left(z_i^2 - z_{i+1}\right)^2 + (z_i-1)^2 \right) + f_\mathrm{opt}$$
+
+-   $\mathbf{z}= \max\left(1,\frac{\sqrt{D}}{8}\right)\mathbf{R}\mathbf{x}+ \mathbf{1}/2$
+
+-   $\mathbf{z^\mathrm{opt}}=\mathbf{1}$
+
+**Properties:**
+
+rotated version of the previously defined Rosenbrock function.
+
+**Information gained from this function:**
+
+-   In comparison to f<sub>8</sub>: Can the search follow a long path with
+    $D-1$ changes in the direction without exploiting
+    partial separability?
+</div>

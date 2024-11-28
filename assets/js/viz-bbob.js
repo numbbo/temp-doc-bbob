@@ -1,6 +1,3 @@
-/* Url to the plots */
-plotPath = "https://raw.githubusercontent.com/numbbo/bbob-plots/main/bbob/"
-
 /* Define some global variables */
 var labelsTyp = ["Level sets", "Normalized rank heatmap", "Surface plot", "Search space cuts: lin-lin", "Search space cuts: lin-log", 
 	"Search space cuts: log-log"];
@@ -79,17 +76,6 @@ function fill_options(name, values, labels, default_value) {
     }
     document.getElementById(name).innerHTML = contents;
     document.getElementById(name).value = value;
-}
-
-/* Display number with leading zero */
-function pad(num, type) {
-	let size = 2;
-	if (type == 1) {
-		size = 3;
-	};
-    num = num.toString();
-    while (num.length < size) num = "0" + num;
-    return num;
 }
 
 /* Adds the plot to the div */

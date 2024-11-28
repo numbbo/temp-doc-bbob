@@ -1,0 +1,29 @@
+---
+title: "f<sub>8</sub>: Rosenbrock Original"
+---
+<div id="text-f8">
+
+$$f_{8}(\mathbf{x}) = \sum_{i = 1}^{D-1} \left( 100\,\left(z_i^2 - z_{i+1}\right)^2 + (z_i-1)^2 \right) + f_\mathrm{opt}$$
+
+-   $\mathbf{z}= \max\!\left(1,\frac{\sqrt{D}}{8}\right)(\mathbf{x}- \mathbf{x^\mathrm{opt}}) + 1$
+
+-   $\mathbf{z^\mathrm{opt}}=\mathbf{1}$
+
+**Properties:**
+
+So-called banana function due to its 2-D contour lines as a bent ridge
+(or valley) [@rosenbrock1960automatic]. In the beginning, the prominent
+first term of the function definition attracts to the point
+$\mathbf{z}=\mathbf{0}$. Then, a long bending
+valley needs to be followed to reach the global optimum. The ridge
+changes its orientation $D-1$ times. Exceptionally, here
+$\mathbf{x^\mathrm{opt}}\in[-3,3]^D$.
+
+-   tri-band dependency structure, in larger dimensions the function has
+    a local optimum with an attraction volume of about 25%
+
+**Information gained from this function:**
+
+-   Can the search follow a long path with $D-1$ changes in
+    the direction?
+</div>

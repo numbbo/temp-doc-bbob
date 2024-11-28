@@ -1,0 +1,31 @@
+---
+title: "f<sub>4</sub>: Skew Rastrigin-Bueche"
+---
+<div id="text-f4">
+
+$$f_{4}(\mathbf{x}) = 10 \left(D- \sum_{i = 1}^{D}\cos(2\pi z_i)\right) + 
+             \sum_{i = 1}^{D}z_i^2 + 100\,f_{\mathrm{pen}}(\mathbf{x}) + f_\mathrm{opt}$$
+
+-   $z_i = s_i\,T_\mathrm{\hspace*{-0.01emosz}}(x_i - x_i^\mathrm{opt}) \quad \text{for} \; i = 1 
+            \ldots D$
+
+-   $s_i = \begin{cases}
+    	      10\times10^{\frac{1}{2}\,\frac{i-1}{D-1}} & 
+           \text{~if~} z_i>0 \text{~and~} i = 1,3,5,\ldots 
+             \\ 
+             10^{\frac{1}{2}\frac{i-1}{D-1}} & \text{~otherwise~}
+      \end{cases}$ for $i= 1,\dots,D$
+
+**Properties:**
+
+Highly multimodal function with a structured but highly asymmetric
+placement of the optima. Constructed as a deceptive function for
+symmetrically distributed search operators.
+
+-   roughly $10^D$ local optima, conditioning is about
+    $10$, skew factor is about $10$ in $x$-space and $100$ in $f$-space
+
+**Information gained from this function:**
+
+-   In comparison to f<sub>3</sub>: What is the effect of asymmetry?
+</div>

@@ -1,0 +1,24 @@
+---
+title: "f<sub>3</sub>: Rastrigin Separable"
+---
+<div id="text-f3">
+
+$$f_{3}(\mathbf{x}) = 10 \left(D- \sum_{i = 1}^{D}\cos(2\pi z_i)\right) + \|\mathbf{z}\|^2 + f_\mathrm{opt}$$
+
+-   $\mathbf{z}= \Lambda^{\!10}T^{{0.2}}_{\mathrm{asy}}(T_\mathrm{\hspace*{-0.01emosz}}(\mathbf{x}-\mathbf{x^\mathrm{opt}}))$
+
+**Properties:**
+
+Highly multimodal function with a comparatively regular structure for
+the placement of the optima. The transformations
+$T^{{}}_\mathrm{asy}$ and $T_\mathrm{\hspace*{-0.01em}osz}$ alleviate
+the symmetry and regularity of the original Rastrigin function
+
+-   roughly $10^D$ local optima
+
+-   conditioning is about $10$
+
+**Information gained from this function:**
+
+-   In comparison to f<sub>15</sub>: Is separability exploited?
+</div>

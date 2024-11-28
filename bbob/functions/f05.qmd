@@ -1,0 +1,31 @@
+---
+title: "f<sub>5</sub>: Linear Slope"
+---
+<div id="text-f5">
+
+$$f_{5}(\mathbf{x}) = \sum_{i = 1}^{D} 5\,|s_i| - s_i z_i  
+   + f_\mathrm{opt}$$
+
+-   $z_i = x_i$ if $x_i^\mathrm{opt}x_i < 5^2$ and
+    $z_i = x_i^\mathrm{opt}$ otherwise, for
+    $i=1,\dots,D$. That is, if $x_i$ exceeds
+    $x_i^\mathrm{opt}$ it will mapped back into the domain
+    and the function appears to be constant in this direction.
+
+-   $s_i = \mathrm{{sign}}\left(x_i^\mathrm{opt}\right)\, 10^{\frac{i-1}{D-1}}$
+    for $i=1,\dots,D$.
+
+-   $\mathbf{x^\mathrm{opt}}= \mathbf{z^\mathrm{opt}}= 5\times\mathbf{1_-^+}$
+
+**Properties:**
+
+Purely linear function testing whether the search can go outside the
+initial convex hull of solutions right into the domain boundary.
+
+-   $\mathbf{x}^\mathrm{opt}$ is on the domain boundary
+
+**Information gained from this function:**
+
+-   Can the search go outside the initial convex hull of solutions into
+    the domain boundary? Can the step size be increased accordingly?
+</div>

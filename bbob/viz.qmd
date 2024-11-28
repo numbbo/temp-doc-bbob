@@ -3,9 +3,10 @@ title: Visualizations of problem landscapes
 format:
   html:
     include-after-body: 
-      - text: <script type="text/javascript" defer src="../assets/js/viz-bbob.js"></script>
+      - text: <script type="text/javascript" defer src="/assets/js/helpers.js"></script>
+      - text: <script type="text/javascript" defer src="/assets/js/viz-bbob.js"></script>
     toc-depth: 2
-    css: "../assets/css/hide-toc-groups.css"
+    css: "/assets/css/bbob-groups-hide-toc.css"
 ---
 
 ## Plots
@@ -57,10 +58,6 @@ Click on <b>Dimension</b>/<b>Function</b>/<b>Instance</b>/<b>Visualization type<
 
 <div id="images" width=100%></div>
 
-## Plot explanation
+## Plot explanations
 
-{{< include plots.md >}}
-
-## Problem definition
-
-{{< include functions.md >}}
+{{< include plot-explanation.md >}} 

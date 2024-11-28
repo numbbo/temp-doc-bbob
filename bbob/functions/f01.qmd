@@ -1,0 +1,40 @@
+---
+title: "f<sub>1</sub>: Sphere"
+format:
+  html:
+    include-after-body: 
+      - text: <script type="text/javascript" defer src="/assets/js/helpers.js"></script>
+      - text: <script type="text/javascript" defer src="/assets/js/viz-bbob-grid-plots.js"></script>
+---
+<div id="text-f1">
+
+$\displaystyle f_{1}(\mathbf{x}) = \|\mathbf{z}\|^2 + f_\mathrm{opt}$
+
+-   $\mathbf{z}= \mathbf{x}- \mathbf{x^\mathrm{opt}}$
+
+<details>
+<summary>**Symbols and definitions:**</summary>
+
+{{< include ../symbols.md >}}
+
+</details>
+
+**Properties:**
+
+Presumably the most easy continuous domain search problem, given the
+volume of the searched solution is small (i.e. where pure monte-carlo
+random search is too expensive).
+
+-   unimodal
+
+-   highly symmetric, in particular rotationally invariant, scale
+    invariant
+
+**Information gained from this function:**
+
+-   What is the optimal convergence rate of an algorithm?
+</div>
+
+## Selected Problem Visualizations 
+
+<div id="plot-grid" class="plot-grid" data-num="1"></div>

@@ -1,0 +1,22 @@
+---
+title: "f<sub>10</sub>: Ellipsoid"
+---
+<div id="text-f10">
+
+$$f_{10}(\mathbf{x}) = \sum_{i = 1}^{D} 10^{6\frac{i-1}{D-1}}z_i^2 + f_\mathrm{opt}$$
+
+-   $\mathbf{z}= T_\mathrm{\hspace*{-0.01emosz}}(\mathbf{R}(\mathbf{x}- \mathbf{x^\mathrm{opt}}))$
+
+**Properties:**
+
+Globally quadratic ill-conditioned function with smooth local
+irregularities, non-separable counterpart to $f_2$.
+
+-   unimodal, conditioning is $10^6$
+
+**Information gained from this function:**
+
+-   In comparison to f<sub>2</sub>: What is the effect of rotation
+    (non-separability)?
+
+</div>

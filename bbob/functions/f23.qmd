@@ -1,0 +1,15 @@
+---
+title: "f<sub>23</sub>: Katsuura"
+---
+<div id="text-f23">
+
+$$f_{23}(\mathbf{x}) = \frac{10}{D^{2}} \prod_{i=1}^D\left(1 + i\sum_{j=1}^{32} 
+     \frac{\left|2^j z_i - [2^j z_i]\right|}{2^j} \right)^{10/D^{1.2}}
+       - \frac{10}{D^{2}} + f_{\mathrm{pen}}(\mathbf{x}) + f_{\mathrm{opt}}$$
+
+-   $\mathbf{z}= \mathbf{Q}\,\Lambda^{\!100}\mathbf{R}(\mathbf{x}-\mathbf{x^\mathrm{opt}})$
+
+**Properties:**
+
+Highly rugged and highly repetitive function with more than $10^D$ global optima, based on the idea in [@katsuura1991continuous]
+</div>
